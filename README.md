@@ -1,11 +1,10 @@
 # BlackBerry Classic (SQC100 / Q20) — Research
 
 > Root, boot-chain, eMMC, and **Android-runtime-port** research on the BlackBerry
-> **Classic** (BB10 / QNX, MSM8960). The Classic is the reference BB10 device for
-> this collection.
+> **Classic** (BB10 / QNX, MSM8960) — the reference BB10 device for this collection.
 >
 > Part of the **[Blackberry-Research](https://github.com/stanw47/Blackberry-Research)**
-> collection. Cross-device mechanisms live in the hub; this repo is Classic-specific.
+> collection · [Williamson Security Solutions](https://williamsonsecuritysolutions.com)
 
 ---
 
@@ -14,113 +13,89 @@
 > **Research aid, not a flashing guide.** Editing eMMC boot partitions
 > (`boot0`/`boot1`) or toggling write-protect can **permanently brick** the
 > device with no recovery short of JTAG/ISP chip-out. For educational /
-> defensive research on devices the author owns. **At your own risk.**
+> defensive research on a device the author owns. **At your own risk.**
 
 ---
 
-## Status
+## Device Details
 
 | Field | Value |
 |---|---|
-| Device / model | BlackBerry Classic (SQC100, "Q20") |
-| SoC | Qualcomm MSM8960 (Snapdragon S4 Plus, secboot3), HWID `0x9700270a` |
-| OS / build | BB10 / QNX 8.0.0 (`BLACKBERRY-528E`, CLASSICNA), 10.3.3.3216 |
-| Bootloader | locked; boot-partition WP **permanent** (`BOOT_WP[173]=0x04`, `B_PERM_WP_EN`) |
-| Root | **real uid-0** (interactive root ksh via `/base/bin/__root`) |
-| Access levels reached | **L0 usb, L1 fastboot, L2 adb, L4 qnx** (dev-mode SSH + root) |
-| Recovery | Windows `cap.exe` autoloader (works) |
-| Status | **rooted, bootable, recoverable**; bootloader unlock is hardware-gated |
-
-**Current state:** The Classic is fully rooted (real uid-0), boots reliably, and
-is recoverable via the Windows `cap.exe` autoloader. The remaining device goal —
-a bootloader unlock — is blocked by a **permanent hardware write-protect** on the
-boot partitions. The **A11-on-QNX runtime port** (a separate, ongoing effort) is
-developed on this device.
+| Model | BlackBerry Classic **SQC100** ("Q20") |
+| Codename | `classic` |
+| SoC | Qualcomm **MSM8960** (Snapdragon S4 Plus, secboot3), HWID `0x9700270a` |
+| OS / software | **BB10 / QNX 8.0.0**, `BLACKBERRY-528E`, ClassicNA |
+| Current build | **10.3.3.3216** (rooted autoloader) |
+| Previous builds | stock 10.3.3; getroot pre-rooted autoloader |
+| Carrier / unlock | carrier-unlocked (no SIM lock); bootloader locked |
+| SIM | single |
 
 ---
 
-## TL;DR
+## Current Status
 
-- **Real uid-0 works.** The getroot autoloader's `btool` runs as root at boot;
-  adding `/proc/boot/pathtrust !/base/bin/__root` (btool line 31) makes the
-  setuid `__root` helper trusted **every boot** → interactive root ksh.
-- **eMMC is readable without desoldering** via the setgid group wrapper
-  `g_Disk_Drivers`; `boot0`/`boot1`/`nvram0`/`dmi0` were dumped.
-- **The unlock wall is hardware.** `BOOT_WP[173] = 0x04` (`B_PERM_WP_EN`,
-  permanent) is re-applied by SBL1 every boot; the software lane is closed
-  (NVRAM power-cycle ritual fails; raw `CMD6`/`VUC_CMD` unavailable).
-- **Classic is MSM8960**, so the public `imggen` prototype-bootloader unlock
-  (MSM8974-only, used on the Passport) **does not apply**.
-- **A11-on-QNX port:** a from-scratch effort to run Android 11 on QNX while
-  keeping the microkernel — the bionic shim runs on-device; binder and the A11
-  native chain are the current frontier.
+The Classic is **fully rooted (real uid-0), boots reliably, and is recoverable**
+via the Windows `cap.exe` autoloader. The one device-level goal that remains — a
+**bootloader unlock** — is blocked by a **permanent hardware write-protect** on
+the boot partitions, so the software lane is closed. Separately, this device hosts
+an ongoing **A11-on-QNX runtime port** (run Android 11 on QNX while keeping the
+microkernel).
 
 ---
 
-## Key findings
+## Completed
 
-*Numbered, stable — append only. Each links to detail.*
+- **Root:** getroot autoloader + pathtrust whitelist → real uid-0.
+- **eMMC access without desoldering:** group wrapper `g_Disk_Drivers`; dumped
+  `boot0`, `boot1`, `nvram0`, `dmi0`.
+- **Write-protect analysis:** `BOOT_WP[173]` decoded; permanent bit confirmed.
+- **QNX MMC driver RE:** devctl constants and WP handler decoded.
+- **A11 port foundation:** WS1 bionic shim built and running on-device; A11
+  native chain compiles and QNX-links.
 
-1. **Real uid-0** via the pathtrust whitelist trick
-   (`/proc/boot/pathtrust !/base/bin/__root`). → [`notes/session7o-classic-real-root.md`](notes/session7o-classic-real-root.md)
-2. **Root payload** = the `btool` autorun (getroot autoloader), reachable via the
-   `/base/scripts/ota_info_pps.sh` symlink; runs as root at boot.
-   → [`cross-device/bb10-root-pathtrust.md`](https://github.com/stanw47/Blackberry-Research/blob/main/cross-device/bb10-root-pathtrust.md)
-3. **eMMC read without desolder** via `g_Disk_Drivers` (group wrapper).
-   → [`notes/session7j-classic-emmc-access.md`](notes/session7j-classic-emmc-access.md)
-4. **boot0/boot1 are permanently write-protected**; `uda0`/`os0`/`dmi0` writable.
-   → [`notes/session7l-boot0-writeprotect.md`](notes/session7l-boot0-writeprotect.md)
-5. **QNX MMC devctl interface decoded** (`WRITE_PROTECT=0xC0201A11`,
-   `VUC_CMD=0xC0441A16`, `CARD_REGISTER=0xC0181A14`).
-   → [`notes/session7r-sdmmc-driver-re.md`](notes/session7r-sdmmc-driver-re.md)
-6. **`/proc/<pid>/as` patching:** `.data`/`.bss` writable, `.text` read-only;
-   cross-process writes return errno 312 (trust boundary).
-   → [`notes/session7t-proc-as-patching.md`](notes/session7t-proc-as-patching.md)
-7. **`/dev/mem` on the Passport is a decoy** (relevant comparison). See Passport repo.
-8. **A11-on-QNX runtime port** — see the dedicated section below.
+## Achieved
 
----
+- ✅ **Real interactive uid-0** via `/proc/boot/pathtrust !/base/bin/__root`
+  (btool line 31) — persistent every boot.
+- ✅ **eMMC read as non-root** via the `g_Disk_Drivers` group wrapper.
+- ✅ **Permanent boot-partition WP proven** (`B_PERM_WP_EN`), closing the
+  software unlock lane.
+- ✅ **A11 bionic shim runs on-device** (1759 exports, 0 TEXTREL, passes the QNX
+  trust gate).
 
-## A11-on-QNX runtime port
+## In Progress
 
-**Goal:** build **our own Android 11 runtime on QNX** — graft/rewrite the runtime
-while keeping the QNX microkernel and the BB10 layer, reproducing RIM's porting
-layer from AOSP 11. (The factory BB10 Android "Player" is 4.3; it is the
-specimen, not the target.)
+- **A11-on-QNX port.** The A11 native chain loads; the **`binder` resmgr** is
+  blocked at `resmgr_attach` → EPERM (path-manager identity). The A11 userland
+  (`zygote`/ART/framework) is the long pole, gated on the AOSP header tree.
+  → [`runtime/README.md`](runtime/README.md), [`ws1/STATUS.md`](ws1/STATUS.md)
 
-**Workstreams:** `ws1/` (bionic-on-QNX shim), `binder/` (A11 binder resmgr),
-`graphics/` (gralloc), `graft/`, `runtime/` (assembly), `sysroot/`, `specimens/`,
-`ref/` (AOSP 11 reference, not committed).
+## Failed
 
-**State (from `ws1/STATUS.md`, `runtime/README.md`, notes 66–72):**
+- **Software unlock / boot-partition write** — `boot0`/`boot1` return
+  `EROFS`/`EIO` even as uid-0; the NVRAM power-cycle ritual leaves
+  `BOOT_WP=0x04`; raw `CMD6` passthrough (`VUC_CMD`) is `ENOTTY`; `/proc/<pid>/as`
+  `.text` writes are blocked (errno 312).
+- **`imggen` prototype-bootloader route** — MSM8974-only; the Classic is
+  MSM8960, so the public toolchain does not apply.
 
-| Piece | State |
-|---|---|
-| WS1 bionic shim `libc.so` (1759 exports, 0 TEXTREL, PIC) | ✅ **runs on-device** |
-| ELF trust markers (e_flags `0x5000202`, `.note` QNX, interp `/proc/boot/libc.so.3`) | ✅ pass the QNX trust gate |
-| `libm.so`/`libdl.so` stubs | ✅ |
-| A11 native chain (`libbinder`/`libutils`/…) compiles + QNX-links | ✅ loads |
-| `binder` resmgr | ⛔ `resmgr_attach` → EPERM (path-manager identity) |
-| A11 userland (`zygote`, ART, framework) | ⏳ blocked on AOSP header tree |
+## Future Plans
 
-Full trail: [`notes/session22–41`](notes/), [`notes/session66–72`](notes/),
-[`runtime/README.md`](runtime/README.md), [`ws1/STATUS.md`](ws1/STATUS.md).
+1. Break the **binder resmgr EPERM** wall (path-manager ability/identity).
+2. Build the A11 userland (needs the AOSP header tree / NDK sysroot).
+3. Unlock remains **hardware-only** (live `CMD6` thunk, ISP, or EDL).
 
 ---
 
-## How to connect
+## Community Activity
 
-BB10 uses **Dev-Mode SSH over USB** (not ADB):
-
-1. Enable Dev Mode on the device; note the device password.
-2. Generate a **fresh 4096-bit RSA key every session** (the device wipes keys).
-3. Start the tunnel:
-   `blackberry-connect 169.254.0.1 -password <pw> -sshPublicKey <key.pub>`.
-4. SSH as `devuser` via paramiko with QNX fixes (`server_sig_algs=False`;
-   disable `rsa-sha2-*`).
-
-Root: pipe commands to `/base/bin/__root` (trusted via btool line 31).
-Full guide: [`docs/ssh-connection-linux.md`](docs/ssh-connection-linux.md).
+- **Root/pathtrust** — **Oleksandr (bb10.root.sx)** documented the BB10 root
+  ritual and RAM-loader mechanics; getroot autoloaders and **BerryCore** are
+  widely shared.
+- **No custom OS** exists for BB10; the **A11-on-QNX port here is original
+  work**. BB10 is EOL (services shut down 2022), so interest is preservation +
+  research.
+- Community hubs: XDA, CrackBerry, the bb10.root.sx blog, and Telegram groups.
 
 ---
 
@@ -128,14 +103,13 @@ Full guide: [`docs/ssh-connection-linux.md`](docs/ssh-connection-linux.md).
 
 | Path | Contents |
 |---|---|
-| `notes/` | BB10/Classic session notes (67) — the chronological research trail |
-| `docs/` | [`BB10-HARDWARE-SECURITY-REFERENCE.md`](docs/BB10-HARDWARE-SECURITY-REFERENCE.md), [`AUTOLOADER_GUIDE.md`](docs/AUTOLOADER_GUIDE.md), [`compat-runtime-spec.md`](docs/compat-runtime-spec.md), `bb10-analysis/`, `structure/` appendices |
-| `recon/` | `classic-audit/` (2026 network audit), `dumps-classic/` (boot0/boot1/nvram0/dmi0), `analysis/`, `resources/` (QNX headers) |
-| `tools/` | BB10 tooling: `bblink.py`, `bb_reroot.py`, `bb_uid0.py`, `imggen/`, `passport_stage3`, `listen_flash.py`, `qsh.py`, bar packagers, probes |
+| `notes/` | BB10/Classic session notes (67) — the research trail |
+| `docs/` | [BB10 hardware/security reference](docs/BB10-HARDWARE-SECURITY-REFERENCE.md), [autoloader guide](docs/AUTOLOADER_GUIDE.md), [compat-runtime spec](docs/compat-runtime-spec.md), `structure/` appendices |
+| `recon/` | network audit, eMMC dumps, sepolicy analysis, QNX headers |
+| `tools/` | BB10 tooling (`bblink.py`, `bb_reroot.py`, `imggen/`, bar packagers, probes) |
 | `ws1/ binder/ graft/ runtime/ graphics/ sysroot/ specimens/` | A11-on-QNX port workstreams |
-| `ref/` | AOSP 11 reference binaries (**not committed** — see `firmware/FETCH.md`) |
-| `work/` | extracted Classic autoloader images (**not committed**) |
 | `devmaps/` | Classic device map (schema v1.0) |
+| `firmware/`, `work/`, `ref/` | fetch notes / large local working trees (**not committed**) |
 
 ---
 
@@ -147,14 +121,16 @@ Full guide: [`docs/ssh-connection-linux.md`](docs/ssh-connection-linux.md).
 
 ---
 
-## References
+## Citations & Acknowledgements
 
 | Source | URL | Relevance |
 |---|---|---|
-| bb10.root.sx (Oleksandr) | https://bb10.root.sx | BB10 root, pathtrust, RAM-loader |
-| BBAndroids/imggen | https://github.com/BBAndroids/imggen | prototype bootloader (MSM8974) |
-| balika011 Passport conversion | https://balika011.hu/blackberry/guides/passport/conversion.php | canonical eMMC unlock |
-| MWR QNX Security Whitepaper | https://github.com/alexplaskett/Publications | QNX security model |
+| Oleksandr / bb10.root.sx | https://bb10.root.sx | BB10 root, pathtrust, RAM-loader |
+| BBAndroids / imggen | https://github.com/BBAndroids/imggen | prototype bootloader (MSM8974) |
+| balika011 — Passport conversion | https://balika011.hu/blackberry/guides/passport/conversion.php | canonical eMMC unlock |
+| MWR — QNX Security Whitepaper | https://github.com/alexplaskett/Publications | QNX security model |
+
+Thanks to the BB10 preservation community (XDA, CrackBerry, bb10.root.sx).
 
 ---
 
