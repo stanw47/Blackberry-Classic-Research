@@ -36,8 +36,8 @@
 
 The Classic is **fully rooted (real uid-0), boots reliably, and is recoverable**
 via the Windows `cap.exe` autoloader. The one device-level goal that remains — a
-**bootloader unlock** — is blocked by a **permanent hardware write-protect** on
-the boot partitions, so the software lane is closed. Separately, this device hosts
+**bootloader unlock** — is blocked by a **hardware write-protect** on the boot
+partitions that no software path can clear, so the software lane is closed. Separately, this device hosts
 an ongoing **A11-on-QNX runtime port** (run Android 11 on QNX while keeping the
 microkernel).
 
@@ -48,7 +48,8 @@ microkernel).
 - **Root:** getroot autoloader + pathtrust whitelist real uid-0.
 - **eMMC access without desoldering:** group wrapper `g_Disk_Drivers`; dumped
   `boot0`, `boot1`, `nvram0`, `dmi0`.
-- **Write-protect analysis:** `BOOT_WP[173]` decoded; permanent bit confirmed.
+- **Write-protect analysis:** `BOOT_WP[173]` decoded — `B_PWR_WP_EN` (power-on),
+  `BOOT_CONFIG_PROT=0` (not fused); the software clear lane is closed.
 - **QNX MMC driver RE:** devctl constants and WP handler decoded.
 - **A11 port foundation:** WS1 bionic shim built and running on-device; A11
   native chain compiles and QNX-links.
@@ -58,8 +59,9 @@ microkernel).
 - **Real interactive uid-0** via `/proc/boot/pathtrust !/base/bin/__root`
   (btool line 31) — persistent every boot.
 - **eMMC read as non-root** via the `g_Disk_Drivers` group wrapper.
-- **Permanent boot-partition WP proven** (`B_PERM_WP_EN`), closing the
-  software unlock lane.
+- **Boot-partition WP pinned as power-on** (`B_PWR_WP_EN`, not `B_PERM_WP_EN`;
+  `BOOT_CONFIG_PROT=0`) — clearable in principle by `CMD6`, but no software path
+  reaches it (driver `WRITE_PROTECT` is `EIO`-gated, raw `CMD6` is `ENOTTY`).
 - **A11 bionic shim runs on-device** (1759 exports, 0 TEXTREL, passes the QNX
   trust gate).
 
