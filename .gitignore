@@ -54,3 +54,9 @@ desktop.ini
 
 # --- KEEP small essential research artifacts ---
 !recon/dumps-classic/*.img
+
+# --- large local working trees (not committed) ---
+/work/
+/ref/
+/tools/autoloader_extract/
+/tools/venv/

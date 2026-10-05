@@ -1,51 +1,58 @@
-# Research notes
+# Classic — session notes index
 
-Chronological session notes (raw, unedited) from the BlackBerry research. They
-are provided as-is as a research aid.
+Chronological, raw research notes for the BlackBerry **Classic** (BB10/QNX,
+MSM8960) and the **A11-on-QNX runtime port** developed on it. Provided as-is as a
+research aid. Each note opens with a fixed header (date · device · access level ·
+status) and a plain-language TL;DR.
 
-## Session index (summary)
+> Priv (Android) notes live in the **Priv** repo; Passport notes in the
+> **Passport** repo. This index covers only Classic.
 
-- `session2-findings.md` — initial recon
-- `session3-authfull-decode.md` — autoloader / auth decoding
-- `session7b-qseecom-audit.md` — QSEECOM audit
-- `session7c-bb-kernel-source.md` — BlackBerry kernel source review
-- `session7d-bide-detection-strategy.md` — boot image detection strategy
-- `session7e-bide-audit.md` — boot image audit
-- `session7f-pathtrust-snapshot.md` — path-trust snapshot
-- `session7g-live-recon-3outcomes.md` — live recon
-- `session7h-audit-conclusion.md` — audit conclusion
-- `session7i-vtnvfsd-emmc-isp.md` — eMMC / ISP path
-- `session7j-classic-emmc-access.md` — Classic eMMC access
-- `session7k-bbss-insecure-pinned.md` — `bbss.insecure` flag pinned
+## BB10 platform / Classic device
+- `session7i-vtnvfsd-emmc-isp.md` — vtnvfsd RE (nvuser format) + eMMC/ISP strategy
+- `session7j-classic-emmc-access.md` — Classic eMMC access (group wrapper)
+- `session7k-bbss-insecure-pinned.md` — `bbss.insecure` flag
 - `session7l-boot0-writeprotect.md` — boot0 write-protect
-- `session7m-mmcsdpub-wp.md` — mmcsdpub write-protect attempt
-- `session7n-final-classic.md` — Classic summary
-- `session7o-classic-real-root.md` — **real uid-0 root achieved**
-- `session7p-dcmd-write-protect.md` — QNX MMC devctl constants + live tests
-- `session7q-extcsd-bootwp.md` — `ext_csd` reveals power-on (temporary) boot WP
-- `session7r-sdmmc-driver-re.md` — `sdmmc-rim-msmsdcc` reverse engineering
-- `session7s-oleksandr-answer.md` — upstream researcher's guidance
-- `session7t-proc-as-patching.md` — `/proc/<pid>/as` patch primitive
-- `session7u-ext-struct-location.md` — (superseded hyphen attempt)
-- `session7v-eio-is-switch.md` — **correction**: EIO is from the CMD6 SWITCH,
-  not a flag gate
-- `session7x-windows-connect.md` — Windows SSH connect ritual + full recipe
-- `session7y-map-device-common.md` — `MAP_DEVICE` is common among QNX drivers
-- `session8a-group-wrapper-emmc.md` — group-wrapper priv-esc unlocks `/dev/emmc`
-- `session8b-wpgrp-patch.md` — WP group-patch targeting, driver re-map
-- `session8c-writable-data-and-extcsd-loc.md` — **live eMMC driver `.data` R/W**;
-  live `ext_csd` located (BOOT_WP=0x04, clearable)
-- `session9a-live-extcsd-reread.md` — fresh boot-WP state; ranked CMD6 paths
-- `session9b-ifs-verify-cap-diff.md` — **IFS integrity verifier DISPROVEN for
-  custom IFS** (red-blink experiment); rooted cap.exe 3-byte diff; public tool
-  haul from bb10.root.sx
-- `session10a-passport-path-audit.md` — **Passport path audit**: `/dev/mem` is a
-  `deadbeef` canary decoy (no physical RAM window); cross-process `/proc/pid/as`
-  write = errno 312; Oleksandr `DCMD_SDMMC_ANY` / `sdmmc_raw_cmd` interface
-  decoded (`FUNC_CLEAR_WP`); why the raw-command handler must be *added* (not
-  just triggered); validity of autoloader/wipe/desolder ideas ranked
-- `bug-report-pathtrust-fput-leak.md` — path-trust `fput` leak analysis
-- `priv-research-log.txt` — device milestones
+- `session7m-mmcsdpub-wp.md` — mmcsdpub publisher vs WP
+- `session7n-final-classic.md` — Classic final state
+- `session7o-classic-real-root.md` — **real uid-0** via pathtrust `!__root`
+- `session7p-dcmd-write-protect.md` — DCMD_MMCSD_WRITE_PROTECT
+- `session7q-extcsd-bootwp.md` — EXT_CSD boot WP
+- `session7r-sdmmc-driver-re.md` — sdmmc driver RE (devctl constants)
+- `session7s-oleksandr-answer.md` — Oleksandr's raw-MMC answer
+- `session7t-proc-as-patching.md` — `/proc/<pid>/as` patching
+- `session7u-ext-struct-location.md` — per-node `ext` struct location
+- `session7v-eio-is-switch.md` — EIO is the switch
+- `session7w-connect-ritual.md` — the SSH connect ritual
+- `session7x-windows-connect.md` — Windows connect
+- `session7y-map-device-common.md` — MAP_DEVICE capability
+- `session8a-group-wrapper-emmc.md` — group-wrapper + live MMC devctl
+- `session8b-wpgrp-patch.md` — targeting the WP_GRP gate
+- `session8c-writable-data-and-extcsd-loc.md` — writable data + ext_csd loc
+- `session8d-r2-accurate-devcctl-map.md` — r2 devctl/resmgr map
+- `session8e-r2-wp-converged.md` — r2 convergence
+- `session9-live-reprobe.md` — live WP/raw-CMD re-probe
+- `session9a-live-extcsd-reread.md` — live EXT_CSD re-read
+- `session9b-ifs-verify-cap-diff.md` — IFS verify + rooted `cap.exe` diff
+- `session10-recreate-patch.md` — re-create the raw-MMC patch
+- `session11-ssh-vs-root-procas.md` — SSH vs root + `/proc/as`
+- `session11b-proc-as-alive-exec-blocker.md` — `/proc/as` alive, exec blocker
+- `session11c-root-dd-hwwp-proc-as-gate.md` — root dd/cat + HW-WP
+- `session11d-ssd-userauth-hang-procas-regression.md` — sshd + `/proc/as` regression
+- `session14-edl-wipe-nvram-lane.md` — EDL marker gate test (Classic)
 
-⚠️ These notes describe procedures that can brick a device. See
-[../SECURITY.md](../SECURITY.md).
+## Android runtime (factory 4.3 player)
+- `session22-android-runtime-install-lane.md` — APK install mechanics
+- `session23-runtime-probe-and-polyfill.md` — runtime discoverability
+- `session24-newest-feasible-sourcing-and-runtime-patch-groundwork.md`
+- `session25-checkpoint-basebundle-fixed-nextgap-desugar-and-graft-unblocked.md`
+- `session26-android-runtime-complete-map.md` — runtime complete map
+- `session27-android-runtime-bar-internals.md` — `.bar` internals
+- `session28-app-manager-source-dissection.md` — App Manager source
+- `ANDROID-RUNTIME-COMPLETE-MAP.md`, `ANDROID-APK-TO-DRAWER-FLOW.md`
+
+## A11-on-QNX port (goal locked sessions 31/32)
+- `session29-port-new-runtime-research.md` … `session41-exec-gate-repro-signal-block-verify.md`
+- `session66-app-install-dexopt-fix.md` … `session72-chain-regen-from-committed-source.md`
+- `notes-session65-resmgr-ab-locked.md`
+- Status: [`../ws1/STATUS.md`](../ws1/STATUS.md), [`../runtime/README.md`](../runtime/README.md)
