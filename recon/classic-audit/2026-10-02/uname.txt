@@ -1,0 +1,5 @@
+### CMD: uname -a; cat /proc/version
+### RC-EOF
+QNX BLACKBERRY-528E 8.0.0 2018/02/21-10:54:19EST MSM8960_V3.2.1.1_N_CLASSICNA_Rev:11 armle
+/proc/version: Permission denied
+

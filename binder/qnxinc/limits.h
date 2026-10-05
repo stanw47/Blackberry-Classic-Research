@@ -1,0 +1,9 @@
+#ifndef _LIMITS_H
+#define _LIMITS_H
+#define NAME_MAX 255
+#define PATH_MAX 1024
+#define INT_MAX 2147483647
+#define UINT_MAX 4294967295u
+#define ULONG_MAX 4294967295ul
+#define SSIZE_MAX 2147483647
+#endif

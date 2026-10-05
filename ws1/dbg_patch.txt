@@ -1,0 +1,3 @@
+/* debug trace */
+extern int write(int, const void *, unsigned long);
+static void dbg(const char *m){ write(1,m,0); /* noop */ }

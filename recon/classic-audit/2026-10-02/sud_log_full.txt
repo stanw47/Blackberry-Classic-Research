@@ -1,0 +1,6 @@
+
+/var/log/sud:
+total 16
+drwxrwx---   2 root      logger         4096 Feb 22  2018 .
+drwxrwx---+ 34 root      logger         4096 Oct 04 16:42 ..
+===

@@ -1,0 +1,35 @@
+total 615937
+drwxrws---+  6 root      1000_shared      4096 Sep 30 23:50 .
+drwxrwx---+ 13 root      1000_shared      4096 Feb 22  2018 ..
+drwxrws---  13 android_root 1000_shared      4096 Oct 01 17:13 android
+drwxr-sr-x   9 101041000 1000_shared      4096 Jun 17 05:27 bcllm
+-rw-rw-rw-   1 101471000 1000_shared     24165 Oct 05 01:35 berry-kbd.log
+drwxr-sr-x   6 101041000 1000_shared      4096 Jun 25 05:30 berrybridge-agent
+drwxrwsrwx  25 101041000 1000_shared     12288 Sep 25 12:10 berrycore
+-rw-rw-r--   1 100531000 1000_shared 315029377 Sep 23 13:56 berrycore.zip
+lrwxrwxrwx   1 101041000 1000_shared        36 Sep 25 11:48 clitools -> /accounts/1000/shared/misc/berrycore
+-rw-rw-r--   1 100531000 1000_shared     12831 Sep 23 13:55 install.sh
+-rw-rw-r--   1 100531000 1000_shared     58083 Sep 23 13:55 qpkg
+-rw-r-----   1 standbymon 1000_shared    200336 Oct 05 01:44 standby.log
+===
+/accounts/1000/appdata/sys.android.gYABgKAOw1czN6neiAT72SGO.ns/data/apdata/app/com.amazon.venezia-1.apk
+/accounts/1000/appdata/sys.android.gYABgKAOw1czN6neiAT72SGO.ns/data/apdata/app/free.rm.skytube.legacy.oss-1.apk
+/accounts/1000/appdata/sys.android.gYABgKAOw1czN6neiAT72SGO.ns/data/apdata/app/org.mozilla.fennec_fdroid-1.apk
+/accounts/1000/appdata/sys.android.gYABgKAOw1czN6neiAT72SGO.ns/data/apdata/app/com.mojang.minecraftpe-1.apk
+/accounts/1000/appdata/sys.android.gYABgKAOw1czN6neiAT72SGO.ns/data/apdata/app/com.namcobandaigames.pacmantournaments-1.apk
+/accounts/1000/appdata/sys.android.gYABgKAOw1czN6neiAT72SGO.ns/data/apdata/app/com.kiloo.subwaysurf-1.apk
+/accounts/1000/appdata/sys.android.gYABgKAOw1czN6neiAT72SGO.ns/data/apdata/app/com.fingersoft.hillclimb-1.apk
+/accounts/1000/appdata/sys.android.gYABgKAOw1czN6neiAT72SGO.ns/data/apdata/app/com.rovio.angrybirdsrio-1.apk
+/accounts/1000/appdata/sys.android.gYABgKAOw1czN6neiAT72SGO.ns/data/apdata/app/com.rovio.angrybirds-1.apk
+/accounts/1000/removable/sdcard/downloads/Telegram.apk
+/accounts/1000/removable/sdcard/downloads/Fennec_68.11.0_arm.apk
+/accounts/1000/removable/sdcard/downloads/SkyTube_Legacy_2.999.apk
+/accounts/1000/removable/sdcard/downloads/com.kiloo.subwaysurf_v1.54.0.89.apk
+/accounts/1000/removable/sdcard/downloads/Hill Climb Racing_1.27.0.apk
+/accounts/1000/removable/sdcard/downloads/Angry Birds_2.3.1.apk
+/accounts/1000/removable/sdcard/downloads/Angry Birds_5.0.2.apk
+/accounts/1000/removable/sdcard/downloads/com.namcobandaigames.pacmantournaments_1.1.6_BB10.apk
+/accounts/1000/shared/downloads/Minecraft.apk
+/accounts/1000/shared/downloads/org.fdroid.fdroid_1.12.1-1012051_minAPI14(nodpi)_apkmirror.com.apk
+/accounts/1000/shared/downloads/org.fdroid.fdroid_1012051.apk
+/accounts/1000/shared/misc/berrycore/share/sttlab/STT-Drop.apk

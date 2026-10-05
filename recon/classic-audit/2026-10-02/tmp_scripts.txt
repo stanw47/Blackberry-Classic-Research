@@ -1,0 +1,6 @@
+### CMD: ls -la /tmp 2>&1; echo ---; find /tmp /accounts/devuser /base/scripts -name '*.sh' -o -name '*.py' 2>/dev/null | head -50
+### RC-EOF
+lrwxr-xr-x   1 root      nto              10 Jan 01  1970 /tmp -> /dev/shmem
+---
+sh: head: cannot execute - No such file or directory
+

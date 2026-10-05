@@ -1,0 +1,1347 @@
+
+native/images:
+total 1561
+drwxr-x---   6 apps      10011          4096 Feb 22  2018 .
+drwxrwxrwx+  6 apps      10011          4096 Feb 22  2018 ..
+drwxr-x---   2 apps      10011          4096 Feb 22  2018 bucket_10
+drwxr-x---   2 apps      10011          4096 Feb 22  2018 bucket_12
+drwxr-x---   2 apps      10011          4096 Feb 22  2018 bucket_8
+drwxr-x---   2 apps      10011          4096 Feb 22  2018 bucket_9
+-rw-r-----   1 apps      10011        466624 Feb 22  2018 default_audio_track.png
+-rw-r-----   1 apps      10011        153343 Feb 22  2018 splash-landscape.jpg
+-rw-r-----   1 apps      10011        146910 Feb 22  2018 splash-portrait.jpg
+-r-xr-xr-x   1 apps      10011          2414 Feb 22  2018 virtualkeys-landscape.png
+-r-xr-xr-x   1 apps      10011          1015 Feb 22  2018 virtualkeys-portrait.png
+-rw-r-----   1 apps      10011          1015 Feb 22  2018 virtualkeys.320x80.png
+-rw-r-----   1 apps      10011          2414 Feb 22  2018 virtualkeys.80x320.png
+
+native/images/bucket_10:
+total 120
+drwxr-x---   2 apps      10011          4096 Feb 22  2018 .
+drwxr-x---   6 apps      10011          4096 Feb 22  2018 ..
+-rw-r-----   1 apps      10011          1622 Feb 22  2018 core_textselection_enabled.png
+-rw-r-----   1 apps      10011         16792 Feb 22  2018 core_textselection_fcc_base.png
+-rw-r-----   1 apps      10011           859 Feb 22  2018 core_textselection_fcc_drag_handle.png
+-rw-r-----   1 apps      10011           859 Feb 22  2018 core_textselection_fcc_drag_handle_pressed.png
+-rw-r-----   1 apps      10011         19391 Feb 22  2018 core_textselection_fcc_pressed.png
+-rw-r-----   1 apps      10011           923 Feb 22  2018 core_textselection_fcc_tap_down.png
+-rw-r-----   1 apps      10011          2352 Feb 22  2018 core_textselection_fcc_tap_left.png
+-rw-r-----   1 apps      10011          2271 Feb 22  2018 core_textselection_fcc_tap_right.png
+-rw-r-----   1 apps      10011           934 Feb 22  2018 core_textselection_fcc_tap_up.png
+-rw-r-----   1 apps      10011           109 Feb 22  2018 ic_drag.png
+-rw-r-----   1 apps      10011          2164 Feb 22  2018 ic_left.png
+-rw-r-----   1 apps      10011          2128 Feb 22  2018 ic_right.png
+
+native/images/bucket_12:
+total 137
+drwxr-x---   2 apps      10011          4096 Feb 22  2018 .
+drwxr-x---   6 apps      10011          4096 Feb 22  2018 ..
+-rw-r-----   1 apps      10011          1720 Feb 22  2018 core_textselection_enabled.png
+-rw-r-----   1 apps      10011         20288 Feb 22  2018 core_textselection_fcc_base.png
+-rw-r-----   1 apps      10011           991 Feb 22  2018 core_textselection_fcc_drag_handle.png
+-rw-r-----   1 apps      10011           991 Feb 22  2018 core_textselection_fcc_drag_handle_pressed.png
+-rw-r-----   1 apps      10011         23353 Feb 22  2018 core_textselection_fcc_pressed.png
+-rw-r-----   1 apps      10011           928 Feb 22  2018 core_textselection_fcc_tap_down.png
+-rw-r-----   1 apps      10011          2668 Feb 22  2018 core_textselection_fcc_tap_left.png
+-rw-r-----   1 apps      10011          2641 Feb 22  2018 core_textselection_fcc_tap_right.png
+-rw-r-----   1 apps      10011           970 Feb 22  2018 core_textselection_fcc_tap_up.png
+-rw-r-----   1 apps      10011           110 Feb 22  2018 ic_drag.png
+-rw-r-----   1 apps      10011          2511 Feb 22  2018 ic_left.png
+-rw-r-----   1 apps      10011          2464 Feb 22  2018 ic_right.png
+
+native/images/bucket_8:
+total 99
+drwxr-x---   2 apps      10011          4096 Feb 22  2018 .
+drwxr-x---   6 apps      10011          4096 Feb 22  2018 ..
+-rw-r-----   1 apps      10011          1543 Feb 22  2018 core_textselection_enabled.png
+-rw-r-----   1 apps      10011         12532 Feb 22  2018 core_textselection_fcc_base.png
+-rw-r-----   1 apps      10011           706 Feb 22  2018 core_textselection_fcc_drag_handle.png
+-rw-r-----   1 apps      10011           706 Feb 22  2018 core_textselection_fcc_drag_handle_pressed.png
+-rw-r-----   1 apps      10011         14445 Feb 22  2018 core_textselection_fcc_pressed.png
+-rw-r-----   1 apps      10011           738 Feb 22  2018 core_textselection_fcc_tap_down.png
+-rw-r-----   1 apps      10011          2018 Feb 22  2018 core_textselection_fcc_tap_left.png
+-rw-r-----   1 apps      10011          1988 Feb 22  2018 core_textselection_fcc_tap_right.png
+-rw-r-----   1 apps      10011           762 Feb 22  2018 core_textselection_fcc_tap_up.png
+-rw-r-----   1 apps      10011           109 Feb 22  2018 ic_drag.png
+-rw-r-----   1 apps      10011          1907 Feb 22  2018 ic_left.png
+-rw-r-----   1 apps      10011          1883 Feb 22  2018 ic_right.png
+
+native/images/bucket_9:
+total 115
+drwxr-x---   2 apps      10011          4096 Feb 22  2018 .
+drwxr-x---   6 apps      10011          4096 Feb 22  2018 ..
+-rw-r-----   1 apps      10011          1491 Feb 22  2018 core_textselection_enabled.png
+-rw-r-----   1 apps      10011         14731 Feb 22  2018 core_textselection_fcc_base.png
+-rw-r-----   1 apps      10011           829 Feb 22  2018 core_textselection_fcc_drag_handle.png
+-rw-r-----   1 apps      10011           852 Feb 22  2018 core_textselection_fcc_drag_handle_pressed.png
+-rw-r-----   1 apps      10011         20224 Feb 22  2018 core_textselection_fcc_pressed.png
+-rw-r-----   1 apps      10011           829 Feb 22  2018 core_textselection_fcc_tap_down.png
+-rw-r-----   1 apps      10011          2179 Feb 22  2018 core_textselection_fcc_tap_left.png
+-rw-r-----   1 apps      10011          2145 Feb 22  2018 core_textselection_fcc_tap_right.png
+-rw-r-----   1 apps      10011           824 Feb 22  2018 core_textselection_fcc_tap_up.png
+-rw-r-----   1 apps      10011           109 Feb 22  2018 ic_drag.png
+-rw-r-----   1 apps      10011          2030 Feb 22  2018 ic_left.png
+-rw-r-----   1 apps      10011          1989 Feb 22  2018 ic_right.png
+
+native/sbin:
+total 206
+drwxr-x---   2 apps      10011          4096 Feb 22  2018 .
+drwxrwxrwx+  6 apps      10011          4096 Feb 22  2018 ..
+-r-xr-xr-x   1 apps      10011         78796 Feb 22  2018 adbd
+-r-xr-xr-x   1 apps      10011         18056 Feb 22  2018 android_launcher
+
+native/scripts:
+total 187
+drwxrwxrwx+  2 apps      10011          4096 Sep 14 17:35 .
+drwxrwxrwx+  6 apps      10011          4096 Feb 22  2018 ..
+-rwxrwxrwx   1 apps      10011           704 Feb 22  2018 android-player-cmd.sh
+-rwxrwxrwx   1 apps      10011          1795 Feb 22  2018 ap-startup-peak-mem-usage.sh
+-rwxrwxrwx   1 apps      10011         71103 Feb 22  2018 capture-logs.py
+-rwxrwxrwx   1 apps      10011           620 Feb 22  2018 clean-android-core.sh
+-rwxrwxrwx   1 apps      10011           176 Feb 22  2018 kill-android-apps.sh
+-rwxrwxrwx   1 apps      10011           313 Feb 22  2018 kill-android-core.sh
+-rwxrwxrwx   1 apps      10011           149 Feb 22  2018 launch-android.sh
+-rwxrwxrwx   1 apps      10011           251 Feb 22  2018 launch-app.sh
+-rwxrwxrwx   1 apps      10011           231 Feb 22  2018 logs_minimal.txt
+-rwxrwxrwx   1 apps      10011           534 Feb 22  2018 ls-oom-adj.sh
+-rwxrwxrwx   1 apps      10011           158 Feb 22  2018 ps-android-apps.sh
+-rwxrwxrwx   1 apps      10011           305 Feb 22  2018 ps-android-core.sh
+-rwxrwxrwx   1 apps      10011           293 Feb 22  2018 reboot-android.sh
+-rwxrwxrwx   1 apps      10011           360 Feb 22  2018 restart-android-core-wrapper.sh
+-rwxrwxrwx   1 apps      10011          2404 Feb 22  2018 restart-android-core.sh
+-rwxrwxrwx   1 apps      10011           609 Feb 22  2018 restore-callback.sh
+-rwxrwxrwx   1 apps      10011           591 Feb 22  2018 restore-cleanup.sh
+-rwxrwxrwx+  1 apps      apps           1198 Feb 22  2018 start-android-core.sh
+-rwxrwxrwx   1 apps      10011           171 Feb 22  2018 stop-android.sh
+
+native/system:
+total 124
+drwxrwxrwx+ 13 apps      10011          4096 Feb 22  2018 .
+drwxrwxrwx+  6 apps      10011          4096 Feb 22  2018 ..
+drwxr-x---   2 apps      10011          8192 Feb 22  2018 app
+drwxrwxrwx   2 apps      10011          4096 Feb 22  2018 bin
+-rw-r-----   1 apps      10011          1038 Feb 22  2018 build.cfg
+lrwxrwxrwx   1 root      nto              69 Sep 15 08:01 build.prop -> /apps/sys.android.gYABgKAOw1czN6neiAT72SGO.ns/native/system/build.cfg
+drwxr-x---   5 apps      10011          4096 Feb 22  2018 etc
+drwxr-x---   2 apps      10011          4096 Feb 22  2018 fonts
+drwxr-x---   2 apps      10011          4096 Feb 22  2018 framework
+drwxr-x---   7 apps      10011          8192 Feb 22  2018 lib
+drwxr-x---   3 apps      10011          4096 Feb 22  2018 media
+drwxr-x---   3 apps      10011          4096 Feb 22  2018 native
+drwxr-x---   3 apps      10011          4096 Feb 22  2018 tts
+drwxr-x---   7 apps      10011          4096 Feb 22  2018 usr
+drwxrwxrwx+  2 apps      10011          4096 Feb 22  2018 xbin
+
+native/system/app:
+total 82505
+drwxr-x---   2 apps      10011          8192 Feb 22  2018 .
+drwxrwxrwx+ 13 apps      10011          4096 Feb 22  2018 ..
+-rw-r-----   1 apps      10011         17253 Feb 22  2018 ApplicationsProvider.apk
+-rw-r-----   1 apps      10011         24664 Feb 22  2018 ApplicationsProvider.odex
+-rw-r-----   1 apps      10011        104525 Feb 22  2018 BackupRestoreConfirmation.apk
+-rw-r-----   1 apps      10011          9536 Feb 22  2018 BackupRestoreConfirmation.odex
+-rw-r-----   1 apps      10011         23910 Feb 22  2018 BasicDreams.apk
+-rw-r-----   1 apps      10011         16368 Feb 22  2018 BasicDreams.odex
+-rw-r-----   1 apps      10011        237504 Feb 22  2018 BlackBerryIME.apk
+-rw-r-----   1 apps      10011         47776 Feb 22  2018 BlackBerryIME.odex
+-rw-r-----   1 apps      10011        568537 Feb 22  2018 Bluetooth.apk
+-rw-r-----   1 apps      10011        652688 Feb 22  2018 Bluetooth.odex
+-rw-r-----   1 apps      10011       1908111 Feb 22  2018 Browser.apk
+-rw-r-----   1 apps      10011        930048 Feb 22  2018 Browser.odex
+-rw-r-----   1 apps      10011        157614 Feb 22  2018 Calculator.apk
+-rw-r-----   1 apps      10011        362128 Feb 22  2018 Calculator.odex
+-rw-r-----   1 apps      10011         68250 Feb 22  2018 CalendarProvider.apk
+-rw-r-----   1 apps      10011        388768 Feb 22  2018 CalendarProvider.odex
+-rw-r-----   1 apps      10011        116765 Feb 22  2018 CertInstaller.apk
+-rw-r-----   1 apps      10011         41920 Feb 22  2018 CertInstaller.odex
+-rw-r-----   1 apps      10011       1530214 Feb 22  2018 Contacts.apk
+-rw-r-----   1 apps      10011       1432696 Feb 22  2018 Contacts.odex
+-rw-r-----   1 apps      10011         87749 Feb 22  2018 ContactsProvider.apk
+-rw-r-----   1 apps      10011        724112 Feb 22  2018 ContactsProvider.odex
+-rw-r-----   1 apps      10011          8825 Feb 22  2018 DefaultContainerService.apk
+-rw-r-----   1 apps      10011         20432 Feb 22  2018 DefaultContainerService.odex
+-rw-r-----   1 apps      10011         60103 Feb 22  2018 Development.apk
+-rw-r-----   1 apps      10011        147648 Feb 22  2018 Development.odex
+-rw-r-----   1 apps      10011        174105 Feb 22  2018 DownloadProvider.apk
+-rw-r-----   1 apps      10011        319904 Feb 22  2018 DownloadProvider.odex
+-rw-r-----   1 apps      10011        156841 Feb 22  2018 DownloadProviderUi.apk
+-rw-r-----   1 apps      10011         40528 Feb 22  2018 DownloadProviderUi.odex
+-rw-r-----   1 apps      10011         24473 Feb 22  2018 DrmProvider.apk
+-rw-r-----   1 apps      10011         12912 Feb 22  2018 DrmProvider.odex
+-rw-r-----   1 apps      10011          3849 Feb 22  2018 FusedLocation.apk
+-rw-r-----   1 apps      10011         12440 Feb 22  2018 FusedLocation.odex
+-rw-r-----   1 apps      10011          6242 Feb 22  2018 GSF.apk
+-rw-r-----   1 apps      10011          4392 Feb 22  2018 GSF.odex
+-rw-r-----   1 apps      10011        251957 Feb 22  2018 Galaxy4.apk
+-rw-r-----   1 apps      10011         21544 Feb 22  2018 Galaxy4.odex
+-rw-r-----   1 apps      10011       3160571 Feb 22  2018 Gallery2.apk
+-rw-r-----   1 apps      10011       2463240 Feb 22  2018 Gallery2.odex
+-rw-r-----   1 apps      10011          8497 Feb 22  2018 HTMLViewer.apk
+-rw-r-----   1 apps      10011          6928 Feb 22  2018 HTMLViewer.odex
+-rw-r-----   1 apps      10011         40079 Feb 22  2018 HoloSpiralWallpaper.apk
+-rw-r-----   1 apps      10011         22792 Feb 22  2018 HoloSpiralWallpaper.odex
+-rw-r-----   1 apps      10011          6498 Feb 22  2018 InAppBilling.apk
+-rw-r-----   1 apps      10011         24944 Feb 22  2018 InAppBilling.odex
+-rw-r-----   1 apps      10011         49390 Feb 22  2018 InputDevices.apk
+-rw-r-----   1 apps      10011          1488 Feb 22  2018 InputDevices.odex
+-rw-r-----   1 apps      10011         47928 Feb 22  2018 KeyChain.apk
+-rw-r-----   1 apps      10011         29512 Feb 22  2018 KeyChain.odex
+-rw-r-----   1 apps      10011       1137595 Feb 22  2018 LiveWallpapers.apk
+-rw-r-----   1 apps      10011         81816 Feb 22  2018 LiveWallpapers.odex
+-rw-r-----   1 apps      10011        161718 Feb 22  2018 LiveWallpapersPicker.apk
+-rw-r-----   1 apps      10011         24320 Feb 22  2018 LiveWallpapersPicker.odex
+-rw-r-----   1 apps      10011        210350 Feb 22  2018 MagicSmokeWallpapers.apk
+-rw-r-----   1 apps      10011         31208 Feb 22  2018 MagicSmokeWallpapers.odex
+-rw-r-----   1 apps      10011         34229 Feb 22  2018 MarketIntent.apk
+-rw-r-----   1 apps      10011          4080 Feb 22  2018 MarketIntent.odex
+-rw-r-----   1 apps      10011         57906 Feb 22  2018 MusicFX.apk
+-rw-r-----   1 apps      10011         86664 Feb 22  2018 MusicFX.odex
+-rw-r-----   1 apps      10011        173433 Feb 22  2018 NativeBBM.apk
+-rw-r-----   1 apps      10011          2368 Feb 22  2018 NativeBBM.odex
+-rw-r-----   1 apps      10011        177980 Feb 22  2018 NativeBrowser.apk
+-rw-r-----   1 apps      10011          2704 Feb 22  2018 NativeBrowser.odex
+-rw-r-----   1 apps      10011        190562 Feb 22  2018 NativeCalendar.apk
+-rw-r-----   1 apps      10011          6144 Feb 22  2018 NativeCalendar.odex
+-rw-r-----   1 apps      10011        169165 Feb 22  2018 NativeCamera.apk
+-rw-r-----   1 apps      10011         15280 Feb 22  2018 NativeCamera.odex
+-rw-r-----   1 apps      10011       1516570 Feb 22  2018 NativeCellular.apk
+-rw-r-----   1 apps      10011         47976 Feb 22  2018 NativeCellular.odex
+-rw-r-----   1 apps      10011        173271 Feb 22  2018 NativeContactPicker.apk
+-rw-r-----   1 apps      10011          3536 Feb 22  2018 NativeContactPicker.odex
+-rw-r-----   1 apps      10011        176015 Feb 22  2018 NativeEmail.apk
+-rw-r-----   1 apps      10011         10944 Feb 22  2018 NativeEmail.odex
+-rw-r-----   1 apps      10011        204741 Feb 22  2018 NativeFileViewer.apk
+-rw-r-----   1 apps      10011         14576 Feb 22  2018 NativeFileViewer.odex
+-rw-r-----   1 apps      10011        175786 Feb 22  2018 NativePhone.apk
+-rw-r-----   1 apps      10011          4280 Feb 22  2018 NativePhone.odex
+-rw-r-----   1 apps      10011        172053 Feb 22  2018 NativeSmsMms.apk
+-rw-r-----   1 apps      10011          9224 Feb 22  2018 NativeSmsMms.odex
+-rw-r-----   1 apps      10011         43814 Feb 22  2018 NativeSpeech.apk
+-rw-r-----   1 apps      10011          6472 Feb 22  2018 NativeSpeech.odex
+-rw-r-----   1 apps      10011         65025 Feb 22  2018 NoiseField.apk
+-rw-r-----   1 apps      10011         23304 Feb 22  2018 NoiseField.odex
+-rw-r-----   1 apps      10011          2819 Feb 22  2018 OneTimeInitializer.apk
+-rw-r-----   1 apps      10011          6424 Feb 22  2018 OneTimeInitializer.odex
+-rw-r-----   1 apps      10011        419031 Feb 22  2018 PackageInstaller.apk
+-rw-r-----   1 apps      10011        140600 Feb 22  2018 PackageInstaller.odex
+-rw-r-----   1 apps      10011         61340 Feb 22  2018 PhaseBeam.apk
+-rw-r-----   1 apps      10011         22840 Feb 22  2018 PhaseBeam.odex
+-rw-r-----   1 apps      10011        425413 Feb 22  2018 PhotoTable.apk
+-rw-r-----   1 apps      10011         90864 Feb 22  2018 PhotoTable.odex
+-rw-r-----   1 apps      10011         10304 Feb 22  2018 PicoTts.apk
+-rw-r-----   1 apps      10011         18312 Feb 22  2018 PicoTts.odex
+-rw-r-----   1 apps      10011          2160 Feb 22  2018 Provision.odex
+-rw-r-----   1 apps      10011       1553738 Feb 22  2018 QNXAppLauncher.apk
+-rw-r-----   1 apps      10011         17744 Feb 22  2018 QNXAppLauncher.odex
+-rw-r-----   1 apps      10011          7674 Feb 22  2018 QNXInvokeProxy.apk
+-rw-r-----   1 apps      10011          5056 Feb 22  2018 QNXInvokeProxy.odex
+-rw-r-----   1 apps      10011         58127 Feb 22  2018 QNXLocationService.apk
+-rw-r-----   1 apps      10011         16024 Feb 22  2018 QNXLocationService.odex
+-rw-r-----   1 apps      10011         21545 Feb 22  2018 QNXMediaProvider.apk
+-rw-r-----   1 apps      10011        288768 Feb 22  2018 QNXMediaProvider.odex
+-rw-r-----   1 apps      10011        261063 Feb 22  2018 QuickSearchBox.apk
+-rw-r-----   1 apps      10011        504456 Feb 22  2018 QuickSearchBox.odex
+-rw-r-----   1 apps      10011       7231485 Feb 22  2018 Settings.apk
+-rw-r-----   1 apps      10011       1341584 Feb 22  2018 Settings.odex
+-rw-r-----   1 apps      10011         20887 Feb 22  2018 SettingsProvider.apk
+-rw-r-----   1 apps      10011         80952 Feb 22  2018 SettingsProvider.odex
+-rw-r-----   1 apps      10011          2766 Feb 22  2018 SharedStorageBackup.apk
+-rw-r-----   1 apps      10011          9088 Feb 22  2018 SharedStorageBackup.odex
+-rw-r-----   1 apps      10011          7406 Feb 22  2018 Shell.apk
+-rw-r-----   1 apps      10011         18800 Feb 22  2018 Shell.odex
+-rw-r-----   1 apps      10011         75576 Feb 22  2018 SoundRecorder.apk
+-rw-r-----   1 apps      10011         25344 Feb 22  2018 SoundRecorder.odex
+-rw-r-----   1 apps      10011       1559845 Feb 22  2018 SystemUI.apk
+-rw-r-----   1 apps      10011        533776 Feb 22  2018 SystemUI.odex
+-rw-r-----   1 apps      10011         49259 Feb 22  2018 TelephonyProvider.apk
+-rw-r-----   1 apps      10011        103744 Feb 22  2018 TelephonyProvider.odex
+-rw-r-----   1 apps      10011          3629 Feb 22  2018 UserDictionaryProvider.apk
+-rw-r-----   1 apps      10011         15544 Feb 22  2018 UserDictionaryProvider.odex
+-rw-r-----   1 apps      10011       4725684 Feb 22  2018 VideoEditor.apk
+-rw-r-----   1 apps      10011        390904 Feb 22  2018 VideoEditor.odex
+-rw-r-----   1 apps      10011        168557 Feb 22  2018 VisualizationWallpapers.apk
+-rw-r-----   1 apps      10011         38128 Feb 22  2018 VisualizationWallpapers.odex
+-rw-r-----   1 apps      10011         45334 Feb 22  2018 VpnDialogs.apk
+-rw-r-----   1 apps      10011          9344 Feb 22  2018 VpnDialogs.odex
+-rw-r-----   1 apps      10011          2745 Feb 22  2018 WAPPushManager.apk
+-rw-r-----   1 apps      10011          9704 Feb 22  2018 WAPPushManager.odex
+
+native/system/bin:
+total 3524
+drwxrwxrwx   2 apps      10011          4096 Feb 22  2018 .
+drwxrwxrwx+ 13 apps      10011          4096 Feb 22  2018 ..
+-rwxrwxrwx   1 apps      10011          9656 Feb 22  2018 abcc
+-rwxrwxrwx   1 apps      10011           191 Feb 22  2018 am
+-rwxrwxrwx   1 apps      10011         39408 Feb 22  2018 android_resmgr
+-rwxrwxrwx   1 apps      10011         13908 Feb 22  2018 app_process
+-rwxrwxrwx   1 apps      10011         30440 Feb 22  2018 binder
+-rwxrwxrwx   1 apps      10011           199 Feb 22  2018 bmgr
+-rwxrwxrwx   1 apps      10011         22388 Feb 22  2018 bootanimation
+-rwxrwxrwx   1 apps      10011           156 Feb 22  2018 bu
+-rwxrwxrwx   1 apps      10011          5504 Feb 22  2018 bugreport
+-rwxrwxrwx   1 apps      10011         22232 Feb 22  2018 cat
+-rwxrwxrwx   1 apps      10011         22232 Feb 22  2018 chmod
+-rwxrwxrwx   1 apps      10011         22232 Feb 22  2018 chown
+-rwxrwxrwx   1 apps      10011         22232 Feb 22  2018 cmp
+-rwxrwxrwx   1 apps      10011           207 Feb 22  2018 content
+-rwxrwxrwx   1 apps      10011          9624 Feb 22  2018 dalvikvm
+-rwxrwxrwx   1 apps      10011          9684 Feb 22  2018 dexopt
+-rwxrwxrwx   1 apps      10011         79952 Feb 22  2018 drmserver
+-rwxrwxrwx   1 apps      10011         38668 Feb 22  2018 dumpstate
+-rwxrwxrwx   1 apps      10011          9716 Feb 22  2018 dumpsys
+-rwxrwxrwx   1 apps      10011         13808 Feb 22  2018 epolld
+-rwxrwxrwx   1 apps      10011         43124 Feb 22  2018 exe_shim
+-rwxrwxrwx   1 apps      10011         22232 Feb 22  2018 getprop
+-rwxrwxrwx   1 apps      10011          9660 Feb 22  2018 gzip
+-rwxrwxrwx   1 apps      10011           194 Feb 22  2018 ime
+-rwxrwxrwx   1 apps      10011         59204 Feb 22  2018 init
+-rwxrwxrwx   1 apps      10011           201 Feb 22  2018 input
+-rwxrwxrwx   1 apps      10011         30688 Feb 22  2018 installd
+-rwxrwxrwx   1 apps      10011         38736 Feb 22  2018 keystore
+-rwxrwxrwx   1 apps      10011        320088 Feb 22  2018 linker
+-rwxrwxrwx   1 apps      10011         39020 Feb 22  2018 linker_helper
+-rwxrwxrwx   1 apps      10011         22232 Feb 22  2018 ln
+-rwxrwxrwx   1 apps      10011         22232 Feb 22  2018 log
+-rwxrwxrwx   1 apps      10011         13888 Feb 22  2018 logcat
+-rwxrwxrwx   1 apps      10011         14456 Feb 22  2018 logd
+-rwxrwxrwx   1 apps      10011         16400 Feb 22  2018 logwrapper
+-rwxrwxrwx   1 apps      10011         14128 Feb 22  2018 lowmemorykiller
+-rwxrwxrwx   1 apps      10011         22232 Feb 22  2018 ls
+-rwxrwxrwx   1 apps      10011           210 Feb 22  2018 media
+-rwxrwxrwx   1 apps      10011         13888 Feb 22  2018 mediaserver
+-rwxrwxrwx   1 apps      10011         22232 Feb 22  2018 mkdir
+-rwxrwxrwx   1 apps      10011        158188 Feb 22  2018 mksh
+-rwxrwxrwx   1 apps      10011           217 Feb 22  2018 monkey
+-rwxrwxrwx   1 apps      10011         22232 Feb 22  2018 mv
+-rwxrwxrwx   1 apps      10011           191 Feb 22  2018 pm
+-rwxrwxrwx   1 apps      10011         22232 Feb 22  2018 printenv
+-rwxrwxrwx   1 apps      10011         22232 Feb 22  2018 ps
+-rwxr-xr-x   1 root      nto            6004 Mar 30 11:28 r
+-rwxrwxrwx   1 apps      10011           188 Feb 22  2018 requestsync
+-rwxrwxrwx   1 apps      10011          5536 Feb 22  2018 rild
+-rwxrwxrwx   1 apps      10011         22232 Feb 22  2018 rm
+-rwxrwxrwx   1 apps      10011         22232 Feb 22  2018 rmdir
+-rwxrwxrwx   1 apps      10011          9712 Feb 22  2018 screencap
+-rwxrwxrwx   1 apps      10011          5516 Feb 22  2018 sensorservice
+-rwxrwxrwx   1 apps      10011         13852 Feb 22  2018 service
+-rwxrwxrwx   1 apps      10011          9780 Feb 22  2018 servicemanager
+-rwxrwxrwx   1 apps      10011         22232 Feb 22  2018 setprop
+-rwxrwxrwx   1 apps      10011           178 Feb 22  2018 settings
+-rwxrwxrwx   1 apps      10011        158188 Feb 22  2018 sh
+-rwxrwxrwx   1 apps      10011         71808 Feb 22  2018 shrimp
+-rwxrwxrwx   1 apps      10011         22232 Feb 22  2018 sleep
+-rwxrwxrwx   1 apps      10011         22232 Feb 22  2018 start
+-rwxrwxrwx   1 apps      10011         22232 Feb 22  2018 stop
+-rwxrwxrwx   1 apps      10011          9644 Feb 22  2018 surfaceflinger
+-rwxrwxrwx   1 apps      10011           192 Feb 22  2018 svc
+-rwxrwxrwx   1 apps      10011          5500 Feb 22  2018 system_server
+-rwxrwxrwx   1 apps      10011         22232 Feb 22  2018 toolbox
+-rwxrwxrwx   1 apps      10011          3748 Feb 22  2018 uiautomator
+-rwxrwxrwx   1 apps      10011           190 Feb 22  2018 wm
+
+native/system/etc:
+total 319
+drwxr-x---   5 apps      10011          4096 Feb 22  2018 .
+drwxrwxrwx+ 13 apps      10011          4096 Feb 22  2018 ..
+-rw-r-----   1 apps      10011         90712 Feb 22  2018 NOTICE.html.gz
+-rw-r-----   1 apps      10011          6575 Feb 22  2018 apns-conf.xml
+-rw-r-----   1 apps      10011          4305 Feb 22  2018 audio_effects.conf
+-rw-r-----   1 apps      10011         14791 Feb 22  2018 event-log-tags
+-rw-r-----   1 apps      10011          5497 Feb 22  2018 fallback_fonts.xml
+-rw-r-----   1 apps      10011            25 Feb 22  2018 hosts
+-rw-r-----   1 apps      10011          7440 Feb 22  2018 media_codecs.xml
+-rw-r-----   1 apps      10011          6376 Feb 22  2018 media_profiles.xml
+-rw-r-----   1 apps      10011          1308 Feb 22  2018 mkshrc
+drwxr-x---   2 apps      10011          4096 Feb 22  2018 permissions
+drwxr-x---   2 apps      10011          4096 Feb 22  2018 ppp
+drwxr-x---   3 apps      10011          4096 Feb 22  2018 security
+-rw-r-----   1 apps      10011          3418 Feb 22  2018 system_fonts.xml
+
+native/system/etc/permissions:
+total 71
+drwxr-x---   2 apps      10011          4096 Feb 22  2018 .
+drwxr-x---   5 apps      10011          4096 Feb 22  2018 ..
+-rw-r-----   1 apps      10011           820 Feb 22  2018 android.hardware.bluetooth.xml
+-rw-r-----   1 apps      10011           830 Feb 22  2018 android.hardware.bluetooth_le.xml
+-rw-r-----   1 apps      10011          1052 Feb 22  2018 android.hardware.camera.flash-autofocus.xml
+-rw-r-----   1 apps      10011           877 Feb 22  2018 android.hardware.camera.front.xml
+-rw-r-----   1 apps      10011           877 Feb 22  2018 android.hardware.camera.xml
+-rw-r-----   1 apps      10011           942 Feb 22  2018 android.hardware.location.gps.xml
+-rw-r-----   1 apps      10011           873 Feb 22  2018 android.hardware.nfc.xml
+-rw-r-----   1 apps      10011           806 Feb 22  2018 android.hardware.sensor.gyroscope.xml
+-rw-r-----   1 apps      10011           816 Feb 22  2018 android.hardware.sensor.light.xml
+-rw-r-----   1 apps      10011           815 Feb 22  2018 android.hardware.sensor.proximity.xml
+-rw-r-----   1 apps      10011           883 Feb 22  2018 android.hardware.telephony.cdma.xml
+-rw-r-----   1 apps      10011           881 Feb 22  2018 android.hardware.telephony.gsm.xml
+-rw-r-----   1 apps      10011          1144 Feb 22  2018 android.hardware.touchscreen.multitouch.jazzhand.xml
+-rw-r-----   1 apps      10011           829 Feb 22  2018 android.hardware.wifi.xml
+-rw-r-----   1 apps      10011          1050 Feb 22  2018 android.software.live_wallpaper.xml
+-rw-r-----   1 apps      10011           828 Feb 22  2018 com.android.location.provider.xml
+-rw-r-----   1 apps      10011           797 Feb 22  2018 com.google.android.maps.xml
+-rw-r-----   1 apps      10011          3407 Feb 22  2018 handheld_core_hardware.xml
+-rw-r-----   1 apps      10011          5524 Feb 22  2018 platform.xml
+
+native/system/etc/ppp:
+total 27
+drwxr-x---   2 apps      10011          4096 Feb 22  2018 .
+drwxr-x---   5 apps      10011          4096 Feb 22  2018 ..
+-r-xr-xr-x   1 apps      10011          5412 Feb 22  2018 ip-up-vpn
+
+native/system/etc/security:
+total 57
+drwxr-x---   3 apps      10011          4096 Feb 22  2018 .
+drwxr-x---   5 apps      10011          4096 Feb 22  2018 ..
+drwxr-x---   2 apps      10011          8192 Feb 22  2018 cacerts
+-rw-r-----   1 apps      10011         10787 Feb 22  2018 mac_permissions.xml
+-rw-r-----   1 apps      10011          1311 Feb 22  2018 otacerts.zip
+
+native/system/etc/security/cacerts:
+total 734
+drwxr-x---   2 apps      10011          8192 Feb 22  2018 .
+drwxr-x---   3 apps      10011          4096 Feb 22  2018 ..
+-rw-r-----   1 apps      10011          1696 Feb 22  2018 006016b6.0
+-rw-r-----   1 apps      10011          1610 Feb 22  2018 02265526.0
+-rw-r-----   1 apps      10011          1606 Feb 22  2018 039c618a.0
+-rw-r-----   1 apps      10011          1306 Feb 22  2018 062cdee6.0
+-rw-r-----   1 apps      10011          2155 Feb 22  2018 080911ac.0
+-rw-r-----   1 apps      10011          1501 Feb 22  2018 09789157.0
+-rw-r-----   1 apps      10011           911 Feb 22  2018 0f11b315.0
+-rw-r-----   1 apps      10011          1167 Feb 22  2018 106f3e4d.0
+-rw-r-----   1 apps      10011          1066 Feb 22  2018 116bf586.0
+-rw-r-----   1 apps      10011          1598 Feb 22  2018 157753a5.0
+-rw-r-----   1 apps      10011          1444 Feb 22  2018 1e09d511.0
+-rw-r-----   1 apps      10011          1180 Feb 22  2018 1ec4d31a.0
+-rw-r-----   1 apps      10011          2094 Feb 22  2018 201cada0.0
+-rw-r-----   1 apps      10011          1444 Feb 22  2018 244b5494.0
+-rw-r-----   1 apps      10011           911 Feb 22  2018 24ad0b63.0
+-rw-r-----   1 apps      10011          1281 Feb 22  2018 2b349938.0
+-rw-r-----   1 apps      10011          1293 Feb 22  2018 2c543cd1.0
+-rw-r-----   1 apps      10011          1570 Feb 22  2018 2e4eed3c.0
+-rw-r-----   1 apps      10011          1415 Feb 22  2018 3513523f.0
+-rw-r-----   1 apps      10011          2183 Feb 22  2018 3b2716e5.0
+-rw-r-----   1 apps      10011          2159 Feb 22  2018 40193066.0
+-rw-r-----   1 apps      10011          1566 Feb 22  2018 40547a79.0
+-rw-r-----   1 apps      10011           911 Feb 22  2018 415660c1.0
+-rw-r-----   1 apps      10011           911 Feb 22  2018 415660c1.1
+-rw-r-----   1 apps      10011          1196 Feb 22  2018 442adcac.0
+-rw-r-----   1 apps      10011          1346 Feb 22  2018 480720ec.0
+-rw-r-----   1 apps      10011          1431 Feb 22  2018 48bec511.0
+-rw-r-----   1 apps      10011          1431 Feb 22  2018 4a6481c9.0
+-rw-r-----   1 apps      10011          1476 Feb 22  2018 4bfab552.0
+-rw-r-----   1 apps      10011          1029 Feb 22  2018 4c35a837.0
+-rw-r-----   1 apps      10011          2122 Feb 22  2018 4f316efb.0
+-rw-r-----   1 apps      10011          2321 Feb 22  2018 5273a94c.0
+-rw-r-----   1 apps      10011          1444 Feb 22  2018 5443e9e3.0
+-rw-r-----   1 apps      10011          1143 Feb 22  2018 55a10908.0
+-rw-r-----   1 apps      10011          1488 Feb 22  2018 562ad774.0
+-rw-r-----   1 apps      10011          1220 Feb 22  2018 578d5c04.0
+-rw-r-----   1 apps      10011          2126 Feb 22  2018 57bcb2da.0
+-rw-r-----   1 apps      10011          1606 Feb 22  2018 592c0a9a.0
+-rw-r-----   1 apps      10011          1338 Feb 22  2018 5ad8a5d6.0
+-rw-r-----   1 apps      10011          1817 Feb 22  2018 5f267794.0
+-rw-r-----   1 apps      10011          2045 Feb 22  2018 63ea8c08.0
+-rw-r-----   1 apps      10011          1338 Feb 22  2018 653b494a.0
+-rw-r-----   1 apps      10011          1720 Feb 22  2018 6b99d060.0
+-rw-r-----   1 apps      10011          1204 Feb 22  2018 6cc3c4c3.0
+-rw-r-----   1 apps      10011          1224 Feb 22  2018 6cc3c4c3.1
+-rw-r-----   1 apps      10011          2041 Feb 22  2018 6e8ec1c2.0
+-rw-r-----   1 apps      10011          1180 Feb 22  2018 6faac4e3.0
+-rw-r-----   1 apps      10011          1590 Feb 22  2018 706f604c.0
+-rw-r-----   1 apps      10011          1395 Feb 22  2018 76cb8f92.0
+-rw-r-----   1 apps      10011          2431 Feb 22  2018 76faf6c0.0
+-rw-r-----   1 apps      10011          1009 Feb 22  2018 79ad8b43.0
+-rw-r-----   1 apps      10011          1358 Feb 22  2018 7d0b38bd.0
+-rw-r-----   1 apps      10011          1395 Feb 22  2018 812e17de.0
+-rw-r-----   1 apps      10011          2037 Feb 22  2018 823a0832.0
+-rw-r-----   1 apps      10011          2004 Feb 22  2018 876f1e28.0
+-rw-r-----   1 apps      10011          2016 Feb 22  2018 8867006a.0
+-rw-r-----   1 apps      10011          2126 Feb 22  2018 930ac5d2.0
+-rw-r-----   1 apps      10011          1281 Feb 22  2018 93bc0acc.0
+-rw-r-----   1 apps      10011          1366 Feb 22  2018 97fecd7d.0
+-rw-r-----   1 apps      10011          1253 Feb 22  2018 98ec67f0.0
+-rw-r-----   1 apps      10011          1232 Feb 22  2018 98ec67f0.1
+-rw-r-----   1 apps      10011          1143 Feb 22  2018 9af9f759.0
+-rw-r-----   1 apps      10011           830 Feb 22  2018 9c8dfbd4.0
+-rw-r-----   1 apps      10011          2134 Feb 22  2018 a8dee976.0
+-rw-r-----   1 apps      10011          2012 Feb 22  2018 ad088e1d.0
+-rw-r-----   1 apps      10011          2837 Feb 22  2018 ae8153b9.0
+-rw-r-----   1 apps      10011          2748 Feb 22  2018 ae8153b9.1
+-rw-r-----   1 apps      10011          1582 Feb 22  2018 aee5f10d.0
+-rw-r-----   1 apps      10011          1427 Feb 22  2018 b1159c4c.0
+-rw-r-----   1 apps      10011          1683 Feb 22  2018 b13cc6df.0
+-rw-r-----   1 apps      10011          1809 Feb 22  2018 b204d74a.0
+-rw-r-----   1 apps      10011          1431 Feb 22  2018 b66938e9.0
+-rw-r-----   1 apps      10011          1968 Feb 22  2018 b727005e.0
+-rw-r-----   1 apps      10011          1346 Feb 22  2018 b7a5b843.0
+-rw-r-----   1 apps      10011          1582 Feb 22  2018 ba89ed3b.0
+-rw-r-----   1 apps      10011          1561 Feb 22  2018 bad35b78.0
+-rw-r-----   1 apps      10011          1777 Feb 22  2018 c01cdfa2.0
+-rw-r-----   1 apps      10011          1017 Feb 22  2018 c089bbbd.0
+-rw-r-----   1 apps      10011          1561 Feb 22  2018 c0ff1f52.0
+-rw-r-----   1 apps      10011          1744 Feb 22  2018 c5e082db.0
+-rw-r-----   1 apps      10011           952 Feb 22  2018 c692a373.0
+-rw-r-----   1 apps      10011          1310 Feb 22  2018 c99398f3.0
+-rw-r-----   1 apps      10011          2110 Feb 22  2018 ca6e4ad9.0
+-rw-r-----   1 apps      10011          1184 Feb 22  2018 cb357862.0
+-rw-r-----   1 apps      10011          1318 Feb 22  2018 cbeee9e2.0
+-rw-r-----   1 apps      10011          1444 Feb 22  2018 cbf06781.0
+-rw-r-----   1 apps      10011          1338 Feb 22  2018 cd58d51e.0
+-rw-r-----   1 apps      10011          1598 Feb 22  2018 cert_02FAF3E291435468607857694DF5E45B68851868.pem
+-rw-r-----   1 apps      10011          1521 Feb 22  2018 cert_039EEDB80BE7A03C6953893B20D2D9323A4C2AFD.pem
+-rw-r-----   1 apps      10011          1683 Feb 22  2018 cert_0483ED3399AC3608058722EDBC5E4600E3BEF9D7.pem
+-rw-r-----   1 apps      10011          1427 Feb 22  2018 cert_0563B8630D62D75ABBC8AB1E4BDFB5A899B24D43.pem
+-rw-r-----   1 apps      10011          1431 Feb 22  2018 cert_07E032E020B72C3F192F0628A2593A19A70F069E.pem
+-rw-r-----   1 apps      10011          2037 Feb 22  2018 cert_0B7199A1C7F3ADDF7BA7EAB8EB574AE80D60DDDE.pem
+-rw-r-----   1 apps      10011          1180 Feb 22  2018 cert_0B77BEBBCB7AA24705DECC0FBD6A02FC7ABD9B52.pem
+-rw-r-----   1 apps      10011          1561 Feb 22  2018 cert_132D0D45534B6997CDB2D5C339E25576609B5CC6.pem
+-rw-r-----   1 apps      10011          2431 Feb 22  2018 cert_1F4914F7D874951DDDAE02C0BEFD3A2D82755185.pem
+-rw-r-----   1 apps      10011          1561 Feb 22  2018 cert_204285DCF7EB764195578E136BD4B7D1E98E46A5.pem
+-rw-r-----   1 apps      10011          1167 Feb 22  2018 cert_20D80640DF9B25F512253A11EAF7598AEB14B547.pem
+-rw-r-----   1 apps      10011          1379 Feb 22  2018 cert_216B2A29E62A00CE820146D8244141B92511B279.pem
+-rw-r-----   1 apps      10011          1358 Feb 22  2018 cert_22D5D8DF8F0231D18DF79DB7CF8A2D64C93F6C3A.pem
+-rw-r-----   1 apps      10011          1204 Feb 22  2018 cert_23E594945195F2414803B4D564D2A3A3F5D88B8C.pem
+-rw-r-----   1 apps      10011          1310 Feb 22  2018 cert_25019019CFFBD9991CB76825748D945F30939542.pem
+-rw-r-----   1 apps      10011          1525 Feb 22  2018 cert_2796BAE63F1801E277261BA0D77770028F20EEE4.pem
+-rw-r-----   1 apps      10011          1281 Feb 22  2018 cert_293621028B20ED02F566C532D1D6ED909F45002F.pem
+-rw-r-----   1 apps      10011          1143 Feb 22  2018 cert_317A2AD07F2B335EF5A1C34E4B57E8B7D8F1FCA6.pem
+-rw-r-----   1 apps      10011          2004 Feb 22  2018 cert_31F1FD68226320EEC63B3F9DEA4A3E537C7C3917.pem
+-rw-r-----   1 apps      10011          1346 Feb 22  2018 cert_323C118E1BF7B8B65254E2E2100DD6029037F096.pem
+-rw-r-----   1 apps      10011          1777 Feb 22  2018 cert_3679CA35668772304D30A5FB873B0FA77BB70D54.pem
+-rw-r-----   1 apps      10011          1301 Feb 22  2018 cert_36B12B49F9819ED74C9EBC380FC6568F5DACB2F7.pem
+-rw-r-----   1 apps      10011          2016 Feb 22  2018 cert_379A197B418545350CA60369F33C2EAF474F2079.pem
+-rw-r-----   1 apps      10011          1399 Feb 22  2018 cert_3921C115C15D0ECA5CCB5BC4F07D21D8050B566A.pem
+-rw-r-----   1 apps      10011          1431 Feb 22  2018 cert_3A44735AE581901F248661461E3B9CC45FF53A1B.pem
+-rw-r-----   1 apps      10011          2837 Feb 22  2018 cert_3E2BF7F2031B96F38CE6C4D8A85D3E2D58476A0F.pem
+-rw-r-----   1 apps      10011          2159 Feb 22  2018 cert_3E5D358F283A0F647C1C927FFBAAD4852D997256.pem
+-rw-r-----   1 apps      10011          1444 Feb 22  2018 cert_47BEABC922EAE80E78783462A79F45C254FDE68B.pem
+-rw-r-----   1 apps      10011          1809 Feb 22  2018 cert_4EB6D578499B1CCF5F581EAD56BE3D9B6744A5E5.pem
+-rw-r-----   1 apps      10011          1582 Feb 22  2018 cert_503006091D97D4F5AE39F7CBE7927D7D652D3431.pem
+-rw-r-----   1 apps      10011          2321 Feb 22  2018 cert_51C6E70849066EF392D45CA00D6DA3628FC35239.pem
+-rw-r-----   1 apps      10011          1444 Feb 22  2018 cert_55A6723ECBF2ECCDC3237470199D2ABE11E381D1.pem
+-rw-r-----   1 apps      10011          2134 Feb 22  2018 cert_56E0FAC03B8F18235518E5D311CAE8C24331AB66.pem
+-rw-r-----   1 apps      10011          1444 Feb 22  2018 cert_590D2D7D884F402E617EA562321765CF17D894E9.pem
+-rw-r-----   1 apps      10011          1696 Feb 22  2018 cert_5D003860F002ED829DEAA41868F788186D62127F.pem
+-rw-r-----   1 apps      10011          1338 Feb 22  2018 cert_5F3B8CF2F810B37D78B4CEEC1919C37334B9C774.pem
+-rw-r-----   1 apps      10011          1395 Feb 22  2018 cert_5F43E5B1BFF8788CAC1CC7CA4A9AC6222BCC34C6.pem
+-rw-r-----   1 apps      10011          1444 Feb 22  2018 cert_5FB7EE0633E259DBAD0C4C9AE6D38F1A61C7DC25.pem
+-rw-r-----   1 apps      10011          1557 Feb 22  2018 cert_61EF43D77FCAD46151BC98E0C35912AF9FEB6311.pem
+-rw-r-----   1 apps      10011          1196 Feb 22  2018 cert_6252DC40F71143A22FDE9EF7348E064251B18118.pem
+-rw-r-----   1 apps      10011          1232 Feb 22  2018 cert_627F8D7827656399D27D7F9044C9FEB3F33EFA9A.pem
+-rw-r-----   1 apps      10011          1566 Feb 22  2018 cert_6631BF9EF74F9EB6C9D5A60CBA6ABED1F7BDEF7B.pem
+-rw-r-----   1 apps      10011          2110 Feb 22  2018 cert_67650DF17E8E7E5B8240A4F4564BCFE23D69C6F0.pem
+-rw-r-----   1 apps      10011           911 Feb 22  2018 cert_6782AAE0EDEEE21A5839D3C0CD14680A4F60142A.pem
+-rw-r-----   1 apps      10011          1143 Feb 22  2018 cert_69BD8CF49CD300FB592E1793CA556AF3ECAA35FB.pem
+-rw-r-----   1 apps      10011          1375 Feb 22  2018 cert_74207441729CDD92EC7931D823108DC28192E2BB.pem
+-rw-r-----   1 apps      10011           911 Feb 22  2018 cert_742C3192E607E424EB4549542BE1BBC53E6174E2.pem
+-rw-r-----   1 apps      10011          1431 Feb 22  2018 cert_75E0ABB6138512271C04F85FDDDE38E4B7242EFE.pem
+-rw-r-----   1 apps      10011          1025 Feb 22  2018 cert_7E784A101C8265CC2DE1F16D47B440CAD90A1945.pem
+-rw-r-----   1 apps      10011          1180 Feb 22  2018 cert_85371CA6E550143DCE2803471BDE3A09E8F8770F.pem
+-rw-r-----   1 apps      10011          1395 Feb 22  2018 cert_85A408C09C193E5D51587DCDD61330FD8CDE37BF.pem
+-rw-r-----   1 apps      10011          2094 Feb 22  2018 cert_85B5FF679B0C79961FC86E4422004613DB179284.pem
+-rw-r-----   1 apps      10011          1427 Feb 22  2018 cert_8782C6C304353BCFD29692D2593E7D44D934FF11.pem
+-rw-r-----   1 apps      10011          1366 Feb 22  2018 cert_887A79406A2E614FB65FA6255E1411E4E13A760A.pem
+-rw-r-----   1 apps      10011          2183 Feb 22  2018 cert_8C96BAEBDD2B070748EE303266A0F3986E7CAE58.pem
+-rw-r-----   1 apps      10011          1610 Feb 22  2018 cert_8CF427FD790C3AD166068DE81E57EFBB932272D4.pem
+-rw-r-----   1 apps      10011          2041 Feb 22  2018 cert_8D08FC43C0770CA84F4DCCB2D41A5D956D786DC4.pem
+-rw-r-----   1 apps      10011          1066 Feb 22  2018 cert_8D1784D537F3037DEC70FE578B519A99E610D7B0.pem
+-rw-r-----   1 apps      10011          1570 Feb 22  2018 cert_91C6D6EE3E8AC86384E548C299295C756C817B81.pem
+-rw-r-----   1 apps      10011          1501 Feb 22  2018 cert_925A8F8D2C6D04E0665F596AFF22D863E8256F3F.pem
+-rw-r-----   1 apps      10011           952 Feb 22  2018 cert_97817950D81C9670CC34D809CF794431367EF474.pem
+-rw-r-----   1 apps      10011          1817 Feb 22  2018 cert_99A69BE61AFE886B4D2B82007CB854FC317E1539.pem
+-rw-r-----   1 apps      10011          2126 Feb 22  2018 cert_9BAAE59F56EE21CB435ABE2593DFA7F040D11DCB.pem
+-rw-r-----   1 apps      10011          1488 Feb 22  2018 cert_9C615C4D4D85103A5326C24DBAEAE4A2D2D5CC97.pem
+-rw-r-----   1 apps      10011          1017 Feb 22  2018 cert_9F744E9F2B4DBAEC0F312C50B6563B8E2D93C311.pem
+-rw-r-----   1 apps      10011          1224 Feb 22  2018 cert_9FAD91A6CE6AC6C50047C44EC9D4A50D92D84979.pem
+-rw-r-----   1 apps      10011           911 Feb 22  2018 cert_A1DB6393916F17E4185509400415C70240B0AE6B.pem
+-rw-r-----   1 apps      10011          2045 Feb 22  2018 cert_A1E7C600AA4170E5B74BC94F9B9703EDC261B4B9.pem
+-rw-r-----   1 apps      10011          2748 Feb 22  2018 cert_A3F1333FE242BFCFC5D14E8F394298406810D1A0.pem
+-rw-r-----   1 apps      10011          1415 Feb 22  2018 cert_A8985D3A65E5E5C4B2D7D66D40C6DD2FB19C5436.pem
+-rw-r-----   1 apps      10011          1318 Feb 22  2018 cert_A9E9780814375888F20519B06D2B0D2B6016907D.pem
+-rw-r-----   1 apps      10011          1017 Feb 22  2018 cert_AADBBC22238FC401A127BB38DDF41DDB089EF012.pem
+-rw-r-----   1 apps      10011          1545 Feb 22  2018 cert_AD7E1C28B064EF8F6003402014C3D0E3370EB58A.pem
+-rw-r-----   1 apps      10011           741 Feb 22  2018 cert_ADB35DAC2770C885222A892DC0D66274A82797FF.pem
+-rw-r-----   1 apps      10011          1744 Feb 22  2018 cert_B172B1A56D95F91FE50287E14D37EA6A4463768A.pem
+-rw-r-----   1 apps      10011          1338 Feb 22  2018 cert_B1BC968BD4F49D622AA89A81F2150152A41D829C.pem
+-rw-r-----   1 apps      10011          1720 Feb 22  2018 cert_B31EB1B740E36C8402DADC37D44DF5D4674952F9.pem
+-rw-r-----   1 apps      10011          1184 Feb 22  2018 cert_B3EAC44776C9C81CEAF29D95B6CCA0081B67EC9D.pem
+-rw-r-----   1 apps      10011          1606 Feb 22  2018 cert_B435D4E1119D1C6690A749EBB394BD637BA782B7.pem
+-rw-r-----   1 apps      10011          1476 Feb 22  2018 cert_B51C067CEE2B0C3DF855AB2D92F4FE39D4E70F0E.pem
+-rw-r-----   1 apps      10011          1590 Feb 22  2018 cert_B80186D1EB9C86A54104CF3054F34C52B7E558C6.pem
+-rw-r-----   1 apps      10011           830 Feb 22  2018 cert_B8236B002F1D16865301556C11A437CAEBFFC3BB.pem
+-rw-r-----   1 apps      10011          1561 Feb 22  2018 cert_C8EC8C879269CB4BAB39E98D7E5767F31495739D.pem
+-rw-r-----   1 apps      10011          2118 Feb 22  2018 cert_CA3AFBCF1240364B44B216208880483919937CF7.pem
+-rw-r-----   1 apps      10011           911 Feb 22  2018 cert_CE6A64A309E42FBBD9851C453E6409EAE87D60F1.pem
+-rw-r-----   1 apps      10011          1346 Feb 22  2018 cert_CF9E876DD3EBFC422697A3B5A37AA076A9062348.pem
+-rw-r-----   1 apps      10011          1594 Feb 22  2018 cert_D1EB23A46D17D68FD92564C2F1F1601764D8E349.pem
+-rw-r-----   1 apps      10011          1220 Feb 22  2018 cert_D23209AD23D314232174E40D7F9D62139786633A.pem
+-rw-r-----   1 apps      10011          1338 Feb 22  2018 cert_D4DE20D05E66FC53FE1A50882C78DB2852CAE474.pem
+-rw-r-----   1 apps      10011          1306 Feb 22  2018 cert_D69B561148F01C77C54578C10926DF5B856976AD.pem
+-rw-r-----   1 apps      10011          1968 Feb 22  2018 cert_D8A6332CE0036FB185F6634F7D6A066526322827.pem
+-rw-r-----   1 apps      10011          2122 Feb 22  2018 cert_D8C5388AB7301B1B6ED47AE645253A6F9F1A2761.pem
+-rw-r-----   1 apps      10011          1009 Feb 22  2018 cert_DA40188B9189A3EDEEAEDA97FE2F9DF5B7D18A41.pem
+-rw-r-----   1 apps      10011          1293 Feb 22  2018 cert_DE28F4A4FFE5B92FA3C503D1A349A7F9962A8212.pem
+-rw-r-----   1 apps      10011          2155 Feb 22  2018 cert_DE3F40BD5093D39B6C60F6DABC076201008976C9.pem
+-rw-r-----   1 apps      10011          1253 Feb 22  2018 cert_E0AB059420725493056062023670F7CD2EFC6666.pem
+-rw-r-----   1 apps      10011          2012 Feb 22  2018 cert_E621F3354379059A4B68309D8A2F74221587EC79.pem
+-rw-r-----   1 apps      10011          1606 Feb 22  2018 cert_F17F6FB631DC99E3A3C87FFE1CF1811088D96033.pem
+-rw-r-----   1 apps      10011          1582 Feb 22  2018 cert_F18B538D1BE903B6A6F056435B171589CAF36BF2.pem
+-rw-r-----   1 apps      10011          2126 Feb 22  2018 cert_F373B387065A28848AF2F34ACE192BDDC78E9CAC.pem
+-rw-r-----   1 apps      10011          1029 Feb 22  2018 cert_F8F8D5BDF9F2F3852B1569D137C04BCB9A96F21A.pem
+-rw-r-----   1 apps      10011          1281 Feb 22  2018 cert_F9B5B632455F9CBEEC575F80DCE96E2CC7B278B7.pem
+-rw-r-----   1 apps      10011          2118 Feb 22  2018 d7e8dc79.0
+-rw-r-----   1 apps      10011          1557 Feb 22  2018 dc45b0bd.0
+-rw-r-----   1 apps      10011          1521 Feb 22  2018 e2799e36.0
+-rw-r-----   1 apps      10011          1399 Feb 22  2018 eacdeb40.0
+-rw-r-----   1 apps      10011          1561 Feb 22  2018 ee1365c0.0
+-rw-r-----   1 apps      10011          1594 Feb 22  2018 ee64a828.0
+-rw-r-----   1 apps      10011          1017 Feb 22  2018 eed8c118.0
+-rw-r-----   1 apps      10011          1025 Feb 22  2018 ef2f636c.0
+-rw-r-----   1 apps      10011          1375 Feb 22  2018 f060240e.0
+-rw-r-----   1 apps      10011          1525 Feb 22  2018 f081611a.0
+-rw-r-----   1 apps      10011          1301 Feb 22  2018 f3377b1b.0
+-rw-r-----   1 apps      10011          1545 Feb 22  2018 f387163d.0
+-rw-r-----   1 apps      10011          1427 Feb 22  2018 f39fc864.0
+-rw-r-----   1 apps      10011          1379 Feb 22  2018 fa373084.0
+-rw-r-----   1 apps      10011           741 Feb 22  2018 fc43ba30.0
+
+native/system/fonts:
+total 27815
+drwxr-x---   2 apps      10011          4096 Feb 22  2018 .
+drwxrwxrwx+ 13 apps      10011          4096 Feb 22  2018 ..
+-rw-r-----   1 apps      10011          5116 Feb 22  2018 AndroidClock.ttf
+-rw-r-----   1 apps      10011          4824 Feb 22  2018 AndroidClock_Highlight.ttf
+-rw-r-----   1 apps      10011          4824 Feb 22  2018 AndroidClock_Solid.ttf
+-rw-r-----   1 apps      10011        448680 Feb 22  2018 AndroidEmoji.ttf
+-rw-r-----   1 apps      10011          6880 Feb 22  2018 Clockopia.ttf
+-rw-r-----   1 apps      10011         89456 Feb 22  2018 DroidNaskh-Regular.ttf
+-rw-r-----   1 apps      10011        111520 Feb 22  2018 DroidNaskhUI-Regular.ttf
+-r-xr-xr-x   1 apps      10011        117240 Feb 22  2018 DroidSans-Bold.ttf
+-r-xr-xr-x   1 apps      10011        114976 Feb 22  2018 DroidSans.ttf
+-rw-r-----   1 apps      10011         13856 Feb 22  2018 DroidSansArmenian.ttf
+-rw-r-----   1 apps      10011        123372 Feb 22  2018 DroidSansDevanagari-Regular.ttf
+-rw-r-----   1 apps      10011        227928 Feb 22  2018 DroidSansEthiopic-Regular.ttf
+-rw-r-----   1 apps      10011       4529044 Feb 22  2018 DroidSansFallback.ttf
+-rw-r-----   1 apps      10011         21096 Feb 22  2018 DroidSansGeorgian.ttf
+-rw-r-----   1 apps      10011         30280 Feb 22  2018 DroidSansHebrew-Bold.ttf
+-rw-r-----   1 apps      10011         30024 Feb 22  2018 DroidSansHebrew-Regular.ttf
+-rw-r-----   1 apps      10011        119380 Feb 22  2018 DroidSansMono.ttf
+-rw-r-----   1 apps      10011         36448 Feb 22  2018 DroidSansTamil-Bold.ttf
+-rw-r-----   1 apps      10011         36308 Feb 22  2018 DroidSansTamil-Regular.ttf
+-rw-r-----   1 apps      10011         35480 Feb 22  2018 DroidSansThai.ttf
+-rw-r-----   1 apps      10011        249880 Feb 22  2018 DroidSerif-Bold.ttf
+-rw-r-----   1 apps      10011        265008 Feb 22  2018 DroidSerif-BoldItalic.ttf
+-rw-r-----   1 apps      10011        251944 Feb 22  2018 DroidSerif-Italic.ttf
+-rw-r-----   1 apps      10011        248904 Feb 22  2018 DroidSerif-Regular.ttf
+-rw-r-----   1 apps      10011       2871020 Feb 22  2018 MTLmr3m.ttf
+-rw-r-----   1 apps      10011       1429144 Feb 22  2018 NanumGothic.ttf
+-rw-r-----   1 apps      10011        104376 Feb 22  2018 NotoSansBengali-Bold.ttf
+-rw-r-----   1 apps      10011        107312 Feb 22  2018 NotoSansBengali-Regular.ttf
+-rw-r-----   1 apps      10011        104948 Feb 22  2018 NotoSansBengaliUI-Bold.ttf
+-rw-r-----   1 apps      10011        107868 Feb 22  2018 NotoSansBengaliUI-Regular.ttf
+-rw-r-----   1 apps      10011         77724 Feb 22  2018 NotoSansKannada-Bold.ttf
+-rw-r-----   1 apps      10011         78928 Feb 22  2018 NotoSansKannada-Regular.ttf
+-rw-r-----   1 apps      10011         77784 Feb 22  2018 NotoSansKannadaUI-Bold.ttf
+-rw-r-----   1 apps      10011         78968 Feb 22  2018 NotoSansKannadaUI-Regular.ttf
+-rw-r-----   1 apps      10011         55932 Feb 22  2018 NotoSansMalayalam-Bold.ttf
+-rw-r-----   1 apps      10011         55980 Feb 22  2018 NotoSansMalayalam-Regular.ttf
+-rw-r-----   1 apps      10011         55972 Feb 22  2018 NotoSansMalayalamUI-Bold.ttf
+-rw-r-----   1 apps      10011         56016 Feb 22  2018 NotoSansMalayalamUI-Regular.ttf
+-rw-r-----   1 apps      10011        111424 Feb 22  2018 NotoSansTelugu-Bold.ttf
+-rw-r-----   1 apps      10011        112068 Feb 22  2018 NotoSansTelugu-Regular.ttf
+-rw-r-----   1 apps      10011        111512 Feb 22  2018 NotoSansTeluguUI-Bold.ttf
+-rw-r-----   1 apps      10011        112128 Feb 22  2018 NotoSansTeluguUI-Regular.ttf
+-rw-r-----   1 apps      10011        117240 Feb 22  2018 Roboto-Bold.ttf
+-rw-r-----   1 apps      10011        120668 Feb 22  2018 Roboto-BoldItalic.ttf
+-rw-r-----   1 apps      10011        101180 Feb 22  2018 Roboto-Italic.ttf
+-rw-r-----   1 apps      10011        115200 Feb 22  2018 Roboto-Light.ttf
+-rw-r-----   1 apps      10011        118728 Feb 22  2018 Roboto-LightItalic.ttf
+-rw-r-----   1 apps      10011        114976 Feb 22  2018 Roboto-Regular.ttf
+-rw-r-----   1 apps      10011        115632 Feb 22  2018 Roboto-Thin.ttf
+-rw-r-----   1 apps      10011        119376 Feb 22  2018 Roboto-ThinItalic.ttf
+-rw-r-----   1 apps      10011        115036 Feb 22  2018 RobotoCondensed-Bold.ttf
+-rw-r-----   1 apps      10011        118580 Feb 22  2018 RobotoCondensed-BoldItalic.ttf
+-rw-r-----   1 apps      10011        118064 Feb 22  2018 RobotoCondensed-Italic.ttf
+-rw-r-----   1 apps      10011        114568 Feb 22  2018 RobotoCondensed-Regular.ttf
+
+native/system/framework:
+total 69763
+drwxr-x---   2 apps      10011          4096 Feb 22  2018 .
+drwxrwxrwx+ 13 apps      10011          4096 Feb 22  2018 ..
+-rw-r-----   1 apps      10011           313 Feb 22  2018 OSMgmaps.jar
+-rw-r-----   1 apps      10011        280344 Feb 22  2018 OSMgmaps.odex
+-rw-r-----   1 apps      10011           313 Feb 22  2018 am.jar
+-rw-r-----   1 apps      10011         43880 Feb 22  2018 am.odex
+-rw-r-----   1 apps      10011           313 Feb 22  2018 android.policy.jar
+-rw-r-----   1 apps      10011        562984 Feb 22  2018 android.policy.odex
+-rw-r-----   1 apps      10011           313 Feb 22  2018 android.test.runner.jar
+-rw-r-----   1 apps      10011        187768 Feb 22  2018 android.test.runner.odex
+-rw-r-----   1 apps      10011         18027 Feb 22  2018 apache-xml.jar
+-rw-r-----   1 apps      10011       1378680 Feb 22  2018 apache-xml.odex
+-rw-r-----   1 apps      10011           313 Feb 22  2018 bmgr.jar
+-rw-r-----   1 apps      10011         14888 Feb 22  2018 bmgr.odex
+-rw-r-----   1 apps      10011           313 Feb 22  2018 bouncycastle.jar
+-rw-r-----   1 apps      10011       1099216 Feb 22  2018 bouncycastle.odex
+-rw-r-----   1 apps      10011           313 Feb 22  2018 bu.jar
+-rw-r-----   1 apps      10011          5080 Feb 22  2018 bu.odex
+-rw-r-----   1 apps      10011           313 Feb 22  2018 com.android.location.provider.jar
+-rw-r-----   1 apps      10011         10888 Feb 22  2018 com.android.location.provider.odex
+-rw-r-----   1 apps      10011           313 Feb 22  2018 content.jar
+-rw-r-----   1 apps      10011         17640 Feb 22  2018 content.odex
+-rw-r-----   1 apps      10011           313 Feb 22  2018 core-junit.jar
+-rw-r-----   1 apps      10011         27576 Feb 22  2018 core-junit.odex
+-rw-r-----   1 apps      10011          3128 Feb 22  2018 core.jar
+-rw-r-----   1 apps      10011       3566248 Feb 22  2018 core.odex
+-rw-r-----   1 apps      10011        659797 Feb 22  2018 ext.jar
+-rw-r-----   1 apps      10011       1510336 Feb 22  2018 ext.odex
+-rw-r-----   1 apps      10011       9753091 Feb 22  2018 framework-res.apk
+-rw-r-----   1 apps      10011         18482 Feb 22  2018 framework.jar
+-rw-r-----   1 apps      10011      11098392 Feb 22  2018 framework.odex
+-rw-r-----   1 apps      10011           313 Feb 22  2018 ime.jar
+-rw-r-----   1 apps      10011          6832 Feb 22  2018 ime.odex
+-rw-r-----   1 apps      10011           313 Feb 22  2018 input.jar
+-rw-r-----   1 apps      10011          7248 Feb 22  2018 input.odex
+-rw-r-----   1 apps      10011           313 Feb 22  2018 javax.obex.jar
+-rw-r-----   1 apps      10011         58320 Feb 22  2018 javax.obex.odex
+-rw-r-----   1 apps      10011           313 Feb 22  2018 media_cmd.jar
+-rw-r-----   1 apps      10011          8616 Feb 22  2018 media_cmd.odex
+-rw-r-----   1 apps      10011           313 Feb 22  2018 mms-common.jar
+-rw-r-----   1 apps      10011        130440 Feb 22  2018 mms-common.odex
+-rw-r-----   1 apps      10011           313 Feb 22  2018 monkey.jar
+-rw-r-----   1 apps      10011        120152 Feb 22  2018 monkey.odex
+-rw-r-----   1 apps      10011           313 Feb 22  2018 pm.jar
+-rw-r-----   1 apps      10011         40120 Feb 22  2018 pm.odex
+-rw-r-----   1 apps      10011           313 Feb 22  2018 requestsync.jar
+-rw-r-----   1 apps      10011          8968 Feb 22  2018 requestsync.odex
+-rw-r-----   1 apps      10011           313 Feb 22  2018 services.jar
+-rw-r-----   1 apps      10011       3463104 Feb 22  2018 services.odex
+-rw-r-----   1 apps      10011           313 Feb 22  2018 settings.jar
+-rw-r-----   1 apps      10011          8152 Feb 22  2018 settings.odex
+-rw-r-----   1 apps      10011           313 Feb 22  2018 svc.jar
+-rw-r-----   1 apps      10011         10408 Feb 22  2018 svc.odex
+-rw-r-----   1 apps      10011           313 Feb 22  2018 telephony-common.jar
+-rw-r-----   1 apps      10011       1278048 Feb 22  2018 telephony-common.odex
+-rw-r-----   1 apps      10011           313 Feb 22  2018 uiautomator.jar
+-rw-r-----   1 apps      10011        114616 Feb 22  2018 uiautomator.odex
+-rw-r-----   1 apps      10011           313 Feb 22  2018 voip-common.jar
+-rw-r-----   1 apps      10011        171680 Feb 22  2018 voip-common.odex
+-rw-r-----   1 apps      10011           313 Feb 22  2018 wm.jar
+-rw-r-----   1 apps      10011          6656 Feb 22  2018 wm.odex
+
+native/system/lib:
+total 83208
+drwxr-x---   7 apps      10011          8192 Feb 22  2018 .
+drwxrwxrwx+ 13 apps      10011          4096 Feb 22  2018 ..
+drwxr-x---   2 apps      10011          4096 Feb 22  2018 drm
+drwxr-x---   2 apps      10011          4096 Feb 22  2018 egl
+drwxr-x---   2 apps      10011          4096 Feb 22  2018 hw
+-r-xr-xr-x   1 apps      10011        339800 Feb 22  2018 libEGL.so
+-r-xr-xr-x   1 apps      10011          9484 Feb 22  2018 libETC1.so
+-r-xr-xr-x   1 apps      10011        208768 Feb 22  2018 libFFTEm.so
+-r-xr-xr-x   1 apps      10011        358412 Feb 22  2018 libGLES_trace.so
+-r-xr-xr-x   1 apps      10011         29928 Feb 22  2018 libGLESv1_CM.so
+-r-xr-xr-x   1 apps      10011         38092 Feb 22  2018 libGLESv2.so
+-r-xr-xr-x   1 apps      10011         38092 Feb 22  2018 libGLESv3.so
+-r-xr-xr-x   1 apps      10011       9310920 Feb 22  2018 libLLVM.so
+-r-xr-xr-x   1 apps      10011          9532 Feb 22  2018 libOpenMAXAL.so
+-r-xr-xr-x   1 apps      10011          9532 Feb 22  2018 libOpenSLES.so
+-r-xr-xr-x   1 apps      10011        225512 Feb 22  2018 libRS.so
+-r-xr-xr-x   1 apps      10011         84840 Feb 22  2018 libRSCpuRef.so
+-r-xr-xr-x   1 apps      10011        154128 Feb 22  2018 libRSDriver.so
+-r-xr-xr-x   1 apps      10011         51040 Feb 22  2018 libRScpp.so
+-r-xr-xr-x   1 apps      10011          5384 Feb 22  2018 libSR_AudioIn.so
+-r-xr-xr-x   1 apps      10011         67556 Feb 22  2018 libandroid.so
+-r-xr-xr-x   1 apps      10011         67556 Feb 22  2018 libandroid_ndk.so
+-r-xr-xr-x   1 apps      10011        790264 Feb 22  2018 libandroid_runtime.so
+-r-xr-xr-x   1 apps      10011        118240 Feb 22  2018 libandroid_servers.so
+-r-xr-xr-x   1 apps      10011        237716 Feb 22  2018 libandroidfw.so
+-r-xr-xr-x   1 apps      10011         38936 Feb 22  2018 libandroidloader.so
+-r-xr-xr-x   1 apps      10011         22304 Feb 22  2018 libaudioeffect_jni.so
+-r-xr-xr-x   1 apps      10011        377960 Feb 22  2018 libaudioflinger.so
+-r-xr-xr-x   1 apps      10011          9584 Feb 22  2018 libaudioutils.so
+-r-xr-xr-x   1 apps      10011          5364 Feb 22  2018 libbcc.sha1.so
+-r-xr-xr-x   1 apps      10011        681280 Feb 22  2018 libbcc.so
+-r-xr-xr-x   1 apps      10011        175152 Feb 22  2018 libbcinfo.so
+-r-xr-xr-x   1 apps      10011        196008 Feb 22  2018 libbinder.so
+-r-xr-xr-x   1 apps      10011         85244 Feb 22  2018 libbionic.so
+-r-xr-xr-x   1 apps      10011         60428 Feb 22  2018 libbluetooth_jni.so
+-r-xr-xr-x   1 apps      10011        211884 Feb 22  2018 libcamera_client.so
+-r-xr-xr-x   1 apps      10011         23528 Feb 22  2018 libcamera_metadata.so
+-r-xr-xr-x   1 apps      10011        497636 Feb 22  2018 libcameraservice.so
+-r-xr-xr-x   1 apps      10011         86152 Feb 22  2018 libchost.so
+-r-xr-xr-x   1 apps      10011          5400 Feb 22  2018 libchost_log.so
+-r-xr-xr-x   1 apps      10011       2037376 Feb 22  2018 libchromium_net.so
+-rw-r-----   1 apps      10011        167100 Feb 22  2018 libclcore.bc
+-rw-r-----   1 apps      10011        162736 Feb 22  2018 libclcore_debug.bc
+-rw-r-----   1 apps      10011        157976 Feb 22  2018 libclcore_neon.bc
+-r-xr-xr-x   1 apps      10011         71496 Feb 22  2018 libcommon_time_client.so
+-r-xr-xr-x   1 apps      10011         26016 Feb 22  2018 libcompiler_rt.so
+-r-xr-xr-x   1 apps      10011          5368 Feb 22  2018 libcorkscrew.so
+-r-xr-xr-x   1 apps      10011        928916 Feb 22  2018 libcrypto.so
+-r-xr-xr-x   1 apps      10011          5432 Feb 22  2018 libctest.so
+-r-xr-xr-x   1 apps      10011         51528 Feb 22  2018 libcutils.so
+-r-xr-xr-x   1 apps      10011          5488 Feb 22  2018 libdefcontainer_jni.so
+-r-xr-xr-x   1 apps      10011          5316 Feb 22  2018 libdl.so
+-r-xr-xr-x   1 apps      10011         34416 Feb 22  2018 libdrm1.so
+-r-xr-xr-x   1 apps      10011         13836 Feb 22  2018 libdrm1_jni.so
+-r-xr-xr-x   1 apps      10011        109008 Feb 22  2018 libdrmframework.so
+-r-xr-xr-x   1 apps      10011         34888 Feb 22  2018 libdrmframework_jni.so
+-r-xr-xr-x   1 apps      10011        941764 Feb 22  2018 libdvm.so
+-r-xr-xr-x   1 apps      10011          9624 Feb 22  2018 libeffects.so
+-r-xr-xr-x   1 apps      10011          9660 Feb 22  2018 libemoji.so
+-r-xr-xr-x   1 apps      10011         39020 Feb 22  2018 libexif_android.so
+-r-xr-xr-x   1 apps      10011          9664 Feb 22  2018 libexif_jni.so
+-r-xr-xr-x   1 apps      10011        150996 Feb 22  2018 libfilterfw.so
+-r-xr-xr-x   1 apps      10011          9492 Feb 22  2018 libfilterpack_imageproc.so
+-r-xr-xr-x   1 apps      10011         17928 Feb 22  2018 libframebuffer_screen.so
+-r-xr-xr-x   1 apps      10011         13724 Feb 22  2018 libgralloc_screen.so
+-r-xr-xr-x   1 apps      10011        253960 Feb 22  2018 libgui.so
+-r-xr-xr-x   1 apps      10011          5468 Feb 22  2018 libhardware.so
+-r-xr-xr-x   1 apps      10011          5472 Feb 22  2018 libhardware_legacy.so
+-r-xr-xr-x   1 apps      10011        169688 Feb 22  2018 libharfbuzz.so
+-r-xr-xr-x   1 apps      10011        322132 Feb 22  2018 libharfbuzz_ng.so
+-r-xr-xr-x   1 apps      10011         13840 Feb 22  2018 libhwcwindow.so
+-r-xr-xr-x   1 apps      10011          9524 Feb 22  2018 libhwplatform.so
+-r-xr-xr-x   1 apps      10011        212660 Feb 22  2018 libhwui.so
+-r-xr-xr-x   1 apps      10011       1242876 Feb 22  2018 libicui18n_android.so
+-r-xr-xr-x   1 apps      10011       1034148 Feb 22  2018 libicuuc_android.so
+-r-xr-xr-x   1 apps      10011        283356 Feb 22  2018 libinput.so
+-r-xr-xr-x   1 apps      10011        296544 Feb 22  2018 libjavacore.so
+-r-xr-xr-x   1 apps      10011         22160 Feb 22  2018 libjni_BlackBerryIME.so
+-r-xr-xr-x   1 apps      10011          5392 Feb 22  2018 libjni_eglfence.so
+-r-xr-xr-x   1 apps      10011         58752 Feb 22  2018 libjni_filtershow_filters.so
+-r-xr-xr-x   1 apps      10011        212100 Feb 22  2018 libjni_mosaic.so
+-r-xr-xr-x   1 apps      10011          5432 Feb 22  2018 libjnigraphics.so
+-r-xr-xr-x   1 apps      10011        210668 Feb 22  2018 libjpeg_android.so
+-r-xr-xr-x   1 apps      10011         38476 Feb 22  2018 libkeystore_binder.so
+-r-xr-xr-x   1 apps      10011         17916 Feb 22  2018 liblog.so
+-r-xr-xr-x   1 apps      10011         12104 Feb 22  2018 liblogwrap.so
+-r-xr-xr-x   1 apps      10011        108340 Feb 22  2018 libm_android.so
+-r-xr-xr-x   1 apps      10011        649180 Feb 22  2018 libmedia.so
+-r-xr-xr-x   1 apps      10011        194496 Feb 22  2018 libmedia_jni.so
+-r-xr-xr-x   1 apps      10011         22032 Feb 22  2018 libmedialogservice.so
+-r-xr-xr-x   1 apps      10011        585116 Feb 22  2018 libmediaplayerservice.so
+-r-xr-xr-x   1 apps      10011          9528 Feb 22  2018 libnativehelper.so
+-r-xr-xr-x   1 apps      10011         30428 Feb 22  2018 libnbaio.so
+-r-xr-xr-x   1 apps      10011         22156 Feb 22  2018 libnetutils.so
+-r-xr-xr-x   1 apps      10011          5376 Feb 22  2018 libnfc_ndef.so
+-r-xr-xr-x   1 apps      10011        130288 Feb 22  2018 libpixelflinger.so
+-r-xr-xr-x   1 apps      10011          5452 Feb 22  2018 libpower.so
+-r-xr-xr-x   1 apps      10011         13752 Feb 22  2018 libpowermanager.so
+-r-xr-xr-x   1 apps      10011          5316 Feb 22  2018 libpthread.so
+-r-xr-xr-x   1 apps      10011         18280 Feb 22  2018 libqnxlocationservice.so
+-r-xr-xr-x   1 apps      10011         35924 Feb 22  2018 libril.so
+-r-xr-xr-x   1 apps      10011         31808 Feb 22  2018 librs_jni.so
+-r-xr-xr-x   1 apps      10011        113728 Feb 22  2018 librtp_jni.so
+-r-xr-xr-x   1 apps      10011          9412 Feb 22  2018 libselinux.so
+-r-xr-xr-x   1 apps      10011         96716 Feb 22  2018 libsensorservice.so
+-r-xr-xr-x   1 apps      10011       2188732 Feb 22  2018 libskia.so
+-r-xr-xr-x   1 apps      10011          9764 Feb 22  2018 libsmartdl.so
+-r-xr-xr-x   1 apps      10011          5376 Feb 22  2018 libsocket_android.so
+-r-xr-xr-x   1 apps      10011        326384 Feb 22  2018 libsonivox.so
+-r-xr-xr-x   1 apps      10011         13892 Feb 22  2018 libsoundpool.so
+-r-xr-xr-x   1 apps      10011         17900 Feb 22  2018 libspeech_jni.so
+-r-xr-xr-x   1 apps      10011         19212 Feb 22  2018 libspeexresampler.so
+-r-xr-xr-x   1 apps      10011        345484 Feb 22  2018 libsqlite.so
+-r-xr-xr-x   1 apps      10011         30212 Feb 22  2018 libsqlite_jni.so
+-r-xr-xr-x   1 apps      10011        240008 Feb 22  2018 libssl.so
+-r-xr-xr-x   1 apps      10011       1127208 Feb 22  2018 libstagefright.so
+-r-xr-xr-x   1 apps      10011         50720 Feb 22  2018 libstagefright_amrnb_common.so
+-r-xr-xr-x   1 apps      10011         21876 Feb 22  2018 libstagefright_avc_common.so
+-r-xr-xr-x   1 apps      10011         68076 Feb 22  2018 libstagefright_chromium_http.so
+-r-xr-xr-x   1 apps      10011          5340 Feb 22  2018 libstagefright_enc_common.so
+-r-xr-xr-x   1 apps      10011         55388 Feb 22  2018 libstagefright_foundation.so
+-r-xr-xr-x   1 apps      10011        109068 Feb 22  2018 libstagefright_omx.so
+-r-xr-xr-x   1 apps      10011        233124 Feb 22  2018 libstagefright_soft_aacdec.so
+-r-xr-xr-x   1 apps      10011        286216 Feb 22  2018 libstagefright_soft_aacenc.so
+-r-xr-xr-x   1 apps      10011         96772 Feb 22  2018 libstagefright_soft_amrdec.so
+-r-xr-xr-x   1 apps      10011         63636 Feb 22  2018 libstagefright_soft_amrnbenc.so
+-r-xr-xr-x   1 apps      10011        131532 Feb 22  2018 libstagefright_soft_amrwbenc.so
+-r-xr-xr-x   1 apps      10011        175552 Feb 22  2018 libstagefright_soft_flacenc.so
+-r-xr-xr-x   1 apps      10011         17948 Feb 22  2018 libstagefright_soft_g711dec.so
+-r-xr-xr-x   1 apps      10011         30480 Feb 22  2018 libstagefright_soft_gsmdec.so
+-r-xr-xr-x   1 apps      10011        125272 Feb 22  2018 libstagefright_soft_h264dec.so
+-r-xr-xr-x   1 apps      10011        100588 Feb 22  2018 libstagefright_soft_h264enc.so
+-r-xr-xr-x   1 apps      10011         67480 Feb 22  2018 libstagefright_soft_mp3dec.so
+-r-xr-xr-x   1 apps      10011        100572 Feb 22  2018 libstagefright_soft_mpeg4dec.so
+-r-xr-xr-x   1 apps      10011        129296 Feb 22  2018 libstagefright_soft_mpeg4enc.so
+-r-xr-xr-x   1 apps      10011         17904 Feb 22  2018 libstagefright_soft_rawdec.so
+-r-xr-xr-x   1 apps      10011         22124 Feb 22  2018 libstagefright_soft_vorbisdec.so
+-r-xr-xr-x   1 apps      10011         92352 Feb 22  2018 libstagefright_soft_vpxdec.so
+-r-xr-xr-x   1 apps      10011        249048 Feb 22  2018 libstagefright_soft_vpxenc.so
+-r-xr-xr-x   1 apps      10011        189508 Feb 22  2018 libstagefright_wfd.so
+-r-xr-xr-x   1 apps      10011         13664 Feb 22  2018 libstagefright_yuv.so
+-r-xr-xr-x   1 apps      10011         38940 Feb 22  2018 libstagefrighthw.so
+-r-xr-xr-x   1 apps      10011          9568 Feb 22  2018 libstdc++_android.so
+-r-xr-xr-x   1 apps      10011        246272 Feb 22  2018 libsurfaceflinger.so
+-r-xr-xr-x   1 apps      10011          5404 Feb 22  2018 libsurfaceflinger_ddmconnection.so
+-r-xr-xr-x   1 apps      10011          9608 Feb 22  2018 libsuspend.so
+-r-xr-xr-x   1 apps      10011          5372 Feb 22  2018 libsync.so
+-r-xr-xr-x   1 apps      10011          9712 Feb 22  2018 libsystem_server.so
+-r-xr-xr-x   1 apps      10011         18128 Feb 22  2018 libsysutils.so
+-r-xr-xr-x   1 apps      10011         13896 Feb 22  2018 libttscompat.so
+-r-xr-xr-x   1 apps      10011        205116 Feb 22  2018 libttspico.so
+-r-xr-xr-x   1 apps      10011         51180 Feb 22  2018 libui.so
+-r-xr-xr-x   1 apps      10011        172340 Feb 22  2018 libutils.so
+-r-xr-xr-x   1 apps      10011         42896 Feb 22  2018 libvariablespeed.so
+-r-xr-xr-x   1 apps      10011        237316 Feb 22  2018 libvideoeditor_core.so
+-r-xr-xr-x   1 apps      10011         89308 Feb 22  2018 libvideoeditor_jni.so
+-r-xr-xr-x   1 apps      10011         22140 Feb 22  2018 libvideoeditor_osal.so
+-r-xr-xr-x   1 apps      10011         13588 Feb 22  2018 libvideoeditor_videofilters.so
+-r-xr-xr-x   1 apps      10011        130116 Feb 22  2018 libvideoeditorplayer.so
+-r-xr-xr-x   1 apps      10011        105212 Feb 22  2018 libvorbisidec.so
+-r-xr-xr-x   1 apps      10011       7458080 Feb 22  2018 libwebcore.so
+-r-xr-xr-x   1 apps      10011        447008 Feb 22  2018 libwebrtc_audio_preprocessing.so
+-r-xr-xr-x   1 apps      10011        166072 Feb 22  2018 libwilhelm.so
+-r-xr-xr-x   1 apps      10011         83536 Feb 22  2018 libz.so
+drwxr-x---   2 apps      10011          4096 Feb 22  2018 soundfx
+drwxr-x---   3 apps      10011          4096 Feb 22  2018 ssl
+
+native/system/lib/drm:
+total 141
+drwxr-x---   2 apps      10011          4096 Feb 22  2018 .
+drwxr-x---   7 apps      10011          8192 Feb 22  2018 ..
+-r-xr-xr-x   1 apps      10011         59668 Feb 22  2018 libfwdlockengine.so
+
+native/system/lib/egl:
+total 229
+drwxr-x---   2 apps      10011          4096 Feb 22  2018 .
+drwxr-x---   7 apps      10011          8192 Feb 22  2018 ..
+-rw-r-----   1 apps      10011            20 Feb 22  2018 egl.cfg
+-r-xr-xr-x   1 apps      10011        104016 Feb 22  2018 libGLES_android.so
+
+native/system/lib/hw:
+total 1109
+drwxr-x---   2 apps      10011          4096 Feb 22  2018 .
+drwxr-x---   7 apps      10011          8192 Feb 22  2018 ..
+-r-xr-xr-x   1 apps      10011         13944 Feb 22  2018 audio.primary.default.so
+-r-xr-xr-x   1 apps      10011          9716 Feb 22  2018 audio_policy.default.so
+-r-xr-xr-x   1 apps      10011        164616 Feb 22  2018 bluetooth.default.so
+-r-xr-xr-x   1 apps      10011        275448 Feb 22  2018 camera.default.so
+-r-xr-xr-x   1 apps      10011         14096 Feb 22  2018 gps.default.so
+-r-xr-xr-x   1 apps      10011         14184 Feb 22  2018 gralloc.Adreno.so
+-r-xr-xr-x   1 apps      10011         14176 Feb 22  2018 gralloc.SGX.so
+-r-xr-xr-x   1 apps      10011          9996 Feb 22  2018 gralloc.default.so
+-r-xr-xr-x   1 apps      10011          5536 Feb 22  2018 hwcomposer.default.so
+-r-xr-xr-x   1 apps      10011          9760 Feb 22  2018 keystore.default.so
+-r-xr-xr-x   1 apps      10011          5524 Feb 22  2018 local_time.default.so
+-r-xr-xr-x   1 apps      10011          5504 Feb 22  2018 power.default.so
+-r-xr-xr-x   1 apps      10011         10732 Feb 22  2018 sensors.default.so
+
+native/system/lib/soundfx:
+total 273
+drwxr-x---   2 apps      10011          4096 Feb 22  2018 .
+drwxr-x---   7 apps      10011          8192 Feb 22  2018 ..
+-r-xr-xr-x   1 apps      10011         13780 Feb 22  2018 libaudiopreprocessing.so
+-r-xr-xr-x   1 apps      10011         63628 Feb 22  2018 libbundlewrapper.so
+-r-xr-xr-x   1 apps      10011          9624 Feb 22  2018 libdownmix.so
+-r-xr-xr-x   1 apps      10011         30076 Feb 22  2018 libreverbwrapper.so
+-r-xr-xr-x   1 apps      10011          9576 Feb 22  2018 libvisualizer.so
+
+native/system/lib/ssl:
+total 32
+drwxr-x---   3 apps      10011          4096 Feb 22  2018 .
+drwxr-x---   7 apps      10011          8192 Feb 22  2018 ..
+drwxr-x---   2 apps      10011          4096 Feb 22  2018 engines
+
+native/system/lib/ssl/engines:
+total 36
+drwxr-x---   2 apps      10011          4096 Feb 22  2018 .
+drwxr-x---   3 apps      10011          4096 Feb 22  2018 ..
+-r-xr-xr-x   1 apps      10011          9740 Feb 22  2018 libkeystore.so
+
+native/system/media:
+total 24
+drwxr-x---   3 apps      10011          4096 Feb 22  2018 .
+drwxrwxrwx+ 13 apps      10011          4096 Feb 22  2018 ..
+drwxr-x---   6 apps      10011          4096 Feb 22  2018 audio
+
+native/system/media/audio:
+total 48
+drwxr-x---   6 apps      10011          4096 Feb 22  2018 .
+drwxr-x---   3 apps      10011          4096 Feb 22  2018 ..
+drwxr-x---   2 apps      10011          4096 Feb 22  2018 alarms
+drwxr-x---   2 apps      10011          4096 Feb 22  2018 notifications
+drwxr-x---   2 apps      10011          4096 Feb 22  2018 ringtones
+drwxr-x---   2 apps      10011          4096 Feb 22  2018 ui
+
+native/system/media/audio/alarms:
+total 3538
+drwxr-x---   2 apps      10011          4096 Feb 22  2018 .
+drwxr-x---   6 apps      10011          4096 Feb 22  2018 ..
+-rw-r-----   1 apps      10011         16130 Feb 22  2018 Alarm_Beep_01.ogg
+-rw-r-----   1 apps      10011          5898 Feb 22  2018 Alarm_Beep_02.ogg
+-rw-r-----   1 apps      10011         21153 Feb 22  2018 Alarm_Beep_03.ogg
+-rw-r-----   1 apps      10011         11368 Feb 22  2018 Alarm_Buzzer.ogg
+-rw-r-----   1 apps      10011         27052 Feb 22  2018 Alarm_Classic.ogg
+-rw-r-----   1 apps      10011         11160 Feb 22  2018 Alarm_Rooster_02.ogg
+-rw-r-----   1 apps      10011        117225 Feb 22  2018 Argon.ogg
+-rw-r-----   1 apps      10011         51499 Feb 22  2018 Barium.ogg
+-rw-r-----   1 apps      10011         97611 Feb 22  2018 Carbon.ogg
+-rw-r-----   1 apps      10011         27025 Feb 22  2018 Cesium.ogg
+-rw-r-----   1 apps      10011        117227 Feb 22  2018 Fermium.ogg
+-rw-r-----   1 apps      10011        147068 Feb 22  2018 Hassium.ogg
+-rw-r-----   1 apps      10011        147067 Feb 22  2018 Helium.ogg
+-rw-r-----   1 apps      10011        103196 Feb 22  2018 Krypton.ogg
+-rw-r-----   1 apps      10011        176788 Feb 22  2018 Neon.ogg
+-rw-r-----   1 apps      10011         97614 Feb 22  2018 Neptunium.ogg
+-rw-r-----   1 apps      10011        176792 Feb 22  2018 Nobelium.ogg
+-rw-r-----   1 apps      10011         42488 Feb 22  2018 Osmium.ogg
+-rw-r-----   1 apps      10011         27025 Feb 22  2018 Oxygen.ogg
+-rw-r-----   1 apps      10011        112676 Feb 22  2018 Platinum.ogg
+-rw-r-----   1 apps      10011        103252 Feb 22  2018 Plutonium.ogg
+-rw-r-----   1 apps      10011        112676 Feb 22  2018 Promethium.ogg
+-rw-r-----   1 apps      10011         47812 Feb 22  2018 Scandium.ogg
+
+native/system/media/audio/notifications:
+total 2742
+drwxr-x---   2 apps      10011          4096 Feb 22  2018 .
+drwxr-x---   6 apps      10011          4096 Feb 22  2018 ..
+-rw-r-----   1 apps      10011         10414 Feb 22  2018 Adara.ogg
+-rw-r-----   1 apps      10011          7593 Feb 22  2018 Aldebaran.ogg
+-rw-r-----   1 apps      10011          7021 Feb 22  2018 Altair.ogg
+-rw-r-----   1 apps      10011          8927 Feb 22  2018 Alya.ogg
+-rw-r-----   1 apps      10011         10375 Feb 22  2018 Antares.ogg
+-rw-r-----   1 apps      10011         27849 Feb 22  2018 Antimony.ogg
+-rw-r-----   1 apps      10011          7933 Feb 22  2018 Arcturus.ogg
+-rw-r-----   1 apps      10011         15851 Feb 22  2018 Argon.ogg
+-rw-r-----   1 apps      10011         34601 Feb 22  2018 Beat_Box_Android.ogg
+-rw-r-----   1 apps      10011         15714 Feb 22  2018 Bellatrix.ogg
+-rw-r-----   1 apps      10011         19381 Feb 22  2018 Beryllium.ogg
+-rw-r-----   1 apps      10011         16108 Feb 22  2018 Betelgeuse.ogg
+-rw-r-----   1 apps      10011         19121 Feb 22  2018 CaffeineSnake.ogg
+-rw-r-----   1 apps      10011         11948 Feb 22  2018 Canopus.ogg
+-rw-r-----   1 apps      10011         13126 Feb 22  2018 Capella.ogg
+-rw-r-----   1 apps      10011         14648 Feb 22  2018 Castor.ogg
+-rw-r-----   1 apps      10011         26158 Feb 22  2018 CetiAlpha.ogg
+-rw-r-----   1 apps      10011         18121 Feb 22  2018 Cobalt.ogg
+-rw-r-----   1 apps      10011         10936 Feb 22  2018 Cricket.ogg
+-rw-r-----   1 apps      10011         18659 Feb 22  2018 DearDeer.ogg
+-rw-r-----   1 apps      10011         14416 Feb 22  2018 Deneb.ogg
+-rw-r-----   1 apps      10011          8911 Feb 22  2018 Doink.ogg
+-rw-r-----   1 apps      10011         16985 Feb 22  2018 DontPanic.ogg
+-rw-r-----   1 apps      10011         13244 Feb 22  2018 Drip.ogg
+-rw-r-----   1 apps      10011         15199 Feb 22  2018 Electra.ogg
+-rw-r-----   1 apps      10011         11950 Feb 22  2018 F1_MissedCall.ogg
+-rw-r-----   1 apps      10011         20983 Feb 22  2018 F1_New_MMS.ogg
+-rw-r-----   1 apps      10011         11941 Feb 22  2018 F1_New_SMS.ogg
+-rw-r-----   1 apps      10011         18674 Feb 22  2018 Fluorine.ogg
+-rw-r-----   1 apps      10011         22003 Feb 22  2018 Fomalhaut.ogg
+-rw-r-----   1 apps      10011         12214 Feb 22  2018 Gallium.ogg
+-rw-r-----   1 apps      10011         38517 Feb 22  2018 Heaven.ogg
+-rw-r-----   1 apps      10011          7445 Feb 22  2018 Helium.ogg
+-rw-r-----   1 apps      10011         18442 Feb 22  2018 Highwire.ogg
+-rw-r-----   1 apps      10011         13986 Feb 22  2018 Hojus.ogg
+-rw-r-----   1 apps      10011         58227 Feb 22  2018 Iridium.ogg
+-rw-r-----   1 apps      10011         11566 Feb 22  2018 Krypton.ogg
+-rw-r-----   1 apps      10011         15619 Feb 22  2018 KzurbSonar.ogg
+-rw-r-----   1 apps      10011         18138 Feb 22  2018 Lalande.ogg
+-rw-r-----   1 apps      10011         18854 Feb 22  2018 Merope.ogg
+-rw-r-----   1 apps      10011         17711 Feb 22  2018 Mira.ogg
+-rw-r-----   1 apps      10011         20052 Feb 22  2018 OnTheHunt.ogg
+-rw-r-----   1 apps      10011         14645 Feb 22  2018 Palladium.ogg
+-rw-r-----   1 apps      10011          6652 Feb 22  2018 Plastic_Pipe.ogg
+-rw-r-----   1 apps      10011         20531 Feb 22  2018 Polaris.ogg
+-rw-r-----   1 apps      10011         23463 Feb 22  2018 Pollux.ogg
+-rw-r-----   1 apps      10011         22344 Feb 22  2018 Procyon.ogg
+-rw-r-----   1 apps      10011         13244 Feb 22  2018 Proxima.ogg
+-rw-r-----   1 apps      10011         25356 Feb 22  2018 Radon.ogg
+-rw-r-----   1 apps      10011         21191 Feb 22  2018 Rubidium.ogg
+-rw-r-----   1 apps      10011         10893 Feb 22  2018 Selenium.ogg
+-rw-r-----   1 apps      10011         24298 Feb 22  2018 Shaula.ogg
+-rw-r-----   1 apps      10011         20976 Feb 22  2018 Sirrah.ogg
+-rw-r-----   1 apps      10011         26180 Feb 22  2018 SpaceSeed.ogg
+-rw-r-----   1 apps      10011          9069 Feb 22  2018 Spica.ogg
+-rw-r-----   1 apps      10011         39203 Feb 22  2018 Strontium.ogg
+-rw-r-----   1 apps      10011          8479 Feb 22  2018 Syrma.ogg
+-rw-r-----   1 apps      10011         43522 Feb 22  2018 TaDa.ogg
+-rw-r-----   1 apps      10011         10435 Feb 22  2018 Talitha.ogg
+-rw-r-----   1 apps      10011         15866 Feb 22  2018 Tejat.ogg
+-rw-r-----   1 apps      10011         18235 Feb 22  2018 Thallium.ogg
+-rw-r-----   1 apps      10011         18858 Feb 22  2018 Tinkerbell.ogg
+-rw-r-----   1 apps      10011         24040 Feb 22  2018 Upsilon.ogg
+-rw-r-----   1 apps      10011         29310 Feb 22  2018 Vega.ogg
+-rw-r-----   1 apps      10011         16487 Feb 22  2018 Voila.ogg
+-rw-r-----   1 apps      10011         27860 Feb 22  2018 Xenon.ogg
+-rw-r-----   1 apps      10011         12697 Feb 22  2018 Zirconium.ogg
+-rw-r-----   1 apps      10011          7908 Feb 22  2018 arcturus.ogg
+-rw-r-----   1 apps      10011         16243 Feb 22  2018 moonbeam.ogg
+-rw-r-----   1 apps      10011         16905 Feb 22  2018 pixiedust.ogg
+-rw-r-----   1 apps      10011         18884 Feb 22  2018 pizzicato.ogg
+-rw-r-----   1 apps      10011         27852 Feb 22  2018 regulus.ogg
+-rw-r-----   1 apps      10011         26612 Feb 22  2018 sirius.ogg
+-rw-r-----   1 apps      10011         10421 Feb 22  2018 tweeters.ogg
+-rw-r-----   1 apps      10011         29476 Feb 22  2018 vega.ogg
+
+native/system/media/audio/ringtones:
+total 11546
+drwxr-x---   2 apps      10011          4096 Feb 22  2018 .
+drwxr-x---   6 apps      10011          4096 Feb 22  2018 ..
+-rw-r-----   1 apps      10011         25014 Feb 22  2018 ANDROMEDA.ogg
+-rw-r-----   1 apps      10011         24973 Feb 22  2018 Andromeda.ogg
+-rw-r-----   1 apps      10011         21457 Feb 22  2018 Aquila.ogg
+-rw-r-----   1 apps      10011        225891 Feb 22  2018 ArgoNavis.ogg
+-rw-r-----   1 apps      10011         89684 Feb 22  2018 Atria.ogg
+-rw-r-----   1 apps      10011         26310 Feb 22  2018 BOOTES.ogg
+-rw-r-----   1 apps      10011         36049 Feb 22  2018 Backroad.ogg
+-rw-r-----   1 apps      10011         28433 Feb 22  2018 BeatPlucker.ogg
+-rw-r-----   1 apps      10011         30759 Feb 22  2018 BentleyDubs.ogg
+-rw-r-----   1 apps      10011         46673 Feb 22  2018 Big_Easy.ogg
+-rw-r-----   1 apps      10011         41828 Feb 22  2018 BirdLoop.ogg
+-rw-r-----   1 apps      10011         39174 Feb 22  2018 Bollywood.ogg
+-rw-r-----   1 apps      10011         48968 Feb 22  2018 BussaMove.ogg
+-rw-r-----   1 apps      10011         31170 Feb 22  2018 CANISMAJOR.ogg
+-rw-r-----   1 apps      10011         31941 Feb 22  2018 CASSIOPEIA.ogg
+-rw-r-----   1 apps      10011         37672 Feb 22  2018 Cairo.ogg
+-rw-r-----   1 apps      10011         38875 Feb 22  2018 Calypso_Steel.ogg
+-rw-r-----   1 apps      10011         31133 Feb 22  2018 CanisMajor.ogg
+-rw-r-----   1 apps      10011         30615 Feb 22  2018 CaribbeanIce.ogg
+-rw-r-----   1 apps      10011         15384 Feb 22  2018 Carina.ogg
+-rw-r-----   1 apps      10011         27644 Feb 22  2018 Centaurus.ogg
+-rw-r-----   1 apps      10011         39921 Feb 22  2018 Champagne_Edition.ogg
+-rw-r-----   1 apps      10011         37179 Feb 22  2018 Club_Cubano.ogg
+-rw-r-----   1 apps      10011         37952 Feb 22  2018 CrayonRock.ogg
+-rw-r-----   1 apps      10011        206809 Feb 22  2018 CrazyDream.ogg
+-rw-r-----   1 apps      10011         30925 Feb 22  2018 CurveBall.ogg
+-rw-r-----   1 apps      10011         29807 Feb 22  2018 Cygnus.ogg
+-rw-r-----   1 apps      10011         61434 Feb 22  2018 DancinFool.ogg
+-rw-r-----   1 apps      10011         15476 Feb 22  2018 Ding.ogg
+-rw-r-----   1 apps      10011         50545 Feb 22  2018 DonMessWivIt.ogg
+-rw-r-----   1 apps      10011         31778 Feb 22  2018 Draco.ogg
+-rw-r-----   1 apps      10011        175423 Feb 22  2018 DreamTheme.ogg
+-rw-r-----   1 apps      10011         50578 Feb 22  2018 Eastern_Sky.ogg
+-rw-r-----   1 apps      10011         61699 Feb 22  2018 Enter_the_Nexus.ogg
+-rw-r-----   1 apps      10011         36585 Feb 22  2018 Eridani.ogg
+-rw-r-----   1 apps      10011         31563 Feb 22  2018 EtherShake.ogg
+-rw-r-----   1 apps      10011        113055 Feb 22  2018 FreeFlight.ogg
+-rw-r-----   1 apps      10011         46425 Feb 22  2018 FriendlyGhost.ogg
+-rw-r-----   1 apps      10011         39738 Feb 22  2018 Funk_Yall.ogg
+-rw-r-----   1 apps      10011         49978 Feb 22  2018 GameOverGuitar.ogg
+-rw-r-----   1 apps      10011         38688 Feb 22  2018 Gimme_Mo_Town.ogg
+-rw-r-----   1 apps      10011         44376 Feb 22  2018 Girtab.ogg
+-rw-r-----   1 apps      10011         54923 Feb 22  2018 Glacial_Groove.ogg
+-rw-r-----   1 apps      10011         41094 Feb 22  2018 Growl.ogg
+-rw-r-----   1 apps      10011         68588 Feb 22  2018 HalfwayHome.ogg
+-rw-r-----   1 apps      10011         22924 Feb 22  2018 Hydra.ogg
+-rw-r-----   1 apps      10011         15146 Feb 22  2018 InsertCoin.ogg
+-rw-r-----   1 apps      10011        164867 Feb 22  2018 Kuma.ogg
+-rw-r-----   1 apps      10011         38307 Feb 22  2018 LoopyLounge.ogg
+-rw-r-----   1 apps      10011         34627 Feb 22  2018 LoveFlute.ogg
+-rw-r-----   1 apps      10011         42540 Feb 22  2018 Lyra.ogg
+-rw-r-----   1 apps      10011         38054 Feb 22  2018 Machina.ogg
+-rw-r-----   1 apps      10011         28124 Feb 22  2018 MidEvilJaunt.ogg
+-rw-r-----   1 apps      10011         34864 Feb 22  2018 MildlyAlarming.ogg
+-rw-r-----   1 apps      10011         41355 Feb 22  2018 Nairobi.ogg
+-rw-r-----   1 apps      10011         44104 Feb 22  2018 Nassau.ogg
+-rw-r-----   1 apps      10011         15563 Feb 22  2018 NewPlayer.ogg
+-rw-r-----   1 apps      10011         32933 Feb 22  2018 No_Limits.ogg
+-rw-r-----   1 apps      10011         36287 Feb 22  2018 Noises1.ogg
+-rw-r-----   1 apps      10011         39025 Feb 22  2018 Noises2.ogg
+-rw-r-----   1 apps      10011         26662 Feb 22  2018 Noises3.ogg
+-rw-r-----   1 apps      10011         32640 Feb 22  2018 OrganDub.ogg
+-rw-r-----   1 apps      10011         54419 Feb 22  2018 Orion.ogg
+-rw-r-----   1 apps      10011        112981 Feb 22  2018 PERSEUS.ogg
+-rw-r-----   1 apps      10011         39199 Feb 22  2018 Paradise_Island.ogg
+-rw-r-----   1 apps      10011         86694 Feb 22  2018 Pegasus.ogg
+-rw-r-----   1 apps      10011        236343 Feb 22  2018 Perseus.ogg
+-rw-r-----   1 apps      10011         56616 Feb 22  2018 Playa.ogg
+-rw-r-----   1 apps      10011         16639 Feb 22  2018 Pyxis.ogg
+-rw-r-----   1 apps      10011        178685 Feb 22  2018 Rasalas.ogg
+-rw-r-----   1 apps      10011         52536 Feb 22  2018 Revelation.ogg
+-rw-r-----   1 apps      10011         57764 Feb 22  2018 Rigel.ogg
+-rw-r-----   1 apps      10011         59024 Feb 22  2018 Ring_Classic_02.ogg
+-rw-r-----   1 apps      10011         21007 Feb 22  2018 Ring_Digital_02.ogg
+-rw-r-----   1 apps      10011         52809 Feb 22  2018 Ring_Synth_02.ogg
+-rw-r-----   1 apps      10011         43965 Feb 22  2018 Ring_Synth_04.ogg
+-rw-r-----   1 apps      10011         49108 Feb 22  2018 Road_Trip.ogg
+-rw-r-----   1 apps      10011         31641 Feb 22  2018 RomancingTheTone.ogg
+-rw-r-----   1 apps      10011         42220 Feb 22  2018 Safari.ogg
+-rw-r-----   1 apps      10011         39138 Feb 22  2018 Savannah.ogg
+-rw-r-----   1 apps      10011        108945 Feb 22  2018 Scarabaeus.ogg
+-rw-r-----   1 apps      10011        316370 Feb 22  2018 Sceptrum.ogg
+-rw-r-----   1 apps      10011         44422 Feb 22  2018 Seville.ogg
+-rw-r-----   1 apps      10011         39413 Feb 22  2018 Shes_All_That.ogg
+-rw-r-----   1 apps      10011         44186 Feb 22  2018 SilkyWay.ogg
+-rw-r-----   1 apps      10011         28898 Feb 22  2018 SitarVsSitar.ogg
+-rw-r-----   1 apps      10011         89515 Feb 22  2018 Solarium.ogg
+-rw-r-----   1 apps      10011         26144 Feb 22  2018 SpringyJalopy.ogg
+-rw-r-----   1 apps      10011         37847 Feb 22  2018 Steppin_Out.ogg
+-rw-r-----   1 apps      10011         36620 Feb 22  2018 Terminated.ogg
+-rw-r-----   1 apps      10011         72078 Feb 22  2018 Testudo.ogg
+-rw-r-----   1 apps      10011        175478 Feb 22  2018 Themos.ogg
+-rw-r-----   1 apps      10011         36539 Feb 22  2018 Third_Eye.ogg
+-rw-r-----   1 apps      10011         46049 Feb 22  2018 Thunderfoot.ogg
+-rw-r-----   1 apps      10011         26298 Feb 22  2018 TwirlAway.ogg
+-rw-r-----   1 apps      10011        144112 Feb 22  2018 URSAMINOR.ogg
+-rw-r-----   1 apps      10011        185005 Feb 22  2018 UrsaMinor.ogg
+-rw-r-----   1 apps      10011         28691 Feb 22  2018 VeryAlarmed.ogg
+-rw-r-----   1 apps      10011         18043 Feb 22  2018 Vespa.ogg
+-rw-r-----   1 apps      10011         31136 Feb 22  2018 World.ogg
+-rw-r-----   1 apps      10011         77919 Feb 22  2018 Zeta.ogg
+-rw-r-----   1 apps      10011         22962 Feb 22  2018 hydra.ogg
+
+native/system/media/audio/ui:
+total 216
+drwxr-x---   2 apps      10011          4096 Feb 22  2018 .
+drwxr-x---   6 apps      10011          4096 Feb 22  2018 ..
+-rw-r-----   1 apps      10011          6327 Feb 22  2018 Dock.ogg
+-rw-r-----   1 apps      10011          4077 Feb 22  2018 Effect_Tick.ogg
+-rw-r-----   1 apps      10011          5832 Feb 22  2018 KeypressDelete.ogg
+-rw-r-----   1 apps      10011          6246 Feb 22  2018 KeypressReturn.ogg
+-rw-r-----   1 apps      10011          5952 Feb 22  2018 KeypressSpacebar.ogg
+-rw-r-----   1 apps      10011          5837 Feb 22  2018 KeypressStandard.ogg
+-rw-r-----   1 apps      10011          4661 Feb 22  2018 Lock.ogg
+-rw-r-----   1 apps      10011         12401 Feb 22  2018 LowBattery.ogg
+-rw-r-----   1 apps      10011          8240 Feb 22  2018 Undock.ogg
+-rw-r-----   1 apps      10011          4666 Feb 22  2018 Unlock.ogg
+-rw-r-----   1 apps      10011          6483 Feb 22  2018 VideoRecord.ogg
+-rw-r-----   1 apps      10011         12025 Feb 22  2018 WirelessChargingStarted.ogg
+-rw-r-----   1 apps      10011          5951 Feb 22  2018 camera_click.ogg
+-rw-r-----   1 apps      10011          9376 Feb 22  2018 camera_focus.ogg
+
+native/system/native:
+total 24
+drwxr-x---   3 apps      10011          4096 Feb 22  2018 .
+drwxrwxrwx+ 13 apps      10011          4096 Feb 22  2018 ..
+drwxr-x---   2 apps      10011          4096 Feb 22  2018 lib
+
+native/system/native/lib:
+total 1246
+drwxr-x---   2 apps      10011          4096 Feb 22  2018 .
+drwxr-x---   3 apps      10011          4096 Feb 22  2018 ..
+-r-xr-xr-x   1 apps      10011        294088 Feb 22  2018 libc.so
+-r-xr-xr-x   1 apps      10011          9292 Feb 22  2018 libdl.so
+-r-xr-xr-x   1 apps      10011        103660 Feb 22  2018 libm.so
+-r-xr-xr-x   1 apps      10011          5300 Feb 22  2018 libstdc++.so
+-r-xr-xr-x   1 apps      10011        210324 Feb 22  2018 libstlport.so
+-r-xr-xr-x   1 apps      10011          5300 Feb 22  2018 libthread_db.so
+
+native/system/tts:
+total 24
+drwxr-x---   3 apps      10011          4096 Feb 22  2018 .
+drwxrwxrwx+ 13 apps      10011          4096 Feb 22  2018 ..
+drwxr-x---   2 apps      10011          4096 Feb 22  2018 lang_pico
+
+native/system/tts/lang_pico:
+total 12636
+drwxr-x---   2 apps      10011          4096 Feb 22  2018 .
+drwxr-x---   3 apps      10011          4096 Feb 22  2018 ..
+-r-xr-xr-x   1 apps      10011        634996 Feb 22  2018 de-DE_gl0_sg.bin
+-r-xr-xr-x   1 apps      10011        440732 Feb 22  2018 de-DE_ta.bin
+-r-xr-xr-x   1 apps      10011        584436 Feb 22  2018 en-GB_kh0_sg.bin
+-r-xr-xr-x   1 apps      10011        412248 Feb 22  2018 en-GB_ta.bin
+-r-xr-xr-x   1 apps      10011        777396 Feb 22  2018 en-US_lh0_sg.bin
+-r-xr-xr-x   1 apps      10011        650668 Feb 22  2018 en-US_ta.bin
+-r-xr-xr-x   1 apps      10011        256744 Feb 22  2018 es-ES_ta.bin
+-r-xr-xr-x   1 apps      10011        605280 Feb 22  2018 es-ES_zl0_sg.bin
+-r-xr-xr-x   1 apps      10011        833236 Feb 22  2018 fr-FR_nk0_sg.bin
+-r-xr-xr-x   1 apps      10011        381936 Feb 22  2018 fr-FR_ta.bin
+-r-xr-xr-x   1 apps      10011        628268 Feb 22  2018 it-IT_cm0_sg.bin
+-r-xr-xr-x   1 apps      10011        252044 Feb 22  2018 it-IT_ta.bin
+
+native/system/usr:
+total 56
+drwxr-x---   7 apps      10011          4096 Feb 22  2018 .
+drwxrwxrwx+ 13 apps      10011          4096 Feb 22  2018 ..
+drwxr-x---   2 apps      10011          4096 Feb 22  2018 icu
+drwxr-x---   2 apps      10011          4096 Feb 22  2018 idc
+drwxr-x---   2 apps      10011          4096 Feb 22  2018 keychars
+drwxr-x---   2 apps      10011          4096 Feb 22  2018 keylayout
+drwxr-x---   4 apps      10011          4096 Feb 22  2018 share
+
+native/system/usr/icu:
+total 22689
+drwxr-x---   2 apps      10011          4096 Feb 22  2018 .
+drwxr-x---   7 apps      10011          4096 Feb 22  2018 ..
+-rw-r-----   1 apps      10011      11608560 Feb 22  2018 icudt50l.dat
+
+native/system/usr/idc:
+total 20
+drwxr-x---   2 apps      10011          4096 Feb 22  2018 .
+drwxr-x---   7 apps      10011          4096 Feb 22  2018 ..
+-rw-r-----   1 apps      10011           869 Feb 22  2018 qwerty.idc
+-rw-r-----   1 apps      10011           870 Feb 22  2018 qwerty2.idc
+
+native/system/usr/keychars:
+total 138
+drwxr-x---   2 apps      10011          4096 Feb 22  2018 .
+drwxr-x---   7 apps      10011          4096 Feb 22  2018 ..
+-rw-r-----   1 apps      10011           722 Feb 22  2018 BlackBerry.kcm
+-rw-r-----   1 apps      10011         14696 Feb 22  2018 Generic.kcm
+-rw-r-----   1 apps      10011         14464 Feb 22  2018 Virtual.kcm
+-rw-r-----   1 apps      10011         15840 Feb 22  2018 qwerty.kcm
+-rw-r-----   1 apps      10011         15710 Feb 22  2018 qwerty2.kcm
+
+native/system/usr/keylayout:
+total 106
+drwxr-x---   2 apps      10011          4096 Feb 22  2018 .
+drwxr-x---   7 apps      10011          4096 Feb 22  2018 ..
+-rw-r-----   1 apps      10011           894 Feb 22  2018 AVRCP.kl
+-rw-r-----   1 apps      10011           769 Feb 22  2018 BlackBerry.kl
+-rw-r-----   1 apps      10011          9096 Feb 22  2018 Generic.kl
+-rw-r-----   1 apps      10011           737 Feb 22  2018 Vendor_0079_Product_0011.kl
+-rw-r-----   1 apps      10011          1277 Feb 22  2018 Vendor_045e_Product_028e.kl
+-rw-r-----   1 apps      10011          1027 Feb 22  2018 Vendor_046d_Product_c216.kl
+-rw-r-----   1 apps      10011           943 Feb 22  2018 Vendor_046d_Product_c219.kl
+-rw-r-----   1 apps      10011           950 Feb 22  2018 Vendor_046d_Product_c21f.kl
+-rw-r-----   1 apps      10011          1325 Feb 22  2018 Vendor_046d_Product_c294.kl
+-rw-r-----   1 apps      10011          1392 Feb 22  2018 Vendor_046d_Product_c299.kl
+-rw-r-----   1 apps      10011          2793 Feb 22  2018 Vendor_046d_Product_c532.kl
+-rw-r-----   1 apps      10011          1454 Feb 22  2018 Vendor_054c_Product_0268.kl
+-rw-r-----   1 apps      10011           788 Feb 22  2018 Vendor_0583_Product_2060.kl
+-rw-r-----   1 apps      10011          2399 Feb 22  2018 Vendor_05ac_Product_0239.kl
+-rw-r-----   1 apps      10011           879 Feb 22  2018 Vendor_0a5c_Product_8502.kl
+-rw-r-----   1 apps      10011           850 Feb 22  2018 Vendor_1038_Product_1412.kl
+-rw-r-----   1 apps      10011           805 Feb 22  2018 Vendor_12bd_Product_d015.kl
+-rw-r-----   1 apps      10011           988 Feb 22  2018 Vendor_1689_Product_fd00.kl
+-rw-r-----   1 apps      10011           942 Feb 22  2018 Vendor_1689_Product_fd01.kl
+-rw-r-----   1 apps      10011           942 Feb 22  2018 Vendor_1689_Product_fe00.kl
+-rw-r-----   1 apps      10011           935 Feb 22  2018 Vendor_1bad_Product_f016.kl
+-rw-r-----   1 apps      10011           940 Feb 22  2018 Vendor_1bad_Product_f023.kl
+-rw-r-----   1 apps      10011           935 Feb 22  2018 Vendor_1bad_Product_f027.kl
+-rw-r-----   1 apps      10011           951 Feb 22  2018 Vendor_1bad_Product_f036.kl
+-rw-r-----   1 apps      10011          1017 Feb 22  2018 Vendor_1d79_Product_0009.kl
+-rw-r-----   1 apps      10011          1994 Feb 22  2018 Vendor_22b8_Product_093d.kl
+-rw-r-----   1 apps      10011           955 Feb 22  2018 Vendor_2378_Product_100a.kl
+-rw-r-----   1 apps      10011          2577 Feb 22  2018 qwerty.kl
+
+native/system/usr/share:
+total 32
+drwxr-x---   4 apps      10011          4096 Feb 22  2018 .
+drwxr-x---   7 apps      10011          4096 Feb 22  2018 ..
+drwxr-x---   2 apps      10011          4096 Feb 22  2018 bmd
+drwxr-x---   2 apps      10011          4096 Feb 22  2018 zoneinfo
+
+native/system/usr/share/bmd:
+total 81
+drwxr-x---   2 apps      10011          4096 Feb 22  2018 .
+drwxr-x---   4 apps      10011          4096 Feb 22  2018 ..
+-rw-r-----   1 apps      10011         12862 Feb 22  2018 RFFspeed_501.bmd
+-rw-r-----   1 apps      10011         19586 Feb 22  2018 RFFstd_501.bmd
+
+native/system/usr/share/zoneinfo:
+total 1139
+drwxr-x---   2 apps      10011          4096 Feb 22  2018 .
+drwxr-x---   4 apps      10011          4096 Feb 22  2018 ..
+-rw-r-----   1 apps      10011         13564 Feb 22  2018 setup
+-rw-r-----   1 apps      10011        560770 Feb 22  2018 tzdata
+
+native/system/xbin:
+total 138
+drwxrwxrwx+  2 apps      10011          4096 Feb 22  2018 .
+drwxrwxrwx+ 13 apps      10011          4096 Feb 22  2018 ..
+-rwxrwxrwx+  1 root      nto            1932 Sep 13 09:04 btool
+-rwxrwxrwx   1 apps      10011         60036 Feb 22  2018 dexdump
+
+public:
+total 24
+drwxr-xr-x   3 apps      10011          4096 Feb 22  2018 .
+drwxrwxrwx+  5 apps      10011          4096 Feb 22  2018 ..
+drwxr-xr-x   2 apps      10011          4096 Feb 22  2018 native
+
+public/native:
+total 603
+drwxr-xr-x   2 apps      10011          4096 Feb 22  2018 .
+drwxr-xr-x   3 apps      10011          4096 Feb 22  2018 ..
+-rw-r--r--   2 apps      10011          2873 Feb 22  2018 icon.png
+-rw-r--r--   2 apps      10011        151167 Feb 22  2018 splash-landscape.png
+-rw-r--r--   2 apps      10011        145770 Feb 22  2018 splash-portrait.png

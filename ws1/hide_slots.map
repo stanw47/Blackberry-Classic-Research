@@ -1,0 +1,8 @@
+{
+  global: *;
+  local:
+    ws1_slot_*;
+    ws1_lookup_glue;
+    ws1_resolve_slot;
+    __ws1_unimplemented;
+};

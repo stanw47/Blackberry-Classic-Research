@@ -1,0 +1,4 @@
+### CMD: for f in $(find /pps/services/networking -type f 2>/dev/null); do echo "== $f"; cat $f 2>&1; done | head -400
+### RC-EOF
+sh: head: cannot execute - No such file or directory
+

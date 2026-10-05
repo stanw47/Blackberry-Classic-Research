@@ -1,0 +1,10 @@
+### CMD: cat /etc/resolv.conf 2>&1; echo ==hosts==; cat /etc/hosts 2>&1
+/etc/resolv.conf: No such file or directory
+==hosts==
+#
+# Host Database
+#
+127.1		localhost.localdomain localhost	
+::1		localhost.localdomain localhost
+
+

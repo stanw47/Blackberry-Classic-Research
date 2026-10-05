@@ -1,0 +1,15 @@
+### CMD: cat /etc/resolv.conf 2>&1; echo ---; cat /pps/services/networking/all/status 2>&1 | head -100; echo ---dns---; ls -la /var/etc/dnsmasq* /etc/hosts 2>&1; cat /etc/hosts 2>&1
+### RC-EOF
+/etc/resolv.conf: No such file or directory
+---
+---dns---
+ls: No such file or directory (/var/etc/dnsmasq*)
+-rw-r--r--   1 root      nto              98 Feb 22  2018 /etc/hosts
+#
+# Host Database
+#
+127.1		localhost.localdomain localhost	
+::1		localhost.localdomain localhost
+
+sh: head: cannot execute - No such file or directory
+

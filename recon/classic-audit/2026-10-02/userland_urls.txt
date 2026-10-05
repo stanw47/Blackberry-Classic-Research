@@ -1,0 +1,4 @@
+### CMD: grep -rIiE 'https?://[a-z0-9./?=_-]+' /accounts/1000/shared/misc /base/scripts /base/bin /accounts/devuser 2>/dev/null | grep -vE 'schemas|w3.org|xml' | head -300
+### RC-EOF
+sh: head: cannot execute - No such file or directory
+

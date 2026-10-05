@@ -1,0 +1,4 @@
+### CMD: for p in /proc/[0-9]*; do ls -l $p/fd 2>/dev/null | grep -iE 'socket|tcp'; done 2>&1 | head -200
+### RC-EOF
+sh: head: cannot execute - No such file or directory
+

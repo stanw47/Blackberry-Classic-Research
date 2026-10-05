@@ -1,0 +1,174 @@
+### CMD: netstat -anv 2>&1
+Active Internet connections (including servers)
+Proto Recv-Q Send-Q  Local Address          Foreign Address        State      
+tcp        0      0  169.254.0.1.22         169.254.0.2.34322      ESTABLISHED
+tcp        1      0  169.254.0.1.4455       169.254.0.2.45064      CLOSE_WAIT 
+tcp        0      0  *.22                   *.*                    LISTEN     
+tcp        0      0  *.8000                 *.*                    LISTEN     
+tcp        0      0  169.254.0.1.4455       169.254.0.2.54450      ESTABLISHED
+tcp        0      0  169.254.0.1.8443       *.*                    LISTEN     
+tcp        0      0  169.254.0.1.80         *.*                    LISTEN     
+tcp        0      0  169.254.0.1.443        *.*                    LISTEN     
+tcp        0      0  127.0.0.1.139          *.*                    LISTEN     
+tcp        0      0  127.0.0.1.445          *.*                    LISTEN     
+tcp        0      0  169.254.0.1.139        *.*                    LISTEN     
+tcp        0      0  169.254.0.1.445        *.*                    LISTEN     
+tcp        0      0  *.5555                 *.*                    LISTEN     
+tcp        0      0  127.0.0.1.56639        127.0.0.1.8888         CLOSE_WAIT 
+tcp        0      0  127.0.0.1.53           127.0.0.1.14419        ESTABLISHED
+tcp        0      0  127.0.0.1.14419        127.0.0.1.53           ESTABLISHED
+tcp        0      0  *.2708                 *.*                    LISTEN     
+tcp        0      0  *.2709                 *.*                    LISTEN     
+tcp        0      0  *.6340                 *.*                    LISTEN     
+tcp        0      0  *.4455                 *.*                    LISTEN     
+tcp        0      0  127.0.0.1.53           *.*                    LISTEN     
+tcp        0      0  127.0.0.1.287          *.*                    LISTEN     
+tcp        0      0  127.0.0.3.186          *.*                    LISTEN     
+tcp        0      0  127.0.0.3.188          *.*                    LISTEN     
+tcp        0      0  127.0.0.3.187          *.*                    LISTEN     
+tcp        0      0  127.0.0.1.8889         *.*                    LISTEN     
+tcp        0      0  127.0.0.1.8888         *.*                    LISTEN     
+tcp        0      0  *.*                    *.*                    CLOSED     
+tcp        0      0  *.443                  *.*                    LISTEN     
+udp        0      0  *.*                    *.*                               
+udp        0      0  *.5353                 *.*                               
+udp        0      0  192.168.100.40.32522   *.*                               
+udp        0      0  192.168.100.40.32361   *.*                               
+udp        0      0  *.68                   *.*                               
+udp        0      0  *.*                    *.*                               
+udp        0      0  169.254.0.1.138        *.*                               
+udp        0      0  169.254.0.1.137        *.*                               
+udp        0      0  *.138                  *.*                               
+udp        0      0  *.137                  *.*                               
+udp        0      0  *.5353                 *.*                               
+udp        0      0  *.67                   *.*                               
+udp        0      0  100.105.34.220.48474   *.*                               
+udp        0      0  100.105.34.220.48279   *.*                               
+udp        0      0  *.*                    *.*                               
+udp        0      0  *.*                    *.*                               
+udp        0      0  *.*                    *.*                               
+udp        0      0  *.*                    *.*                               
+udp        0      0  127.0.0.1.28794        *.*                               
+udp        0      0  *.*                    *.*                               
+udp        0      0  *.5353                 *.*                               
+udp        0      0  *.27982                *.*                               
+udp        0      0  *.27891                *.*                               
+udp        0      0  *.*                    *.*                               
+Active Internet6 connections (including servers)
+Proto Recv-Q Send-Q  Local Address          Foreign Address        (state)    
+tcp6       0      0  *.22                   *.*                    LISTEN     
+tcp6       0      0  ::ffff:192.168.100.40.58466 ::ffff:142.250.71.174.80 ESTABLISHED
+tcp6       0      0  *.14419                *.*                    CLOSED     
+tcp6       0      0  *.2708                 *.*                    LISTEN     
+tcp6       0      0  *.2709                 *.*                    LISTEN     
+tcp6       0      0  *.2710                 *.*                    LISTEN     
+tcp6       0      0  *.8080                 *.*                    LISTEN     
+tcp6       0      0  fd07:26c7:5d8b:fffb:84b2:f81d:d870:72ba.8443 *.*                    LISTEN     
+tcp6       0      0  fd07:26c7:5d8b:fffb:84b2:f81d:d870:72ba.80 *.*                    LISTEN     
+tcp6       0      0  *.59467                *.*                    LISTEN     
+tcp6       0      0  *.1111                 *.*                    LISTEN     
+udp6       0      0  *.5353                 *.*                               
+udp6       0      0  *.5353                 *.*                               
+udp6       0      0  *.5353                 *.*                               
+udp6       0      0  *.*                    *.*                               
+udp6       0      0  *.18568                *.*                               
+udp6       0      0  *.18493                *.*                               
+Active UNIX domain sockets
+Address  Type   Recv-Q Send-Q    Inode     Conn     Refs  Nextref Addr
+108b2998 stream      0      0        0 107a4ec0        0        0 
+107a4ec0 stream      0      0        0 108b2998        0        0 
+108b2418 stream      0      0        0 108b21b0        0        0 
+108b21b0 stream      0      0        0 108b2418        0        0 
+108b2368 stream      0      0 107a8c88        0        0        0 /accounts/1000/appdata/sys.android.gYABgKAOw1czN6neiAT72SGO.ns/tmp/jdwp-control
+108b2cb0 stream      0      0        0 108b2730        0        0 
+108b2730 stream      0      0        0 108b2cb0        0        0 
+108b2838 stream      0      0 108bb490        0        0        0 /accounts/1000/appdata/sys.android.gYABgKAOw1czN6neiAT72SGO.ns/tmp/adbd
+108b25d0 stream      0      0        0 108b20a8        0        0 /var/tmp/rim_diag_mux_uds
+108b20a8 stream      0      0        0 108b25d0        0        0 -> /var/tmp/rim_diag_mux_uds
+108b2e10 stream      0      0        0        0        0        0 /var/tmp/rim_diag_mux_uds
+108b2f70 stream      0      0        0 10f6cf18        0        0 /accounts/1000/appdata/sys.android.gYABgKAOw1czN6neiAT72SGO.ns/tmp/zygote
+10f6cf18 stream      0      0        0 108b2f70        0        0 -> /accounts/1000/appdata/sys.android.gYABgKAOw1czN6neiAT72SGO.ns/tmp/zygote
+108b2a48 stream      0      0        0        0        0        0 /var/tmp/rim_diag_mux_uds
+108b2d08 stream      0      0        0        0        0        0 /var/tmp/rim_diag_mux_uds
+108b2680 stream      0      0        0        0        0        0 /var/tmp/rim_diag_mux_uds
+108b26d8 stream      0      0        0        0        0        0 /var/tmp/rim_diag_mux_uds
+108b2ba8 stream      0      0        0        0        0        0 /var/tmp/rim_diag_mux_uds
+108b29f0 stream      0      0        0        0        0        0 /var/tmp/rim_diag_mux_uds
+108b2310 stream      0      0        0        0        0        0 /var/tmp/rim_diag_mux_uds
+107a4730 stream      0      0        0        0        0        0 /var/tmp/rim_diag_mux_uds
+107a4f70 stream      0      0        0        0        0        0 /var/tmp/rim_diag_mux_uds
+107a4e68 stream      0      0        0        0        0        0 /var/tmp/rim_diag_mux_uds
+108b2158 stream      0      0        0        0        0        0 /var/tmp/rim_diag_mux_uds
+107a4f18 stream      0      0        0        0        0        0 /var/tmp/rim_diag_mux_uds
+108b2050 stream      0      0        0        0        0        0 /var/tmp/rim_diag_mux_uds
+107a4e10 stream      0      0        0 107a4d60        0        0 
+107a4d60 stream      0      0        0 107a4e10        0        0 
+107a4c58 stream      0      0 107a3738        0        0        0 /accounts/1000/appdata/sys.fuse.gYABgOQWagv3fU6DN3PbYTsScIM/tmp/proxiwebsocket
+107a4db8 stream      0      0 107a3628        0        0        0 /accounts/1000/appdata/sys.fuse.gYABgOQWagv3fU6DN3PbYTsScIM/tmp/proxifastcgi
+107a4940 stream      0      0 1079ef30        0        0        0 /data/system/ndebugsocket
+107a45d0 stream      0      0        0 107a4520        0        0 /accounts/1000/appdata/sys.android.gYABgKAOw1czN6neiAT72SGO.ns/tmp/installd
+107a4520 stream      0      0        0 107a45d0        0        0 -> /accounts/1000/appdata/sys.android.gYABgKAOw1czN6neiAT72SGO.ns/tmp/installd
+107a4418 stream      0      0 107a3e20        0        0        0 /accounts/1000/appdata/sys.android.gYABgKAOw1czN6neiAT72SGO.ns/tmp/installd
+107a43c0 stream      0      0 107a3d10        0        0        0 /accounts/1000/appdata/sys.android.gYABgKAOw1czN6neiAT72SGO.ns/tmp/zygote
+107a4368 stream      0      0        0 107a42b8        0        0 
+107a42b8 stream      0      0        0 107a4368        0        0 
+107a4310 stream      0      0 107a3c00        0        0        0 /accounts/1000/appdata/sys.android.gYABgKAOw1czN6neiAT72SGO.ns/tmp/property_service
+107a4100 stream      0      0        0 107a4158        0        0 /var/run/mdnsd/mdnsd
+107a4158 stream      0      0        0 107a4100        0        0 -> /var/run/mdnsd/mdnsd
+107a41b0 stream      0      0        0 107a4260        0        0 /var/run/mdnsd/mdnsd
+107a4260 stream      0      0        0 107a41b0        0        0 -> /var/run/mdnsd/mdnsd
+107a4208 stream      0      0 107a8050        0        0        0 /tmp/webpps.socket
+107a40a8 stream      0      0        0 107a4050        0        0 
+107a4050 stream      0      0        0 107a40a8        0        0 
+1079cf70 stream      0      0        0 1079cf18        0        0 
+1079cf18 stream      0      0        0 1079cf70        0        0 
+1079cec0 stream      0      0        0 1079c9f0        0        0 
+1079c9f0 stream      0      0        0 1079cec0        0        0 
+1079ce68 stream      0      0        0 1079cdb8        0        0 
+1079cdb8 stream      0      0        0 1079ce68        0        0 
+1079cd60 stream      0      0        0 1079ce10        0        0 
+1079ce10 stream      0      0        0 1079cd60        0        0 
+1079ccb0 stream      0      0        0 1079caf8        0        0 /var/run/mdnsd/mdnsd
+1079caf8 stream      0      0        0 1079ccb0        0        0 -> /var/run/mdnsd/mdnsd
+1079cc58 stream      0      0        0 1079cc00        0        0 
+1079cc00 stream      0      0        0 1079cc58        0        0 
+1079cba8 stream      0      0        0 1079cb50        0        0 
+1079cb50 stream      0      0        0 1079cba8        0        0 
+1079caa0 stream      0      0        0 1079ca48        0        0 /var/run/mdnsd/mdnsd
+1079ca48 stream      0      0        0 1079caa0        0        0 -> /var/run/mdnsd/mdnsd
+1079c940 stream      0      0 1079eaf0        0        0        0 /var/run/mdnsd/mdnsd
+1079c8e8 stream      0      0 1079e9e0        0        0        0 /var/run/mdnsd/mdnsd_ent
+1079c310 stream      0      0        0 1079c2b8        0        0 
+1079c2b8 stream      0      0        0 1079c310        0        0 
+1079c0a8 stream      0      0 1079e518        0        0        0 /var/tmp/qct_mplogsvc_uds
+10f6cf70 stream      0      0 10f75848        0        0        0 /var/tmp/rim_diag_mux_uds
+10f6cdb8 stream      0      0        0 10f6cd60        0        0 
+10f6cd60 stream      0      0        0 10f6cdb8        0        0 
+10f6c5d0 stream      0      0 10f6e738        0        0        0 /var/nws/api.nws
+107a4b50 dgram       0      0        0 107a49f0 107a49f0        0 
+107a49f0 dgram       0      0        0 107a4b50 107a4b50        0 
+108b23c0 dgram       0      0        0 108b2260 108b2260        0 
+108b2260 dgram       0      0        0 108b23c0 108b23c0        0 
+107a4d08 dgram       0      0        0 107a4cb0 107a4cb0        0 
+107a4cb0 dgram       0      0        0 107a4d08 107a4d08        0 
+107a4c00 dgram       0      0        0 107a4ba8 107a4ba8        0 
+107a4ba8 dgram       0      0        0 107a4c00 107a4c00        0 
+107a4af8 dgram       0      0        0 107a4aa0 107a4aa0        0 
+107a4aa0 dgram       0      0        0 107a4af8 107a4af8        0 
+107a4a48 dgram       0      0        0 107a48e8 107a48e8        0 
+107a48e8 dgram       0      0        0 107a4a48 107a4a48        0 
+107a4998 dgram       0      0        0 107a4890 107a4890        0 
+107a4890 dgram       0      0        0 107a4998 107a4998        0 
+107a4838 dgram       0      0        0 107a4788 107a4788        0 
+107a4788 dgram       0      0        0 107a4838 107a4838        0 
+107a46d8 dgram       0      0        0 107a4680 107a4680        0 
+107a4680 dgram       0      0        0 107a46d8 107a46d8        0 
+107a4628 dgram       0      0        0 107a4578 107a4578        0 
+107a4578 dgram       0      0        0 107a4628 107a4628        0 
+107a44c8 dgram       0      0        0 107a4470 107a4470        0 
+107a4470 dgram       0      0        0 107a44c8 107a44c8        0 
+1079c260 dgram       0      0 1079e7c0        0        0        0 /tmp/dummy05406a
+10f6cec0 dgram       0      0 10f75628 10f6ce68        0        0 -> /var/wlan/wpa_supplicant/bcm0
+10f6ce68 dgram       0      0 10f75490        0 10f6cec0        0 /var/wlan/wpa_supplicant/bcm0
+10f6ce10 dgram       0      0 10f75270        0        0        0 /var/wlan/supplicant_global
+

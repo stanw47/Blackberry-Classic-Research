@@ -1,0 +1,6 @@
+### CMD: ls -la /var/run/dnsmasq* 2>&1; cat /var/etc/dnsmasq.leases 2>&1; find /var -name '*.dnsmasq*' 2>/dev/null | head
+### RC-EOF
+ls: Permission denied (/var/run/dnsmasq*)
+/var/etc/dnsmasq.leases: No such file or directory
+sh: head: cannot execute - No such file or directory
+

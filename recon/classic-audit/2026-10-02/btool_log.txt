@@ -1,0 +1,15 @@
+### CMD: cat /tmp/launcher_patcher.log 2>&1 | tail -200; echo ---; cat /var/log/*sud* 2>&1 | head
+### RC-EOF
+----------------------------------------------------
+  BB10 launcher patcher(uni)
+  Version:  1.1.0
+  Author:   Oleksandr <oleksandr@e.email>
+  Build:    Apr 19 2026 09:49:44
+----------------------------------------------------
+Target PID: 8147057, Relative Patch Offset: 0x0009A838
+Launcher base: 0x10509000
+Current byte at 0x105A3838: 2
+Patch applied successfully at 0x105A3838!
+---
+sh: head: cannot execute - No such file or directory
+

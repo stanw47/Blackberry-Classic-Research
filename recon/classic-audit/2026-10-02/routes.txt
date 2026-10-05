@@ -1,0 +1,6 @@
+### CMD: netstat -rn 2>&1; echo ---ipv6---; netstat -rn -f inet6 2>&1
+### RC-EOF
+netstat: kvm error: Operation not permitted: Operation not permitted
+---ipv6---
+netstat: kvm error: Operation not permitted: Operation not permitted
+

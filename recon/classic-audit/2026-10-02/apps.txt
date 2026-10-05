@@ -1,0 +1,44 @@
+### CMD: ls -la /accounts/1000/appdata 2>&1; echo ---; ls -la /apps 2>&1 | head -40
+### RC-EOF
+total 304
+drwxr-x---+ 38 apps      1000           4096 Oct 02 18:35 .
+drwxr-xr-x  20 root      1000           4096 Feb 22  2018 ..
+drwxr-x---   6 apps      10104          4096 Sep 23 06:53 com.example.Term49.gYABgFEqMSpja5S6kL.DWpWmq50
+drwxr-x---   6 apps      100031000      4096 Sep 23 18:57 com.rim.bb.app.adobeReader.gYABgAxBqJsMx5M..e.RfW5WpTU
+drwxr-x---   6 apps      10147          4096 Sep 24 18:49 com.sw7ft.BerryShellV3.testRel_erryShellV3d55e24f1
+drwxr-x---   6 apps      air_services      4096 Sep 23 06:44 sys.airservices
+drwxr-x---   6 apps      10011          4096 Sep 23 06:46 sys.android.gYABgKAOw1czN6neiAT72SGO.ns
+drwxr-x---   6 apps      10012          4096 Sep 23 06:52 sys.android.shell.gYABgCWpLq.7ipa6NFYT0JaLpt8
+drwxr-x---   6 apps      10018          4096 Sep 23 06:47 sys.bb_screen_reader.gYABgLsW4Tb4iTK1U5uI9RWsB08
+drwxr-x---   3 apps      10017          4096 Sep 23 06:46 sys.bbm.gYABgLOJBR2Vz7FzS.kdgJchuag
+drwxr-x---   6 apps      100191000      4096 Sep 25 11:23 sys.browser.gYABgJYFHAzbeFMPCCpYWBtHAm0
+drwxr-x---   6 apps      100211000      4096 Sep 28 16:11 sys.btviewer.gYABgJSFvQk7U5eBFvuKFzo01iM
+drwxr-x---   6 apps      100251000      4096 Sep 27 15:52 sys.camera.gYABgAvGHb4h9H5WeWdjQhXgeRM
+drwxr-x---   6 apps      10028          4096 Sep 23 06:47 sys.cfs.webdav.todtm.gYABgGnToZvN4bqMB3xslfel.KU
+drwxr-x---   6 apps      10029          4096 Oct 01 15:57 sys.chat.gYABgADt.JeweQYFvYX28P5bwu0
+drwxr-x---   3 apps      dialog_service      4096 Sep 23 06:44 sys.dialogservice
+drwxr-x---   6 apps      100331000      4096 Oct 02 18:35 sys.dxtg.launcher.gYABgHFqGG632tetjwVL_egrHHc
+drwxr-x---   6 apps      100381000      4096 Sep 25 13:16 sys.filepicker.gYABgBUOB4WQ4V0f7gH0kMCrcVA
+drwxr-x---   6 apps      10039          4096 Sep 23 06:44 sys.firstlaunch.gYABgE1L_lY.sjW85E1SCBQsrco
+drwxr-x---   6 apps      10040          4096 Sep 23 06:44 sys.fuse.gYABgOQWagv3fU6DN3PbYTsScIM
+drwxr-x---   6 apps      10044          4096 Sep 24 18:50 sys.installhandlerui.gYABgMBQqw3Z4PrzRBHXPxalPfU
+drwxr-x---   6 apps      100451000      4096 Sep 28 16:11 sys.invokeTargetSelection.gYABgCH2_Yal8b8T6fxdbFQhKEI
+drwxr-x---   6 apps      keyboard       4096 Sep 23 06:44 sys.keyboard
+drwxr-x---   3 apps      nto            4096 Sep 23 06:43 sys.navigator
+drwxr-x---   6 apps      100501000      4096 Sep 25 13:18 sys.notification_card.gYABgLyFNMkTny6ihJLjaG02jUU
+drwxr-x---   6 apps      100531000      4096 Sep 23 06:47 sys.perimeterbrowser.gYABgMgpl40MVrFkZvPEXRuQTGE
+drwxr-x---   3 apps      10054          4096 Sep 23 06:44 sys.phone.gYABgB3m3BHdGLR4aicCyzCVsYQ
+drwxr-x---   6 apps      100571000      4096 Sep 28 16:11 sys.pictures.gYABgFZ.pCiYHqciL1zClEPjmps
+drwxr-x---   6 apps      100581000      4096 Sep 27 15:52 sys.picturesviewer.gYABgFKlvDBH.tdV7sGqIDZHnNY
+drwxr-x---   6 apps      10060          4096 Oct 02 18:01 sys.pim.calendar.gYABgG0xvpxP1jARa6DD5o.VL8A
+drwxr-x---   6 apps      10067          4096 Sep 23 06:44 sys.pim.messages.gYABgJ8jn83Ok_NEWYplPYozt5w
+drwxr-x---   6 apps      10075          4096 Sep 23 06:44 sys.search.gYABgPp5WMkB_07CE6wzbflslRQ
+drwxr-x---   6 apps      10077          4096 Sep 23 06:44 sys.settings.gYABgFXZghhSmuJ6oBTACT1DwpQ
+drwxr-x---   6 apps      10081          4096 Sep 23 18:52 sys.smartcard.gYABgNk7IIG4IwwaZJBWMOiRy6E
+drwxr-x---   6 apps      10082          4096 Sep 23 06:44 sys.smartcardnfcdriver.gYABgPWjBQaaSZLk8.i5t_P04AI
+drwxr-x---   6 apps      10084          4096 Sep 23 06:47 sys.smarttriggers.gYABgGf.nHzTs5OnSghZBhyvA7M
+drwxr-x---   6 apps      10089          4096 Sep 23 06:47 sys.sysmon.gYABgB0kStA2fqDfeIFBK.Bhe34
+drwxr-x---   3 apps      10100          4096 Sep 23 06:46 sys.zbbiocm.gYABgDZcy0Sq5cvKqkoZgR3qJps
+---
+sh: head: cannot execute - No such file or directory
+

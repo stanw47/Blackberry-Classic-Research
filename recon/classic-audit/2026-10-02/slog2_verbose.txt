@@ -1,0 +1,2 @@
+### CMD: /base/bin/slog2info -a 2>&1
+

@@ -1,0 +1,4 @@
+### CMD: slog2info -b boot -a 2>&1 | head -2000
+### RC-EOF
+sh: head: cannot execute - No such file or directory
+

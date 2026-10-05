@@ -1,0 +1,8 @@
+### CMD: netstat -an 2>&1 | head -200; echo ---arp---; arp -a 2>&1
+### RC-EOF
+---arp---
+? (169.254.0.2) at a6:e4:b8:47:d4:4a on ncm0
+? (169.254.0.3) at (incomplete) on ncm0
+AP-AX3000CV2-3CA7.lan (192.168.100.1) at 04:d6:88:a1:3c:a7 on bcm0
+sh: head: cannot execute - No such file or directory
+

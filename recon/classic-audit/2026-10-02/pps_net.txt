@@ -1,0 +1,1073 @@
+### CMD: find /pps/services/networking -type f -exec sh -c 'echo == $1; cat $1' _ {} \; 2>&1
+
+_: No such file or directory
+[n]@ncm1
+connected:b:true
+fib:n:15
+ip4_ok::error_no_ip_addr
+ip6_ok::error_no_ip_addr
+ip_gateway:json:[]
+ip_ok::error_no_ip_addr
+link_address::a6:e4:b8:47:d4:4d
+manual::yes
+manual6::off
+mtu:n:1500
+nameservers:json:[]
+searchdomains::
+type::usb
+up:b:true
+
+_: No such file or directory
+[n]@bb1
+fib:n:15
+ip4_ok::error_not_connected
+ip6_ok::error_not_connected
+ip_gateway:json:[]
+ip_ok::error_not_connected
+
+_: No such file or directory
+[n]@bb2
+fib:n:15
+
+_: No such file or directory
+[n]@bpte0
+fib:n:15
+
+_: No such file or directory
+[n]@vlan0
+fib:n:15
+
+_: No such file or directory
+[n]@vpn0
+fib:n:15
+
+_: No such file or directory
+[n]@ondemand3
+fib:n:15
+
+_: No such file or directory
+[n]@ondemand2
+fib:n:15
+
+_: No such file or directory
+[n]@ondemand1
+fib:n:15
+
+_: No such file or directory
+[n]@ondemand0
+fib:n:15
+
+_: No such file or directory
+[n]@ncm0
+connected:b:true
+fib:n:15
+ip4_ok::error_no_ip_gateway
+ip6_ok::error_no_ip_addr
+ip_addresses:json:["169.254.0.1/255.255.255.252","fe80::a4e4:b8ff:fe47:d44b%ncm0/ffff:ffff:ffff:ffff::"]
+ip_bcastaddr::169.254.0.3
+ip_gateway:json:[]
+ip_ok::error_no_ip_gateway
+link_address::a6:e4:b8:47:d4:4b
+manual::yes
+manual6::off
+mtu:n:1500
+nameservers:json:[]
+searchdomains::
+type::usb
+up:b:true
+
+_: No such file or directory
+[n]@rndis0
+fib:n:15
+
+_: No such file or directory
+[n]@ecm0
+fib:n:15
+
+_: No such file or directory
+[n]@bb0
+fib:n:15
+
+_: No such file or directory
+[n]@ppp0
+fib:n:15
+
+_: No such file or directory
+[n]@pan0
+fib:n:15
+
+_: No such file or directory
+[n]@nap0
+fib:n:15
+
+_: No such file or directory
+[n]@msm4
+connected:b:false
+fib:n:15
+ip4_ok::error_not_up
+ip6_ok::error_not_up
+ip_addresses:json:[]
+ip_gateway:json:[]
+ip_ok::error_not_up
+link_address::02:00:00:00:00:04
+mtu:n:1514
+nameservers:json:[]
+searchdomains::
+type::cellular
+up:b:false
+
+_: No such file or directory
+[n]@msm3
+connected:b:false
+fib:n:15
+ip4_ok::error_not_up
+ip6_ok::error_not_up
+ip_addresses:json:[]
+ip_gateway:json:[]
+ip_ok::error_not_up
+link_address::02:00:00:00:00:03
+mtu:n:1514
+nameservers:json:[]
+searchdomains::
+type::cellular
+up:b:false
+
+_: No such file or directory
+[n]@msm2
+connected:b:false
+fib:n:15
+ip4_ok::error_not_up
+ip6_ok::error_not_up
+ip_addresses:json:[]
+ip_gateway:json:[]
+ip_ok::error_not_up
+link_address::02:00:00:00:00:02
+mtu:n:1514
+nameservers:json:[]
+searchdomains::
+type::cellular
+up:b:false
+
+_: No such file or directory
+[n]@msm1
+connected:b:false
+fib:n:15
+ip4_ok::error_not_up
+ip6_ok::error_not_up
+ip_addresses:json:[]
+ip_gateway:json:[]
+ip_ok::error_not_up
+link_address::02:00:00:00:00:01
+mtu:n:1514
+nameservers:json:[]
+searchdomains::
+type::cellular
+up:b:false
+
+_: No such file or directory
+[n]@msm0
+connected:b:true
+fib:n:15
+ip4_ok::yes
+ip6_ok::error_no_ip_addr
+ip_addresses:json:["fe80::a6e4:b8ff:fe47:d44b%msm0/ffff:ffff:ffff:ffff::","100.105.34.220/255.255.255.252"]
+ip_dstaddr::0.0.0.0
+ip_gateway:json:["100.105.34.220"]
+ip_ok::yes
+link_address::02:00:00:00:00:00
+manual::yes
+manual6::off
+mtu:n:1428
+nameservers:json:["115.164.64.14","182.62.210.14"]
+searchdomains::
+type::cellular
+up:b:true
+
+_: No such file or directory
+[n]@bcm1
+connected:b:false
+fib:n:15
+ip4_ok::error_not_up
+ip6_ok::error_not_up
+ip_addresses:json:[]
+ip_gateway:json:[]
+ip_ok::error_not_up
+link_address::a4:e4:b8:47:d4:4a
+mtu:n:1500
+nameservers:json:[]
+searchdomains::
+type::unknown
+up:b:false
+
+_: No such file or directory
+[n]@bcm0
+connected:b:true
+fib:n:15
+hotspot::no
+ip4_ok::yes
+ip6_ok::error_no_ip_addr
+ip_addresses:json:["fe80::a6e4:b8ff:fe47:d44b%bcm0/ffff:ffff:ffff:ffff::","192.168.100.40/255.255.255.0"]
+ip_bcastaddr::192.168.100.255
+ip_gateway:json:["192.168.100.1"]
+ip_ok::yes
+link_address::a4:e4:b8:47:d4:4b
+manual::no
+manual6::off
+mtu:n:1500
+nameservers:json:["192.168.100.1"]
+searchdomains::lan
+type::wifi
+up:b:true
+
+_: No such file or directory
+[n]@smsc0
+fib:n:15
+
+_: No such file or directory
+[n]@asix0
+fib:n:15
+
+_: No such file or directory
+[n]@ipsec3
+fib:n:15
+
+_: No such file or directory
+[n]@ipsec2
+fib:n:15
+
+_: No such file or directory
+[n]@anyconnect1
+fib:n:15
+
+_: No such file or directory
+[n]@openvpn1
+fib:n:15
+
+_: No such file or directory
+[n]@ipsec1
+fib:n:15
+
+_: No such file or directory
+[n]@anyconnect0
+fib:n:15
+
+_: No such file or directory
+[n]@openvpn0
+fib:n:15
+
+_: No such file or directory
+[n]@ipsec0
+fib:n:15
+
+_: No such file or directory
+@status
+
+_: No such file or directory
+[n]@status_public
+default_gateway:json:["192.168.100.1"]
+default_interface::bcm0
+default_interface4::bcm0
+default_interface6::
+fib:n:15
+ip4_ok::yes
+ip6_ok::error_no_ip_addr
+ip_ok::yes
+nameservers:json:["192.168.100.1"]
+priority:json:["ipsec0","openvpn0","anyconnect0","ipsec1","openvpn1","anyconnect1","ipsec2","ipsec3","asix0","smsc0","bcm0","bcm1","msm0","msm1","msm2","msm3","msm4","nap0","pan0","ppp0","bb0","ecm0","rndis0","ncm0","ondemand0","ondemand1","ondemand2","ondemand3","vpn0","vlan0","bpte0","bb2","bb1","ncm1"]
+searchdomains::lan
+
+_: No such file or directory
+/pps/services/networking/all/proxy: Permission denied
+
+_: No such file or directory
+/pps/services/networking/control: Permission denied
+
+_: No such file or directory
+/pps/services/networking/settings: Permission denied
+
+_: No such file or directory
+[n]@bb1
+fib:n:1
+ip4_ok::error_not_connected
+ip6_ok::error_not_connected
+ip_gateway:json:[]
+ip_ok::error_not_connected
+
+_: No such file or directory
+[n]@bb2
+fib:n:1
+
+_: No such file or directory
+[n]@bpte0
+fib:n:1
+
+_: No such file or directory
+[n]@vlan0
+fib:n:1
+
+_: No such file or directory
+[n]@vpn0
+fib:n:1
+
+_: No such file or directory
+[n]@ondemand3
+fib:n:1
+
+_: No such file or directory
+[n]@ondemand2
+fib:n:1
+
+_: No such file or directory
+[n]@ondemand1
+fib:n:1
+
+_: No such file or directory
+[n]@ondemand0
+fib:n:1
+
+_: No such file or directory
+[n]@bcm0
+connected:b:false
+fib:n:1
+hotspot::no
+ip4_ok::error_not_connected
+ip6_ok::error_not_connected
+ip_addresses:json:["fe80::a6e4:b8ff:fe47:d44b%bcm0/ffff:ffff:ffff:ffff::","192.168.100.40/255.255.255.0"]
+ip_bcastaddr::192.168.100.255
+ip_gateway:json:[]
+ip_ok::error_not_connected
+link_address::a4:e4:b8:47:d4:4b
+mtu:n:1500
+nameservers:json:[]
+searchdomains::
+type::unknown
+up:b:true
+
+_: No such file or directory
+[n]@anyconnect1
+fib:n:1
+
+_: No such file or directory
+[n]@openvpn1
+fib:n:1
+
+_: No such file or directory
+[n]@ipsec1
+fib:n:1
+
+_: No such file or directory
+@status
+
+_: No such file or directory
+[n]@status_public
+default_gateway:json:[]
+default_interface::
+default_interface4::
+default_interface6::
+fib:n:1
+ip4_ok::error_not_up
+ip6_ok::error_not_up
+ip_ok::error_not_up
+nameservers:json:[]
+priority:json:["ipsec1","openvpn1","anyconnect1","ondemand0","ondemand1","ondemand2","ondemand3","vpn0","vlan0","bpte0","bcm0","bb2","bb1"]
+searchdomains::
+
+_: No such file or directory
+/pps/services/networking/enterprise/proxy: Permission denied
+
+_: No such file or directory
+/pps/services/networking/enterprise/proxyserver: Permission denied
+
+_: No such file or directory
+[n]@pflog0
+connected:b:false
+fib:n:0
+ip4_ok::error_not_up
+ip6_ok::error_not_up
+ip_addresses:json:[]
+ip_gateway:json:[]
+ip_ok::error_not_up
+link_address::00:00:00:00:00:00
+mtu:n:33192
+nameservers:json:[]
+searchdomains::
+type::unknown
+unmanaged:b:true
+up:b:false
+
+_: No such file or directory
+[n]@lo0
+connected:b:false
+fib:n:0
+ip4_ok::error_not_connected
+ip6_ok::error_not_connected
+ip_addresses:json:["127.0.0.1/255.0.0.0","::1%1/ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff","fe80::1%lo0/ffff:ffff:ffff:ffff::"]
+ip_dstaddr::127.0.0.1
+ip_gateway:json:[]
+ip_ok::error_not_connected
+link_address::00:00:00:00:00:00
+mtu:n:33192
+nameservers:json:[]
+searchdomains::
+type::unknown
+unmanaged:b:true
+up:b:true
+
+_: No such file or directory
+[n]@ncm0
+connected:b:true
+fib:n:0
+ip4_ok::error_no_ip_gateway
+ip6_ok::error_no_ip_addr
+ip_addresses:json:["169.254.0.1/255.255.255.252","fe80::a4e4:b8ff:fe47:d44b%ncm0/ffff:ffff:ffff:ffff::"]
+ip_bcastaddr::169.254.0.3
+ip_gateway:json:[]
+ip_ok::error_no_ip_gateway
+link_address::a6:e4:b8:47:d4:4b
+manual::yes
+manual6::off
+mtu:n:1500
+nameservers:json:[]
+searchdomains::
+type::usb
+up:b:true
+
+_: No such file or directory
+[n]@rndis0
+fib:n:0
+
+_: No such file or directory
+[n]@ecm0
+fib:n:0
+
+_: No such file or directory
+[n]@bb0
+fib:n:0
+
+_: No such file or directory
+[n]@ppp0
+fib:n:0
+
+_: No such file or directory
+[n]@pan0
+fib:n:0
+
+_: No such file or directory
+[n]@nap0
+fib:n:0
+
+_: No such file or directory
+[n]@msm4
+connected:b:false
+fib:n:0
+ip4_ok::error_not_up
+ip6_ok::error_not_up
+ip_addresses:json:[]
+ip_gateway:json:[]
+ip_ok::error_not_up
+link_address::02:00:00:00:00:04
+mtu:n:1514
+nameservers:json:[]
+searchdomains::
+type::cellular
+up:b:false
+
+_: No such file or directory
+[n]@msm3
+connected:b:false
+fib:n:0
+ip4_ok::error_not_up
+ip6_ok::error_not_up
+ip_addresses:json:[]
+ip_gateway:json:[]
+ip_ok::error_not_up
+link_address::02:00:00:00:00:03
+mtu:n:1514
+nameservers:json:[]
+searchdomains::
+type::cellular
+up:b:false
+
+_: No such file or directory
+[n]@msm2
+connected:b:false
+fib:n:0
+ip4_ok::error_not_up
+ip6_ok::error_not_up
+ip_addresses:json:[]
+ip_gateway:json:[]
+ip_ok::error_not_up
+link_address::02:00:00:00:00:02
+mtu:n:1514
+nameservers:json:[]
+searchdomains::
+type::cellular
+up:b:false
+
+_: No such file or directory
+[n]@msm1
+connected:b:false
+fib:n:0
+ip4_ok::error_not_up
+ip6_ok::error_not_up
+ip_addresses:json:[]
+ip_gateway:json:[]
+ip_ok::error_not_up
+link_address::02:00:00:00:00:01
+mtu:n:1514
+nameservers:json:[]
+searchdomains::
+type::cellular
+up:b:false
+
+_: No such file or directory
+[n]@msm0
+connected:b:true
+fib:n:0
+ip4_ok::yes
+ip6_ok::error_no_ip_addr
+ip_addresses:json:["fe80::a6e4:b8ff:fe47:d44b%msm0/ffff:ffff:ffff:ffff::","100.105.34.220/255.255.255.252"]
+ip_dstaddr::0.0.0.0
+ip_gateway:json:["100.105.34.220"]
+ip_ok::yes
+link_address::02:00:00:00:00:00
+manual::yes
+manual6::off
+mtu:n:1428
+nameservers:json:["115.164.64.14","182.62.210.14"]
+searchdomains::
+type::cellular
+up:b:true
+
+_: No such file or directory
+[n]@bcm1
+connected:b:false
+fib:n:0
+ip4_ok::error_not_up
+ip6_ok::error_not_up
+ip_addresses:json:[]
+ip_gateway:json:[]
+ip_ok::error_not_up
+link_address::a4:e4:b8:47:d4:4a
+mtu:n:1500
+nameservers:json:[]
+searchdomains::
+type::unknown
+up:b:false
+
+_: No such file or directory
+[n]@bcm0
+connected:b:true
+fib:n:0
+hotspot::no
+ip4_ok::yes
+ip6_ok::error_no_ip_addr
+ip_addresses:json:["fe80::a6e4:b8ff:fe47:d44b%bcm0/ffff:ffff:ffff:ffff::","192.168.100.40/255.255.255.0"]
+ip_bcastaddr::192.168.100.255
+ip_gateway:json:["192.168.100.1"]
+ip_ok::yes
+link_address::a4:e4:b8:47:d4:4b
+manual::no
+manual6::off
+mtu:n:1500
+nameservers:json:["192.168.100.1"]
+searchdomains::lan
+type::wifi
+up:b:true
+
+_: No such file or directory
+[n]@smsc0
+fib:n:0
+
+_: No such file or directory
+[n]@asix0
+fib:n:0
+
+_: No such file or directory
+[n]@ipsec3
+fib:n:0
+
+_: No such file or directory
+[n]@ipsec2
+fib:n:0
+
+_: No such file or directory
+[n]@anyconnect1
+fib:n:0
+
+_: No such file or directory
+[n]@openvpn1
+fib:n:0
+
+_: No such file or directory
+[n]@ipsec1
+fib:n:0
+
+_: No such file or directory
+[n]@anyconnect0
+fib:n:0
+
+_: No such file or directory
+[n]@openvpn0
+fib:n:0
+
+_: No such file or directory
+[n]@ipsec0
+fib:n:0
+
+_: No such file or directory
+[n]@lo2
+connected:b:false
+fib:n:0
+ip4_ok::error_not_up
+ip6_ok::error_not_up
+ip_addresses:json:[]
+ip_gateway:json:[]
+ip_ok::error_not_up
+link_address::00:00:00:00:00:00
+mtu:n:33192
+nameservers:json:[]
+searchdomains::
+type::unknown
+unmanaged:b:true
+up:b:false
+
+_: No such file or directory
+[n]@bptp0
+connected:b:true
+fib:n:0
+ip4_ok::error_ip_off
+ip6_ok::error_ip_off
+ip_addresses:json:["fe80::a6e4:b8ff:fe47:d44b%bptp0/ffff:ffff:ffff:ffff::","fd07:26c7:5d8b:fffb:84b2:f81d:d870:72ba%56/ff00::"]
+ip_gateway:json:[]
+ip_ok::error_ip_off
+link_address::00:00:00:00:00:00
+manual::off
+manual6::yes
+mtu:n:1356
+nameservers:json:[]
+searchdomains::
+type::p2p
+unmanaged:b:true
+up:b:true
+
+_: No such file or directory
+[n]@bb1
+fib:n:3
+ip4_ok::error_not_connected
+ip6_ok::error_not_connected
+ip_gateway:json:[]
+ip_ok::error_not_connected
+
+_: No such file or directory
+[n]@bb2
+fib:n:3
+
+_: No such file or directory
+[n]@bpte0
+fib:n:3
+
+_: No such file or directory
+[n]@vlan0
+fib:n:3
+
+_: No such file or directory
+[n]@vpn0
+fib:n:3
+
+_: No such file or directory
+[n]@bcm0
+connected:b:false
+fib:n:3
+hotspot::no
+ip4_ok::error_not_connected
+ip6_ok::error_not_connected
+ip_addresses:json:["fe80::a6e4:b8ff:fe47:d44b%bcm0/ffff:ffff:ffff:ffff::","192.168.100.40/255.255.255.0"]
+ip_bcastaddr::192.168.100.255
+ip_gateway:json:[]
+ip_ok::error_not_connected
+link_address::a4:e4:b8:47:d4:4b
+mtu:n:1500
+nameservers:json:[]
+searchdomains::
+type::unknown
+up:b:true
+
+_: No such file or directory
+[n]@anyconnect1
+fib:n:3
+
+_: No such file or directory
+[n]@openvpn1
+fib:n:3
+
+_: No such file or directory
+[n]@ipsec1
+fib:n:3
+
+_: No such file or directory
+@status
+
+_: No such file or directory
+[n]@status_public
+default_gateway:json:[]
+default_interface::
+default_interface4::
+default_interface6::
+fib:n:3
+ip4_ok::error_not_up
+ip6_ok::error_not_up
+ip_ok::error_not_up
+nameservers:json:[]
+priority:json:["ipsec1","openvpn1","anyconnect1","vpn0","vlan0","bpte0","bcm0","bb2","bb1"]
+searchdomains::
+
+_: No such file or directory
+/pps/services/networking/enterprise_admin/proxy: Permission denied
+
+_: No such file or directory
+/pps/services/networking/enterprise_admin/proxyserver: Permission denied
+
+_: No such file or directory
+/pps/services/networking/control_restricted: Permission denied
+
+_: No such file or directory
+[n]@msm4
+connected:b:false
+fib:n:4
+ip4_ok::error_not_up
+ip6_ok::error_not_up
+ip_addresses:json:[]
+ip_gateway:json:[]
+ip_ok::error_not_up
+link_address::02:00:00:00:00:04
+mtu:n:1514
+nameservers:json:[]
+searchdomains::
+type::cellular
+up:b:false
+
+_: No such file or directory
+[n]@msm3
+connected:b:false
+fib:n:4
+ip4_ok::error_not_up
+ip6_ok::error_not_up
+ip_addresses:json:[]
+ip_gateway:json:[]
+ip_ok::error_not_up
+link_address::02:00:00:00:00:03
+mtu:n:1514
+nameservers:json:[]
+searchdomains::
+type::cellular
+up:b:false
+
+_: No such file or directory
+[n]@msm2
+connected:b:false
+fib:n:4
+ip4_ok::error_not_up
+ip6_ok::error_not_up
+ip_addresses:json:[]
+ip_gateway:json:[]
+ip_ok::error_not_up
+link_address::02:00:00:00:00:02
+mtu:n:1514
+nameservers:json:[]
+searchdomains::
+type::cellular
+up:b:false
+
+_: No such file or directory
+[n]@msm1
+connected:b:false
+fib:n:4
+ip4_ok::error_not_up
+ip6_ok::error_not_up
+ip_addresses:json:[]
+ip_gateway:json:[]
+ip_ok::error_not_up
+link_address::02:00:00:00:00:01
+mtu:n:1514
+nameservers:json:[]
+searchdomains::
+type::cellular
+up:b:false
+
+_: No such file or directory
+[n]@msm0
+connected:b:true
+fib:n:4
+ip4_ok::yes
+ip6_ok::error_no_ip_addr
+ip_addresses:json:["fe80::a6e4:b8ff:fe47:d44b%msm0/ffff:ffff:ffff:ffff::","100.105.34.220/255.255.255.252"]
+ip_dstaddr::0.0.0.0
+ip_gateway:json:["100.105.34.220"]
+ip_ok::yes
+link_address::02:00:00:00:00:00
+manual::yes
+manual6::off
+mtu:n:1428
+nameservers:json:["115.164.64.14","182.62.210.14"]
+searchdomains::
+type::cellular
+up:b:true
+
+_: No such file or directory
+[n]@bcm1
+connected:b:false
+fib:n:4
+ip4_ok::error_not_up
+ip6_ok::error_not_up
+ip_addresses:json:[]
+ip_gateway:json:[]
+ip_ok::error_not_up
+link_address::a4:e4:b8:47:d4:4a
+mtu:n:1500
+nameservers:json:[]
+searchdomains::
+type::unknown
+up:b:false
+
+_: No such file or directory
+[n]@bcm0
+connected:b:true
+fib:n:4
+hotspot::no
+ip4_ok::yes
+ip6_ok::error_no_ip_addr
+ip_addresses:json:["fe80::a6e4:b8ff:fe47:d44b%bcm0/ffff:ffff:ffff:ffff::","192.168.100.40/255.255.255.0"]
+ip_bcastaddr::192.168.100.255
+ip_gateway:json:["192.168.100.1"]
+ip_ok::yes
+link_address::a4:e4:b8:47:d4:4b
+manual::no
+manual6::off
+mtu:n:1500
+nameservers:json:["192.168.100.1"]
+searchdomains::lan
+type::wifi
+up:b:true
+
+_: No such file or directory
+[n]@ipsec3
+fib:n:4
+
+_: No such file or directory
+[n]@ipsec2
+fib:n:4
+
+_: No such file or directory
+[n]@anyconnect1
+fib:n:4
+
+_: No such file or directory
+[n]@openvpn1
+fib:n:4
+
+_: No such file or directory
+[n]@ipsec1
+fib:n:4
+
+_: No such file or directory
+[n]@anyconnect0
+fib:n:4
+
+_: No such file or directory
+[n]@openvpn0
+fib:n:4
+
+_: No such file or directory
+[n]@ipsec0
+fib:n:4
+
+_: No such file or directory
+@status
+
+_: No such file or directory
+[n]@status_public
+default_gateway:json:["192.168.100.1"]
+default_interface::bcm0
+default_interface4::bcm0
+default_interface6::
+fib:n:4
+ip4_ok::yes
+ip6_ok::error_no_ip_addr
+ip_ok::yes
+nameservers:json:["192.168.100.1"]
+priority:json:["ipsec1","openvpn1","anyconnect1","ipsec0","anyconnect0","openvpn0","ipsec2","ipsec3","bcm0","bcm1","msm0","msm1","msm2","msm3","msm4"]
+searchdomains::lan
+
+_: No such file or directory
+/pps/services/networking/enterprise_unsecure/proxy: Permission denied
+
+_: No such file or directory
+/pps/services/networking/enterprise_unsecure/proxyserver: Permission denied
+
+_: No such file or directory
+[n]@ncm1
+connected:b:false
+fib:n:2
+ip4_ok::error_not_connected
+ip6_ok::error_not_connected
+ip_gateway:json:[]
+ip_ok::error_not_connected
+link_address::a6:e4:b8:47:d4:4d
+manual::yes
+manual6::off
+mtu:n:1500
+nameservers:json:[]
+searchdomains::
+type::unknown
+up:b:false
+
+_: No such file or directory
+[n]@rndis0
+fib:n:2
+
+_: No such file or directory
+[n]@ecm0
+fib:n:2
+
+_: No such file or directory
+[n]@nap0
+fib:n:2
+
+_: No such file or directory
+[n]@msm4
+connected:b:false
+fib:n:2
+ip4_ok::error_not_connected
+ip6_ok::error_not_connected
+ip_addresses:json:[]
+ip_gateway:json:[]
+ip_ok::error_not_connected
+link_address::02:00:00:00:00:04
+mtu:n:1514
+nameservers:json:[]
+searchdomains::
+type::cellular
+up:b:false
+
+_: No such file or directory
+[n]@msm3
+connected:b:false
+fib:n:2
+ip4_ok::error_not_connected
+ip6_ok::error_not_connected
+ip_addresses:json:[]
+ip_gateway:json:[]
+ip_ok::error_not_connected
+link_address::02:00:00:00:00:03
+mtu:n:1514
+nameservers:json:[]
+searchdomains::
+type::cellular
+up:b:false
+
+_: No such file or directory
+[n]@msm2
+connected:b:false
+fib:n:2
+ip4_ok::error_not_connected
+ip6_ok::error_not_connected
+ip_addresses:json:[]
+ip_gateway:json:[]
+ip_ok::error_not_connected
+link_address::02:00:00:00:00:02
+mtu:n:1514
+nameservers:json:[]
+searchdomains::
+type::cellular
+up:b:false
+
+_: No such file or directory
+[n]@msm1
+connected:b:false
+fib:n:2
+ip4_ok::error_not_connected
+ip6_ok::error_not_connected
+ip_addresses:json:[]
+ip_gateway:json:[]
+ip_ok::error_not_connected
+link_address::02:00:00:00:00:01
+mtu:n:1514
+nameservers:json:[]
+searchdomains::
+type::cellular
+up:b:false
+
+_: No such file or directory
+[n]@msm0
+connected:b:false
+fib:n:2
+ip4_ok::error_not_connected
+ip6_ok::error_not_connected
+ip_addresses:json:["fe80::a6e4:b8ff:fe47:d44b%msm0/ffff:ffff:ffff:ffff::","100.105.34.220/255.255.255.252"]
+ip_dstaddr::0.0.0.0
+ip_gateway:json:[]
+ip_ok::error_not_connected
+link_address::02:00:00:00:00:00
+mtu:n:1514
+nameservers:json:[]
+searchdomains::
+type::cellular
+up:b:true
+
+_: No such file or directory
+[n]@bcm1
+connected:b:false
+fib:n:2
+ip4_ok::error_not_connected
+ip6_ok::error_not_connected
+ip_addresses:json:[]
+ip_gateway:json:[]
+ip_ok::error_not_connected
+link_address::a4:e4:b8:47:d4:4a
+mtu:n:1500
+nameservers:json:[]
+searchdomains::
+type::unknown
+up:b:false
+
+_: No such file or directory
+@status
+
+_: No such file or directory
+[n]@status_public
+fib:n:2
+priority:json:["msm0","msm1","msm2","msm3","msm4","ecm0","rndis0","ncm1","bcm1","nap0"]
+
+_: No such file or directory
+/pps/services/networking/tethering/proxy: Permission denied
+
+_: No such file or directory
+[n]@status
+bb2:json:{"connected":false}
+bcm0:json:{"connected":true,"type":"wifi"}
+bcm1:json:{"connected":false}
+bptp0:json:{"connected":true,"type":"p2p"}
+msm0:json:{"connected":true,"type":"cellular"}
+ncm0:json:{"connected":true,"type":"usb"}
+ncm1:json:{"connected":true,"type":"usb"}
+
+_: No such file or directory
+[n]@status_public
+default_gateway:json:["192.168.100.1"]
+default_interface::bcm0
+default_interface4::bcm0
+default_interface6::
+fib:n:0
+ip4_ok::yes
+ip6_ok::error_no_ip_addr
+ip_ok::yes
+nameservers:json:["192.168.100.1"]
+priority:json:["ipsec0","openvpn0","anyconnect0","ipsec1","openvpn1","anyconnect1","ipsec2","ipsec3","asix0","smsc0","bcm0","bcm1","msm0","msm1","msm2","msm3","msm4","nap0","pan0","ppp0","bb0","ecm0","rndis0","ncm0"]
+searchdomains::lan
+
+_: No such file or directory
+/pps/services/networking/proxy: Permission denied
+
+_: No such file or directory
+

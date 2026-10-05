@@ -1,0 +1,2 @@
+### CMD: slog2info 2>&1
+

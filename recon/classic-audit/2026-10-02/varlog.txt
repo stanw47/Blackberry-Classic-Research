@@ -1,0 +1,3 @@
+### CMD: ls -la /var/log 2>&1
+ls: Permission denied (/var/log)
+

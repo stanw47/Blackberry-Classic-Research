@@ -1,0 +1,8 @@
+### CMD: netstat -anv 2>&1 | grep -i estab
+### RC-EOF
+tcp        0      0  169.254.0.1.22         169.254.0.2.32866      ESTABLISHED
+tcp        0      0  169.254.0.1.4455       169.254.0.2.54450      ESTABLISHED
+tcp        0      0  127.0.0.1.53           127.0.0.1.14419        ESTABLISHED
+tcp        0      0  127.0.0.1.14419        127.0.0.1.53           ESTABLISHED
+tcp6       0      0  ::ffff:192.168.100.40.58466 ::ffff:142.250.71.174.80 ESTABLISHED
+

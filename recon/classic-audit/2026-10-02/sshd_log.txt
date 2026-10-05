@@ -1,0 +1,7 @@
+### CMD: find /var -name '*sshd*' 2>/dev/null; cat /var/log/sshd* 2>&1 | head; slog2info -a 2>&1 | grep -iE 'sshd|ssh|auth' | head -200
+### RC-EOF
+/var/chroot/sshd
+/var/etc/ssh/sshd_config
+sh: head: cannot execute - No such file or directory
+sh: head: cannot execute - No such file or directory
+

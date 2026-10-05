@@ -1,0 +1,43 @@
+### CMD: echo 'ls -la /var/log' | /base/bin/__root 2>&1
+total 2559
+drwxrwx---+ 34 root      logger         4096 Oct 04 16:42 .
+drwxr-xr-x  60 root      radio          4096 Oct 05 01:15 ..
+drwxrwx---   2 root      logger         4096 Feb 22  2018 activator
+drwxrwxr-x   4 root      nto            4096 Sep 23 06:43 analyzer
+drwxrwx---   2 root      logger         4096 Feb 22  2018 atparser
+drwxrwx---   5 root      logger         4096 Feb 22  2018 bmetrics
+drwxrwx---   2 root      logger         4096 Sep 25 12:48 boot
+drwxrwx---   2 root      bslauncher      4096 Sep 25 12:46 bslauncher
+drwxrwx---   2 root      logger         4096 Feb 22  2018 cellular-control
+drwxrwx---   2 root      logger         4096 Feb 22  2018 cellular-services
+drwxrwx---   2 root      logger         4096 Feb 22  2018 cellular-voice-service
+drwxrwx---   2 root      logger         4096 Feb 22  2018 chat
+drwxrwx---   2 root      logger         4096 Feb 22  2018 datactrl_rrm
+-rw-rw----   1 battery   battery      277923 Oct 05 01:35 fg.log0
+-rw-rw----   1 battery   battery      400090 Oct 04 16:40 fg.log1
+drwxrwx---   2 root      logger         4096 Feb 22  2018 getXtraData
+drwxrwx---   2 root      logger         4096 Feb 22  2018 gps
+drwxrwx---   2 root      logger         4096 Feb 22  2018 iked
+drwxrwx---   2 root      logger         4096 Feb 22  2018 launcher
+-rw-r--r--   1 samba     nto          169676 Oct 05 01:30 log.nmbd
+-rw-r--r--   1 samba     nto          309148 Oct 05 01:30 log.smbd
+drwxrwx---   7 root      logger         4096 Sep 25 12:47 migrate
+lrwxrwxrwx   1 root      nto              16 Oct 05 01:35 modem -> /var/log/msm8960
+drwxrwxr-x   3 root      nto            4096 Feb 22  2018 msm8960
+drwxrwx---   2 root      logger         4096 Feb 22  2018 net_pps
+drwxrwx---   2 omadm     logger         4096 Feb 22  2018 omadm
+drwxrwx---   2 root      logger         4096 Feb 22  2018 phone-service
+drwxrwx---   2 root      logger         4096 Feb 22  2018 qct_rrm
+drwxrwx---   3 quip      logger         4096 Sep 23 18:51 quip
+drwxrwx---   4 root      logger         4096 Sep 23 06:43 radio
+drwxrwx---   2 root      logger         4096 Feb 22  2018 radioctrl_data_pps
+drw-r-----   2 root      nto            4096 Sep 23 06:46 sanity
+drw-r-----   2 root      nto            4096 Sep 23 06:46 sanitybackup
+drwxr-x---   2 root      nto            4096 Oct 05 01:34 slogger2
+drwxrwx---   2 root      logger         4096 Feb 22  2018 sud
+-rw-rw-r--   1 root      nto           12380 Sep 25 12:46 system.info
+drwxrwx---   2 root      logger         4096 Feb 22  2018 vpn_pps
+drwxrwx---   2 root      logger         4096 Feb 22  2018 wap_push
+drwxrwx---   2 root      logger         4096 Feb 22  2018 wpa_pps
+drwxrwx---   2 root      logger         4096 Feb 22  2018 wpa_supplicant
+

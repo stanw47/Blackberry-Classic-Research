@@ -1,0 +1,361 @@
+QNX localhost 8.0.0 2018/02/21-10:54:19EST MSM8960_V3.2.1.1_N_CLASSICNA_Rev:11 armle
+
+Build ID: 911537
+Build Branch: BB10_3_3
+
+RESET INFO STATS
+size = 268
+version = 2.0
+number of saved resets = 14
+serial NO. = 671273144
+
+Reset history (from latest to oldest)
+Reset 13
+Reset Cause =  0x00000503 user forced
+PMIC Reset Reason =  0xc405940d
+PMIC Reset Reason 2 =  0x00000000
+ASIC Reset Reason =  0x11088000
+Boot Reason = 5 system reset
+Reset Initiator = user_power_key(1)
+Reason = forced power key
+Reboot type = none
+Reset Count =  0
+Size =  2148
+Version =  3
+is_reported =  1
+is_fake_off =  0
+is_hard_after_soft =  0
+system_track_flag =  0x11
+system_track_shutdown_flag =  0x0
+trustzone reset type = 0x00000000
+OS Version = 10.3.3.3216
+Time of reset (GMT) = Fri Sep 25 05:45:34 2026
+
+
+Reset 12
+Reset Cause =  0x00000505 sw requested
+PMIC Reset Reason =  0x4006920d
+PMIC Reset Reason 2 =  0x00000000
+ASIC Reset Reason =  0x01088000
+Boot Reason = 3 power button
+Reset Initiator = charge_monitor
+Reason = ChrgMon shutdown because of No power source detected while in reset to charge reason
+Reboot type = SHUTDOWN_SYSTEM
+Reset Count =  0
+Size =  2148
+Version =  3
+is_reported =  1
+is_fake_off =  0
+is_hard_after_soft =  0
+system_track_flag =  0x11
+system_track_shutdown_flag =  0x12
+trustzone reset type = 0x00000000
+Process charge_monitor -c -v -r -e2 -m 3600 
+Process procnto-smp-instr -v -m~xrg -ae -d 066 -F 
+OS Version = 10.3.3.3216
+Time of reset (GMT) = Fri Sep 25 05:44:46 2026
+
+
+Reset 11
+Reset Cause =  0x00000504 user requested
+PMIC Reset Reason =  0x0505948d
+PMIC Reset Reason 2 =  0x00000000
+ASIC Reset Reason =  0x11092100
+Boot Reason = 6 reset to charge
+Reset Initiator = user_UI_shutdown
+Reason = powerman: Edge >do_restart_charger_detect< from pid 8024193 /accounts/1000/appdata/sys.navigator/app/navigator
+Reboot type = SHUTDOWN_WARMREBOOT
+Reset Count =  0
+Size =  2148
+Version =  3
+is_reported =  1
+is_fake_off =  0
+is_hard_after_soft =  0
+system_track_flag =  0x12
+system_track_shutdown_flag =  0x12
+trustzone reset type = 0x00000000
+Process shutdown -w -f -r reason=powerman: Edge >do_restart_charger_detect< from pid 8024193 /accounts/1000/appdata/
+Process sh /base/scripts/shutdown.sh /base/scripts/shutdown.sh /base/scripts/shutdown.sh /base/scripts/shutdow
+Process coreServices2 -U30:0,22,31,88,100,335,361,368,1000,1001,1002,1200,750,751 -S31:32 -M32:32 
+Process procnto-smp-instr -v -m~xrg -ae -d 066 -F 
+OS Version = 10.3.3.3216
+Time of reset (GMT) = Fri Sep 25 05:44:32 2026
+
+
+Reset 10
+Reset Cause =  0x00000504 user requested
+PMIC Reset Reason =  0x0406940d
+PMIC Reset Reason 2 =  0x00000000
+ASIC Reset Reason =  0x11090000
+Boot Reason = 5 system reset
+Reset Initiator = user_UI_restart
+Reason = powerman: Edge >do_restart< from pid 8151166 /accounts/1000/appdata/sys.navigator/app/navigator
+Reboot type = SHUTDOWN_REBOOT
+Reset Count =  0
+Size =  2148
+Version =  3
+is_reported =  1
+is_fake_off =  0
+is_hard_after_soft =  0
+system_track_flag =  0x12
+system_track_shutdown_flag =  0x12
+trustzone reset type = 0x00000000
+Process shutdown -f -r reason=powerman: Edge >do_restart< from pid 8151166 /accounts/1000/appdata/sys.navigator/app/
+Process sh /base/scripts/shutdown.sh /base/scripts/shutdown.sh /base/scripts/shutdown.sh /base/scripts/shutdow
+Process coreServices2 -U30:0,22,31,88,100,335,361,368,1000,1001,1002,1200,750,751 -S31:32 -M32:32 
+Process procnto-smp-instr -v -m~xrg -ae -d 066 -F 
+OS Version = 10.3.3.3216
+Time of reset (GMT) = Fri Sep 25 05:36:01 2026
+
+
+Reset 9
+Reset Cause =  0x00000504 user requested
+PMIC Reset Reason =  0x0406940d
+PMIC Reset Reason 2 =  0x00000000
+ASIC Reset Reason =  0x11090000
+Boot Reason = 5 system reset
+Reset Initiator = user_UI_restart
+Reason = powerman: Edge >do_restart< from pid 7938172 /accounts/1000/appdata/sys.navigator/app/navigator
+Reboot type = SHUTDOWN_REBOOT
+Reset Count =  0
+Size =  2148
+Version =  3
+is_reported =  1
+is_fake_off =  0
+is_hard_after_soft =  0
+system_track_flag =  0x12
+system_track_shutdown_flag =  0x12
+trustzone reset type = 0x00000000
+Process shutdown -f -r reason=powerman: Edge >do_restart< from pid 7938172 /accounts/1000/appdata/sys.navigator/app/
+Process sh /base/scripts/shutdown.sh /base/scripts/shutdown.sh /base/scripts/shutdown.sh /base/scripts/shutdow
+Process coreServices2 -U30:0,22,31,88,100,335,361,368,1000,1001,1002,1200,750,751 -S31:32 -M32:32 
+Process procnto-smp-instr -v -m~xrg -ae -d 066 -F 
+OS Version = 10.3.3.3216
+Time of reset (GMT) = Fri Sep 25 04:59:54 2026
+
+
+Reset 8
+Reset Cause =  0x00000503 user forced
+PMIC Reset Reason =  0xc405920d
+PMIC Reset Reason 2 =  0x00000000
+ASIC Reset Reason =  0x01090000
+Boot Reason = 5 system reset
+Reset Initiator = user_power_key
+Reason = forced power key
+Reboot type = none
+Reset Count =  0
+Size =  2148
+Version =  3
+is_reported =  1
+is_fake_off =  0
+is_hard_after_soft =  0
+system_track_flag =  0x12
+system_track_shutdown_flag =  0x0
+trustzone reset type = 0x00000000
+OS Version = 10.3.3.3216
+Time of reset (GMT) = Wed Sep 23 12:05:51 2026
+
+
+Reset 7
+Reset Cause =  0x00000504 user requested
+PMIC Reset Reason =  0x0406940d
+PMIC Reset Reason 2 =  0x00000000
+ASIC Reset Reason =  0x11090000
+Boot Reason = 5 system reset
+Reset Initiator = user_UI_restart
+Reason = powerman: Edge >do_restart< from pid 8454273 /accounts/1000/appdata/sys.navigator/app/navigator
+Reboot type = SHUTDOWN_REBOOT
+Reset Count =  0
+Size =  2148
+Version =  3
+is_reported =  1
+is_fake_off =  0
+is_hard_after_soft =  0
+system_track_flag =  0x12
+system_track_shutdown_flag =  0x12
+trustzone reset type = 0x00000000
+Process shutdown -f -r reason=powerman: Edge >do_restart< from pid 8454273 /accounts/1000/appdata/sys.navigator/app/
+Process sh /base/scripts/shutdown.sh /base/scripts/shutdown.sh /base/scripts/shutdown.sh /base/scripts/shutdow
+Process coreServices2 -U30:0,22,31,88,100,335,361,368,1000,1001,1002,1200,750,751 -S31:32 -M32:32 
+Process procnto-smp-instr -v -m~xrg -ae -d 066 -F 
+OS Version = 10.3.3.3216
+Time of reset (GMT) = Wed Sep 23 11:49:48 2026
+
+
+Reset 6
+Reset Cause =  0x00000504 user requested
+PMIC Reset Reason =  0x0406930d
+PMIC Reset Reason 2 =  0x00000000
+ASIC Reset Reason =  0x01490000
+Boot Reason = 5 system reset
+Reset Initiator = user_UI_restart
+Reason = powerman: Edge >do_restart< from pid 10690698 /accounts/1000/appdata/sys.navigator/app/navigator
+Reboot type = SHUTDOWN_REBOOT
+Reset Count =  0
+Size =  2148
+Version =  3
+is_reported =  1
+is_fake_off =  0
+is_hard_after_soft =  0
+system_track_flag =  0x12
+system_track_shutdown_flag =  0x12
+trustzone reset type = 0x00000000
+Process shutdown -f -r reason=powerman: Edge >do_restart< from pid 10690698 /accounts/1000/appdata/sys.navigator/app
+Process sh /base/scripts/shutdown.sh /base/scripts/shutdown.sh /base/scripts/shutdown.sh /base/scripts/shutdow
+Process coreServices2 -U30:0,22,31,88,100,335,361,368,1000,1001,1002,1200,750,751 -S31:32 -M32:32 
+Process procnto-smp-instr -v -m~xrg -ae -d 066 -F 
+OS Version = 10.3.3.3216
+Time of reset (GMT) = Wed Sep 23 05:31:57 2026
+
+
+Reset 5
+Reset Cause =  0x00000506 cfp
+PMIC Reset Reason =  0x0507930d
+PMIC Reset Reason 2 =  0x00000000
+ASIC Reset Reason =  0x01490000
+Boot Reason = 5 system reset
+Reset Initiator = ramimage
+Reason = ramimage_reset
+Reboot type = none
+Reset Count =  0
+Size =  2148
+Version =  3
+is_reported =  1
+is_fake_off =  0
+is_hard_after_soft =  0
+system_track_flag =  0x12
+system_track_shutdown_flag =  0x12
+trustzone reset type = 0x00000000
+OS Version = 10.3.3.3216
+Time of reset (GMT) = Tue Sep 22 23:42:41 2026
+
+
+Reset 4
+Reset Initiator = coreServices: none specified
+Reason = powerman: Edge >do_restart_charger_detect< from pid 7577726 /accounts/1000/appdata/sys.navigator/app/navigator
+Reboot type = SHUTDOWN_WARMREBOOT
+Reset Count =  0
+Size =  2148
+Version =  3
+is_reported =  1
+is_fake_off =  0
+is_hard_after_soft =  0
+system_track_flag =  0x0
+system_track_shutdown_flag =  0x0
+trustzone reset type = 0x00000000
+Process shutdown -w -f -r reason=powerman: Edge >do_restart_charger_detect< from pid 7577726 /accounts/1000/appdata/
+Process sh /base/scripts/shutdown.sh /base/scripts/shutdown.sh /base/scripts/shutdown.sh /base/scripts/shutdow
+Process coreServices2 -U30:0,22,31,88,100,335,361,368,1000,1001,1002,1200,750,751 -S31:32 -M32:32 
+Process procnto-smp-instr -v -m~xrg -ae -d 066 -F 
+OS Version = 0.0.0.0
+Time of reset (GMT) = Tue Sep 22 23:38:54 2026
+
+
+Reset 3
+Reset Cause =  0x00000504 user requested
+PMIC Reset Reason =  0x0406920d
+PMIC Reset Reason 2 =  0x00000000
+ASIC Reset Reason =  0x01090000
+Boot Reason = 5 system reset
+Reset Initiator = user_UI_restart
+Reason = powerman: Edge >do_restart< from pid 10555519 /accounts/1000/appdata/sys.navigator/app/navigator
+Reboot type = SHUTDOWN_REBOOT
+Reset Count =  0
+Size =  2148
+Version =  3
+is_reported =  1
+is_fake_off =  0
+is_hard_after_soft =  0
+system_track_flag =  0x12
+system_track_shutdown_flag =  0x12
+trustzone reset type = 0x00000000
+Process shutdown -f -r reason=powerman: Edge >do_restart< from pid 10555519 /accounts/1000/appdata/sys.navigator/app
+Process sh /base/scripts/shutdown.sh /base/scripts/shutdown.sh /base/scripts/shutdown.sh /base/scripts/shutdow
+Process coreServices2 -U30:0,22,31,88,100,335,361,368,1000,1001,1002,1200,750,751 -S31:32 -M32:32 
+Process procnto-smp-instr -v -m~xrg -ae -d 066 -F 
+OS Version = 10.3.3.3216
+Time of reset (GMT) = Tue Sep 22 23:28:37 2026
+
+
+Reset 2
+Reset Cause =  0x00000506 cfp
+PMIC Reset Reason =  0x0406930d
+PMIC Reset Reason 2 =  0x00000000
+ASIC Reset Reason =  0x01488000
+Boot Reason = 5 system reset
+Reset Initiator = ramimage
+Reason = ramimage_reset
+Reboot type = none
+Reset Count =  0
+Size =  2148
+Version =  3
+is_reported =  1
+is_fake_off =  0
+is_hard_after_soft =  0
+system_track_flag =  0x11
+system_track_shutdown_flag =  0x12
+trustzone reset type = 0xc0c0c0c0
+OS Version = 10.3.3.3216
+Time of reset (GMT) = Tue Sep 22 22:38:04 2026
+
+
+Reset 1
+Reset Initiator = charge_monitor
+Reason = ChrgMon shutdown because of No power source detected while in reset to charge reason
+Reboot type = SHUTDOWN_SYSTEM
+Reset Count =  0
+Size =  2148
+Version =  3
+is_reported =  1
+is_fake_off =  0
+is_hard_after_soft =  0
+system_track_flag =  0x0
+system_track_shutdown_flag =  0x0
+trustzone reset type = 0x00000000
+Process charge_monitor -c -v -r -e2 -m 3600 
+Process procnto-smp-instr -v -m~xrg -ae -d 066 -F 
+OS Version = 0.0.0.0
+Time of reset (GMT) = Tue Sep 22 22:33:33 2026
+
+
+Reset 0
+Reset Cause =  0x00000504 user requested
+PMIC Reset Reason =  0x0505948d
+PMIC Reset Reason 2 =  0x00000000
+ASIC Reset Reason =  0x11091e00
+Boot Reason = 6 reset to charge
+Reset Initiator = user_UI_shutdown
+Reason = powerman: Edge >do_restart_charger_detect< from pid 8437886 /accounts/1000/appdata/sys.navigator/app/navigator
+Reboot type = SHUTDOWN_WARMREBOOT
+Reset Count =  0
+Size =  2148
+Version =  3
+is_reported =  1
+is_fake_off =  0
+is_hard_after_soft =  0
+system_track_flag =  0x12
+system_track_shutdown_flag =  0x12
+trustzone reset type = 0x00000000
+Process shutdown -w -f -r reason=powerman: Edge >do_restart_charger_detect< from pid 8437886 /accounts/1000/appdata/
+Process sh /base/scripts/shutdown.sh /base/scripts/shutdown.sh /base/scripts/shutdown.sh /base/scripts/shutdow
+Process coreServices2 -U30:0,22,31,88,100,335,361,368,1000,1001,1002,1200,750,751 -S31:32 -M32:32 
+Process procnto-smp-instr -v -m~xrg -ae -d 066 -F 
+OS Version = 10.3.3.3216
+Time of reset (GMT) = Tue Sep 22 22:33:18 2026
+
+
+BlackBerry PlayBook Cryptographic Kernel version 5.6.2.44214
+CPU:ARM Release:8.0.0  FreeMem:1821MB/2048MB BootTime:Sep 25 12:45:31 ICT 2026
+Processes: 129, Threads: 605
+Processor1: 1360987348 QCT Krait (MP) 1512MHz FPU 
+Processor2: 1360987348 QCT Krait (MP) 1512MHz FPU 
+
+Filesystem            512-blocks      Used Available Capacity  Mounted on      
+/dev/hd3                27893728   9178608  18715120      33%  /               
+/dev/emmc/os0t179         786728    786728         0     100%  /base/          
+/dev/emmc/boot0             8192      8192         0     100%                  
+/dev/hd4                   73696     21288     52408      29%  /efs/           
+/dev/emmc/os1            1024000   1024000         0     100%  /dev/emmc/os1t17
+/dev/emmc/os1            1048576   1048576         0     100%                  
+/dev/emmc/os0            1048576   1048576         0     100%                  
+/dev/emmc/uda0          30777344  30777344         0     100%                  

@@ -1,0 +1,34 @@
+### CMD: netstat -anv 2>&1 | grep -i listen
+### RC-EOF
+tcp        0      0  *.22                   *.*                    LISTEN     
+tcp        0      0  *.8000                 *.*                    LISTEN     
+tcp        0      0  169.254.0.1.8443       *.*                    LISTEN     
+tcp        0      0  169.254.0.1.80         *.*                    LISTEN     
+tcp        0      0  169.254.0.1.443        *.*                    LISTEN     
+tcp        0      0  127.0.0.1.139          *.*                    LISTEN     
+tcp        0      0  127.0.0.1.445          *.*                    LISTEN     
+tcp        0      0  169.254.0.1.139        *.*                    LISTEN     
+tcp        0      0  169.254.0.1.445        *.*                    LISTEN     
+tcp        0      0  *.5555                 *.*                    LISTEN     
+tcp        0      0  *.2708                 *.*                    LISTEN     
+tcp        0      0  *.2709                 *.*                    LISTEN     
+tcp        0      0  *.6340                 *.*                    LISTEN     
+tcp        0      0  *.4455                 *.*                    LISTEN     
+tcp        0      0  127.0.0.1.53           *.*                    LISTEN     
+tcp        0      0  127.0.0.1.287          *.*                    LISTEN     
+tcp        0      0  127.0.0.3.186          *.*                    LISTEN     
+tcp        0      0  127.0.0.3.188          *.*                    LISTEN     
+tcp        0      0  127.0.0.3.187          *.*                    LISTEN     
+tcp        0      0  127.0.0.1.8889         *.*                    LISTEN     
+tcp        0      0  127.0.0.1.8888         *.*                    LISTEN     
+tcp        0      0  *.443                  *.*                    LISTEN     
+tcp6       0      0  *.22                   *.*                    LISTEN     
+tcp6       0      0  *.2708                 *.*                    LISTEN     
+tcp6       0      0  *.2709                 *.*                    LISTEN     
+tcp6       0      0  *.2710                 *.*                    LISTEN     
+tcp6       0      0  *.8080                 *.*                    LISTEN     
+tcp6       0      0  fd07:26c7:5d8b:fffb:84b2:f81d:d870:72ba.8443 *.*                    LISTEN     
+tcp6       0      0  fd07:26c7:5d8b:fffb:84b2:f81d:d870:72ba.80 *.*                    LISTEN     
+tcp6       0      0  *.59467                *.*                    LISTEN     
+tcp6       0      0  *.1111                 *.*                    LISTEN     
+

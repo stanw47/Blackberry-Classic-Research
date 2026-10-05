@@ -1,0 +1,516 @@
+### CMD: for p in /proc/[0-9]*; do echo "== $p"; ls -l $p/fd 2>&1; done 2>&1
+== /proc/1
+ls: No such file or directory (/proc/1/fd)
+== /proc/10047696
+ls: No such file or directory (/proc/10047696/fd)
+== /proc/10068175
+ls: No such file or directory (/proc/10068175/fd)
+== /proc/10092755
+ls: No such file or directory (/proc/10092755/fd)
+== /proc/10166485
+ls: No such file or directory (/proc/10166485/fd)
+== /proc/10371292
+ls: No such file or directory (/proc/10371292/fd)
+== /proc/10395865
+ls: No such file or directory (/proc/10395865/fd)
+== /proc/10490068
+ls: No such file or directory (/proc/10490068/fd)
+== /proc/10490071
+ls: No such file or directory (/proc/10490071/fd)
+== /proc/10498247
+ls: No such file or directory (/proc/10498247/fd)
+== /proc/11624662
+ls: No such file or directory (/proc/11624662/fd)
+== /proc/1179681
+ls: No such file or directory (/proc/1179681/fd)
+== /proc/11829272
+ls: No such file or directory (/proc/11829272/fd)
+== /proc/11890893
+ls: No such file or directory (/proc/11890893/fd)
+== /proc/12239073
+ls: No such file or directory (/proc/12239073/fd)
+== /proc/1224736
+ls: No such file or directory (/proc/1224736/fd)
+== /proc/1245218
+ls: No such file or directory (/proc/1245218/fd)
+== /proc/1302564
+ls: No such file or directory (/proc/1302564/fd)
+== /proc/13078752
+ls: No such file or directory (/proc/13078752/fd)
+== /proc/13095135
+ls: No such file or directory (/proc/13095135/fd)
+== /proc/13103330
+ls: No such file or directory (/proc/13103330/fd)
+== /proc/13103331
+ls: No such file or directory (/proc/13103331/fd)
+== /proc/13369554
+ls: No such file or directory (/proc/13369554/fd)
+== /proc/13418533
+ls: No such file or directory (/proc/13418533/fd)
+== /proc/13488349
+ls: No such file or directory (/proc/13488349/fd)
+== /proc/13529320
+ls: No such file or directory (/proc/13529320/fd)
+== /proc/13590762
+ls: No such file or directory (/proc/13590762/fd)
+== /proc/13619436
+ls: No such file or directory (/proc/13619436/fd)
+== /proc/13652196
+ls: No such file or directory (/proc/13652196/fd)
+== /proc/13652198
+ls: No such file or directory (/proc/13652198/fd)
+== /proc/13717726
+ls: No such file or directory (/proc/13717726/fd)
+== /proc/13717737
+ls: No such file or directory (/proc/13717737/fd)
+== /proc/13717742
+ls: No such file or directory (/proc/13717742/fd)
+== /proc/13717744
+ls: No such file or directory (/proc/13717744/fd)
+== /proc/13717746
+ls: No such file or directory (/proc/13717746/fd)
+== /proc/13717748
+ls: No such file or directory (/proc/13717748/fd)
+== /proc/13725935
+ls: No such file or directory (/proc/13725935/fd)
+== /proc/13754609
+ls: No such file or directory (/proc/13754609/fd)
+== /proc/14217417
+ls: No such file or directory (/proc/14217417/fd)
+== /proc/14319618
+ls: No such file or directory (/proc/14319618/fd)
+== /proc/14348494
+ls: No such file or directory (/proc/14348494/fd)
+== /proc/14377178
+ls: No such file or directory (/proc/14377178/fd)
+== /proc/14377179
+ls: No such file or directory (/proc/14377179/fd)
+== /proc/14377189
+ls: No such file or directory (/proc/14377189/fd)
+== /proc/1462310
+ls: No such file or directory (/proc/1462310/fd)
+== /proc/1486887
+ls: No such file or directory (/proc/1486887/fd)
+== /proc/15069227
+ls: No such file or directory (/proc/15069227/fd)
+== /proc/15069339
+ls: No such file or directory (/proc/15069339/fd)
+== /proc/159752
+ls: No such file or directory (/proc/159752/fd)
+== /proc/164794568
+ls: No such file or directory (/proc/164794568/fd)
+== /proc/1663016
+ls: No such file or directory (/proc/1663016/fd)
+== /proc/1712169
+ls: No such file or directory (/proc/1712169/fd)
+== /proc/1835039
+ls: No such file or directory (/proc/1835039/fd)
+== /proc/185348248
+ls: No such file or directory (/proc/185348248/fd)
+== /proc/192522
+ls: No such file or directory (/proc/192522/fd)
+== /proc/2330666
+ls: No such file or directory (/proc/2330666/fd)
+== /proc/2527277
+ls: No such file or directory (/proc/2527277/fd)
+== /proc/253961
+ls: No such file or directory (/proc/253961/fd)
+== /proc/278540
+ls: No such file or directory (/proc/278540/fd)
+== /proc/30494955
+ls: No such file or directory (/proc/30494955/fd)
+== /proc/32772
+ls: No such file or directory (/proc/32772/fd)
+== /proc/3481644
+ls: No such file or directory (/proc/3481644/fd)
+== /proc/352270
+ls: No such file or directory (/proc/352270/fd)
+== /proc/356367
+ls: No such file or directory (/proc/356367/fd)
+== /proc/3575854
+ls: No such file or directory (/proc/3575854/fd)
+== /proc/3588143
+ls: No such file or directory (/proc/3588143/fd)
+== /proc/3604528
+ls: No such file or directory (/proc/3604528/fd)
+== /proc/3612721
+ls: No such file or directory (/proc/3612721/fd)
+== /proc/3645491
+ls: No such file or directory (/proc/3645491/fd)
+== /proc/3649588
+ls: No such file or directory (/proc/3649588/fd)
+== /proc/3653685
+ls: No such file or directory (/proc/3653685/fd)
+== /proc/3686454
+ls: No such file or directory (/proc/3686454/fd)
+== /proc/376000637
+ls: No such file or directory (/proc/376000637/fd)
+== /proc/382222539
+ls: No such file or directory (/proc/382222539/fd)
+== /proc/382222545
+ls: No such file or directory (/proc/382222545/fd)
+== /proc/382226663
+ls: No such file or directory (/proc/382226663/fd)
+== /proc/409616
+ls: No such file or directory (/proc/409616/fd)
+== /proc/40965
+ls: No such file or directory (/proc/40965/fd)
+== /proc/40966
+ls: No such file or directory (/proc/40966/fd)
+== /proc/40967
+ls: No such file or directory (/proc/40967/fd)
+== /proc/4124728
+ls: No such file or directory (/proc/4124728/fd)
+== /proc/4206647
+ls: No such file or directory (/proc/4206647/fd)
+== /proc/4239423
+ls: No such file or directory (/proc/4239423/fd)
+== /proc/4259898
+ls: No such file or directory (/proc/4259898/fd)
+== /proc/426001
+ls: No such file or directory (/proc/426001/fd)
+== /proc/4272190
+ls: No such file or directory (/proc/4272190/fd)
+== /proc/4300803
+ls: No such file or directory (/proc/4300803/fd)
+== /proc/4304956
+ls: No such file or directory (/proc/4304956/fd)
+== /proc/4304960
+ls: No such file or directory (/proc/4304960/fd)
+== /proc/438291
+ls: No such file or directory (/proc/438291/fd)
+== /proc/4444229
+ls: No such file or directory (/proc/4444229/fd)
+== /proc/4456516
+ls: No such file or directory (/proc/4456516/fd)
+== /proc/450581
+ls: No such file or directory (/proc/450581/fd)
+== /proc/454414393
+ls: No such file or directory (/proc/454414393/fd)
+== /proc/466964
+ls: No such file or directory (/proc/466964/fd)
+== /proc/503819
+ls: No such file or directory (/proc/503819/fd)
+== /proc/520210
+ls: No such file or directory (/proc/520210/fd)
+== /proc/5222459
+ls: No such file or directory (/proc/5222459/fd)
+== /proc/5283906
+ls: No such file or directory (/proc/5283906/fd)
+== /proc/5296195
+ls: No such file or directory (/proc/5296195/fd)
+== /proc/565270
+ls: No such file or directory (/proc/565270/fd)
+== /proc/5656646
+ls: No such file or directory (/proc/5656646/fd)
+== /proc/5656647
+ls: No such file or directory (/proc/5656647/fd)
+== /proc/5656648
+ls: No such file or directory (/proc/5656648/fd)
+== /proc/5656649
+ls: No such file or directory (/proc/5656649/fd)
+== /proc/5656650
+ls: No such file or directory (/proc/5656650/fd)
+== /proc/5656651
+ls: No such file or directory (/proc/5656651/fd)
+== /proc/5730381
+ls: No such file or directory (/proc/5730381/fd)
+== /proc/5742670
+ls: No such file or directory (/proc/5742670/fd)
+== /proc/5783631
+ls: No such file or directory (/proc/5783631/fd)
+== /proc/5976144
+ls: No such file or directory (/proc/5976144/fd)
+== /proc/606231
+ls: No such file or directory (/proc/606231/fd)
+== /proc/6459468
+ls: No such file or directory (/proc/6459468/fd)
+== /proc/6459473
+ls: No such file or directory (/proc/6459473/fd)
+== /proc/6492225
+ls: No such file or directory (/proc/6492225/fd)
+== /proc/6549586
+ls: No such file or directory (/proc/6549586/fd)
+== /proc/6549587
+ls: No such file or directory (/proc/6549587/fd)
+== /proc/6565972
+ls: No such file or directory (/proc/6565972/fd)
+== /proc/6660181
+ls: No such file or directory (/proc/6660181/fd)
+== /proc/6668374
+ls: No such file or directory (/proc/6668374/fd)
+== /proc/6672471
+ls: No such file or directory (/proc/6672471/fd)
+== /proc/671769
+ls: No such file or directory (/proc/671769/fd)
+== /proc/6725722
+ls: No such file or directory (/proc/6725722/fd)
+== /proc/6729819
+ls: No such file or directory (/proc/6729819/fd)
+== /proc/6738013
+ls: No such file or directory (/proc/6738013/fd)
+== /proc/6742110
+ls: No such file or directory (/proc/6742110/fd)
+== /proc/7110745
+ls: No such file or directory (/proc/7110745/fd)
+== /proc/7135331
+ls: No such file or directory (/proc/7135331/fd)
+== /proc/7139425
+ls: No such file or directory (/proc/7139425/fd)
+== /proc/7159908
+ls: No such file or directory (/proc/7159908/fd)
+== /proc/7200860
+ls: No such file or directory (/proc/7200860/fd)
+== /proc/7204960
+ls: No such file or directory (/proc/7204960/fd)
+== /proc/7241826
+ls: No such file or directory (/proc/7241826/fd)
+== /proc/7241830
+ls: No such file or directory (/proc/7241830/fd)
+== /proc/7245928
+ls: No such file or directory (/proc/7245928/fd)
+== /proc/7262309
+ls: No such file or directory (/proc/7262309/fd)
+== /proc/7266410
+ls: No such file or directory (/proc/7266410/fd)
+== /proc/729115
+ls: No such file or directory (/proc/729115/fd)
+== /proc/7352429
+ls: No such file or directory (/proc/7352429/fd)
+== /proc/7360622
+ls: No such file or directory (/proc/7360622/fd)
+== /proc/741404
+ls: No such file or directory (/proc/741404/fd)
+== /proc/7499881
+ls: No such file or directory (/proc/7499881/fd)
+== /proc/7508079
+ls: No such file or directory (/proc/7508079/fd)
+== /proc/7516272
+ls: No such file or directory (/proc/7516272/fd)
+== /proc/7536755
+ls: No such file or directory (/proc/7536755/fd)
+== /proc/7573625
+ls: No such file or directory (/proc/7573625/fd)
+== /proc/7745652
+ls: No such file or directory (/proc/7745652/fd)
+== /proc/7745654
+ls: No such file or directory (/proc/7745654/fd)
+== /proc/7766133
+ls: No such file or directory (/proc/7766133/fd)
+== /proc/7770231
+ls: No such file or directory (/proc/7770231/fd)
+== /proc/7786610
+ls: No such file or directory (/proc/7786610/fd)
+== /proc/7823484
+ls: No such file or directory (/proc/7823484/fd)
+== /proc/7864443
+ls: No such file or directory (/proc/7864443/fd)
+== /proc/7905406
+ls: No such file or directory (/proc/7905406/fd)
+== /proc/7970944
+ls: No such file or directory (/proc/7970944/fd)
+== /proc/8007768
+ls: No such file or directory (/proc/8007768/fd)
+== /proc/8024193
+ls: No such file or directory (/proc/8024193/fd)
+== /proc/8147057
+ls: No such file or directory (/proc/8147057/fd)
+== /proc/8147071
+ls: No such file or directory (/proc/8147071/fd)
+== /proc/8171652
+ls: No such file or directory (/proc/8171652/fd)
+== /proc/8331394
+ls: No such file or directory (/proc/8331394/fd)
+== /proc/8331401
+ls: No such file or directory (/proc/8331401/fd)
+== /proc/8355974
+ls: No such file or directory (/proc/8355974/fd)
+== /proc/8364167
+ls: No such file or directory (/proc/8364167/fd)
+== /proc/8401034
+ls: No such file or directory (/proc/8401034/fd)
+== /proc/8405132
+ls: No such file or directory (/proc/8405132/fd)
+== /proc/8409231
+ls: No such file or directory (/proc/8409231/fd)
+== /proc/8429716
+ls: No such file or directory (/proc/8429716/fd)
+== /proc/8433813
+ls: No such file or directory (/proc/8433813/fd)
+== /proc/8442001
+ls: No such file or directory (/proc/8442001/fd)
+== /proc/8474771
+ls: No such file or directory (/proc/8474771/fd)
+== /proc/856077
+ls: No such file or directory (/proc/856077/fd)
+== /proc/8650891
+ls: No such file or directory (/proc/8650891/fd)
+== /proc/8675469
+ls: No such file or directory (/proc/8675469/fd)
+== /proc/8691854
+ls: No such file or directory (/proc/8691854/fd)
+== /proc/8765591
+ls: No such file or directory (/proc/8765591/fd)
+== /proc/8769680
+ls: No such file or directory (/proc/8769680/fd)
+== /proc/8781955
+ls: No such file or directory (/proc/8781955/fd)
+== /proc/8810616
+ls: No such file or directory (/proc/8810616/fd)
+== /proc/8827013
+ls: No such file or directory (/proc/8827013/fd)
+== /proc/8855647
+ls: No such file or directory (/proc/8855647/fd)
+== /proc/8880278
+ls: No such file or directory (/proc/8880278/fd)
+== /proc/9027634
+ls: No such file or directory (/proc/9027634/fd)
+== /proc/9048210
+ls: No such file or directory (/proc/9048210/fd)
+== /proc/9068697
+ls: No such file or directory (/proc/9068697/fd)
+== /proc/9097319
+ls: No such file or directory (/proc/9097319/fd)
+== /proc/9097352
+ls: No such file or directory (/proc/9097352/fd)
+== /proc/9097370
+ls: No such file or directory (/proc/9097370/fd)
+== /proc/9097372
+ls: No such file or directory (/proc/9097372/fd)
+== /proc/9101469
+ls: No such file or directory (/proc/9101469/fd)
+== /proc/9101470
+ls: No such file or directory (/proc/9101470/fd)
+== /proc/9142432
+ls: No such file or directory (/proc/9142432/fd)
+== /proc/9142434
+ls: No such file or directory (/proc/9142434/fd)
+== /proc/9150627
+ls: No such file or directory (/proc/9150627/fd)
+== /proc/9150628
+ls: No such file or directory (/proc/9150628/fd)
+== /proc/9179295
+ls: No such file or directory (/proc/9179295/fd)
+== /proc/9228453
+ls: No such file or directory (/proc/9228453/fd)
+== /proc/9253030
+ls: No such file or directory (/proc/9253030/fd)
+== /proc/9253031
+ls: No such file or directory (/proc/9253031/fd)
+== /proc/9257128
+ls: No such file or directory (/proc/9257128/fd)
+== /proc/9261225
+ls: No such file or directory (/proc/9261225/fd)
+== /proc/9277612
+ls: No such file or directory (/proc/9277612/fd)
+== /proc/9277616
+ls: No such file or directory (/proc/9277616/fd)
+== /proc/9277617
+ls: No such file or directory (/proc/9277617/fd)
+== /proc/9285806
+ls: No such file or directory (/proc/9285806/fd)
+== /proc/9285807
+ls: No such file or directory (/proc/9285807/fd)
+== /proc/9285810
+ls: No such file or directory (/proc/9285810/fd)
+== /proc/9289907
+ls: No such file or directory (/proc/9289907/fd)
+== /proc/9294004
+ls: No such file or directory (/proc/9294004/fd)
+== /proc/9306293
+ls: No such file or directory (/proc/9306293/fd)
+== /proc/9306294
+ls: No such file or directory (/proc/9306294/fd)
+== /proc/9306295
+ls: No such file or directory (/proc/9306295/fd)
+== /proc/9306296
+ls: No such file or directory (/proc/9306296/fd)
+== /proc/9351339
+ls: No such file or directory (/proc/9351339/fd)
+== /proc/9363629
+ls: No such file or directory (/proc/9363629/fd)
+== /proc/9404586
+ls: No such file or directory (/proc/9404586/fd)
+== /proc/9420985
+ls: No such file or directory (/proc/9420985/fd)
+== /proc/9433274
+ls: No such file or directory (/proc/9433274/fd)
+== /proc/946206
+ls: No such file or directory (/proc/946206/fd)
+== /proc/9494718
+ls: No such file or directory (/proc/9494718/fd)
+== /proc/9511099
+ls: No such file or directory (/proc/9511099/fd)
+== /proc/9511100
+ls: No such file or directory (/proc/9511100/fd)
+== /proc/9552061
+ls: No such file or directory (/proc/9552061/fd)
+== /proc/9556159
+ls: No such file or directory (/proc/9556159/fd)
+== /proc/9711777
+ls: No such file or directory (/proc/9711777/fd)
+== /proc/9715904
+ls: No such file or directory (/proc/9715904/fd)
+== /proc/9728194
+ls: No such file or directory (/proc/9728194/fd)
+== /proc/973062251
+ls: No such file or directory (/proc/973062251/fd)
+== /proc/973095157
+ls: No such file or directory (/proc/973095157/fd)
+== /proc/973345019
+ls: No such file or directory (/proc/973345019/fd)
+== /proc/973426942
+ls: No such file or directory (/proc/973426942/fd)
+== /proc/973426945
+ls: No such file or directory (/proc/973426945/fd)
+== /proc/973512953
+ls: No such file or directory (/proc/973512953/fd)
+== /proc/973512957
+ls: No such file or directory (/proc/973512957/fd)
+== /proc/973525247
+ls: No such file or directory (/proc/973525247/fd)
+== /proc/9736385
+ls: No such file or directory (/proc/9736385/fd)
+== /proc/973742326
+ls: No such file or directory (/proc/973742326/fd)
+== /proc/973918445
+ls: No such file or directory (/proc/973918445/fd)
+== /proc/973922412
+ls: No such file or directory (/proc/973922412/fd)
+== /proc/973922554
+ls: No such file or directory (/proc/973922554/fd)
+== /proc/974368803
+ls: No such file or directory (/proc/974368803/fd)
+== /proc/974368829
+ls: No such file or directory (/proc/974368829/fd)
+== /proc/9744580
+ls: No such file or directory (/proc/9744580/fd)
+== /proc/974561532
+ls: No such file or directory (/proc/974561532/fd)
+== /proc/975159491
+ls: No such file or directory (/proc/975159491/fd)
+== /proc/975159512
+ls: No such file or directory (/proc/975159512/fd)
+== /proc/9769157
+ls: No such file or directory (/proc/9769157/fd)
+== /proc/980308226
+ls: No such file or directory (/proc/980308226/fd)
+== /proc/980566259
+ls: No such file or directory (/proc/980566259/fd)
+== /proc/980574455
+ls: No such file or directory (/proc/980574455/fd)
+== /proc/980643866
+ls: No such file or directory (/proc/980643866/fd)
+== /proc/9822406
+ls: No such file or directory (/proc/9822406/fd)
+== /proc/983548152
+ls: No such file or directory (/proc/983548152/fd)
+== /proc/9859274
+ls: No such file or directory (/proc/9859274/fd)
+== /proc/9863372
+ls: No such file or directory (/proc/9863372/fd)
+== /proc/998568058
+ls: No such file or directory (/proc/998568058/fd)
+== /proc/999453
+ls: No such file or directory (/proc/999453/fd)
+
