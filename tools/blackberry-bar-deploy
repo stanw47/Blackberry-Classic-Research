@@ -1,0 +1,4 @@
+#!/bin/bash
+# Wrapper for BarDeploy.jar
+JAVA_HOME=${JAVA_HOME:-/usr/lib/jvm/default-java}
+exec java -Xmx512M -jar /home/stanw47/priv-research/bbndk-tools/host_10_3_1_12/win32/x86/usr/lib/BarDeploy.jar "$@"
