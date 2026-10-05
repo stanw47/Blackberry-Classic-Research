@@ -21,12 +21,12 @@
 
 | Field | Value |
 |---|---|
-| Model | BlackBerry Classic **SQC100** ("Q20") |
+| Model | BlackBerry Classic **SQC100-4** ("Q20") |
 | Codename | `classic` |
 | SoC | Qualcomm **MSM8960** (Snapdragon S4 Plus, secboot3), HWID `0x9700270a` |
 | OS / software | **BB10 / QNX 8.0.0**, `BLACKBERRY-528E`, ClassicNA |
-| Current build | **10.3.3.3216** (rooted autoloader) |
-| Previous builds | stock 10.3.3; getroot pre-rooted autoloader |
+| Current build | **10.3.3.3216** (pre-rooted autoloader v2) |
+| Previous builds | stock 10.3.3 |
 | Carrier / unlock | carrier-unlocked (no SIM lock); bootloader locked |
 | SIM | single |
 
@@ -45,7 +45,7 @@ microkernel).
 
 ## Completed
 
-- **Root:** getroot autoloader + pathtrust whitelist → real uid-0.
+- **Root:** getroot autoloader + pathtrust whitelist real uid-0.
 - **eMMC access without desoldering:** group wrapper `g_Disk_Drivers`; dumped
   `boot0`, `boot1`, `nvram0`, `dmi0`.
 - **Write-protect analysis:** `BOOT_WP[173]` decoded; permanent bit confirmed.
@@ -55,20 +55,20 @@ microkernel).
 
 ## Achieved
 
-- ✅ **Real interactive uid-0** via `/proc/boot/pathtrust !/base/bin/__root`
+- **Real interactive uid-0** via `/proc/boot/pathtrust !/base/bin/__root`
   (btool line 31) — persistent every boot.
-- ✅ **eMMC read as non-root** via the `g_Disk_Drivers` group wrapper.
-- ✅ **Permanent boot-partition WP proven** (`B_PERM_WP_EN`), closing the
+- **eMMC read as non-root** via the `g_Disk_Drivers` group wrapper.
+- **Permanent boot-partition WP proven** (`B_PERM_WP_EN`), closing the
   software unlock lane.
-- ✅ **A11 bionic shim runs on-device** (1759 exports, 0 TEXTREL, passes the QNX
+- **A11 bionic shim runs on-device** (1759 exports, 0 TEXTREL, passes the QNX
   trust gate).
 
 ## In Progress
 
 - **A11-on-QNX port.** The A11 native chain loads; the **`binder` resmgr** is
-  blocked at `resmgr_attach` → EPERM (path-manager identity). The A11 userland
+  blocked at `resmgr_attach` EPERM (path-manager identity). The A11 userland
   (`zygote`/ART/framework) is the long pole, gated on the AOSP header tree.
-  → [`runtime/README.md`](runtime/README.md), [`ws1/STATUS.md`](ws1/STATUS.md)
+  [`runtime/README.md`](runtime/README.md), [`ws1/STATUS.md`](ws1/STATUS.md)
 
 ## Failed
 
@@ -89,15 +89,25 @@ microkernel).
 
 ## Community Activity
 
-- **Root/pathtrust** — **Oleksandr (bb10.root.sx)** documented the BB10 root
-  ritual and RAM-loader mechanics; getroot autoloaders and **BerryCore** are
-  widely shared.
-- **No custom OS** exists for BB10; the **A11-on-QNX port here is original
-  work**. BB10 is EOL (services shut down 2022), so interest is preservation +
-  research.
-- Community hubs: XDA, CrackBerry, the bb10.root.sx blog, and Telegram groups.
+BB10 is end-of-life (BlackBerry services shut down January 2022), but a small,
+active community keeps the hardware alive:
 
----
+- **Root and pathtrust** - Oleksandr (bb10.root.sx) documented the pathtrust root
+  ritual and the RAM-loader/RCFS mechanics; modded (rooted) autoloaders circulate
+  through the community.
+- **BerryCore (sw7ft)** - the most active modern project: a QNX "extended
+  userland" (a continuation of Berry Much OS) adding GCC, Python 3, Git,
+  OpenSSH, FFmpeg, an on-device LLM (`bcllm`), a package manager (`qpkg`), and,
+  as of v0.90.0, the first **Berry Browser (Chromium) beta** - installable as a
+  `.bar` on a **rooted** device. Distributed via BerryBridge/BerryStore.
+- **Zinwa Technologies** - commercial "restomod": the **Q25 / Q25 Pro** replaces
+  the Classic's internals with a MediaTek Helio G99, 12 GB RAM, USB-C and
+  Android 14 (assembled unit ~US$420); a DIY kit also exists.
+- **ProjectBerry/BB10-ROMS** - archive of original 10.3.3.x ROMs.
+- Hubs: CrackBerry, XDA, the bb10.root.sx blog, and the BlackBerry Android
+  Hideout Discord.
+- **No custom OS** for BB10 exists; the A11-on-QNX port in this repo is original
+  work.
 
 ## Repository layout
 
