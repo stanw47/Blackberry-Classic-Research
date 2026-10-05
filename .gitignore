@@ -51,3 +51,6 @@ desktop.ini
 /recon/dumps-classic/*.img
 /recon/classic-audit/**/*.apk
 /recon/classic-audit/**/slog2info_root.clean.txt
+
+# --- KEEP small essential research artifacts ---
+!recon/dumps-classic/*.img
