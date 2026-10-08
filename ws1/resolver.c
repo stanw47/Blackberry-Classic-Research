@@ -20,6 +20,16 @@ extern void ws1_dbg_arm_now(void);
 
 void __attribute__((visibility("hidden"))) __ws1_unimplemented(void)
 {
+#ifdef WS1_SPINMARK
+    extern void *qnxb_ptrs[];
+    static int marked;
+    if (!marked) {
+        long (*w)(int, const void *, unsigned long) =
+            (long (*)(int, const void *, unsigned long))qnxb_ptrs[667];
+        marked = 1;
+        if (w) w(2, "WS1SPIN\n", 8);
+    }
+#endif
     for (;;)
         ;
 }

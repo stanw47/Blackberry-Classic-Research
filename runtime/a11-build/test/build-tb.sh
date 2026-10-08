@@ -46,18 +46,18 @@ $LD $LDFLAGS -o "$B/tb_dlopen" "$B/start.o" "$B/tb_dlopen.o" \
 echo "[build-tb] tb_a11 (load full A11 chain via libbinder.so)"
 $CC $CFLAGS -c "$T/tb_a11.c" -o "$B/tb_a11.o"
 $LD $LDFLAGS -o "$B/tb_a11" "$B/start.o" "$B/tb_a11.o" \
-    -L"$A11OUT" -L"$SHIM" -L"$SR" --no-as-needed -l:libc++.so -l:libc.so -l:libc.so.3
+    -L"$A11OUT" -L"$SHIM" -L"$SR" --no-as-needed -l:libc.so.3 -l:libc++.so -l:libc.so
 
 echo "[build-tb] tb_cxx (libc++ static init + shim)"
 $CXX -std=c++17 -fPIC -c "$T/tb_cxx.cpp" -o "$B/tb_cxx.o"
 $LD $LDFLAGS -o "$B/tb_cxx" "$B/start.o" "$CB" "$B/tb_cxx.o" \
-    -L"$A11OUT" -L"$SHIM" -L"$SR" -l:libc++.so -l:libc.so -l:libc.so.3 \
+    -L"$A11OUT" -L"$SHIM" -L"$SR" -l:libc.so.3 -l:libc++.so -l:libc.so \
     "$CE"
 
 echo "[build-tb] probe_binder_step (step-by-step binder open_driver probe)"
 $CC $CFLAGS -I"$REPO/binder/include" -I"$REPO/binder/qnxinc" -c "$T/probe_binder_step.c" -o "$B/probe_binder_step.o"
 $LD $LDFLAGS -o "$B/probe_binder_step" "$B/start.o" "$B/probe_binder_step.o" \
-    -L"$SHIM" -L"$SR" -l:libc.so -l:libc.so.3
+    -L"$SHIM" -L"$SR" -l:libc.so.3 -l:libc.so
 
 for f in tb_shim tb_dlopen tb_cxx tb_a11 probe_binder_step; do
     printf '== %-18s == ' "$f"
