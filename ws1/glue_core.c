@@ -6,9 +6,12 @@ typedef struct __sFILE22 FILE;
 
 extern int write(int, const void *, size_t);
 
-/* Simple errno */
-static int shim_errno = 0;
-int *__errno(void) { return &shim_errno; }
+/* errno: bionic wants *__errno(); forward to QNX's per-thread errno so the
+ * value reflects the real libc calls (__get_errno_ptr is a libc.so.3 export). */
+extern int *__get_errno_ptr(void);
+int *__errno(void) { return __get_errno_ptr(); }
+int *__errno_location(void) { return __get_errno_ptr(); }
+int *___errno(void) { return __get_errno_ptr(); }
 
 /* ---- Debug write at load time ---- */
 static void __attribute__((constructor)) shim_debug_init(void)
