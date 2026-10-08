@@ -26,7 +26,20 @@ extern size_t _msize(void *p);
 
 /* QNX brk/sbrk support. */
 extern void *_curbrk;         /* QNX current break symbol */
-extern void *__brk(void *addr);
+extern void *dlopen(const char *file, int mode);
+extern void *dlsym(void *handle, const char *name);
+
+/* QNX exports brk() (the bionic __brk name does not exist here). */
+static void *qnx_brk(void *addr)
+{
+    static void *(*f)(void *);
+    if (!f) {
+        void *h = dlopen("libc.so.3", 0);
+        if (h) f = (void *(*)(void *))dlsym(h, "brk");
+        if (!f) return (void *)-1;
+    }
+    return f(addr);
+}
 
 /* ---- dlmalloc entry points -> forward to QNX malloc ---- */
 void *ws1_impl_dlmalloc(size_t n) { return malloc(n); }
@@ -61,15 +74,14 @@ void *ws1_impl_reallocarray(void *p, size_t n, size_t sz)
 /* ---- brk / sbrk ---- */
 void *ws1_impl_brk(void *addr)
 {
-    /* QNX: __brk sets the break; returns new break or -1 on error. */
-    return __brk(addr);
+    return qnx_brk(addr);
 }
 
 void *ws1_impl_sbrk(long incr)
 {
     void *old = _curbrk;
     void *nw = (void *)((char *)old + incr);
-    if (__brk(nw) == (void *)-1) return (void *)-1;
+    if (qnx_brk(nw) == (void *)-1) return (void *)-1;
     return old;
 }
 

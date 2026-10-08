@@ -16,7 +16,7 @@ LIBGCCDIR := $(shell dirname $(shell $(CROSS)-gcc -print-libgcc-file-name))
 CFLAGS  := -march=armv7-a -mfloat-abi=soft -mthumb -Os -Wall -Wextra \
            -nostdlib -fno-builtin -fpic -ffreestanding
 LIBGCCDEFSYM := $(foreach s,$(shell cat libgcc_force.txt),-Wl,--defsym=lw_ref_$(s)=$(s))
-OBJS    := build/tramps.o build/resolver.o build/resolver_tab.o build/glue_core.o build/lgcc_tramps.o build/signal_block.o build/resolver_entry.o build/glue_impl.o build/ws1_resolver.o build/prop_impl.o build/tls_impl.o build/malloc_impl.o
+OBJS    := build/tramps.o build/resolver.o build/resolver_tab.o build/glue_core.o build/lgcc_tramps.o build/signal_block.o build/resolver_entry.o build/glue_impl.o build/ws1_resolver.o build/prop_impl.o build/tls_impl.o build/malloc_impl.o build/extra_impls.o
 LDFLAGS := -nostdlib -Wl,-soname,libc.so $(LIBGCCDEFSYM) \
            -Wl,--version-script=hide_slots.map -L$(SYSROOT)/lib \
            -Wl,--no-as-needed -l:libc.so.3 \
@@ -110,3 +110,6 @@ build/tls_impl.o: tls_impl.c resolver.h | build
 
 build/malloc_impl.o: malloc_impl.c resolver.h | build
 	$(CC) $(CFLAGS) -c malloc_impl.c -o $@
+
+build/extra_impls.o: extra_impls.c | build
+	$(CC) $(CFLAGS) -c extra_impls.c -o $@

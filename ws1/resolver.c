@@ -13,6 +13,12 @@
 extern void *dlopen(const char *file, int mode);
 extern void *dlsym(void *handle, const char *name);
 
+#ifdef WS1_TRACE
+extern void ws1_dbg_note(const char *);
+extern void ws1_dbg_note2(const char *, void *);
+extern void ws1_dbg_arm_now(void);
+#endif
+
 void __attribute__((visibility("hidden"))) __ws1_unimplemented(void)
 {
     for (;;)
@@ -21,6 +27,7 @@ void __attribute__((visibility("hidden"))) __ws1_unimplemented(void)
 
 static void *volatile ws1_libc_handle;
 static int ws1_in_ctor;
+static int ws1_resolving;
 
 /* Report symbols that fall through to the spin stub, but only when a running
  * program actually calls them (not while the ctor pre-fills every slot). */
@@ -45,7 +52,7 @@ static void ws1_diag_miss(const char *name)
     in_diag = 0;
 }
 
-static void *resolve_symbol(const char *name, int kind)
+static void *resolve_symbol_inner(const char *name, int kind)
 {
     void *impl = ws1_lookup_glue(name);
     if (impl)
@@ -56,8 +63,21 @@ static void *resolve_symbol(const char *name, int kind)
     }
     void *libc = ws1_libc_handle;
     if (!libc) {
+        void *p;
+        if (ws1_resolving) {
+            /* Re-entrant resolve: QNX dlopen() internally calls libc functions
+             * (e.g. getenv) that are interposed by our trampolines.  Calling
+             * dlopen again here deadlocks/crashes the loader lock, so resolve
+             * with RTLD_NEXT to skip our own definition and find QNX libc's. */
+            p = dlsym((void *)-3 /* RTLD_NEXT */, name);
+            if (p) return p;
+            p = dlsym((void *)-2 /* RTLD_DEFAULT */, name);
+            return p ? p : (void *)__ws1_unimplemented;
+        }
+        ws1_resolving = 1;
         libc = dlopen("libc.so.3", 0);
         ws1_libc_handle = libc;
+        ws1_resolving = 0;
     }
     if (libc) {
         void *p = dlsym(libc, name);
@@ -67,9 +87,29 @@ static void *resolve_symbol(const char *name, int kind)
     return (void *)__ws1_unimplemented;
 }
 
+static void *resolve_symbol(const char *name, int kind)
+{
+    void *r;
+#ifdef WS1_TRACE
+    if (!ws1_in_ctor) {
+        ws1_dbg_arm_now();
+        ws1_dbg_note(name);
+    }
+#endif
+    r = resolve_symbol_inner(name, kind);
+#ifdef WS1_TRACE
+    if (!ws1_in_ctor)
+        ws1_dbg_note2(name, r);
+#endif
+    return r;
+}
+
 void * __attribute__((visibility("hidden")))
 ws1_resolve_slot(struct ws1_slot *s)
 {
+#ifdef WS1_TRACE
+    ws1_dbg_arm_now();
+#endif
     if (s && s->ptr) {
         if (!*s->ptr)
             *s->ptr = resolve_symbol(s->name, s->kind);
