@@ -78,12 +78,48 @@ ws1_resolve_slot(struct ws1_slot *s)
     return (void *)__ws1_unimplemented;
 }
 
+#ifdef WS1_TRACE
+static void ws1_trace(unsigned i, unsigned sp)
+{
+    static long (*w)(int, const void *, unsigned long);
+    static const char hx[] = "0123456789abcdef";
+    char b[24];
+    int k = 0, j;
+    if (!w) {
+        void *h = dlopen("libc.so.3", 0);
+        if (h) w = (long (*)(int, const void *, unsigned long))dlsym(h, "write");
+    }
+    if (!w)
+        return;
+    b[k++] = '[';
+    for (j = 7; j >= 0; --j) b[k++] = hx[(i >> (j * 4)) & 0xf];
+    b[k++] = ' ';
+    for (j = 7; j >= 0; --j) b[k++] = hx[(sp >> (j * 4)) & 0xf];
+    b[k++] = ']'; b[k++] = '\n';
+    w(1, b, k);
+}
+#endif
+
 __attribute__((constructor(200)))
 static void ws1_onload(void)
 {
     unsigned i;
     ws1_in_ctor = 1;
+#ifdef WS1_TRACE
+    {
+        register unsigned sp __asm__("sp");
+        ws1_trace(ws1_nslots, sp);
+    }
+    for (i = 0; i < ws1_nslots; ++i) {
+        if ((i & 31) == 0) {
+            register unsigned sp __asm__("sp");
+            ws1_trace(i, sp);
+        }
+        ws1_resolve_slot(&ws1_slots[i]);
+    }
+#else
     for (i = 0; i < ws1_nslots; ++i)
         ws1_resolve_slot(&ws1_slots[i]);
+#endif
     ws1_in_ctor = 0;
 }

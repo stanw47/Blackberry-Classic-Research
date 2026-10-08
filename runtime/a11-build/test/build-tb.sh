@@ -38,6 +38,11 @@ $CC $CFLAGS -c "$T/tb_shim.c" -o "$B/tb_shim.o"
 $LD $LDFLAGS -o "$B/tb_shim" "$B/start.o" "$B/tb_shim.o" \
     -L"$SHIM" -L"$SR" -l:libc.so.3 -l:libc.so
 
+echo "[build-tb] tb_dlopen (handler-first, dlopens the chain; shim only)"
+$CC $CFLAGS -c "$T/tb_dlopen.c" -o "$B/tb_dlopen.o"
+$LD $LDFLAGS -o "$B/tb_dlopen" "$B/start.o" "$B/tb_dlopen.o" \
+    -L"$SHIM" -L"$SR" -l:libc.so.3 -l:libc.so
+
 echo "[build-tb] tb_a11 (load full A11 chain via libbinder.so)"
 $CC $CFLAGS -c "$T/tb_a11.c" -o "$B/tb_a11.o"
 $LD $LDFLAGS -o "$B/tb_a11" "$B/start.o" "$B/tb_a11.o" \
@@ -54,7 +59,7 @@ $CC $CFLAGS -I"$REPO/binder/include" -I"$REPO/binder/qnxinc" -c "$T/probe_binder
 $LD $LDFLAGS -o "$B/probe_binder_step" "$B/start.o" "$B/probe_binder_step.o" \
     -L"$SHIM" -L"$SR" -l:libc.so -l:libc.so.3
 
-for f in tb_shim tb_cxx tb_a11 probe_binder_step; do
+for f in tb_shim tb_dlopen tb_cxx tb_a11 probe_binder_step; do
     printf '== %-18s == ' "$f"
     arm-none-eabi-readelf -d "$B/$f" | grep -oE '\[lib[^]]*\]' | tr '\n' ' '
     echo
