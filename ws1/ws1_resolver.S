@@ -28,9 +28,7 @@ ws1_resolver:
 	ldr	r2, .Lslots
 	add	r2, r0
 	ldr	r2, [r2]                   @ r2 = &ws1_slots
-	lsls	r3, r1, #2
-	add	r3, r3, r1, lsl #3         @ r3 = idx*12
-	add	r3, r2, r3                 @ r3 = &ws1_slots[idx]
+	add	r3, r2, r1, lsl #4         @ r3 = &ws1_slots[idx] (16-byte struct)
 	ldr	r2, [r3]                   @ r2 = slot.ptr
 	ldr	r0, [r2]                   @ r0 = *ptr (resolved fn, 0 if unfilled)
 	cmp	r0, #0

@@ -6,9 +6,9 @@
 typedef unsigned long size_t;
 
 static long (*W)(int, const void *, unsigned long);
-extern void *dlopen(const char *, int);
-extern void *dlsym(void *, const char *);
+extern int write(int, const void *, size_t);
 extern int sigaction(int, const void *, void *);
+extern int dladdr(const void *, void *);
 
 #define SA_SIGINFO 0x0002
 #define SIGILL  4
@@ -120,22 +120,77 @@ static void handler(int sig, siginfo_t_ *si, void *ctx)
     for (;;) ;
 }
 
-void __attribute__((constructor(50))) ws1_dbg_arm(void)
+static int g_armed;
+
+extern void *qnxb_ptrs[];   /* libqnxbind.so: direct QNX libc bindings */
+
+void ws1_dbg_arm_now(void)
 {
     struct sigaction_ sa;
     unsigned *raw = (unsigned *)&sa;
-    void *h;
     int i;
-    h = dlopen("libc.so.3", 0);
-    if (h) W = (long (*)(int, const void *, unsigned long))dlsym(h, "write");
-    if (!W) return;
-    pstr("[DBG] armed\n");
-    if (h) p_dladdr = (int (*)(void *, Dl_info *))dlsym(h, "dladdr");
+    if (g_armed) return;
+    g_armed = 1;
+    /* use the link-time-bound QNX functions directly (no trampoline, no
+     * dlopen/dlsym -> safe pre-ctor and cannot recurse into the resolver) */
+    W = (long (*)(int, const void *, unsigned long))qnxb_ptrs[667]; /* write */
     for (i = 0; i < (int)(sizeof sa / sizeof raw[0]); ++i) raw[i] = 0;
     sa.sa_sigaction = handler;
     sa.sa_flags = SA_SIGINFO;
-    sigaction(SIGSEGV, &sa, 0);
-    sigaction(SIGBUS, &sa, 0);
-    sigaction(SIGILL, &sa, 0);
-    pstr("[DBG] handler ok\n");
+    if (qnxb_ptrs[489]) {   /* sigaction */
+        int (*qsa)(int, const void *, void *) = (int (*)(int, const void *, void *))qnxb_ptrs[489];
+        qsa(SIGSEGV, &sa, 0);
+        qsa(SIGBUS, &sa, 0);
+        qsa(SIGILL, &sa, 0);
+    }
+    if (!p_dladdr && qnxb_ptrs[97])   /* dladdr */
+        p_dladdr = (int (*)(void *, Dl_info *))qnxb_ptrs[97];
 }
+
+void __attribute__((constructor(50))) ws1_dbg_arm(void)
+{
+    ws1_dbg_arm_now();
+    pstr("[DBG] armed\n");
+}
+
+/* --- pre-ctor tracing (used by resolver.c under WS1_TRACE) -------------- */
+
+static int g_note_guard;
+
+static void note_out(const char *s, unsigned n)
+{
+    if (g_note_guard) return;
+    g_note_guard = 1;
+    if (W) W(1, s, n);
+    else write(1, s, n);
+    g_note_guard = 0;
+}
+
+void ws1_dbg_note(const char *s)
+{
+    unsigned n = 0;
+    if (!s) s = "?";
+    while (s[n] && n < 80) n++;
+    note_out("[PCT] ", 6);
+    note_out(s, n);
+    note_out("\n", 1);
+}
+
+void ws1_dbg_note2(const char *s, void *p)
+{
+    static const char hx[] = "0123456789abcdef";
+    char b[20];
+    unsigned long v = (unsigned long)p;
+    unsigned n = 0;
+    int j;
+    if (!s) s = "?";
+    while (s[n] && n < 80) n++;
+    note_out("[PCT] ", 6);
+    note_out(s, n);
+    note_out(" -> ", 4);
+    b[0] = '0'; b[1] = 'x';
+    for (j = 0; j < 8; ++j) b[2 + j] = hx[(v >> ((7 - j) * 4)) & 0xf];
+    b[10] = '\n';
+    note_out(b, 11);
+}
+

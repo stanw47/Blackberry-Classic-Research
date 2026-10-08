@@ -18,8 +18,8 @@ CFLAGS  := -march=armv7-a -mfloat-abi=soft -mthumb -Os -Wall -Wextra \
 LIBGCCDEFSYM := $(foreach s,$(shell cat libgcc_force.txt),-Wl,--defsym=lw_ref_$(s)=$(s))
 OBJS    := build/tramps.o build/resolver.o build/resolver_tab.o build/glue_core.o build/lgcc_tramps.o build/signal_block.o build/resolver_entry.o build/glue_impl.o build/ws1_resolver.o build/prop_impl.o build/tls_impl.o build/malloc_impl.o build/extra_impls.o
 LDFLAGS := -nostdlib -Wl,-soname,libc.so $(LIBGCCDEFSYM) \
-           -Wl,--version-script=hide_slots.map -L$(SYSROOT)/lib \
-           -Wl,--no-as-needed -l:libc.so.3 \
+           -Wl,--version-script=hide_slots.map -Lbuild -L$(SYSROOT)/lib \
+           -Wl,--no-as-needed -l:libqnxbind.so -l:libc.so.3 \
            -L$(LIBGCCDIR) -lgcc
 
 
@@ -43,9 +43,18 @@ build/glue_core.o: glue_core.c | build
 build/lgcc_tramps.o: lgcc_tramps.S libgcc_force.txt | build
 	$(CC) $(CFLAGS) -c lgcc_tramps.S -o $@
 
-build/libc.so: $(OBJS)
+build/libc.so: $(OBJS) build/libqnxbind.so
 	$(CC) -shared $(OBJS) -o $@ $(LDFLAGS)
 	$(CROSS)-readelf -h $@ | grep -E "Class|Machine|Flags"
+
+# link-time binding table: direct references to QNX libc.so.3 symbols, filled
+# by the loader at load time (no dlopen/dlsym at resolution time)
+build/qnxbind.o: qnxbind.c | build
+	$(CC) $(CFLAGS) -c qnxbind.c -o $@
+
+build/libqnxbind.so: build/qnxbind.o
+	$(CC) -shared $< -o $@ -nostdlib -Wl,-soname,libqnxbind.so \
+	    -L$(SYSROOT)/lib -Wl,--no-as-needed -l:libc.so.3
 
 # soname-correct empty slabs so A11 NEEDED libm.so / libdl.so resolve
 build/libm_stub.o: libm_stub.c | build

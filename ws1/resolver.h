@@ -7,6 +7,7 @@ struct ws1_slot {
     void **ptr;        /* <- points at the .data storage word in tramps.S */
     const char *name;  /* bionic ABI symbol name being exported         */
     int kind;          /* how the slot was classified during WS1 mapping */
+    void **direct;     /* &qnxb_ptrs[idx]: link-time-bound libc fn or 0  */
 };
 
 extern struct ws1_slot ws1_slots[];
