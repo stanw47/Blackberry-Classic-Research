@@ -21,13 +21,17 @@
 .type _start, %function
 .thumb_func
 _start:
-    mov     r4, r0              @ preserve loader-passed r0
     ldr     r0, [sp]            @ argc
     add     r1, sp, #4          @ argv = &argv[0]
-    lsl     r3, r0, #2
-    add     r2, r1, r3          @ envp = argv + argc*4
-    add     r2, r2, #4          @ envp (past NULL terminator)
+    add     r2, r1, r0, lsl #2
+    add     r2, r2, #4          @ envp
+    push    {r0, r1, r2}
     mov     r3, r2
+1:  ldr     ip, [r3], #4
+    teq     ip, #0
+    bne     1b
+    bl      _init_libc          @ QNX libc startup (connection/fd state)
+    pop     {r0, r1, r2}
     bl      main
     bl      exit                @ r0 = main's return; RIM's crt does the same
 .size _start, .-_start

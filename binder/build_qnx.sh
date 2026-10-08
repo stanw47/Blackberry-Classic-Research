@@ -25,7 +25,7 @@ LDFLAGS="-nostdlib -fpic -Wl,-pie -Wl,-e,_start \
          -Wl,--dynamic-linker=/usr/lib/ldqnx.so.2 \
          -Wl,--hash-style=gnu -Wl,--build-id=md5 \
          -Wl,--export-dynamic -Wl,--unresolved-symbols=ignore-all \
-         -Wl,--no-as-needed -L ${SYSROOT}/lib -l:libc.so.3"
+         -Wl,--no-as-needed -L ${SYSROOT}/lib -L ../ws1/build -l:libc.so.3 -l:libc.so"
 
 mkdir -p "$OUT"
 
