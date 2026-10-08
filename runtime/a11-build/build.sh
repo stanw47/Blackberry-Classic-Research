@@ -52,14 +52,14 @@ gen_aidl() {
 #              utf8.cpp (windows path), misc.cpp (vndksupport), logd_writer/pmsg_writer
 #              (need generated log-tag config), trace-container.cpp (atrace gen).
 compile_lib() {
-    lib=$1; dir=$2; out=$3
+    lib=$1; dir=$2; out=$3; extra=$4
     rm -rf "$out"; mkdir -p "$out"; ok=0; fail=0
     # NOTE: libutils/misc.cpp (add_sysprop_change_callback) is REQUIRED; its only
     # Android-only dep is the vndksupport branch, disabled by __ANDROID_RECOVERY__
     # (see CXXFLAGS).  Only libbase's vndksupport misc.cpp is excluded by path.
     for f in $(find "$dir" -maxdepth 1 -name '*.cpp' \
                  | grep -vE '_windows\.cpp|_benchmark\.cpp|format_benchmark|errors_windows|/utf8\.cpp|aosp_system_libbase/misc\.cpp|logd_writer|pmsg_writer|trace-container|_test[0-9]*\.cpp|-host\.cpp'); do
-        if $CXX -std=c++17 -fPIC -D__ANDROID_RECOVERY__ -c $INC -o "$out/$(basename $f .cpp).o" "$f" 2>/dev/null; then
+        if $CXX -std=c++17 -fPIC -D__ANDROID_RECOVERY__ -c $INC $extra -o "$out/$(basename $f .cpp).o" "$f" 2>/dev/null; then
             ok=$((ok+1)); else fail=$((fail+1)); echo "  skip/fail: $(basename $f)"; fi
     done
     echo "$lib: compiled ok=$ok fail=$fail"
@@ -70,9 +70,16 @@ gen_aidl
 echo "[a11-build] compiling A11 native libs"
 compile_lib libbase   "$AOSP/aosp_system_libbase"          /tmp/a11obj/libbase
 compile_lib liblog    "$AOSP/aosp_system_logging/liblog"   /tmp/a11obj/liblog
+# logd_writer.cpp is excluded; liblog references LogdWrite -> no-op stub.
+$CXX -std=c++17 -fPIC $INC -c "$(dirname "$0")/a11_stubs/logd_stub.cpp" -o /tmp/a11obj/liblog/logd_stub.o
 compile_lib libcutils "$AOSP/lin_system_core/libcutils"    /tmp/a11obj/libcutils
 compile_lib libutils  "$AOSP/lin_system_core/libutils"     /tmp/a11obj/libutils
-compile_lib libbinder "$AOSP/lin_frameworks_native/libs/binder" /tmp/a11obj/libbinder
+QNXB="$(cd "$(dirname "$0")" && pwd)/qnx_binder"
+compile_lib libbinder "$AOSP/lin_frameworks_native/libs/binder" /tmp/a11obj/libbinder "-include $QNXB/qnx_binder_redirect.h -I$QNXB"
+CC=$NDK/bin/armv7a-linux-androideabi30-clang
+$CC -std=c11 -fPIC -I"$QNXB" -c "$QNXB/binder_compat.c" -o /tmp/a11obj/libbinder/qnx_binder_compat.o
+$CC -std=c11 -fPIC -I"$QNXB" -c "$QNXB/qnx_binder.c" -o /tmp/a11obj/libbinder/qnx_binder.o
+echo "[a11-build] compiled QNX binder compat redirect into libbinder" 
 
 # AIDL-generated .cpp define android/os/*::descriptor + getInterfaceDescriptor — libbinder
 # needs them (else the QNX loader reports them unresolved). Compile into libbinder's objs.

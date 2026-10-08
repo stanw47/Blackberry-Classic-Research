@@ -40,3 +40,24 @@ test mapping is valid.)
   `devctl(fd, dcmd, ...)` with RIM's dcmds and calls these translators
   (`0xC0186201` WR, `0xC0046209` VER, `0xC108620C` CFG, `0xC03C620B` TXN),
   patched into the qnx-linked A11 libbinder.
+
+## Integration (built into the QNX libbinder)
+
+- `qnx_binder_redirect.h` is force-included for the libbinder compile
+  (`build.sh`): `ioctl()` on the binder fd becomes `qnx_binder_ioctl()`
+  (upstream AOSP sources untouched).
+- `qnx_binder.c` maps A11 requests to the RIM driver:
+  `0xC0046209` VERSION -> devctl (4B),
+  `0x40046205` SET_MAX_THREADS -> devctl `0xC108620C` CFG (0xfe000),
+  `0xC0306201` BINDER_WRITE_READ -> translate + devctl `0xC0186201` (24B) +
+  read-buffer translate back.
+- `logd_stub.cpp` (a11_stubs/) provides `LogdWrite`/`PmsgWrite` no-ops so
+  liblog resolves (its logd_writer/pmsg_writer are excluded from the build).
+
+### On-device status (Passport, devuser)
+
+`ProcessState::self()` executes the real path: `open("/dev/binder")` OK (with
+test `chmod 666`), then the version devctl reaches the **real driver**, which
+answers **EACCES** (credentials: device is `1000:10011`; devuser lacks them);
+AOSP then aborts by design.  `tb_a11` still passes.  Next: run in the product
+launch context (Android uid) and validate the write/read transaction path.
