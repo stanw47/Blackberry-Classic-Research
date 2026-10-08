@@ -12,7 +12,7 @@ skip=set(open(os.path.join(BASE,"libgcc_impl.txt")).read().split())
 skip|=set(open(os.path.join(BASE,"glue_core_impl.txt")).read().split())
 glue=[x for x in glue if x not in skip]
 overlap=sorted(a11 & b43)
-extra_alias={"dlclose","dlerror","dladdr"}
+extra_alias={"dlclose","dlerror","dladdr","devctl","_init_libc"}
 # dlopen/dlsym MUST NOT be re-exported as shim trampolines: the resolver itself
 # (resolver.c) calls the REAL QNX dlopen/dlsym from libc.so.3.  If the shim also
 # defines them, ELF symbol lookup can bind the resolver's own calls back to these

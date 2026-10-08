@@ -428,11 +428,19 @@ _exit:
 	b ws1_resolver
 	.align 2
 
+	.global _init_libc
+	.type _init_libc, %function
+	.thumb_func
+_init_libc:
+	movw r12, #53
+	b ws1_resolver
+	.align 2
+
 	.global _longjmp
 	.type _longjmp, %function
 	.thumb_func
 _longjmp:
-	movw r12, #53
+	movw r12, #54
 	b ws1_resolver
 	.align 2
 
@@ -440,7 +448,7 @@ _longjmp:
 	.type _setjmp, %function
 	.thumb_func
 _setjmp:
-	movw r12, #54
+	movw r12, #55
 	b ws1_resolver
 	.align 2
 
@@ -448,7 +456,7 @@ _setjmp:
 	.type _tolower, %function
 	.thumb_func
 _tolower:
-	movw r12, #55
+	movw r12, #56
 	b ws1_resolver
 	.align 2
 
@@ -456,7 +464,7 @@ _tolower:
 	.type _toupper, %function
 	.thumb_func
 _toupper:
-	movw r12, #56
+	movw r12, #57
 	b ws1_resolver
 	.align 2
 
@@ -464,7 +472,7 @@ _toupper:
 	.type abort, %function
 	.thumb_func
 abort:
-	movw r12, #57
+	movw r12, #58
 	b ws1_resolver
 	.align 2
 
@@ -472,7 +480,7 @@ abort:
 	.type abs, %function
 	.thumb_func
 abs:
-	movw r12, #58
+	movw r12, #59
 	b ws1_resolver
 	.align 2
 
@@ -480,7 +488,7 @@ abs:
 	.type access, %function
 	.thumb_func
 access:
-	movw r12, #59
+	movw r12, #60
 	b ws1_resolver
 	.align 2
 
@@ -488,7 +496,7 @@ access:
 	.type alarm, %function
 	.thumb_func
 alarm:
-	movw r12, #60
+	movw r12, #61
 	b ws1_resolver
 	.align 2
 
@@ -496,7 +504,7 @@ alarm:
 	.type at_quick_exit, %function
 	.thumb_func
 at_quick_exit:
-	movw r12, #61
+	movw r12, #62
 	b ws1_resolver
 	.align 2
 
@@ -504,7 +512,7 @@ at_quick_exit:
 	.type atexit, %function
 	.thumb_func
 atexit:
-	movw r12, #62
+	movw r12, #63
 	b ws1_resolver
 	.align 2
 
@@ -512,7 +520,7 @@ atexit:
 	.type atof, %function
 	.thumb_func
 atof:
-	movw r12, #63
+	movw r12, #64
 	b ws1_resolver
 	.align 2
 
@@ -520,7 +528,7 @@ atof:
 	.type atoi, %function
 	.thumb_func
 atoi:
-	movw r12, #64
+	movw r12, #65
 	b ws1_resolver
 	.align 2
 
@@ -528,7 +536,7 @@ atoi:
 	.type atol, %function
 	.thumb_func
 atol:
-	movw r12, #65
+	movw r12, #66
 	b ws1_resolver
 	.align 2
 
@@ -536,7 +544,7 @@ atol:
 	.type atoll, %function
 	.thumb_func
 atoll:
-	movw r12, #66
+	movw r12, #67
 	b ws1_resolver
 	.align 2
 
@@ -544,7 +552,7 @@ atoll:
 	.type basename, %function
 	.thumb_func
 basename:
-	movw r12, #67
+	movw r12, #68
 	b ws1_resolver
 	.align 2
 
@@ -552,7 +560,7 @@ basename:
 	.type bcopy, %function
 	.thumb_func
 bcopy:
-	movw r12, #68
+	movw r12, #69
 	b ws1_resolver
 	.align 2
 
@@ -560,7 +568,7 @@ bcopy:
 	.type bsearch, %function
 	.thumb_func
 bsearch:
-	movw r12, #69
+	movw r12, #70
 	b ws1_resolver
 	.align 2
 
@@ -568,7 +576,7 @@ bsearch:
 	.type btowc, %function
 	.thumb_func
 btowc:
-	movw r12, #70
+	movw r12, #71
 	b ws1_resolver
 	.align 2
 
@@ -576,7 +584,7 @@ btowc:
 	.type bzero, %function
 	.thumb_func
 bzero:
-	movw r12, #71
+	movw r12, #72
 	b ws1_resolver
 	.align 2
 
@@ -584,7 +592,7 @@ bzero:
 	.type c16rtomb, %function
 	.thumb_func
 c16rtomb:
-	movw r12, #72
+	movw r12, #73
 	b ws1_resolver
 	.align 2
 
@@ -592,7 +600,7 @@ c16rtomb:
 	.type c32rtomb, %function
 	.thumb_func
 c32rtomb:
-	movw r12, #73
+	movw r12, #74
 	b ws1_resolver
 	.align 2
 
@@ -600,7 +608,7 @@ c32rtomb:
 	.type calloc, %function
 	.thumb_func
 calloc:
-	movw r12, #74
+	movw r12, #75
 	b ws1_resolver
 	.align 2
 
@@ -608,7 +616,7 @@ calloc:
 	.type cfgetispeed, %function
 	.thumb_func
 cfgetispeed:
-	movw r12, #75
+	movw r12, #76
 	b ws1_resolver
 	.align 2
 
@@ -616,7 +624,7 @@ cfgetispeed:
 	.type cfgetospeed, %function
 	.thumb_func
 cfgetospeed:
-	movw r12, #76
+	movw r12, #77
 	b ws1_resolver
 	.align 2
 
@@ -624,7 +632,7 @@ cfgetospeed:
 	.type cfmakeraw, %function
 	.thumb_func
 cfmakeraw:
-	movw r12, #77
+	movw r12, #78
 	b ws1_resolver
 	.align 2
 
@@ -632,7 +640,7 @@ cfmakeraw:
 	.type cfsetispeed, %function
 	.thumb_func
 cfsetispeed:
-	movw r12, #78
+	movw r12, #79
 	b ws1_resolver
 	.align 2
 
@@ -640,7 +648,7 @@ cfsetispeed:
 	.type cfsetospeed, %function
 	.thumb_func
 cfsetospeed:
-	movw r12, #79
+	movw r12, #80
 	b ws1_resolver
 	.align 2
 
@@ -648,7 +656,7 @@ cfsetospeed:
 	.type chmod, %function
 	.thumb_func
 chmod:
-	movw r12, #80
+	movw r12, #81
 	b ws1_resolver
 	.align 2
 
@@ -656,7 +664,7 @@ chmod:
 	.type chroot, %function
 	.thumb_func
 chroot:
-	movw r12, #81
+	movw r12, #82
 	b ws1_resolver
 	.align 2
 
@@ -664,7 +672,7 @@ chroot:
 	.type clearenv, %function
 	.thumb_func
 clearenv:
-	movw r12, #82
+	movw r12, #83
 	b ws1_resolver
 	.align 2
 
@@ -672,7 +680,7 @@ clearenv:
 	.type clearerr, %function
 	.thumb_func
 clearerr:
-	movw r12, #83
+	movw r12, #84
 	b ws1_resolver
 	.align 2
 
@@ -680,7 +688,7 @@ clearerr:
 	.type clock, %function
 	.thumb_func
 clock:
-	movw r12, #84
+	movw r12, #85
 	b ws1_resolver
 	.align 2
 
@@ -688,7 +696,7 @@ clock:
 	.type clock_getcpuclockid, %function
 	.thumb_func
 clock_getcpuclockid:
-	movw r12, #85
+	movw r12, #86
 	b ws1_resolver
 	.align 2
 
@@ -696,7 +704,7 @@ clock_getcpuclockid:
 	.type clock_getres, %function
 	.thumb_func
 clock_getres:
-	movw r12, #86
+	movw r12, #87
 	b ws1_resolver
 	.align 2
 
@@ -704,7 +712,7 @@ clock_getres:
 	.type clock_gettime, %function
 	.thumb_func
 clock_gettime:
-	movw r12, #87
+	movw r12, #88
 	b ws1_resolver
 	.align 2
 
@@ -712,7 +720,7 @@ clock_gettime:
 	.type clock_nanosleep, %function
 	.thumb_func
 clock_nanosleep:
-	movw r12, #88
+	movw r12, #89
 	b ws1_resolver
 	.align 2
 
@@ -720,7 +728,7 @@ clock_nanosleep:
 	.type clock_settime, %function
 	.thumb_func
 clock_settime:
-	movw r12, #89
+	movw r12, #90
 	b ws1_resolver
 	.align 2
 
@@ -728,7 +736,7 @@ clock_settime:
 	.type closedir, %function
 	.thumb_func
 closedir:
-	movw r12, #90
+	movw r12, #91
 	b ws1_resolver
 	.align 2
 
@@ -736,7 +744,7 @@ closedir:
 	.type closelog, %function
 	.thumb_func
 closelog:
-	movw r12, #91
+	movw r12, #92
 	b ws1_resolver
 	.align 2
 
@@ -744,7 +752,7 @@ closelog:
 	.type ctermid, %function
 	.thumb_func
 ctermid:
-	movw r12, #92
+	movw r12, #93
 	b ws1_resolver
 	.align 2
 
@@ -752,7 +760,15 @@ ctermid:
 	.type daemon, %function
 	.thumb_func
 daemon:
-	movw r12, #93
+	movw r12, #94
+	b ws1_resolver
+	.align 2
+
+	.global devctl
+	.type devctl, %function
+	.thumb_func
+devctl:
+	movw r12, #95
 	b ws1_resolver
 	.align 2
 
@@ -760,7 +776,7 @@ daemon:
 	.type dirfd, %function
 	.thumb_func
 dirfd:
-	movw r12, #94
+	movw r12, #96
 	b ws1_resolver
 	.align 2
 
@@ -768,7 +784,7 @@ dirfd:
 	.type dirname, %function
 	.thumb_func
 dirname:
-	movw r12, #95
+	movw r12, #97
 	b ws1_resolver
 	.align 2
 
@@ -776,7 +792,7 @@ dirname:
 	.type div, %function
 	.thumb_func
 div:
-	movw r12, #96
+	movw r12, #98
 	b ws1_resolver
 	.align 2
 
@@ -784,7 +800,7 @@ div:
 	.type dladdr, %function
 	.thumb_func
 dladdr:
-	movw r12, #97
+	movw r12, #99
 	b ws1_resolver
 	.align 2
 
@@ -792,7 +808,7 @@ dladdr:
 	.type dlclose, %function
 	.thumb_func
 dlclose:
-	movw r12, #98
+	movw r12, #100
 	b ws1_resolver
 	.align 2
 
@@ -800,7 +816,7 @@ dlclose:
 	.type dlerror, %function
 	.thumb_func
 dlerror:
-	movw r12, #99
+	movw r12, #101
 	b ws1_resolver
 	.align 2
 
@@ -808,7 +824,7 @@ dlerror:
 	.type drand48, %function
 	.thumb_func
 drand48:
-	movw r12, #100
+	movw r12, #102
 	b ws1_resolver
 	.align 2
 
@@ -816,7 +832,7 @@ drand48:
 	.type dup, %function
 	.thumb_func
 dup:
-	movw r12, #101
+	movw r12, #103
 	b ws1_resolver
 	.align 2
 
@@ -824,7 +840,7 @@ dup:
 	.type dup2, %function
 	.thumb_func
 dup2:
-	movw r12, #102
+	movw r12, #104
 	b ws1_resolver
 	.align 2
 
@@ -832,7 +848,7 @@ dup2:
 	.type endgrent, %function
 	.thumb_func
 endgrent:
-	movw r12, #103
+	movw r12, #105
 	b ws1_resolver
 	.align 2
 
@@ -840,7 +856,7 @@ endgrent:
 	.type environ, %function
 	.thumb_func
 environ:
-	movw r12, #104
+	movw r12, #106
 	b ws1_resolver
 	.align 2
 
@@ -848,7 +864,7 @@ environ:
 	.type erand48, %function
 	.thumb_func
 erand48:
-	movw r12, #105
+	movw r12, #107
 	b ws1_resolver
 	.align 2
 
@@ -856,7 +872,7 @@ erand48:
 	.type err, %function
 	.thumb_func
 err:
-	movw r12, #106
+	movw r12, #108
 	b ws1_resolver
 	.align 2
 
@@ -864,7 +880,7 @@ err:
 	.type errx, %function
 	.thumb_func
 errx:
-	movw r12, #107
+	movw r12, #109
 	b ws1_resolver
 	.align 2
 
@@ -872,7 +888,7 @@ errx:
 	.type exit, %function
 	.thumb_func
 exit:
-	movw r12, #108
+	movw r12, #110
 	b ws1_resolver
 	.align 2
 
@@ -880,7 +896,7 @@ exit:
 	.type fchdir, %function
 	.thumb_func
 fchdir:
-	movw r12, #109
+	movw r12, #111
 	b ws1_resolver
 	.align 2
 
@@ -888,7 +904,7 @@ fchdir:
 	.type fchmod, %function
 	.thumb_func
 fchmod:
-	movw r12, #110
+	movw r12, #112
 	b ws1_resolver
 	.align 2
 
@@ -896,7 +912,7 @@ fchmod:
 	.type fclose, %function
 	.thumb_func
 fclose:
-	movw r12, #111
+	movw r12, #113
 	b ws1_resolver
 	.align 2
 
@@ -904,7 +920,7 @@ fclose:
 	.type fcntl, %function
 	.thumb_func
 fcntl:
-	movw r12, #112
+	movw r12, #114
 	b ws1_resolver
 	.align 2
 
@@ -912,7 +928,7 @@ fcntl:
 	.type fdatasync, %function
 	.thumb_func
 fdatasync:
-	movw r12, #113
+	movw r12, #115
 	b ws1_resolver
 	.align 2
 
@@ -920,7 +936,7 @@ fdatasync:
 	.type fdopen, %function
 	.thumb_func
 fdopen:
-	movw r12, #114
+	movw r12, #116
 	b ws1_resolver
 	.align 2
 
@@ -928,7 +944,7 @@ fdopen:
 	.type feof, %function
 	.thumb_func
 feof:
-	movw r12, #115
+	movw r12, #117
 	b ws1_resolver
 	.align 2
 
@@ -936,7 +952,7 @@ feof:
 	.type ferror, %function
 	.thumb_func
 ferror:
-	movw r12, #116
+	movw r12, #118
 	b ws1_resolver
 	.align 2
 
@@ -944,7 +960,7 @@ ferror:
 	.type fflush, %function
 	.thumb_func
 fflush:
-	movw r12, #117
+	movw r12, #119
 	b ws1_resolver
 	.align 2
 
@@ -952,7 +968,7 @@ fflush:
 	.type ffs, %function
 	.thumb_func
 ffs:
-	movw r12, #118
+	movw r12, #120
 	b ws1_resolver
 	.align 2
 
@@ -960,7 +976,7 @@ ffs:
 	.type fgetc, %function
 	.thumb_func
 fgetc:
-	movw r12, #119
+	movw r12, #121
 	b ws1_resolver
 	.align 2
 
@@ -968,7 +984,7 @@ fgetc:
 	.type fgetpos, %function
 	.thumb_func
 fgetpos:
-	movw r12, #120
+	movw r12, #122
 	b ws1_resolver
 	.align 2
 
@@ -976,7 +992,7 @@ fgetpos:
 	.type fgets, %function
 	.thumb_func
 fgets:
-	movw r12, #121
+	movw r12, #123
 	b ws1_resolver
 	.align 2
 
@@ -984,7 +1000,7 @@ fgets:
 	.type fgetwc, %function
 	.thumb_func
 fgetwc:
-	movw r12, #122
+	movw r12, #124
 	b ws1_resolver
 	.align 2
 
@@ -992,7 +1008,7 @@ fgetwc:
 	.type fgetws, %function
 	.thumb_func
 fgetws:
-	movw r12, #123
+	movw r12, #125
 	b ws1_resolver
 	.align 2
 
@@ -1000,7 +1016,7 @@ fgetws:
 	.type fileno, %function
 	.thumb_func
 fileno:
-	movw r12, #124
+	movw r12, #126
 	b ws1_resolver
 	.align 2
 
@@ -1008,7 +1024,7 @@ fileno:
 	.type flock, %function
 	.thumb_func
 flock:
-	movw r12, #125
+	movw r12, #127
 	b ws1_resolver
 	.align 2
 
@@ -1016,7 +1032,7 @@ flock:
 	.type flockfile, %function
 	.thumb_func
 flockfile:
-	movw r12, #126
+	movw r12, #128
 	b ws1_resolver
 	.align 2
 
@@ -1024,7 +1040,7 @@ flockfile:
 	.type fnmatch, %function
 	.thumb_func
 fnmatch:
-	movw r12, #127
+	movw r12, #129
 	b ws1_resolver
 	.align 2
 
@@ -1032,7 +1048,7 @@ fnmatch:
 	.type fopen, %function
 	.thumb_func
 fopen:
-	movw r12, #128
+	movw r12, #130
 	b ws1_resolver
 	.align 2
 
@@ -1040,7 +1056,7 @@ fopen:
 	.type fopen64, %function
 	.thumb_func
 fopen64:
-	movw r12, #129
+	movw r12, #131
 	b ws1_resolver
 	.align 2
 
@@ -1048,7 +1064,7 @@ fopen64:
 	.type fpathconf, %function
 	.thumb_func
 fpathconf:
-	movw r12, #130
+	movw r12, #132
 	b ws1_resolver
 	.align 2
 
@@ -1056,7 +1072,7 @@ fpathconf:
 	.type fprintf, %function
 	.thumb_func
 fprintf:
-	movw r12, #131
+	movw r12, #133
 	b ws1_resolver
 	.align 2
 
@@ -1064,7 +1080,7 @@ fprintf:
 	.type fputc, %function
 	.thumb_func
 fputc:
-	movw r12, #132
+	movw r12, #134
 	b ws1_resolver
 	.align 2
 
@@ -1072,7 +1088,7 @@ fputc:
 	.type fputs, %function
 	.thumb_func
 fputs:
-	movw r12, #133
+	movw r12, #135
 	b ws1_resolver
 	.align 2
 
@@ -1080,7 +1096,7 @@ fputs:
 	.type fputwc, %function
 	.thumb_func
 fputwc:
-	movw r12, #134
+	movw r12, #136
 	b ws1_resolver
 	.align 2
 
@@ -1088,7 +1104,7 @@ fputwc:
 	.type fputws, %function
 	.thumb_func
 fputws:
-	movw r12, #135
+	movw r12, #137
 	b ws1_resolver
 	.align 2
 
@@ -1096,7 +1112,7 @@ fputws:
 	.type fread, %function
 	.thumb_func
 fread:
-	movw r12, #136
+	movw r12, #138
 	b ws1_resolver
 	.align 2
 
@@ -1104,7 +1120,7 @@ fread:
 	.type free, %function
 	.thumb_func
 free:
-	movw r12, #137
+	movw r12, #139
 	b ws1_resolver
 	.align 2
 
@@ -1112,7 +1128,7 @@ free:
 	.type freopen, %function
 	.thumb_func
 freopen:
-	movw r12, #138
+	movw r12, #140
 	b ws1_resolver
 	.align 2
 
@@ -1120,7 +1136,7 @@ freopen:
 	.type freopen64, %function
 	.thumb_func
 freopen64:
-	movw r12, #139
+	movw r12, #141
 	b ws1_resolver
 	.align 2
 
@@ -1128,7 +1144,7 @@ freopen64:
 	.type fscanf, %function
 	.thumb_func
 fscanf:
-	movw r12, #140
+	movw r12, #142
 	b ws1_resolver
 	.align 2
 
@@ -1136,7 +1152,7 @@ fscanf:
 	.type fseek, %function
 	.thumb_func
 fseek:
-	movw r12, #141
+	movw r12, #143
 	b ws1_resolver
 	.align 2
 
@@ -1144,7 +1160,7 @@ fseek:
 	.type fseeko, %function
 	.thumb_func
 fseeko:
-	movw r12, #142
+	movw r12, #144
 	b ws1_resolver
 	.align 2
 
@@ -1152,7 +1168,7 @@ fseeko:
 	.type fseeko64, %function
 	.thumb_func
 fseeko64:
-	movw r12, #143
+	movw r12, #145
 	b ws1_resolver
 	.align 2
 
@@ -1160,7 +1176,7 @@ fseeko64:
 	.type fsetpos, %function
 	.thumb_func
 fsetpos:
-	movw r12, #144
+	movw r12, #146
 	b ws1_resolver
 	.align 2
 
@@ -1168,7 +1184,7 @@ fsetpos:
 	.type fstatvfs, %function
 	.thumb_func
 fstatvfs:
-	movw r12, #145
+	movw r12, #147
 	b ws1_resolver
 	.align 2
 
@@ -1176,7 +1192,7 @@ fstatvfs:
 	.type fstatvfs64, %function
 	.thumb_func
 fstatvfs64:
-	movw r12, #146
+	movw r12, #148
 	b ws1_resolver
 	.align 2
 
@@ -1184,7 +1200,7 @@ fstatvfs64:
 	.type fsync, %function
 	.thumb_func
 fsync:
-	movw r12, #147
+	movw r12, #149
 	b ws1_resolver
 	.align 2
 
@@ -1192,7 +1208,7 @@ fsync:
 	.type ftell, %function
 	.thumb_func
 ftell:
-	movw r12, #148
+	movw r12, #150
 	b ws1_resolver
 	.align 2
 
@@ -1200,7 +1216,7 @@ ftell:
 	.type ftello, %function
 	.thumb_func
 ftello:
-	movw r12, #149
+	movw r12, #151
 	b ws1_resolver
 	.align 2
 
@@ -1208,7 +1224,7 @@ ftello:
 	.type ftello64, %function
 	.thumb_func
 ftello64:
-	movw r12, #150
+	movw r12, #152
 	b ws1_resolver
 	.align 2
 
@@ -1216,7 +1232,7 @@ ftello64:
 	.type ftime, %function
 	.thumb_func
 ftime:
-	movw r12, #151
+	movw r12, #153
 	b ws1_resolver
 	.align 2
 
@@ -1224,7 +1240,7 @@ ftime:
 	.type ftok, %function
 	.thumb_func
 ftok:
-	movw r12, #152
+	movw r12, #154
 	b ws1_resolver
 	.align 2
 
@@ -1232,7 +1248,7 @@ ftok:
 	.type ftruncate, %function
 	.thumb_func
 ftruncate:
-	movw r12, #153
+	movw r12, #155
 	b ws1_resolver
 	.align 2
 
@@ -1240,7 +1256,7 @@ ftruncate:
 	.type ftruncate64, %function
 	.thumb_func
 ftruncate64:
-	movw r12, #154
+	movw r12, #156
 	b ws1_resolver
 	.align 2
 
@@ -1248,7 +1264,7 @@ ftruncate64:
 	.type ftrylockfile, %function
 	.thumb_func
 ftrylockfile:
-	movw r12, #155
+	movw r12, #157
 	b ws1_resolver
 	.align 2
 
@@ -1256,7 +1272,7 @@ ftrylockfile:
 	.type ftw, %function
 	.thumb_func
 ftw:
-	movw r12, #156
+	movw r12, #158
 	b ws1_resolver
 	.align 2
 
@@ -1264,7 +1280,7 @@ ftw:
 	.type ftw64, %function
 	.thumb_func
 ftw64:
-	movw r12, #157
+	movw r12, #159
 	b ws1_resolver
 	.align 2
 
@@ -1272,7 +1288,7 @@ ftw64:
 	.type funlockfile, %function
 	.thumb_func
 funlockfile:
-	movw r12, #158
+	movw r12, #160
 	b ws1_resolver
 	.align 2
 
@@ -1280,7 +1296,7 @@ funlockfile:
 	.type fwide, %function
 	.thumb_func
 fwide:
-	movw r12, #159
+	movw r12, #161
 	b ws1_resolver
 	.align 2
 
@@ -1288,7 +1304,7 @@ fwide:
 	.type fwprintf, %function
 	.thumb_func
 fwprintf:
-	movw r12, #160
+	movw r12, #162
 	b ws1_resolver
 	.align 2
 
@@ -1296,7 +1312,7 @@ fwprintf:
 	.type fwrite, %function
 	.thumb_func
 fwrite:
-	movw r12, #161
+	movw r12, #163
 	b ws1_resolver
 	.align 2
 
@@ -1304,7 +1320,7 @@ fwrite:
 	.type fwscanf, %function
 	.thumb_func
 fwscanf:
-	movw r12, #162
+	movw r12, #164
 	b ws1_resolver
 	.align 2
 
@@ -1312,7 +1328,7 @@ fwscanf:
 	.type getc, %function
 	.thumb_func
 getc:
-	movw r12, #163
+	movw r12, #165
 	b ws1_resolver
 	.align 2
 
@@ -1320,7 +1336,7 @@ getc:
 	.type getc_unlocked, %function
 	.thumb_func
 getc_unlocked:
-	movw r12, #164
+	movw r12, #166
 	b ws1_resolver
 	.align 2
 
@@ -1328,7 +1344,7 @@ getc_unlocked:
 	.type getchar, %function
 	.thumb_func
 getchar:
-	movw r12, #165
+	movw r12, #167
 	b ws1_resolver
 	.align 2
 
@@ -1336,7 +1352,7 @@ getchar:
 	.type getchar_unlocked, %function
 	.thumb_func
 getchar_unlocked:
-	movw r12, #166
+	movw r12, #168
 	b ws1_resolver
 	.align 2
 
@@ -1344,7 +1360,7 @@ getchar_unlocked:
 	.type getcwd, %function
 	.thumb_func
 getcwd:
-	movw r12, #167
+	movw r12, #169
 	b ws1_resolver
 	.align 2
 
@@ -1352,7 +1368,7 @@ getcwd:
 	.type getdtablesize, %function
 	.thumb_func
 getdtablesize:
-	movw r12, #168
+	movw r12, #170
 	b ws1_resolver
 	.align 2
 
@@ -1360,7 +1376,7 @@ getdtablesize:
 	.type getenv, %function
 	.thumb_func
 getenv:
-	movw r12, #169
+	movw r12, #171
 	b ws1_resolver
 	.align 2
 
@@ -1368,7 +1384,7 @@ getenv:
 	.type getgrent, %function
 	.thumb_func
 getgrent:
-	movw r12, #170
+	movw r12, #172
 	b ws1_resolver
 	.align 2
 
@@ -1376,7 +1392,7 @@ getgrent:
 	.type getgrgid_r, %function
 	.thumb_func
 getgrgid_r:
-	movw r12, #171
+	movw r12, #173
 	b ws1_resolver
 	.align 2
 
@@ -1384,7 +1400,7 @@ getgrgid_r:
 	.type getgrnam_r, %function
 	.thumb_func
 getgrnam_r:
-	movw r12, #172
+	movw r12, #174
 	b ws1_resolver
 	.align 2
 
@@ -1392,7 +1408,7 @@ getgrnam_r:
 	.type gethostname, %function
 	.thumb_func
 gethostname:
-	movw r12, #173
+	movw r12, #175
 	b ws1_resolver
 	.align 2
 
@@ -1400,7 +1416,7 @@ gethostname:
 	.type getitimer, %function
 	.thumb_func
 getitimer:
-	movw r12, #174
+	movw r12, #176
 	b ws1_resolver
 	.align 2
 
@@ -1408,7 +1424,7 @@ getitimer:
 	.type getopt, %function
 	.thumb_func
 getopt:
-	movw r12, #175
+	movw r12, #177
 	b ws1_resolver
 	.align 2
 
@@ -1416,7 +1432,7 @@ getopt:
 	.type getopt_long, %function
 	.thumb_func
 getopt_long:
-	movw r12, #176
+	movw r12, #178
 	b ws1_resolver
 	.align 2
 
@@ -1424,7 +1440,7 @@ getopt_long:
 	.type getopt_long_only, %function
 	.thumb_func
 getopt_long_only:
-	movw r12, #177
+	movw r12, #179
 	b ws1_resolver
 	.align 2
 
@@ -1432,7 +1448,7 @@ getopt_long_only:
 	.type getpagesize, %function
 	.thumb_func
 getpagesize:
-	movw r12, #178
+	movw r12, #180
 	b ws1_resolver
 	.align 2
 
@@ -1440,7 +1456,7 @@ getpagesize:
 	.type getpgid, %function
 	.thumb_func
 getpgid:
-	movw r12, #179
+	movw r12, #181
 	b ws1_resolver
 	.align 2
 
@@ -1448,7 +1464,7 @@ getpgid:
 	.type getpgrp, %function
 	.thumb_func
 getpgrp:
-	movw r12, #180
+	movw r12, #182
 	b ws1_resolver
 	.align 2
 
@@ -1456,7 +1472,7 @@ getpgrp:
 	.type getpid, %function
 	.thumb_func
 getpid:
-	movw r12, #181
+	movw r12, #183
 	b ws1_resolver
 	.align 2
 
@@ -1464,7 +1480,7 @@ getpid:
 	.type getppid, %function
 	.thumb_func
 getppid:
-	movw r12, #182
+	movw r12, #184
 	b ws1_resolver
 	.align 2
 
@@ -1472,7 +1488,7 @@ getppid:
 	.type getpwent, %function
 	.thumb_func
 getpwent:
-	movw r12, #183
+	movw r12, #185
 	b ws1_resolver
 	.align 2
 
@@ -1480,7 +1496,7 @@ getpwent:
 	.type getrlimit, %function
 	.thumb_func
 getrlimit:
-	movw r12, #184
+	movw r12, #186
 	b ws1_resolver
 	.align 2
 
@@ -1488,7 +1504,7 @@ getrlimit:
 	.type getrlimit64, %function
 	.thumb_func
 getrlimit64:
-	movw r12, #185
+	movw r12, #187
 	b ws1_resolver
 	.align 2
 
@@ -1496,7 +1512,7 @@ getrlimit64:
 	.type getrusage, %function
 	.thumb_func
 getrusage:
-	movw r12, #186
+	movw r12, #188
 	b ws1_resolver
 	.align 2
 
@@ -1504,7 +1520,7 @@ getrusage:
 	.type gets, %function
 	.thumb_func
 gets:
-	movw r12, #187
+	movw r12, #189
 	b ws1_resolver
 	.align 2
 
@@ -1512,7 +1528,7 @@ gets:
 	.type getsid, %function
 	.thumb_func
 getsid:
-	movw r12, #188
+	movw r12, #190
 	b ws1_resolver
 	.align 2
 
@@ -1520,7 +1536,7 @@ getsid:
 	.type getsubopt, %function
 	.thumb_func
 getsubopt:
-	movw r12, #189
+	movw r12, #191
 	b ws1_resolver
 	.align 2
 
@@ -1528,7 +1544,7 @@ getsubopt:
 	.type gettid, %function
 	.thumb_func
 gettid:
-	movw r12, #190
+	movw r12, #192
 	b ws1_resolver
 	.align 2
 
@@ -1536,7 +1552,7 @@ gettid:
 	.type gettimeofday, %function
 	.thumb_func
 gettimeofday:
-	movw r12, #191
+	movw r12, #193
 	b ws1_resolver
 	.align 2
 
@@ -1544,7 +1560,7 @@ gettimeofday:
 	.type getwc, %function
 	.thumb_func
 getwc:
-	movw r12, #192
+	movw r12, #194
 	b ws1_resolver
 	.align 2
 
@@ -1552,7 +1568,7 @@ getwc:
 	.type getwchar, %function
 	.thumb_func
 getwchar:
-	movw r12, #193
+	movw r12, #195
 	b ws1_resolver
 	.align 2
 
@@ -1560,7 +1576,7 @@ getwchar:
 	.type hcreate, %function
 	.thumb_func
 hcreate:
-	movw r12, #194
+	movw r12, #196
 	b ws1_resolver
 	.align 2
 
@@ -1568,7 +1584,7 @@ hcreate:
 	.type hdestroy, %function
 	.thumb_func
 hdestroy:
-	movw r12, #195
+	movw r12, #197
 	b ws1_resolver
 	.align 2
 
@@ -1576,7 +1592,7 @@ hdestroy:
 	.type hsearch, %function
 	.thumb_func
 hsearch:
-	movw r12, #196
+	movw r12, #198
 	b ws1_resolver
 	.align 2
 
@@ -1584,7 +1600,7 @@ hsearch:
 	.type htonl, %function
 	.thumb_func
 htonl:
-	movw r12, #197
+	movw r12, #199
 	b ws1_resolver
 	.align 2
 
@@ -1592,7 +1608,7 @@ htonl:
 	.type htons, %function
 	.thumb_func
 htons:
-	movw r12, #198
+	movw r12, #200
 	b ws1_resolver
 	.align 2
 
@@ -1600,7 +1616,7 @@ htons:
 	.type index, %function
 	.thumb_func
 index:
-	movw r12, #199
+	movw r12, #201
 	b ws1_resolver
 	.align 2
 
@@ -1608,7 +1624,7 @@ index:
 	.type inet_addr, %function
 	.thumb_func
 inet_addr:
-	movw r12, #200
+	movw r12, #202
 	b ws1_resolver
 	.align 2
 
@@ -1616,7 +1632,7 @@ inet_addr:
 	.type inet_aton, %function
 	.thumb_func
 inet_aton:
-	movw r12, #201
+	movw r12, #203
 	b ws1_resolver
 	.align 2
 
@@ -1624,7 +1640,7 @@ inet_aton:
 	.type inet_ntop, %function
 	.thumb_func
 inet_ntop:
-	movw r12, #202
+	movw r12, #204
 	b ws1_resolver
 	.align 2
 
@@ -1632,7 +1648,7 @@ inet_ntop:
 	.type inet_pton, %function
 	.thumb_func
 inet_pton:
-	movw r12, #203
+	movw r12, #205
 	b ws1_resolver
 	.align 2
 
@@ -1640,7 +1656,7 @@ inet_pton:
 	.type initgroups, %function
 	.thumb_func
 initgroups:
-	movw r12, #204
+	movw r12, #206
 	b ws1_resolver
 	.align 2
 
@@ -1648,7 +1664,7 @@ initgroups:
 	.type inotify_add_watch, %function
 	.thumb_func
 inotify_add_watch:
-	movw r12, #205
+	movw r12, #207
 	b ws1_resolver
 	.align 2
 
@@ -1656,7 +1672,7 @@ inotify_add_watch:
 	.type inotify_init, %function
 	.thumb_func
 inotify_init:
-	movw r12, #206
+	movw r12, #208
 	b ws1_resolver
 	.align 2
 
@@ -1664,7 +1680,7 @@ inotify_init:
 	.type inotify_rm_watch, %function
 	.thumb_func
 inotify_rm_watch:
-	movw r12, #207
+	movw r12, #209
 	b ws1_resolver
 	.align 2
 
@@ -1672,7 +1688,7 @@ inotify_rm_watch:
 	.type ioctl, %function
 	.thumb_func
 ioctl:
-	movw r12, #208
+	movw r12, #210
 	b ws1_resolver
 	.align 2
 
@@ -1680,7 +1696,7 @@ ioctl:
 	.type isalnum, %function
 	.thumb_func
 isalnum:
-	movw r12, #209
+	movw r12, #211
 	b ws1_resolver
 	.align 2
 
@@ -1688,7 +1704,7 @@ isalnum:
 	.type isalpha, %function
 	.thumb_func
 isalpha:
-	movw r12, #210
+	movw r12, #212
 	b ws1_resolver
 	.align 2
 
@@ -1696,7 +1712,7 @@ isalpha:
 	.type isascii, %function
 	.thumb_func
 isascii:
-	movw r12, #211
+	movw r12, #213
 	b ws1_resolver
 	.align 2
 
@@ -1704,7 +1720,7 @@ isascii:
 	.type isatty, %function
 	.thumb_func
 isatty:
-	movw r12, #212
+	movw r12, #214
 	b ws1_resolver
 	.align 2
 
@@ -1712,7 +1728,7 @@ isatty:
 	.type isblank, %function
 	.thumb_func
 isblank:
-	movw r12, #213
+	movw r12, #215
 	b ws1_resolver
 	.align 2
 
@@ -1720,7 +1736,7 @@ isblank:
 	.type iscntrl, %function
 	.thumb_func
 iscntrl:
-	movw r12, #214
+	movw r12, #216
 	b ws1_resolver
 	.align 2
 
@@ -1728,7 +1744,7 @@ iscntrl:
 	.type isdigit, %function
 	.thumb_func
 isdigit:
-	movw r12, #215
+	movw r12, #217
 	b ws1_resolver
 	.align 2
 
@@ -1736,7 +1752,7 @@ isdigit:
 	.type isgraph, %function
 	.thumb_func
 isgraph:
-	movw r12, #216
+	movw r12, #218
 	b ws1_resolver
 	.align 2
 
@@ -1744,7 +1760,7 @@ isgraph:
 	.type islower, %function
 	.thumb_func
 islower:
-	movw r12, #217
+	movw r12, #219
 	b ws1_resolver
 	.align 2
 
@@ -1752,7 +1768,7 @@ islower:
 	.type isprint, %function
 	.thumb_func
 isprint:
-	movw r12, #218
+	movw r12, #220
 	b ws1_resolver
 	.align 2
 
@@ -1760,7 +1776,7 @@ isprint:
 	.type ispunct, %function
 	.thumb_func
 ispunct:
-	movw r12, #219
+	movw r12, #221
 	b ws1_resolver
 	.align 2
 
@@ -1768,7 +1784,7 @@ ispunct:
 	.type isspace, %function
 	.thumb_func
 isspace:
-	movw r12, #220
+	movw r12, #222
 	b ws1_resolver
 	.align 2
 
@@ -1776,7 +1792,7 @@ isspace:
 	.type isupper, %function
 	.thumb_func
 isupper:
-	movw r12, #221
+	movw r12, #223
 	b ws1_resolver
 	.align 2
 
@@ -1784,7 +1800,7 @@ isupper:
 	.type iswalnum, %function
 	.thumb_func
 iswalnum:
-	movw r12, #222
+	movw r12, #224
 	b ws1_resolver
 	.align 2
 
@@ -1792,7 +1808,7 @@ iswalnum:
 	.type iswalpha, %function
 	.thumb_func
 iswalpha:
-	movw r12, #223
+	movw r12, #225
 	b ws1_resolver
 	.align 2
 
@@ -1800,7 +1816,7 @@ iswalpha:
 	.type iswblank, %function
 	.thumb_func
 iswblank:
-	movw r12, #224
+	movw r12, #226
 	b ws1_resolver
 	.align 2
 
@@ -1808,7 +1824,7 @@ iswblank:
 	.type iswcntrl, %function
 	.thumb_func
 iswcntrl:
-	movw r12, #225
+	movw r12, #227
 	b ws1_resolver
 	.align 2
 
@@ -1816,7 +1832,7 @@ iswcntrl:
 	.type iswctype, %function
 	.thumb_func
 iswctype:
-	movw r12, #226
+	movw r12, #228
 	b ws1_resolver
 	.align 2
 
@@ -1824,7 +1840,7 @@ iswctype:
 	.type iswdigit, %function
 	.thumb_func
 iswdigit:
-	movw r12, #227
+	movw r12, #229
 	b ws1_resolver
 	.align 2
 
@@ -1832,7 +1848,7 @@ iswdigit:
 	.type iswgraph, %function
 	.thumb_func
 iswgraph:
-	movw r12, #228
+	movw r12, #230
 	b ws1_resolver
 	.align 2
 
@@ -1840,7 +1856,7 @@ iswgraph:
 	.type iswlower, %function
 	.thumb_func
 iswlower:
-	movw r12, #229
+	movw r12, #231
 	b ws1_resolver
 	.align 2
 
@@ -1848,7 +1864,7 @@ iswlower:
 	.type iswprint, %function
 	.thumb_func
 iswprint:
-	movw r12, #230
+	movw r12, #232
 	b ws1_resolver
 	.align 2
 
@@ -1856,7 +1872,7 @@ iswprint:
 	.type iswpunct, %function
 	.thumb_func
 iswpunct:
-	movw r12, #231
+	movw r12, #233
 	b ws1_resolver
 	.align 2
 
@@ -1864,7 +1880,7 @@ iswpunct:
 	.type iswspace, %function
 	.thumb_func
 iswspace:
-	movw r12, #232
+	movw r12, #234
 	b ws1_resolver
 	.align 2
 
@@ -1872,7 +1888,7 @@ iswspace:
 	.type iswupper, %function
 	.thumb_func
 iswupper:
-	movw r12, #233
+	movw r12, #235
 	b ws1_resolver
 	.align 2
 
@@ -1880,7 +1896,7 @@ iswupper:
 	.type iswxdigit, %function
 	.thumb_func
 iswxdigit:
-	movw r12, #234
+	movw r12, #236
 	b ws1_resolver
 	.align 2
 
@@ -1888,7 +1904,7 @@ iswxdigit:
 	.type isxdigit, %function
 	.thumb_func
 isxdigit:
-	movw r12, #235
+	movw r12, #237
 	b ws1_resolver
 	.align 2
 
@@ -1896,7 +1912,7 @@ isxdigit:
 	.type jrand48, %function
 	.thumb_func
 jrand48:
-	movw r12, #236
+	movw r12, #238
 	b ws1_resolver
 	.align 2
 
@@ -1904,7 +1920,7 @@ jrand48:
 	.type kill, %function
 	.thumb_func
 kill:
-	movw r12, #237
+	movw r12, #239
 	b ws1_resolver
 	.align 2
 
@@ -1912,7 +1928,7 @@ kill:
 	.type killpg, %function
 	.thumb_func
 killpg:
-	movw r12, #238
+	movw r12, #240
 	b ws1_resolver
 	.align 2
 
@@ -1920,7 +1936,7 @@ killpg:
 	.type labs, %function
 	.thumb_func
 labs:
-	movw r12, #239
+	movw r12, #241
 	b ws1_resolver
 	.align 2
 
@@ -1928,7 +1944,7 @@ labs:
 	.type lcong48, %function
 	.thumb_func
 lcong48:
-	movw r12, #240
+	movw r12, #242
 	b ws1_resolver
 	.align 2
 
@@ -1936,7 +1952,7 @@ lcong48:
 	.type ldiv, %function
 	.thumb_func
 ldiv:
-	movw r12, #241
+	movw r12, #243
 	b ws1_resolver
 	.align 2
 
@@ -1944,7 +1960,7 @@ ldiv:
 	.type lfind, %function
 	.thumb_func
 lfind:
-	movw r12, #242
+	movw r12, #244
 	b ws1_resolver
 	.align 2
 
@@ -1952,7 +1968,7 @@ lfind:
 	.type link, %function
 	.thumb_func
 link:
-	movw r12, #243
+	movw r12, #245
 	b ws1_resolver
 	.align 2
 
@@ -1960,7 +1976,7 @@ link:
 	.type llabs, %function
 	.thumb_func
 llabs:
-	movw r12, #244
+	movw r12, #246
 	b ws1_resolver
 	.align 2
 
@@ -1968,7 +1984,7 @@ llabs:
 	.type lldiv, %function
 	.thumb_func
 lldiv:
-	movw r12, #245
+	movw r12, #247
 	b ws1_resolver
 	.align 2
 
@@ -1976,7 +1992,7 @@ lldiv:
 	.type localeconv, %function
 	.thumb_func
 localeconv:
-	movw r12, #246
+	movw r12, #248
 	b ws1_resolver
 	.align 2
 
@@ -1984,7 +2000,7 @@ localeconv:
 	.type lockf, %function
 	.thumb_func
 lockf:
-	movw r12, #247
+	movw r12, #249
 	b ws1_resolver
 	.align 2
 
@@ -1992,7 +2008,7 @@ lockf:
 	.type lockf64, %function
 	.thumb_func
 lockf64:
-	movw r12, #248
+	movw r12, #250
 	b ws1_resolver
 	.align 2
 
@@ -2000,7 +2016,7 @@ lockf64:
 	.type longjmp, %function
 	.thumb_func
 longjmp:
-	movw r12, #249
+	movw r12, #251
 	b ws1_resolver
 	.align 2
 
@@ -2008,7 +2024,7 @@ longjmp:
 	.type lrand48, %function
 	.thumb_func
 lrand48:
-	movw r12, #250
+	movw r12, #252
 	b ws1_resolver
 	.align 2
 
@@ -2016,7 +2032,7 @@ lrand48:
 	.type lsearch, %function
 	.thumb_func
 lsearch:
-	movw r12, #251
+	movw r12, #253
 	b ws1_resolver
 	.align 2
 
@@ -2024,7 +2040,7 @@ lsearch:
 	.type lseek, %function
 	.thumb_func
 lseek:
-	movw r12, #252
+	movw r12, #254
 	b ws1_resolver
 	.align 2
 
@@ -2032,7 +2048,7 @@ lseek:
 	.type lseek64, %function
 	.thumb_func
 lseek64:
-	movw r12, #253
+	movw r12, #255
 	b ws1_resolver
 	.align 2
 
@@ -2040,7 +2056,7 @@ lseek64:
 	.type mallinfo, %function
 	.thumb_func
 mallinfo:
-	movw r12, #254
+	movw r12, #256
 	b ws1_resolver
 	.align 2
 
@@ -2048,7 +2064,7 @@ mallinfo:
 	.type malloc, %function
 	.thumb_func
 malloc:
-	movw r12, #255
+	movw r12, #257
 	b ws1_resolver
 	.align 2
 
@@ -2056,7 +2072,7 @@ malloc:
 	.type mallopt, %function
 	.thumb_func
 mallopt:
-	movw r12, #256
+	movw r12, #258
 	b ws1_resolver
 	.align 2
 
@@ -2064,7 +2080,7 @@ mallopt:
 	.type mblen, %function
 	.thumb_func
 mblen:
-	movw r12, #257
+	movw r12, #259
 	b ws1_resolver
 	.align 2
 
@@ -2072,7 +2088,7 @@ mblen:
 	.type mbrlen, %function
 	.thumb_func
 mbrlen:
-	movw r12, #258
+	movw r12, #260
 	b ws1_resolver
 	.align 2
 
@@ -2080,7 +2096,7 @@ mbrlen:
 	.type mbrtoc16, %function
 	.thumb_func
 mbrtoc16:
-	movw r12, #259
+	movw r12, #261
 	b ws1_resolver
 	.align 2
 
@@ -2088,7 +2104,7 @@ mbrtoc16:
 	.type mbrtoc32, %function
 	.thumb_func
 mbrtoc32:
-	movw r12, #260
+	movw r12, #262
 	b ws1_resolver
 	.align 2
 
@@ -2096,7 +2112,7 @@ mbrtoc32:
 	.type mbrtowc, %function
 	.thumb_func
 mbrtowc:
-	movw r12, #261
+	movw r12, #263
 	b ws1_resolver
 	.align 2
 
@@ -2104,7 +2120,7 @@ mbrtowc:
 	.type mbsinit, %function
 	.thumb_func
 mbsinit:
-	movw r12, #262
+	movw r12, #264
 	b ws1_resolver
 	.align 2
 
@@ -2112,7 +2128,7 @@ mbsinit:
 	.type mbsrtowcs, %function
 	.thumb_func
 mbsrtowcs:
-	movw r12, #263
+	movw r12, #265
 	b ws1_resolver
 	.align 2
 
@@ -2120,7 +2136,7 @@ mbsrtowcs:
 	.type mbstowcs, %function
 	.thumb_func
 mbstowcs:
-	movw r12, #264
+	movw r12, #266
 	b ws1_resolver
 	.align 2
 
@@ -2128,7 +2144,7 @@ mbstowcs:
 	.type mbtowc, %function
 	.thumb_func
 mbtowc:
-	movw r12, #265
+	movw r12, #267
 	b ws1_resolver
 	.align 2
 
@@ -2136,7 +2152,7 @@ mbtowc:
 	.type memalign, %function
 	.thumb_func
 memalign:
-	movw r12, #266
+	movw r12, #268
 	b ws1_resolver
 	.align 2
 
@@ -2144,7 +2160,7 @@ memalign:
 	.type memccpy, %function
 	.thumb_func
 memccpy:
-	movw r12, #267
+	movw r12, #269
 	b ws1_resolver
 	.align 2
 
@@ -2152,7 +2168,7 @@ memccpy:
 	.type memchr, %function
 	.thumb_func
 memchr:
-	movw r12, #268
+	movw r12, #270
 	b ws1_resolver
 	.align 2
 
@@ -2160,7 +2176,7 @@ memchr:
 	.type memcpy, %function
 	.thumb_func
 memcpy:
-	movw r12, #269
+	movw r12, #271
 	b ws1_resolver
 	.align 2
 
@@ -2168,7 +2184,7 @@ memcpy:
 	.type memmove, %function
 	.thumb_func
 memmove:
-	movw r12, #270
+	movw r12, #272
 	b ws1_resolver
 	.align 2
 
@@ -2176,7 +2192,7 @@ memmove:
 	.type memset, %function
 	.thumb_func
 memset:
-	movw r12, #271
+	movw r12, #273
 	b ws1_resolver
 	.align 2
 
@@ -2184,7 +2200,7 @@ memset:
 	.type mkfifo, %function
 	.thumb_func
 mkfifo:
-	movw r12, #272
+	movw r12, #274
 	b ws1_resolver
 	.align 2
 
@@ -2192,7 +2208,7 @@ mkfifo:
 	.type mkstemp, %function
 	.thumb_func
 mkstemp:
-	movw r12, #273
+	movw r12, #275
 	b ws1_resolver
 	.align 2
 
@@ -2200,7 +2216,7 @@ mkstemp:
 	.type mktemp, %function
 	.thumb_func
 mktemp:
-	movw r12, #274
+	movw r12, #276
 	b ws1_resolver
 	.align 2
 
@@ -2208,7 +2224,7 @@ mktemp:
 	.type mlock, %function
 	.thumb_func
 mlock:
-	movw r12, #275
+	movw r12, #277
 	b ws1_resolver
 	.align 2
 
@@ -2216,7 +2232,7 @@ mlock:
 	.type mlockall, %function
 	.thumb_func
 mlockall:
-	movw r12, #276
+	movw r12, #278
 	b ws1_resolver
 	.align 2
 
@@ -2224,7 +2240,7 @@ mlockall:
 	.type mmap, %function
 	.thumb_func
 mmap:
-	movw r12, #277
+	movw r12, #279
 	b ws1_resolver
 	.align 2
 
@@ -2232,7 +2248,7 @@ mmap:
 	.type mmap64, %function
 	.thumb_func
 mmap64:
-	movw r12, #278
+	movw r12, #280
 	b ws1_resolver
 	.align 2
 
@@ -2240,7 +2256,7 @@ mmap64:
 	.type mount, %function
 	.thumb_func
 mount:
-	movw r12, #279
+	movw r12, #281
 	b ws1_resolver
 	.align 2
 
@@ -2248,7 +2264,7 @@ mount:
 	.type mprotect, %function
 	.thumb_func
 mprotect:
-	movw r12, #280
+	movw r12, #282
 	b ws1_resolver
 	.align 2
 
@@ -2256,7 +2272,7 @@ mprotect:
 	.type mrand48, %function
 	.thumb_func
 mrand48:
-	movw r12, #281
+	movw r12, #283
 	b ws1_resolver
 	.align 2
 
@@ -2264,7 +2280,7 @@ mrand48:
 	.type msync, %function
 	.thumb_func
 msync:
-	movw r12, #282
+	movw r12, #284
 	b ws1_resolver
 	.align 2
 
@@ -2272,7 +2288,7 @@ msync:
 	.type munlock, %function
 	.thumb_func
 munlock:
-	movw r12, #283
+	movw r12, #285
 	b ws1_resolver
 	.align 2
 
@@ -2280,7 +2296,7 @@ munlock:
 	.type munlockall, %function
 	.thumb_func
 munlockall:
-	movw r12, #284
+	movw r12, #286
 	b ws1_resolver
 	.align 2
 
@@ -2288,7 +2304,7 @@ munlockall:
 	.type munmap, %function
 	.thumb_func
 munmap:
-	movw r12, #285
+	movw r12, #287
 	b ws1_resolver
 	.align 2
 
@@ -2296,7 +2312,7 @@ munmap:
 	.type nanosleep, %function
 	.thumb_func
 nanosleep:
-	movw r12, #286
+	movw r12, #288
 	b ws1_resolver
 	.align 2
 
@@ -2304,7 +2320,7 @@ nanosleep:
 	.type nftw, %function
 	.thumb_func
 nftw:
-	movw r12, #287
+	movw r12, #289
 	b ws1_resolver
 	.align 2
 
@@ -2312,7 +2328,7 @@ nftw:
 	.type nftw64, %function
 	.thumb_func
 nftw64:
-	movw r12, #288
+	movw r12, #290
 	b ws1_resolver
 	.align 2
 
@@ -2320,7 +2336,7 @@ nftw64:
 	.type nice, %function
 	.thumb_func
 nice:
-	movw r12, #289
+	movw r12, #291
 	b ws1_resolver
 	.align 2
 
@@ -2328,7 +2344,7 @@ nice:
 	.type nrand48, %function
 	.thumb_func
 nrand48:
-	movw r12, #290
+	movw r12, #292
 	b ws1_resolver
 	.align 2
 
@@ -2336,7 +2352,7 @@ nrand48:
 	.type ntohl, %function
 	.thumb_func
 ntohl:
-	movw r12, #291
+	movw r12, #293
 	b ws1_resolver
 	.align 2
 
@@ -2344,7 +2360,7 @@ ntohl:
 	.type ntohs, %function
 	.thumb_func
 ntohs:
-	movw r12, #292
+	movw r12, #294
 	b ws1_resolver
 	.align 2
 
@@ -2352,7 +2368,7 @@ ntohs:
 	.type openlog, %function
 	.thumb_func
 openlog:
-	movw r12, #293
+	movw r12, #295
 	b ws1_resolver
 	.align 2
 
@@ -2360,7 +2376,7 @@ openlog:
 	.type optarg, %function
 	.thumb_func
 optarg:
-	movw r12, #294
+	movw r12, #296
 	b ws1_resolver
 	.align 2
 
@@ -2368,7 +2384,7 @@ optarg:
 	.type opterr, %function
 	.thumb_func
 opterr:
-	movw r12, #295
+	movw r12, #297
 	b ws1_resolver
 	.align 2
 
@@ -2376,7 +2392,7 @@ opterr:
 	.type optind, %function
 	.thumb_func
 optind:
-	movw r12, #296
+	movw r12, #298
 	b ws1_resolver
 	.align 2
 
@@ -2384,7 +2400,7 @@ optind:
 	.type optopt, %function
 	.thumb_func
 optopt:
-	movw r12, #297
+	movw r12, #299
 	b ws1_resolver
 	.align 2
 
@@ -2392,7 +2408,7 @@ optopt:
 	.type optreset, %function
 	.thumb_func
 optreset:
-	movw r12, #298
+	movw r12, #300
 	b ws1_resolver
 	.align 2
 
@@ -2400,7 +2416,7 @@ optreset:
 	.type pathconf, %function
 	.thumb_func
 pathconf:
-	movw r12, #299
+	movw r12, #301
 	b ws1_resolver
 	.align 2
 
@@ -2408,7 +2424,7 @@ pathconf:
 	.type pause, %function
 	.thumb_func
 pause:
-	movw r12, #300
+	movw r12, #302
 	b ws1_resolver
 	.align 2
 
@@ -2416,7 +2432,7 @@ pause:
 	.type perror, %function
 	.thumb_func
 perror:
-	movw r12, #301
+	movw r12, #303
 	b ws1_resolver
 	.align 2
 
@@ -2424,7 +2440,7 @@ perror:
 	.type pipe, %function
 	.thumb_func
 pipe:
-	movw r12, #302
+	movw r12, #304
 	b ws1_resolver
 	.align 2
 
@@ -2432,7 +2448,7 @@ pipe:
 	.type posix_fadvise, %function
 	.thumb_func
 posix_fadvise:
-	movw r12, #303
+	movw r12, #305
 	b ws1_resolver
 	.align 2
 
@@ -2440,7 +2456,7 @@ posix_fadvise:
 	.type posix_fadvise64, %function
 	.thumb_func
 posix_fadvise64:
-	movw r12, #304
+	movw r12, #306
 	b ws1_resolver
 	.align 2
 
@@ -2448,7 +2464,7 @@ posix_fadvise64:
 	.type posix_fallocate, %function
 	.thumb_func
 posix_fallocate:
-	movw r12, #305
+	movw r12, #307
 	b ws1_resolver
 	.align 2
 
@@ -2456,7 +2472,7 @@ posix_fallocate:
 	.type posix_fallocate64, %function
 	.thumb_func
 posix_fallocate64:
-	movw r12, #306
+	movw r12, #308
 	b ws1_resolver
 	.align 2
 
@@ -2464,7 +2480,7 @@ posix_fallocate64:
 	.type posix_madvise, %function
 	.thumb_func
 posix_madvise:
-	movw r12, #307
+	movw r12, #309
 	b ws1_resolver
 	.align 2
 
@@ -2472,7 +2488,7 @@ posix_madvise:
 	.type posix_memalign, %function
 	.thumb_func
 posix_memalign:
-	movw r12, #308
+	movw r12, #310
 	b ws1_resolver
 	.align 2
 
@@ -2480,7 +2496,7 @@ posix_memalign:
 	.type posix_spawn, %function
 	.thumb_func
 posix_spawn:
-	movw r12, #309
+	movw r12, #311
 	b ws1_resolver
 	.align 2
 
@@ -2488,7 +2504,7 @@ posix_spawn:
 	.type posix_spawn_file_actions_addclose, %function
 	.thumb_func
 posix_spawn_file_actions_addclose:
-	movw r12, #310
+	movw r12, #312
 	b ws1_resolver
 	.align 2
 
@@ -2496,7 +2512,7 @@ posix_spawn_file_actions_addclose:
 	.type posix_spawn_file_actions_adddup2, %function
 	.thumb_func
 posix_spawn_file_actions_adddup2:
-	movw r12, #311
+	movw r12, #313
 	b ws1_resolver
 	.align 2
 
@@ -2504,7 +2520,7 @@ posix_spawn_file_actions_adddup2:
 	.type posix_spawn_file_actions_addopen, %function
 	.thumb_func
 posix_spawn_file_actions_addopen:
-	movw r12, #312
+	movw r12, #314
 	b ws1_resolver
 	.align 2
 
@@ -2512,7 +2528,7 @@ posix_spawn_file_actions_addopen:
 	.type posix_spawn_file_actions_destroy, %function
 	.thumb_func
 posix_spawn_file_actions_destroy:
-	movw r12, #313
+	movw r12, #315
 	b ws1_resolver
 	.align 2
 
@@ -2520,7 +2536,7 @@ posix_spawn_file_actions_destroy:
 	.type posix_spawn_file_actions_init, %function
 	.thumb_func
 posix_spawn_file_actions_init:
-	movw r12, #314
+	movw r12, #316
 	b ws1_resolver
 	.align 2
 
@@ -2528,7 +2544,7 @@ posix_spawn_file_actions_init:
 	.type posix_spawnattr_destroy, %function
 	.thumb_func
 posix_spawnattr_destroy:
-	movw r12, #315
+	movw r12, #317
 	b ws1_resolver
 	.align 2
 
@@ -2536,7 +2552,7 @@ posix_spawnattr_destroy:
 	.type posix_spawnattr_getflags, %function
 	.thumb_func
 posix_spawnattr_getflags:
-	movw r12, #316
+	movw r12, #318
 	b ws1_resolver
 	.align 2
 
@@ -2544,7 +2560,7 @@ posix_spawnattr_getflags:
 	.type posix_spawnattr_getpgroup, %function
 	.thumb_func
 posix_spawnattr_getpgroup:
-	movw r12, #317
+	movw r12, #319
 	b ws1_resolver
 	.align 2
 
@@ -2552,7 +2568,7 @@ posix_spawnattr_getpgroup:
 	.type posix_spawnattr_getschedparam, %function
 	.thumb_func
 posix_spawnattr_getschedparam:
-	movw r12, #318
+	movw r12, #320
 	b ws1_resolver
 	.align 2
 
@@ -2560,7 +2576,7 @@ posix_spawnattr_getschedparam:
 	.type posix_spawnattr_getschedpolicy, %function
 	.thumb_func
 posix_spawnattr_getschedpolicy:
-	movw r12, #319
+	movw r12, #321
 	b ws1_resolver
 	.align 2
 
@@ -2568,7 +2584,7 @@ posix_spawnattr_getschedpolicy:
 	.type posix_spawnattr_getsigdefault, %function
 	.thumb_func
 posix_spawnattr_getsigdefault:
-	movw r12, #320
+	movw r12, #322
 	b ws1_resolver
 	.align 2
 
@@ -2576,7 +2592,7 @@ posix_spawnattr_getsigdefault:
 	.type posix_spawnattr_getsigmask, %function
 	.thumb_func
 posix_spawnattr_getsigmask:
-	movw r12, #321
+	movw r12, #323
 	b ws1_resolver
 	.align 2
 
@@ -2584,7 +2600,7 @@ posix_spawnattr_getsigmask:
 	.type posix_spawnattr_init, %function
 	.thumb_func
 posix_spawnattr_init:
-	movw r12, #322
+	movw r12, #324
 	b ws1_resolver
 	.align 2
 
@@ -2592,7 +2608,7 @@ posix_spawnattr_init:
 	.type posix_spawnattr_setflags, %function
 	.thumb_func
 posix_spawnattr_setflags:
-	movw r12, #323
+	movw r12, #325
 	b ws1_resolver
 	.align 2
 
@@ -2600,7 +2616,7 @@ posix_spawnattr_setflags:
 	.type posix_spawnattr_setpgroup, %function
 	.thumb_func
 posix_spawnattr_setpgroup:
-	movw r12, #324
+	movw r12, #326
 	b ws1_resolver
 	.align 2
 
@@ -2608,7 +2624,7 @@ posix_spawnattr_setpgroup:
 	.type posix_spawnattr_setschedparam, %function
 	.thumb_func
 posix_spawnattr_setschedparam:
-	movw r12, #325
+	movw r12, #327
 	b ws1_resolver
 	.align 2
 
@@ -2616,7 +2632,7 @@ posix_spawnattr_setschedparam:
 	.type posix_spawnattr_setschedpolicy, %function
 	.thumb_func
 posix_spawnattr_setschedpolicy:
-	movw r12, #326
+	movw r12, #328
 	b ws1_resolver
 	.align 2
 
@@ -2624,7 +2640,7 @@ posix_spawnattr_setschedpolicy:
 	.type posix_spawnattr_setsigdefault, %function
 	.thumb_func
 posix_spawnattr_setsigdefault:
-	movw r12, #327
+	movw r12, #329
 	b ws1_resolver
 	.align 2
 
@@ -2632,7 +2648,7 @@ posix_spawnattr_setsigdefault:
 	.type posix_spawnattr_setsigmask, %function
 	.thumb_func
 posix_spawnattr_setsigmask:
-	movw r12, #328
+	movw r12, #330
 	b ws1_resolver
 	.align 2
 
@@ -2640,7 +2656,7 @@ posix_spawnattr_setsigmask:
 	.type posix_spawnp, %function
 	.thumb_func
 posix_spawnp:
-	movw r12, #329
+	movw r12, #331
 	b ws1_resolver
 	.align 2
 
@@ -2648,7 +2664,7 @@ posix_spawnp:
 	.type pread, %function
 	.thumb_func
 pread:
-	movw r12, #330
+	movw r12, #332
 	b ws1_resolver
 	.align 2
 
@@ -2656,7 +2672,7 @@ pread:
 	.type pread64, %function
 	.thumb_func
 pread64:
-	movw r12, #331
+	movw r12, #333
 	b ws1_resolver
 	.align 2
 
@@ -2664,7 +2680,7 @@ pread64:
 	.type printf, %function
 	.thumb_func
 printf:
-	movw r12, #332
+	movw r12, #334
 	b ws1_resolver
 	.align 2
 
@@ -2672,7 +2688,7 @@ printf:
 	.type pthread_atfork, %function
 	.thumb_func
 pthread_atfork:
-	movw r12, #333
+	movw r12, #335
 	b ws1_resolver
 	.align 2
 
@@ -2680,7 +2696,7 @@ pthread_atfork:
 	.type pthread_attr_destroy, %function
 	.thumb_func
 pthread_attr_destroy:
-	movw r12, #334
+	movw r12, #336
 	b ws1_resolver
 	.align 2
 
@@ -2688,7 +2704,7 @@ pthread_attr_destroy:
 	.type pthread_attr_getdetachstate, %function
 	.thumb_func
 pthread_attr_getdetachstate:
-	movw r12, #335
+	movw r12, #337
 	b ws1_resolver
 	.align 2
 
@@ -2696,7 +2712,7 @@ pthread_attr_getdetachstate:
 	.type pthread_attr_getguardsize, %function
 	.thumb_func
 pthread_attr_getguardsize:
-	movw r12, #336
+	movw r12, #338
 	b ws1_resolver
 	.align 2
 
@@ -2704,7 +2720,7 @@ pthread_attr_getguardsize:
 	.type pthread_attr_getinheritsched, %function
 	.thumb_func
 pthread_attr_getinheritsched:
-	movw r12, #337
+	movw r12, #339
 	b ws1_resolver
 	.align 2
 
@@ -2712,7 +2728,7 @@ pthread_attr_getinheritsched:
 	.type pthread_attr_getschedparam, %function
 	.thumb_func
 pthread_attr_getschedparam:
-	movw r12, #338
+	movw r12, #340
 	b ws1_resolver
 	.align 2
 
@@ -2720,7 +2736,7 @@ pthread_attr_getschedparam:
 	.type pthread_attr_getschedpolicy, %function
 	.thumb_func
 pthread_attr_getschedpolicy:
-	movw r12, #339
+	movw r12, #341
 	b ws1_resolver
 	.align 2
 
@@ -2728,7 +2744,7 @@ pthread_attr_getschedpolicy:
 	.type pthread_attr_getscope, %function
 	.thumb_func
 pthread_attr_getscope:
-	movw r12, #340
+	movw r12, #342
 	b ws1_resolver
 	.align 2
 
@@ -2736,7 +2752,7 @@ pthread_attr_getscope:
 	.type pthread_attr_getstack, %function
 	.thumb_func
 pthread_attr_getstack:
-	movw r12, #341
+	movw r12, #343
 	b ws1_resolver
 	.align 2
 
@@ -2744,7 +2760,7 @@ pthread_attr_getstack:
 	.type pthread_attr_getstackaddr, %function
 	.thumb_func
 pthread_attr_getstackaddr:
-	movw r12, #342
+	movw r12, #344
 	b ws1_resolver
 	.align 2
 
@@ -2752,7 +2768,7 @@ pthread_attr_getstackaddr:
 	.type pthread_attr_getstacksize, %function
 	.thumb_func
 pthread_attr_getstacksize:
-	movw r12, #343
+	movw r12, #345
 	b ws1_resolver
 	.align 2
 
@@ -2760,7 +2776,7 @@ pthread_attr_getstacksize:
 	.type pthread_attr_setdetachstate, %function
 	.thumb_func
 pthread_attr_setdetachstate:
-	movw r12, #344
+	movw r12, #346
 	b ws1_resolver
 	.align 2
 
@@ -2768,7 +2784,7 @@ pthread_attr_setdetachstate:
 	.type pthread_attr_setguardsize, %function
 	.thumb_func
 pthread_attr_setguardsize:
-	movw r12, #345
+	movw r12, #347
 	b ws1_resolver
 	.align 2
 
@@ -2776,7 +2792,7 @@ pthread_attr_setguardsize:
 	.type pthread_attr_setinheritsched, %function
 	.thumb_func
 pthread_attr_setinheritsched:
-	movw r12, #346
+	movw r12, #348
 	b ws1_resolver
 	.align 2
 
@@ -2784,7 +2800,7 @@ pthread_attr_setinheritsched:
 	.type pthread_attr_setschedparam, %function
 	.thumb_func
 pthread_attr_setschedparam:
-	movw r12, #347
+	movw r12, #349
 	b ws1_resolver
 	.align 2
 
@@ -2792,7 +2808,7 @@ pthread_attr_setschedparam:
 	.type pthread_attr_setschedpolicy, %function
 	.thumb_func
 pthread_attr_setschedpolicy:
-	movw r12, #348
+	movw r12, #350
 	b ws1_resolver
 	.align 2
 
@@ -2800,7 +2816,7 @@ pthread_attr_setschedpolicy:
 	.type pthread_attr_setscope, %function
 	.thumb_func
 pthread_attr_setscope:
-	movw r12, #349
+	movw r12, #351
 	b ws1_resolver
 	.align 2
 
@@ -2808,7 +2824,7 @@ pthread_attr_setscope:
 	.type pthread_attr_setstack, %function
 	.thumb_func
 pthread_attr_setstack:
-	movw r12, #350
+	movw r12, #352
 	b ws1_resolver
 	.align 2
 
@@ -2816,7 +2832,7 @@ pthread_attr_setstack:
 	.type pthread_attr_setstackaddr, %function
 	.thumb_func
 pthread_attr_setstackaddr:
-	movw r12, #351
+	movw r12, #353
 	b ws1_resolver
 	.align 2
 
@@ -2824,7 +2840,7 @@ pthread_attr_setstackaddr:
 	.type pthread_attr_setstacksize, %function
 	.thumb_func
 pthread_attr_setstacksize:
-	movw r12, #352
+	movw r12, #354
 	b ws1_resolver
 	.align 2
 
@@ -2832,7 +2848,7 @@ pthread_attr_setstacksize:
 	.type pthread_barrier_destroy, %function
 	.thumb_func
 pthread_barrier_destroy:
-	movw r12, #353
+	movw r12, #355
 	b ws1_resolver
 	.align 2
 
@@ -2840,7 +2856,7 @@ pthread_barrier_destroy:
 	.type pthread_barrier_init, %function
 	.thumb_func
 pthread_barrier_init:
-	movw r12, #354
+	movw r12, #356
 	b ws1_resolver
 	.align 2
 
@@ -2848,7 +2864,7 @@ pthread_barrier_init:
 	.type pthread_barrier_wait, %function
 	.thumb_func
 pthread_barrier_wait:
-	movw r12, #355
+	movw r12, #357
 	b ws1_resolver
 	.align 2
 
@@ -2856,7 +2872,7 @@ pthread_barrier_wait:
 	.type pthread_barrierattr_destroy, %function
 	.thumb_func
 pthread_barrierattr_destroy:
-	movw r12, #356
+	movw r12, #358
 	b ws1_resolver
 	.align 2
 
@@ -2864,7 +2880,7 @@ pthread_barrierattr_destroy:
 	.type pthread_barrierattr_getpshared, %function
 	.thumb_func
 pthread_barrierattr_getpshared:
-	movw r12, #357
+	movw r12, #359
 	b ws1_resolver
 	.align 2
 
@@ -2872,7 +2888,7 @@ pthread_barrierattr_getpshared:
 	.type pthread_barrierattr_init, %function
 	.thumb_func
 pthread_barrierattr_init:
-	movw r12, #358
+	movw r12, #360
 	b ws1_resolver
 	.align 2
 
@@ -2880,7 +2896,7 @@ pthread_barrierattr_init:
 	.type pthread_barrierattr_setpshared, %function
 	.thumb_func
 pthread_barrierattr_setpshared:
-	movw r12, #359
+	movw r12, #361
 	b ws1_resolver
 	.align 2
 
@@ -2888,7 +2904,7 @@ pthread_barrierattr_setpshared:
 	.type pthread_cond_broadcast, %function
 	.thumb_func
 pthread_cond_broadcast:
-	movw r12, #360
+	movw r12, #362
 	b ws1_resolver
 	.align 2
 
@@ -2896,7 +2912,7 @@ pthread_cond_broadcast:
 	.type pthread_cond_destroy, %function
 	.thumb_func
 pthread_cond_destroy:
-	movw r12, #361
+	movw r12, #363
 	b ws1_resolver
 	.align 2
 
@@ -2904,7 +2920,7 @@ pthread_cond_destroy:
 	.type pthread_cond_init, %function
 	.thumb_func
 pthread_cond_init:
-	movw r12, #362
+	movw r12, #364
 	b ws1_resolver
 	.align 2
 
@@ -2912,7 +2928,7 @@ pthread_cond_init:
 	.type pthread_cond_signal, %function
 	.thumb_func
 pthread_cond_signal:
-	movw r12, #363
+	movw r12, #365
 	b ws1_resolver
 	.align 2
 
@@ -2920,7 +2936,7 @@ pthread_cond_signal:
 	.type pthread_cond_timedwait, %function
 	.thumb_func
 pthread_cond_timedwait:
-	movw r12, #364
+	movw r12, #366
 	b ws1_resolver
 	.align 2
 
@@ -2928,7 +2944,7 @@ pthread_cond_timedwait:
 	.type pthread_cond_wait, %function
 	.thumb_func
 pthread_cond_wait:
-	movw r12, #365
+	movw r12, #367
 	b ws1_resolver
 	.align 2
 
@@ -2936,7 +2952,7 @@ pthread_cond_wait:
 	.type pthread_condattr_destroy, %function
 	.thumb_func
 pthread_condattr_destroy:
-	movw r12, #366
+	movw r12, #368
 	b ws1_resolver
 	.align 2
 
@@ -2944,7 +2960,7 @@ pthread_condattr_destroy:
 	.type pthread_condattr_getclock, %function
 	.thumb_func
 pthread_condattr_getclock:
-	movw r12, #367
+	movw r12, #369
 	b ws1_resolver
 	.align 2
 
@@ -2952,7 +2968,7 @@ pthread_condattr_getclock:
 	.type pthread_condattr_getpshared, %function
 	.thumb_func
 pthread_condattr_getpshared:
-	movw r12, #368
+	movw r12, #370
 	b ws1_resolver
 	.align 2
 
@@ -2960,7 +2976,7 @@ pthread_condattr_getpshared:
 	.type pthread_condattr_init, %function
 	.thumb_func
 pthread_condattr_init:
-	movw r12, #369
+	movw r12, #371
 	b ws1_resolver
 	.align 2
 
@@ -2968,7 +2984,7 @@ pthread_condattr_init:
 	.type pthread_condattr_setclock, %function
 	.thumb_func
 pthread_condattr_setclock:
-	movw r12, #370
+	movw r12, #372
 	b ws1_resolver
 	.align 2
 
@@ -2976,7 +2992,7 @@ pthread_condattr_setclock:
 	.type pthread_condattr_setpshared, %function
 	.thumb_func
 pthread_condattr_setpshared:
-	movw r12, #371
+	movw r12, #373
 	b ws1_resolver
 	.align 2
 
@@ -2984,7 +3000,7 @@ pthread_condattr_setpshared:
 	.type pthread_detach, %function
 	.thumb_func
 pthread_detach:
-	movw r12, #372
+	movw r12, #374
 	b ws1_resolver
 	.align 2
 
@@ -2992,7 +3008,7 @@ pthread_detach:
 	.type pthread_equal, %function
 	.thumb_func
 pthread_equal:
-	movw r12, #373
+	movw r12, #375
 	b ws1_resolver
 	.align 2
 
@@ -3000,7 +3016,7 @@ pthread_equal:
 	.type pthread_exit, %function
 	.thumb_func
 pthread_exit:
-	movw r12, #374
+	movw r12, #376
 	b ws1_resolver
 	.align 2
 
@@ -3008,7 +3024,7 @@ pthread_exit:
 	.type pthread_getcpuclockid, %function
 	.thumb_func
 pthread_getcpuclockid:
-	movw r12, #375
+	movw r12, #377
 	b ws1_resolver
 	.align 2
 
@@ -3016,7 +3032,7 @@ pthread_getcpuclockid:
 	.type pthread_getname_np, %function
 	.thumb_func
 pthread_getname_np:
-	movw r12, #376
+	movw r12, #378
 	b ws1_resolver
 	.align 2
 
@@ -3024,7 +3040,7 @@ pthread_getname_np:
 	.type pthread_getschedparam, %function
 	.thumb_func
 pthread_getschedparam:
-	movw r12, #377
+	movw r12, #379
 	b ws1_resolver
 	.align 2
 
@@ -3032,7 +3048,7 @@ pthread_getschedparam:
 	.type pthread_getspecific, %function
 	.thumb_func
 pthread_getspecific:
-	movw r12, #378
+	movw r12, #380
 	b ws1_resolver
 	.align 2
 
@@ -3040,7 +3056,7 @@ pthread_getspecific:
 	.type pthread_join, %function
 	.thumb_func
 pthread_join:
-	movw r12, #379
+	movw r12, #381
 	b ws1_resolver
 	.align 2
 
@@ -3048,7 +3064,7 @@ pthread_join:
 	.type pthread_key_create, %function
 	.thumb_func
 pthread_key_create:
-	movw r12, #380
+	movw r12, #382
 	b ws1_resolver
 	.align 2
 
@@ -3056,7 +3072,7 @@ pthread_key_create:
 	.type pthread_key_delete, %function
 	.thumb_func
 pthread_key_delete:
-	movw r12, #381
+	movw r12, #383
 	b ws1_resolver
 	.align 2
 
@@ -3064,7 +3080,7 @@ pthread_key_delete:
 	.type pthread_kill, %function
 	.thumb_func
 pthread_kill:
-	movw r12, #382
+	movw r12, #384
 	b ws1_resolver
 	.align 2
 
@@ -3072,7 +3088,7 @@ pthread_kill:
 	.type pthread_mutex_destroy, %function
 	.thumb_func
 pthread_mutex_destroy:
-	movw r12, #383
+	movw r12, #385
 	b ws1_resolver
 	.align 2
 
@@ -3080,7 +3096,7 @@ pthread_mutex_destroy:
 	.type pthread_mutex_init, %function
 	.thumb_func
 pthread_mutex_init:
-	movw r12, #384
+	movw r12, #386
 	b ws1_resolver
 	.align 2
 
@@ -3088,7 +3104,7 @@ pthread_mutex_init:
 	.type pthread_mutex_lock, %function
 	.thumb_func
 pthread_mutex_lock:
-	movw r12, #385
+	movw r12, #387
 	b ws1_resolver
 	.align 2
 
@@ -3096,7 +3112,7 @@ pthread_mutex_lock:
 	.type pthread_mutex_timedlock, %function
 	.thumb_func
 pthread_mutex_timedlock:
-	movw r12, #386
+	movw r12, #388
 	b ws1_resolver
 	.align 2
 
@@ -3104,7 +3120,7 @@ pthread_mutex_timedlock:
 	.type pthread_mutex_trylock, %function
 	.thumb_func
 pthread_mutex_trylock:
-	movw r12, #387
+	movw r12, #389
 	b ws1_resolver
 	.align 2
 
@@ -3112,7 +3128,7 @@ pthread_mutex_trylock:
 	.type pthread_mutex_unlock, %function
 	.thumb_func
 pthread_mutex_unlock:
-	movw r12, #388
+	movw r12, #390
 	b ws1_resolver
 	.align 2
 
@@ -3120,7 +3136,7 @@ pthread_mutex_unlock:
 	.type pthread_mutexattr_destroy, %function
 	.thumb_func
 pthread_mutexattr_destroy:
-	movw r12, #389
+	movw r12, #391
 	b ws1_resolver
 	.align 2
 
@@ -3128,7 +3144,7 @@ pthread_mutexattr_destroy:
 	.type pthread_mutexattr_getprotocol, %function
 	.thumb_func
 pthread_mutexattr_getprotocol:
-	movw r12, #390
+	movw r12, #392
 	b ws1_resolver
 	.align 2
 
@@ -3136,7 +3152,7 @@ pthread_mutexattr_getprotocol:
 	.type pthread_mutexattr_getpshared, %function
 	.thumb_func
 pthread_mutexattr_getpshared:
-	movw r12, #391
+	movw r12, #393
 	b ws1_resolver
 	.align 2
 
@@ -3144,7 +3160,7 @@ pthread_mutexattr_getpshared:
 	.type pthread_mutexattr_gettype, %function
 	.thumb_func
 pthread_mutexattr_gettype:
-	movw r12, #392
+	movw r12, #394
 	b ws1_resolver
 	.align 2
 
@@ -3152,7 +3168,7 @@ pthread_mutexattr_gettype:
 	.type pthread_mutexattr_init, %function
 	.thumb_func
 pthread_mutexattr_init:
-	movw r12, #393
+	movw r12, #395
 	b ws1_resolver
 	.align 2
 
@@ -3160,7 +3176,7 @@ pthread_mutexattr_init:
 	.type pthread_mutexattr_setprotocol, %function
 	.thumb_func
 pthread_mutexattr_setprotocol:
-	movw r12, #394
+	movw r12, #396
 	b ws1_resolver
 	.align 2
 
@@ -3168,7 +3184,7 @@ pthread_mutexattr_setprotocol:
 	.type pthread_mutexattr_setpshared, %function
 	.thumb_func
 pthread_mutexattr_setpshared:
-	movw r12, #395
+	movw r12, #397
 	b ws1_resolver
 	.align 2
 
@@ -3176,7 +3192,7 @@ pthread_mutexattr_setpshared:
 	.type pthread_mutexattr_settype, %function
 	.thumb_func
 pthread_mutexattr_settype:
-	movw r12, #396
+	movw r12, #398
 	b ws1_resolver
 	.align 2
 
@@ -3184,7 +3200,7 @@ pthread_mutexattr_settype:
 	.type pthread_once, %function
 	.thumb_func
 pthread_once:
-	movw r12, #397
+	movw r12, #399
 	b ws1_resolver
 	.align 2
 
@@ -3192,7 +3208,7 @@ pthread_once:
 	.type pthread_rwlock_destroy, %function
 	.thumb_func
 pthread_rwlock_destroy:
-	movw r12, #398
+	movw r12, #400
 	b ws1_resolver
 	.align 2
 
@@ -3200,7 +3216,7 @@ pthread_rwlock_destroy:
 	.type pthread_rwlock_init, %function
 	.thumb_func
 pthread_rwlock_init:
-	movw r12, #399
+	movw r12, #401
 	b ws1_resolver
 	.align 2
 
@@ -3208,7 +3224,7 @@ pthread_rwlock_init:
 	.type pthread_rwlock_rdlock, %function
 	.thumb_func
 pthread_rwlock_rdlock:
-	movw r12, #400
+	movw r12, #402
 	b ws1_resolver
 	.align 2
 
@@ -3216,7 +3232,7 @@ pthread_rwlock_rdlock:
 	.type pthread_rwlock_timedrdlock, %function
 	.thumb_func
 pthread_rwlock_timedrdlock:
-	movw r12, #401
+	movw r12, #403
 	b ws1_resolver
 	.align 2
 
@@ -3224,7 +3240,7 @@ pthread_rwlock_timedrdlock:
 	.type pthread_rwlock_timedwrlock, %function
 	.thumb_func
 pthread_rwlock_timedwrlock:
-	movw r12, #402
+	movw r12, #404
 	b ws1_resolver
 	.align 2
 
@@ -3232,7 +3248,7 @@ pthread_rwlock_timedwrlock:
 	.type pthread_rwlock_tryrdlock, %function
 	.thumb_func
 pthread_rwlock_tryrdlock:
-	movw r12, #403
+	movw r12, #405
 	b ws1_resolver
 	.align 2
 
@@ -3240,7 +3256,7 @@ pthread_rwlock_tryrdlock:
 	.type pthread_rwlock_trywrlock, %function
 	.thumb_func
 pthread_rwlock_trywrlock:
-	movw r12, #404
+	movw r12, #406
 	b ws1_resolver
 	.align 2
 
@@ -3248,7 +3264,7 @@ pthread_rwlock_trywrlock:
 	.type pthread_rwlock_unlock, %function
 	.thumb_func
 pthread_rwlock_unlock:
-	movw r12, #405
+	movw r12, #407
 	b ws1_resolver
 	.align 2
 
@@ -3256,7 +3272,7 @@ pthread_rwlock_unlock:
 	.type pthread_rwlock_wrlock, %function
 	.thumb_func
 pthread_rwlock_wrlock:
-	movw r12, #406
+	movw r12, #408
 	b ws1_resolver
 	.align 2
 
@@ -3264,7 +3280,7 @@ pthread_rwlock_wrlock:
 	.type pthread_rwlockattr_destroy, %function
 	.thumb_func
 pthread_rwlockattr_destroy:
-	movw r12, #407
+	movw r12, #409
 	b ws1_resolver
 	.align 2
 
@@ -3272,7 +3288,7 @@ pthread_rwlockattr_destroy:
 	.type pthread_rwlockattr_getpshared, %function
 	.thumb_func
 pthread_rwlockattr_getpshared:
-	movw r12, #408
+	movw r12, #410
 	b ws1_resolver
 	.align 2
 
@@ -3280,7 +3296,7 @@ pthread_rwlockattr_getpshared:
 	.type pthread_rwlockattr_init, %function
 	.thumb_func
 pthread_rwlockattr_init:
-	movw r12, #409
+	movw r12, #411
 	b ws1_resolver
 	.align 2
 
@@ -3288,7 +3304,7 @@ pthread_rwlockattr_init:
 	.type pthread_rwlockattr_setpshared, %function
 	.thumb_func
 pthread_rwlockattr_setpshared:
-	movw r12, #410
+	movw r12, #412
 	b ws1_resolver
 	.align 2
 
@@ -3296,7 +3312,7 @@ pthread_rwlockattr_setpshared:
 	.type pthread_self, %function
 	.thumb_func
 pthread_self:
-	movw r12, #411
+	movw r12, #413
 	b ws1_resolver
 	.align 2
 
@@ -3304,7 +3320,7 @@ pthread_self:
 	.type pthread_setname_np, %function
 	.thumb_func
 pthread_setname_np:
-	movw r12, #412
+	movw r12, #414
 	b ws1_resolver
 	.align 2
 
@@ -3312,7 +3328,7 @@ pthread_setname_np:
 	.type pthread_setschedparam, %function
 	.thumb_func
 pthread_setschedparam:
-	movw r12, #413
+	movw r12, #415
 	b ws1_resolver
 	.align 2
 
@@ -3320,7 +3336,7 @@ pthread_setschedparam:
 	.type pthread_setschedprio, %function
 	.thumb_func
 pthread_setschedprio:
-	movw r12, #414
+	movw r12, #416
 	b ws1_resolver
 	.align 2
 
@@ -3328,7 +3344,7 @@ pthread_setschedprio:
 	.type pthread_setspecific, %function
 	.thumb_func
 pthread_setspecific:
-	movw r12, #415
+	movw r12, #417
 	b ws1_resolver
 	.align 2
 
@@ -3336,7 +3352,7 @@ pthread_setspecific:
 	.type pthread_sigmask, %function
 	.thumb_func
 pthread_sigmask:
-	movw r12, #416
+	movw r12, #418
 	b ws1_resolver
 	.align 2
 
@@ -3344,7 +3360,7 @@ pthread_sigmask:
 	.type pthread_spin_destroy, %function
 	.thumb_func
 pthread_spin_destroy:
-	movw r12, #417
+	movw r12, #419
 	b ws1_resolver
 	.align 2
 
@@ -3352,7 +3368,7 @@ pthread_spin_destroy:
 	.type pthread_spin_init, %function
 	.thumb_func
 pthread_spin_init:
-	movw r12, #418
+	movw r12, #420
 	b ws1_resolver
 	.align 2
 
@@ -3360,7 +3376,7 @@ pthread_spin_init:
 	.type pthread_spin_lock, %function
 	.thumb_func
 pthread_spin_lock:
-	movw r12, #419
+	movw r12, #421
 	b ws1_resolver
 	.align 2
 
@@ -3368,7 +3384,7 @@ pthread_spin_lock:
 	.type pthread_spin_trylock, %function
 	.thumb_func
 pthread_spin_trylock:
-	movw r12, #420
+	movw r12, #422
 	b ws1_resolver
 	.align 2
 
@@ -3376,7 +3392,7 @@ pthread_spin_trylock:
 	.type pthread_spin_unlock, %function
 	.thumb_func
 pthread_spin_unlock:
-	movw r12, #421
+	movw r12, #423
 	b ws1_resolver
 	.align 2
 
@@ -3384,7 +3400,7 @@ pthread_spin_unlock:
 	.type putc, %function
 	.thumb_func
 putc:
-	movw r12, #422
+	movw r12, #424
 	b ws1_resolver
 	.align 2
 
@@ -3392,7 +3408,7 @@ putc:
 	.type putc_unlocked, %function
 	.thumb_func
 putc_unlocked:
-	movw r12, #423
+	movw r12, #425
 	b ws1_resolver
 	.align 2
 
@@ -3400,7 +3416,7 @@ putc_unlocked:
 	.type putchar, %function
 	.thumb_func
 putchar:
-	movw r12, #424
+	movw r12, #426
 	b ws1_resolver
 	.align 2
 
@@ -3408,7 +3424,7 @@ putchar:
 	.type putchar_unlocked, %function
 	.thumb_func
 putchar_unlocked:
-	movw r12, #425
+	movw r12, #427
 	b ws1_resolver
 	.align 2
 
@@ -3416,7 +3432,7 @@ putchar_unlocked:
 	.type putenv, %function
 	.thumb_func
 putenv:
-	movw r12, #426
+	movw r12, #428
 	b ws1_resolver
 	.align 2
 
@@ -3424,7 +3440,7 @@ putenv:
 	.type puts, %function
 	.thumb_func
 puts:
-	movw r12, #427
+	movw r12, #429
 	b ws1_resolver
 	.align 2
 
@@ -3432,7 +3448,7 @@ puts:
 	.type putwc, %function
 	.thumb_func
 putwc:
-	movw r12, #428
+	movw r12, #430
 	b ws1_resolver
 	.align 2
 
@@ -3440,7 +3456,7 @@ putwc:
 	.type putwchar, %function
 	.thumb_func
 putwchar:
-	movw r12, #429
+	movw r12, #431
 	b ws1_resolver
 	.align 2
 
@@ -3448,7 +3464,7 @@ putwchar:
 	.type pwrite, %function
 	.thumb_func
 pwrite:
-	movw r12, #430
+	movw r12, #432
 	b ws1_resolver
 	.align 2
 
@@ -3456,7 +3472,7 @@ pwrite:
 	.type pwrite64, %function
 	.thumb_func
 pwrite64:
-	movw r12, #431
+	movw r12, #433
 	b ws1_resolver
 	.align 2
 
@@ -3464,7 +3480,7 @@ pwrite64:
 	.type qsort, %function
 	.thumb_func
 qsort:
-	movw r12, #432
+	movw r12, #434
 	b ws1_resolver
 	.align 2
 
@@ -3472,7 +3488,7 @@ qsort:
 	.type quick_exit, %function
 	.thumb_func
 quick_exit:
-	movw r12, #433
+	movw r12, #435
 	b ws1_resolver
 	.align 2
 
@@ -3480,7 +3496,7 @@ quick_exit:
 	.type raise, %function
 	.thumb_func
 raise:
-	movw r12, #434
+	movw r12, #436
 	b ws1_resolver
 	.align 2
 
@@ -3488,7 +3504,7 @@ raise:
 	.type rand, %function
 	.thumb_func
 rand:
-	movw r12, #435
+	movw r12, #437
 	b ws1_resolver
 	.align 2
 
@@ -3496,7 +3512,7 @@ rand:
 	.type rand_r, %function
 	.thumb_func
 rand_r:
-	movw r12, #436
+	movw r12, #438
 	b ws1_resolver
 	.align 2
 
@@ -3504,7 +3520,7 @@ rand_r:
 	.type read, %function
 	.thumb_func
 read:
-	movw r12, #437
+	movw r12, #439
 	b ws1_resolver
 	.align 2
 
@@ -3512,7 +3528,7 @@ read:
 	.type readdir, %function
 	.thumb_func
 readdir:
-	movw r12, #438
+	movw r12, #440
 	b ws1_resolver
 	.align 2
 
@@ -3520,7 +3536,7 @@ readdir:
 	.type readdir64, %function
 	.thumb_func
 readdir64:
-	movw r12, #439
+	movw r12, #441
 	b ws1_resolver
 	.align 2
 
@@ -3528,7 +3544,7 @@ readdir64:
 	.type readdir64_r, %function
 	.thumb_func
 readdir64_r:
-	movw r12, #440
+	movw r12, #442
 	b ws1_resolver
 	.align 2
 
@@ -3536,7 +3552,7 @@ readdir64_r:
 	.type readdir_r, %function
 	.thumb_func
 readdir_r:
-	movw r12, #441
+	movw r12, #443
 	b ws1_resolver
 	.align 2
 
@@ -3544,7 +3560,7 @@ readdir_r:
 	.type readlink, %function
 	.thumb_func
 readlink:
-	movw r12, #442
+	movw r12, #444
 	b ws1_resolver
 	.align 2
 
@@ -3552,7 +3568,7 @@ readlink:
 	.type readv, %function
 	.thumb_func
 readv:
-	movw r12, #443
+	movw r12, #445
 	b ws1_resolver
 	.align 2
 
@@ -3560,7 +3576,7 @@ readv:
 	.type realloc, %function
 	.thumb_func
 realloc:
-	movw r12, #444
+	movw r12, #446
 	b ws1_resolver
 	.align 2
 
@@ -3568,7 +3584,7 @@ realloc:
 	.type realpath, %function
 	.thumb_func
 realpath:
-	movw r12, #445
+	movw r12, #447
 	b ws1_resolver
 	.align 2
 
@@ -3576,7 +3592,7 @@ realpath:
 	.type remove, %function
 	.thumb_func
 remove:
-	movw r12, #446
+	movw r12, #448
 	b ws1_resolver
 	.align 2
 
@@ -3584,7 +3600,7 @@ remove:
 	.type rename, %function
 	.thumb_func
 rename:
-	movw r12, #447
+	movw r12, #449
 	b ws1_resolver
 	.align 2
 
@@ -3592,7 +3608,7 @@ rename:
 	.type rewind, %function
 	.thumb_func
 rewind:
-	movw r12, #448
+	movw r12, #450
 	b ws1_resolver
 	.align 2
 
@@ -3600,7 +3616,7 @@ rewind:
 	.type rewinddir, %function
 	.thumb_func
 rewinddir:
-	movw r12, #449
+	movw r12, #451
 	b ws1_resolver
 	.align 2
 
@@ -3608,7 +3624,7 @@ rewinddir:
 	.type scanf, %function
 	.thumb_func
 scanf:
-	movw r12, #450
+	movw r12, #452
 	b ws1_resolver
 	.align 2
 
@@ -3616,7 +3632,7 @@ scanf:
 	.type sched_get_priority_max, %function
 	.thumb_func
 sched_get_priority_max:
-	movw r12, #451
+	movw r12, #453
 	b ws1_resolver
 	.align 2
 
@@ -3624,7 +3640,7 @@ sched_get_priority_max:
 	.type sched_get_priority_min, %function
 	.thumb_func
 sched_get_priority_min:
-	movw r12, #452
+	movw r12, #454
 	b ws1_resolver
 	.align 2
 
@@ -3632,7 +3648,7 @@ sched_get_priority_min:
 	.type sched_getparam, %function
 	.thumb_func
 sched_getparam:
-	movw r12, #453
+	movw r12, #455
 	b ws1_resolver
 	.align 2
 
@@ -3640,7 +3656,7 @@ sched_getparam:
 	.type sched_getscheduler, %function
 	.thumb_func
 sched_getscheduler:
-	movw r12, #454
+	movw r12, #456
 	b ws1_resolver
 	.align 2
 
@@ -3648,7 +3664,7 @@ sched_getscheduler:
 	.type sched_rr_get_interval, %function
 	.thumb_func
 sched_rr_get_interval:
-	movw r12, #455
+	movw r12, #457
 	b ws1_resolver
 	.align 2
 
@@ -3656,7 +3672,7 @@ sched_rr_get_interval:
 	.type sched_setparam, %function
 	.thumb_func
 sched_setparam:
-	movw r12, #456
+	movw r12, #458
 	b ws1_resolver
 	.align 2
 
@@ -3664,7 +3680,7 @@ sched_setparam:
 	.type sched_setscheduler, %function
 	.thumb_func
 sched_setscheduler:
-	movw r12, #457
+	movw r12, #459
 	b ws1_resolver
 	.align 2
 
@@ -3672,7 +3688,7 @@ sched_setscheduler:
 	.type sched_yield, %function
 	.thumb_func
 sched_yield:
-	movw r12, #458
+	movw r12, #460
 	b ws1_resolver
 	.align 2
 
@@ -3680,7 +3696,7 @@ sched_yield:
 	.type seed48, %function
 	.thumb_func
 seed48:
-	movw r12, #459
+	movw r12, #461
 	b ws1_resolver
 	.align 2
 
@@ -3688,7 +3704,7 @@ seed48:
 	.type seekdir, %function
 	.thumb_func
 seekdir:
-	movw r12, #460
+	movw r12, #462
 	b ws1_resolver
 	.align 2
 
@@ -3696,7 +3712,7 @@ seekdir:
 	.type select, %function
 	.thumb_func
 select:
-	movw r12, #461
+	movw r12, #463
 	b ws1_resolver
 	.align 2
 
@@ -3704,7 +3720,7 @@ select:
 	.type sem_close, %function
 	.thumb_func
 sem_close:
-	movw r12, #462
+	movw r12, #464
 	b ws1_resolver
 	.align 2
 
@@ -3712,7 +3728,7 @@ sem_close:
 	.type sem_destroy, %function
 	.thumb_func
 sem_destroy:
-	movw r12, #463
+	movw r12, #465
 	b ws1_resolver
 	.align 2
 
@@ -3720,7 +3736,7 @@ sem_destroy:
 	.type sem_getvalue, %function
 	.thumb_func
 sem_getvalue:
-	movw r12, #464
+	movw r12, #466
 	b ws1_resolver
 	.align 2
 
@@ -3728,7 +3744,7 @@ sem_getvalue:
 	.type sem_init, %function
 	.thumb_func
 sem_init:
-	movw r12, #465
+	movw r12, #467
 	b ws1_resolver
 	.align 2
 
@@ -3736,7 +3752,7 @@ sem_init:
 	.type sem_open, %function
 	.thumb_func
 sem_open:
-	movw r12, #466
+	movw r12, #468
 	b ws1_resolver
 	.align 2
 
@@ -3744,7 +3760,7 @@ sem_open:
 	.type sem_post, %function
 	.thumb_func
 sem_post:
-	movw r12, #467
+	movw r12, #469
 	b ws1_resolver
 	.align 2
 
@@ -3752,7 +3768,7 @@ sem_post:
 	.type sem_timedwait, %function
 	.thumb_func
 sem_timedwait:
-	movw r12, #468
+	movw r12, #470
 	b ws1_resolver
 	.align 2
 
@@ -3760,7 +3776,7 @@ sem_timedwait:
 	.type sem_trywait, %function
 	.thumb_func
 sem_trywait:
-	movw r12, #469
+	movw r12, #471
 	b ws1_resolver
 	.align 2
 
@@ -3768,7 +3784,7 @@ sem_trywait:
 	.type sem_unlink, %function
 	.thumb_func
 sem_unlink:
-	movw r12, #470
+	movw r12, #472
 	b ws1_resolver
 	.align 2
 
@@ -3776,7 +3792,7 @@ sem_unlink:
 	.type sem_wait, %function
 	.thumb_func
 sem_wait:
-	movw r12, #471
+	movw r12, #473
 	b ws1_resolver
 	.align 2
 
@@ -3784,7 +3800,7 @@ sem_wait:
 	.type setbuf, %function
 	.thumb_func
 setbuf:
-	movw r12, #472
+	movw r12, #474
 	b ws1_resolver
 	.align 2
 
@@ -3792,7 +3808,7 @@ setbuf:
 	.type setbuffer, %function
 	.thumb_func
 setbuffer:
-	movw r12, #473
+	movw r12, #475
 	b ws1_resolver
 	.align 2
 
@@ -3800,7 +3816,7 @@ setbuffer:
 	.type setenv, %function
 	.thumb_func
 setenv:
-	movw r12, #474
+	movw r12, #476
 	b ws1_resolver
 	.align 2
 
@@ -3808,7 +3824,7 @@ setenv:
 	.type setgrent, %function
 	.thumb_func
 setgrent:
-	movw r12, #475
+	movw r12, #477
 	b ws1_resolver
 	.align 2
 
@@ -3816,7 +3832,7 @@ setgrent:
 	.type sethostname, %function
 	.thumb_func
 sethostname:
-	movw r12, #476
+	movw r12, #478
 	b ws1_resolver
 	.align 2
 
@@ -3824,7 +3840,7 @@ sethostname:
 	.type setitimer, %function
 	.thumb_func
 setitimer:
-	movw r12, #477
+	movw r12, #479
 	b ws1_resolver
 	.align 2
 
@@ -3832,7 +3848,7 @@ setitimer:
 	.type setlinebuf, %function
 	.thumb_func
 setlinebuf:
-	movw r12, #478
+	movw r12, #480
 	b ws1_resolver
 	.align 2
 
@@ -3840,7 +3856,7 @@ setlinebuf:
 	.type setlocale, %function
 	.thumb_func
 setlocale:
-	movw r12, #479
+	movw r12, #481
 	b ws1_resolver
 	.align 2
 
@@ -3848,7 +3864,7 @@ setlocale:
 	.type setlogmask, %function
 	.thumb_func
 setlogmask:
-	movw r12, #480
+	movw r12, #482
 	b ws1_resolver
 	.align 2
 
@@ -3856,7 +3872,7 @@ setlogmask:
 	.type setpgid, %function
 	.thumb_func
 setpgid:
-	movw r12, #481
+	movw r12, #483
 	b ws1_resolver
 	.align 2
 
@@ -3864,7 +3880,7 @@ setpgid:
 	.type setpgrp, %function
 	.thumb_func
 setpgrp:
-	movw r12, #482
+	movw r12, #484
 	b ws1_resolver
 	.align 2
 
@@ -3872,7 +3888,7 @@ setpgrp:
 	.type setpwent, %function
 	.thumb_func
 setpwent:
-	movw r12, #483
+	movw r12, #485
 	b ws1_resolver
 	.align 2
 
@@ -3880,7 +3896,7 @@ setpwent:
 	.type setrlimit, %function
 	.thumb_func
 setrlimit:
-	movw r12, #484
+	movw r12, #486
 	b ws1_resolver
 	.align 2
 
@@ -3888,7 +3904,7 @@ setrlimit:
 	.type setrlimit64, %function
 	.thumb_func
 setrlimit64:
-	movw r12, #485
+	movw r12, #487
 	b ws1_resolver
 	.align 2
 
@@ -3896,7 +3912,7 @@ setrlimit64:
 	.type setsid, %function
 	.thumb_func
 setsid:
-	movw r12, #486
+	movw r12, #488
 	b ws1_resolver
 	.align 2
 
@@ -3904,7 +3920,7 @@ setsid:
 	.type settimeofday, %function
 	.thumb_func
 settimeofday:
-	movw r12, #487
+	movw r12, #489
 	b ws1_resolver
 	.align 2
 
@@ -3912,7 +3928,7 @@ settimeofday:
 	.type setvbuf, %function
 	.thumb_func
 setvbuf:
-	movw r12, #488
+	movw r12, #490
 	b ws1_resolver
 	.align 2
 
@@ -3920,7 +3936,7 @@ setvbuf:
 	.type sigaction, %function
 	.thumb_func
 sigaction:
-	movw r12, #489
+	movw r12, #491
 	b ws1_resolver
 	.align 2
 
@@ -3928,7 +3944,7 @@ sigaction:
 	.type sigaddset, %function
 	.thumb_func
 sigaddset:
-	movw r12, #490
+	movw r12, #492
 	b ws1_resolver
 	.align 2
 
@@ -3936,7 +3952,7 @@ sigaddset:
 	.type sigblock, %function
 	.thumb_func
 sigblock:
-	movw r12, #491
+	movw r12, #493
 	b ws1_resolver
 	.align 2
 
@@ -3944,7 +3960,7 @@ sigblock:
 	.type sigdelset, %function
 	.thumb_func
 sigdelset:
-	movw r12, #492
+	movw r12, #494
 	b ws1_resolver
 	.align 2
 
@@ -3952,7 +3968,7 @@ sigdelset:
 	.type sigemptyset, %function
 	.thumb_func
 sigemptyset:
-	movw r12, #493
+	movw r12, #495
 	b ws1_resolver
 	.align 2
 
@@ -3960,7 +3976,7 @@ sigemptyset:
 	.type sigfillset, %function
 	.thumb_func
 sigfillset:
-	movw r12, #494
+	movw r12, #496
 	b ws1_resolver
 	.align 2
 
@@ -3968,7 +3984,7 @@ sigfillset:
 	.type sigismember, %function
 	.thumb_func
 sigismember:
-	movw r12, #495
+	movw r12, #497
 	b ws1_resolver
 	.align 2
 
@@ -3976,7 +3992,7 @@ sigismember:
 	.type siglongjmp, %function
 	.thumb_func
 siglongjmp:
-	movw r12, #496
+	movw r12, #498
 	b ws1_resolver
 	.align 2
 
@@ -3984,7 +4000,7 @@ siglongjmp:
 	.type signal, %function
 	.thumb_func
 signal:
-	movw r12, #497
+	movw r12, #499
 	b ws1_resolver
 	.align 2
 
@@ -3992,7 +4008,7 @@ signal:
 	.type sigpause, %function
 	.thumb_func
 sigpause:
-	movw r12, #498
+	movw r12, #500
 	b ws1_resolver
 	.align 2
 
@@ -4000,7 +4016,7 @@ sigpause:
 	.type sigpending, %function
 	.thumb_func
 sigpending:
-	movw r12, #499
+	movw r12, #501
 	b ws1_resolver
 	.align 2
 
@@ -4008,7 +4024,7 @@ sigpending:
 	.type sigprocmask, %function
 	.thumb_func
 sigprocmask:
-	movw r12, #500
+	movw r12, #502
 	b ws1_resolver
 	.align 2
 
@@ -4016,7 +4032,7 @@ sigprocmask:
 	.type sigqueue, %function
 	.thumb_func
 sigqueue:
-	movw r12, #501
+	movw r12, #503
 	b ws1_resolver
 	.align 2
 
@@ -4024,7 +4040,7 @@ sigqueue:
 	.type sigsetjmp, %function
 	.thumb_func
 sigsetjmp:
-	movw r12, #502
+	movw r12, #504
 	b ws1_resolver
 	.align 2
 
@@ -4032,7 +4048,7 @@ sigsetjmp:
 	.type sigsetmask, %function
 	.thumb_func
 sigsetmask:
-	movw r12, #503
+	movw r12, #505
 	b ws1_resolver
 	.align 2
 
@@ -4040,7 +4056,7 @@ sigsetmask:
 	.type sigsuspend, %function
 	.thumb_func
 sigsuspend:
-	movw r12, #504
+	movw r12, #506
 	b ws1_resolver
 	.align 2
 
@@ -4048,7 +4064,7 @@ sigsuspend:
 	.type sigtimedwait, %function
 	.thumb_func
 sigtimedwait:
-	movw r12, #505
+	movw r12, #507
 	b ws1_resolver
 	.align 2
 
@@ -4056,7 +4072,7 @@ sigtimedwait:
 	.type sigwait, %function
 	.thumb_func
 sigwait:
-	movw r12, #506
+	movw r12, #508
 	b ws1_resolver
 	.align 2
 
@@ -4064,7 +4080,7 @@ sigwait:
 	.type sigwaitinfo, %function
 	.thumb_func
 sigwaitinfo:
-	movw r12, #507
+	movw r12, #509
 	b ws1_resolver
 	.align 2
 
@@ -4072,7 +4088,7 @@ sigwaitinfo:
 	.type sleep, %function
 	.thumb_func
 sleep:
-	movw r12, #508
+	movw r12, #510
 	b ws1_resolver
 	.align 2
 
@@ -4080,7 +4096,7 @@ sleep:
 	.type snprintf, %function
 	.thumb_func
 snprintf:
-	movw r12, #509
+	movw r12, #511
 	b ws1_resolver
 	.align 2
 
@@ -4088,7 +4104,7 @@ snprintf:
 	.type sprintf, %function
 	.thumb_func
 sprintf:
-	movw r12, #510
+	movw r12, #512
 	b ws1_resolver
 	.align 2
 
@@ -4096,7 +4112,7 @@ sprintf:
 	.type srand, %function
 	.thumb_func
 srand:
-	movw r12, #511
+	movw r12, #513
 	b ws1_resolver
 	.align 2
 
@@ -4104,7 +4120,7 @@ srand:
 	.type srand48, %function
 	.thumb_func
 srand48:
-	movw r12, #512
+	movw r12, #514
 	b ws1_resolver
 	.align 2
 
@@ -4112,7 +4128,7 @@ srand48:
 	.type sscanf, %function
 	.thumb_func
 sscanf:
-	movw r12, #513
+	movw r12, #515
 	b ws1_resolver
 	.align 2
 
@@ -4120,7 +4136,7 @@ sscanf:
 	.type statvfs64, %function
 	.thumb_func
 statvfs64:
-	movw r12, #514
+	movw r12, #516
 	b ws1_resolver
 	.align 2
 
@@ -4128,7 +4144,7 @@ statvfs64:
 	.type stderr, %function
 	.thumb_func
 stderr:
-	movw r12, #515
+	movw r12, #517
 	b ws1_resolver
 	.align 2
 
@@ -4136,7 +4152,7 @@ stderr:
 	.type stdin, %function
 	.thumb_func
 stdin:
-	movw r12, #516
+	movw r12, #518
 	b ws1_resolver
 	.align 2
 
@@ -4144,7 +4160,7 @@ stdin:
 	.type stdout, %function
 	.thumb_func
 stdout:
-	movw r12, #517
+	movw r12, #519
 	b ws1_resolver
 	.align 2
 
@@ -4152,7 +4168,7 @@ stdout:
 	.type strcasecmp, %function
 	.thumb_func
 strcasecmp:
-	movw r12, #518
+	movw r12, #520
 	b ws1_resolver
 	.align 2
 
@@ -4160,7 +4176,7 @@ strcasecmp:
 	.type strcat, %function
 	.thumb_func
 strcat:
-	movw r12, #519
+	movw r12, #521
 	b ws1_resolver
 	.align 2
 
@@ -4168,7 +4184,7 @@ strcat:
 	.type strchr, %function
 	.thumb_func
 strchr:
-	movw r12, #520
+	movw r12, #522
 	b ws1_resolver
 	.align 2
 
@@ -4176,7 +4192,7 @@ strchr:
 	.type strcmp, %function
 	.thumb_func
 strcmp:
-	movw r12, #521
+	movw r12, #523
 	b ws1_resolver
 	.align 2
 
@@ -4184,7 +4200,7 @@ strcmp:
 	.type strcoll, %function
 	.thumb_func
 strcoll:
-	movw r12, #522
+	movw r12, #524
 	b ws1_resolver
 	.align 2
 
@@ -4192,7 +4208,7 @@ strcoll:
 	.type strcpy, %function
 	.thumb_func
 strcpy:
-	movw r12, #523
+	movw r12, #525
 	b ws1_resolver
 	.align 2
 
@@ -4200,7 +4216,7 @@ strcpy:
 	.type strcspn, %function
 	.thumb_func
 strcspn:
-	movw r12, #524
+	movw r12, #526
 	b ws1_resolver
 	.align 2
 
@@ -4208,7 +4224,7 @@ strcspn:
 	.type strdup, %function
 	.thumb_func
 strdup:
-	movw r12, #525
+	movw r12, #527
 	b ws1_resolver
 	.align 2
 
@@ -4216,7 +4232,7 @@ strdup:
 	.type strerror, %function
 	.thumb_func
 strerror:
-	movw r12, #526
+	movw r12, #528
 	b ws1_resolver
 	.align 2
 
@@ -4224,7 +4240,7 @@ strerror:
 	.type strerror_r, %function
 	.thumb_func
 strerror_r:
-	movw r12, #527
+	movw r12, #529
 	b ws1_resolver
 	.align 2
 
@@ -4232,7 +4248,7 @@ strerror_r:
 	.type strlcat, %function
 	.thumb_func
 strlcat:
-	movw r12, #528
+	movw r12, #530
 	b ws1_resolver
 	.align 2
 
@@ -4240,7 +4256,7 @@ strlcat:
 	.type strlcpy, %function
 	.thumb_func
 strlcpy:
-	movw r12, #529
+	movw r12, #531
 	b ws1_resolver
 	.align 2
 
@@ -4248,7 +4264,7 @@ strlcpy:
 	.type strlen, %function
 	.thumb_func
 strlen:
-	movw r12, #530
+	movw r12, #532
 	b ws1_resolver
 	.align 2
 
@@ -4256,7 +4272,7 @@ strlen:
 	.type strncasecmp, %function
 	.thumb_func
 strncasecmp:
-	movw r12, #531
+	movw r12, #533
 	b ws1_resolver
 	.align 2
 
@@ -4264,7 +4280,7 @@ strncasecmp:
 	.type strncat, %function
 	.thumb_func
 strncat:
-	movw r12, #532
+	movw r12, #534
 	b ws1_resolver
 	.align 2
 
@@ -4272,7 +4288,7 @@ strncat:
 	.type strncmp, %function
 	.thumb_func
 strncmp:
-	movw r12, #533
+	movw r12, #535
 	b ws1_resolver
 	.align 2
 
@@ -4280,7 +4296,7 @@ strncmp:
 	.type strncpy, %function
 	.thumb_func
 strncpy:
-	movw r12, #534
+	movw r12, #536
 	b ws1_resolver
 	.align 2
 
@@ -4288,7 +4304,7 @@ strncpy:
 	.type strnlen, %function
 	.thumb_func
 strnlen:
-	movw r12, #535
+	movw r12, #537
 	b ws1_resolver
 	.align 2
 
@@ -4296,7 +4312,7 @@ strnlen:
 	.type strpbrk, %function
 	.thumb_func
 strpbrk:
-	movw r12, #536
+	movw r12, #538
 	b ws1_resolver
 	.align 2
 
@@ -4304,7 +4320,7 @@ strpbrk:
 	.type strrchr, %function
 	.thumb_func
 strrchr:
-	movw r12, #537
+	movw r12, #539
 	b ws1_resolver
 	.align 2
 
@@ -4312,7 +4328,7 @@ strrchr:
 	.type strsep, %function
 	.thumb_func
 strsep:
-	movw r12, #538
+	movw r12, #540
 	b ws1_resolver
 	.align 2
 
@@ -4320,7 +4336,7 @@ strsep:
 	.type strsignal, %function
 	.thumb_func
 strsignal:
-	movw r12, #539
+	movw r12, #541
 	b ws1_resolver
 	.align 2
 
@@ -4328,7 +4344,7 @@ strsignal:
 	.type strspn, %function
 	.thumb_func
 strspn:
-	movw r12, #540
+	movw r12, #542
 	b ws1_resolver
 	.align 2
 
@@ -4336,7 +4352,7 @@ strspn:
 	.type strstr, %function
 	.thumb_func
 strstr:
-	movw r12, #541
+	movw r12, #543
 	b ws1_resolver
 	.align 2
 
@@ -4344,7 +4360,7 @@ strstr:
 	.type strtod, %function
 	.thumb_func
 strtod:
-	movw r12, #542
+	movw r12, #544
 	b ws1_resolver
 	.align 2
 
@@ -4352,7 +4368,7 @@ strtod:
 	.type strtof, %function
 	.thumb_func
 strtof:
-	movw r12, #543
+	movw r12, #545
 	b ws1_resolver
 	.align 2
 
@@ -4360,7 +4376,7 @@ strtof:
 	.type strtoimax, %function
 	.thumb_func
 strtoimax:
-	movw r12, #544
+	movw r12, #546
 	b ws1_resolver
 	.align 2
 
@@ -4368,7 +4384,7 @@ strtoimax:
 	.type strtok, %function
 	.thumb_func
 strtok:
-	movw r12, #545
+	movw r12, #547
 	b ws1_resolver
 	.align 2
 
@@ -4376,7 +4392,7 @@ strtok:
 	.type strtok_r, %function
 	.thumb_func
 strtok_r:
-	movw r12, #546
+	movw r12, #548
 	b ws1_resolver
 	.align 2
 
@@ -4384,7 +4400,7 @@ strtok_r:
 	.type strtol, %function
 	.thumb_func
 strtol:
-	movw r12, #547
+	movw r12, #549
 	b ws1_resolver
 	.align 2
 
@@ -4392,7 +4408,7 @@ strtol:
 	.type strtold, %function
 	.thumb_func
 strtold:
-	movw r12, #548
+	movw r12, #550
 	b ws1_resolver
 	.align 2
 
@@ -4400,7 +4416,7 @@ strtold:
 	.type strtoll, %function
 	.thumb_func
 strtoll:
-	movw r12, #549
+	movw r12, #551
 	b ws1_resolver
 	.align 2
 
@@ -4408,7 +4424,7 @@ strtoll:
 	.type strtoul, %function
 	.thumb_func
 strtoul:
-	movw r12, #550
+	movw r12, #552
 	b ws1_resolver
 	.align 2
 
@@ -4416,7 +4432,7 @@ strtoul:
 	.type strtoull, %function
 	.thumb_func
 strtoull:
-	movw r12, #551
+	movw r12, #553
 	b ws1_resolver
 	.align 2
 
@@ -4424,7 +4440,7 @@ strtoull:
 	.type strtoumax, %function
 	.thumb_func
 strtoumax:
-	movw r12, #552
+	movw r12, #554
 	b ws1_resolver
 	.align 2
 
@@ -4432,7 +4448,7 @@ strtoumax:
 	.type strxfrm, %function
 	.thumb_func
 strxfrm:
-	movw r12, #553
+	movw r12, #555
 	b ws1_resolver
 	.align 2
 
@@ -4440,7 +4456,7 @@ strxfrm:
 	.type swab, %function
 	.thumb_func
 swab:
-	movw r12, #554
+	movw r12, #556
 	b ws1_resolver
 	.align 2
 
@@ -4448,7 +4464,7 @@ swab:
 	.type swprintf, %function
 	.thumb_func
 swprintf:
-	movw r12, #555
+	movw r12, #557
 	b ws1_resolver
 	.align 2
 
@@ -4456,7 +4472,7 @@ swprintf:
 	.type swscanf, %function
 	.thumb_func
 swscanf:
-	movw r12, #556
+	movw r12, #558
 	b ws1_resolver
 	.align 2
 
@@ -4464,7 +4480,7 @@ swscanf:
 	.type symlink, %function
 	.thumb_func
 symlink:
-	movw r12, #557
+	movw r12, #559
 	b ws1_resolver
 	.align 2
 
@@ -4472,7 +4488,7 @@ symlink:
 	.type sync, %function
 	.thumb_func
 sync:
-	movw r12, #558
+	movw r12, #560
 	b ws1_resolver
 	.align 2
 
@@ -4480,7 +4496,7 @@ sync:
 	.type sys_siglist, %function
 	.thumb_func
 sys_siglist:
-	movw r12, #559
+	movw r12, #561
 	b ws1_resolver
 	.align 2
 
@@ -4488,7 +4504,7 @@ sys_siglist:
 	.type sysconf, %function
 	.thumb_func
 sysconf:
-	movw r12, #560
+	movw r12, #562
 	b ws1_resolver
 	.align 2
 
@@ -4496,7 +4512,7 @@ sysconf:
 	.type syslog, %function
 	.thumb_func
 syslog:
-	movw r12, #561
+	movw r12, #563
 	b ws1_resolver
 	.align 2
 
@@ -4504,7 +4520,7 @@ syslog:
 	.type system, %function
 	.thumb_func
 system:
-	movw r12, #562
+	movw r12, #564
 	b ws1_resolver
 	.align 2
 
@@ -4512,7 +4528,7 @@ system:
 	.type tcdrain, %function
 	.thumb_func
 tcdrain:
-	movw r12, #563
+	movw r12, #565
 	b ws1_resolver
 	.align 2
 
@@ -4520,7 +4536,7 @@ tcdrain:
 	.type tcflow, %function
 	.thumb_func
 tcflow:
-	movw r12, #564
+	movw r12, #566
 	b ws1_resolver
 	.align 2
 
@@ -4528,7 +4544,7 @@ tcflow:
 	.type tcflush, %function
 	.thumb_func
 tcflush:
-	movw r12, #565
+	movw r12, #567
 	b ws1_resolver
 	.align 2
 
@@ -4536,7 +4552,7 @@ tcflush:
 	.type tcgetattr, %function
 	.thumb_func
 tcgetattr:
-	movw r12, #566
+	movw r12, #568
 	b ws1_resolver
 	.align 2
 
@@ -4544,7 +4560,7 @@ tcgetattr:
 	.type tcgetpgrp, %function
 	.thumb_func
 tcgetpgrp:
-	movw r12, #567
+	movw r12, #569
 	b ws1_resolver
 	.align 2
 
@@ -4552,7 +4568,7 @@ tcgetpgrp:
 	.type tcgetsid, %function
 	.thumb_func
 tcgetsid:
-	movw r12, #568
+	movw r12, #570
 	b ws1_resolver
 	.align 2
 
@@ -4560,7 +4576,7 @@ tcgetsid:
 	.type tcsendbreak, %function
 	.thumb_func
 tcsendbreak:
-	movw r12, #569
+	movw r12, #571
 	b ws1_resolver
 	.align 2
 
@@ -4568,7 +4584,7 @@ tcsendbreak:
 	.type tcsetattr, %function
 	.thumb_func
 tcsetattr:
-	movw r12, #570
+	movw r12, #572
 	b ws1_resolver
 	.align 2
 
@@ -4576,7 +4592,7 @@ tcsetattr:
 	.type tcsetpgrp, %function
 	.thumb_func
 tcsetpgrp:
-	movw r12, #571
+	movw r12, #573
 	b ws1_resolver
 	.align 2
 
@@ -4584,7 +4600,7 @@ tcsetpgrp:
 	.type telldir, %function
 	.thumb_func
 telldir:
-	movw r12, #572
+	movw r12, #574
 	b ws1_resolver
 	.align 2
 
@@ -4592,7 +4608,7 @@ telldir:
 	.type tempnam, %function
 	.thumb_func
 tempnam:
-	movw r12, #573
+	movw r12, #575
 	b ws1_resolver
 	.align 2
 
@@ -4600,7 +4616,7 @@ tempnam:
 	.type time, %function
 	.thumb_func
 time:
-	movw r12, #574
+	movw r12, #576
 	b ws1_resolver
 	.align 2
 
@@ -4608,7 +4624,7 @@ time:
 	.type timer_create, %function
 	.thumb_func
 timer_create:
-	movw r12, #575
+	movw r12, #577
 	b ws1_resolver
 	.align 2
 
@@ -4616,7 +4632,7 @@ timer_create:
 	.type timer_delete, %function
 	.thumb_func
 timer_delete:
-	movw r12, #576
+	movw r12, #578
 	b ws1_resolver
 	.align 2
 
@@ -4624,7 +4640,7 @@ timer_delete:
 	.type timer_getoverrun, %function
 	.thumb_func
 timer_getoverrun:
-	movw r12, #577
+	movw r12, #579
 	b ws1_resolver
 	.align 2
 
@@ -4632,7 +4648,7 @@ timer_getoverrun:
 	.type timer_gettime, %function
 	.thumb_func
 timer_gettime:
-	movw r12, #578
+	movw r12, #580
 	b ws1_resolver
 	.align 2
 
@@ -4640,7 +4656,7 @@ timer_gettime:
 	.type timer_settime, %function
 	.thumb_func
 timer_settime:
-	movw r12, #579
+	movw r12, #581
 	b ws1_resolver
 	.align 2
 
@@ -4648,7 +4664,7 @@ timer_settime:
 	.type times, %function
 	.thumb_func
 times:
-	movw r12, #580
+	movw r12, #582
 	b ws1_resolver
 	.align 2
 
@@ -4656,7 +4672,7 @@ times:
 	.type tmpfile, %function
 	.thumb_func
 tmpfile:
-	movw r12, #581
+	movw r12, #583
 	b ws1_resolver
 	.align 2
 
@@ -4664,7 +4680,7 @@ tmpfile:
 	.type tmpfile64, %function
 	.thumb_func
 tmpfile64:
-	movw r12, #582
+	movw r12, #584
 	b ws1_resolver
 	.align 2
 
@@ -4672,7 +4688,7 @@ tmpfile64:
 	.type tmpnam, %function
 	.thumb_func
 tmpnam:
-	movw r12, #583
+	movw r12, #585
 	b ws1_resolver
 	.align 2
 
@@ -4680,7 +4696,7 @@ tmpnam:
 	.type tolower, %function
 	.thumb_func
 tolower:
-	movw r12, #584
+	movw r12, #586
 	b ws1_resolver
 	.align 2
 
@@ -4688,7 +4704,7 @@ tolower:
 	.type toupper, %function
 	.thumb_func
 toupper:
-	movw r12, #585
+	movw r12, #587
 	b ws1_resolver
 	.align 2
 
@@ -4696,7 +4712,7 @@ toupper:
 	.type towctrans, %function
 	.thumb_func
 towctrans:
-	movw r12, #586
+	movw r12, #588
 	b ws1_resolver
 	.align 2
 
@@ -4704,7 +4720,7 @@ towctrans:
 	.type towlower, %function
 	.thumb_func
 towlower:
-	movw r12, #587
+	movw r12, #589
 	b ws1_resolver
 	.align 2
 
@@ -4712,7 +4728,7 @@ towlower:
 	.type towupper, %function
 	.thumb_func
 towupper:
-	movw r12, #588
+	movw r12, #590
 	b ws1_resolver
 	.align 2
 
@@ -4720,7 +4736,7 @@ towupper:
 	.type truncate, %function
 	.thumb_func
 truncate:
-	movw r12, #589
+	movw r12, #591
 	b ws1_resolver
 	.align 2
 
@@ -4728,7 +4744,7 @@ truncate:
 	.type truncate64, %function
 	.thumb_func
 truncate64:
-	movw r12, #590
+	movw r12, #592
 	b ws1_resolver
 	.align 2
 
@@ -4736,7 +4752,7 @@ truncate64:
 	.type umask, %function
 	.thumb_func
 umask:
-	movw r12, #591
+	movw r12, #593
 	b ws1_resolver
 	.align 2
 
@@ -4744,7 +4760,7 @@ umask:
 	.type umount, %function
 	.thumb_func
 umount:
-	movw r12, #592
+	movw r12, #594
 	b ws1_resolver
 	.align 2
 
@@ -4752,7 +4768,7 @@ umount:
 	.type uname, %function
 	.thumb_func
 uname:
-	movw r12, #593
+	movw r12, #595
 	b ws1_resolver
 	.align 2
 
@@ -4760,7 +4776,7 @@ uname:
 	.type ungetc, %function
 	.thumb_func
 ungetc:
-	movw r12, #594
+	movw r12, #596
 	b ws1_resolver
 	.align 2
 
@@ -4768,7 +4784,7 @@ ungetc:
 	.type ungetwc, %function
 	.thumb_func
 ungetwc:
-	movw r12, #595
+	movw r12, #597
 	b ws1_resolver
 	.align 2
 
@@ -4776,7 +4792,7 @@ ungetwc:
 	.type unlink, %function
 	.thumb_func
 unlink:
-	movw r12, #596
+	movw r12, #598
 	b ws1_resolver
 	.align 2
 
@@ -4784,7 +4800,7 @@ unlink:
 	.type unsetenv, %function
 	.thumb_func
 unsetenv:
-	movw r12, #597
+	movw r12, #599
 	b ws1_resolver
 	.align 2
 
@@ -4792,7 +4808,7 @@ unsetenv:
 	.type usleep, %function
 	.thumb_func
 usleep:
-	movw r12, #598
+	movw r12, #600
 	b ws1_resolver
 	.align 2
 
@@ -4800,7 +4816,7 @@ usleep:
 	.type utime, %function
 	.thumb_func
 utime:
-	movw r12, #599
+	movw r12, #601
 	b ws1_resolver
 	.align 2
 
@@ -4808,7 +4824,7 @@ utime:
 	.type utimes, %function
 	.thumb_func
 utimes:
-	movw r12, #600
+	movw r12, #602
 	b ws1_resolver
 	.align 2
 
@@ -4816,7 +4832,7 @@ utimes:
 	.type valloc, %function
 	.thumb_func
 valloc:
-	movw r12, #601
+	movw r12, #603
 	b ws1_resolver
 	.align 2
 
@@ -4824,7 +4840,7 @@ valloc:
 	.type verr, %function
 	.thumb_func
 verr:
-	movw r12, #602
+	movw r12, #604
 	b ws1_resolver
 	.align 2
 
@@ -4832,7 +4848,7 @@ verr:
 	.type verrx, %function
 	.thumb_func
 verrx:
-	movw r12, #603
+	movw r12, #605
 	b ws1_resolver
 	.align 2
 
@@ -4840,7 +4856,7 @@ verrx:
 	.type vfork, %function
 	.thumb_func
 vfork:
-	movw r12, #604
+	movw r12, #606
 	b ws1_resolver
 	.align 2
 
@@ -4848,7 +4864,7 @@ vfork:
 	.type vfprintf, %function
 	.thumb_func
 vfprintf:
-	movw r12, #605
+	movw r12, #607
 	b ws1_resolver
 	.align 2
 
@@ -4856,7 +4872,7 @@ vfprintf:
 	.type vfscanf, %function
 	.thumb_func
 vfscanf:
-	movw r12, #606
+	movw r12, #608
 	b ws1_resolver
 	.align 2
 
@@ -4864,7 +4880,7 @@ vfscanf:
 	.type vfwprintf, %function
 	.thumb_func
 vfwprintf:
-	movw r12, #607
+	movw r12, #609
 	b ws1_resolver
 	.align 2
 
@@ -4872,7 +4888,7 @@ vfwprintf:
 	.type vfwscanf, %function
 	.thumb_func
 vfwscanf:
-	movw r12, #608
+	movw r12, #610
 	b ws1_resolver
 	.align 2
 
@@ -4880,7 +4896,7 @@ vfwscanf:
 	.type vprintf, %function
 	.thumb_func
 vprintf:
-	movw r12, #609
+	movw r12, #611
 	b ws1_resolver
 	.align 2
 
@@ -4888,7 +4904,7 @@ vprintf:
 	.type vscanf, %function
 	.thumb_func
 vscanf:
-	movw r12, #610
+	movw r12, #612
 	b ws1_resolver
 	.align 2
 
@@ -4896,7 +4912,7 @@ vscanf:
 	.type vsnprintf, %function
 	.thumb_func
 vsnprintf:
-	movw r12, #611
+	movw r12, #613
 	b ws1_resolver
 	.align 2
 
@@ -4904,7 +4920,7 @@ vsnprintf:
 	.type vsprintf, %function
 	.thumb_func
 vsprintf:
-	movw r12, #612
+	movw r12, #614
 	b ws1_resolver
 	.align 2
 
@@ -4912,7 +4928,7 @@ vsprintf:
 	.type vsscanf, %function
 	.thumb_func
 vsscanf:
-	movw r12, #613
+	movw r12, #615
 	b ws1_resolver
 	.align 2
 
@@ -4920,7 +4936,7 @@ vsscanf:
 	.type vswprintf, %function
 	.thumb_func
 vswprintf:
-	movw r12, #614
+	movw r12, #616
 	b ws1_resolver
 	.align 2
 
@@ -4928,7 +4944,7 @@ vswprintf:
 	.type vswscanf, %function
 	.thumb_func
 vswscanf:
-	movw r12, #615
+	movw r12, #617
 	b ws1_resolver
 	.align 2
 
@@ -4936,7 +4952,7 @@ vswscanf:
 	.type vsyslog, %function
 	.thumb_func
 vsyslog:
-	movw r12, #616
+	movw r12, #618
 	b ws1_resolver
 	.align 2
 
@@ -4944,7 +4960,7 @@ vsyslog:
 	.type vwarn, %function
 	.thumb_func
 vwarn:
-	movw r12, #617
+	movw r12, #619
 	b ws1_resolver
 	.align 2
 
@@ -4952,7 +4968,7 @@ vwarn:
 	.type vwarnx, %function
 	.thumb_func
 vwarnx:
-	movw r12, #618
+	movw r12, #620
 	b ws1_resolver
 	.align 2
 
@@ -4960,7 +4976,7 @@ vwarnx:
 	.type vwprintf, %function
 	.thumb_func
 vwprintf:
-	movw r12, #619
+	movw r12, #621
 	b ws1_resolver
 	.align 2
 
@@ -4968,7 +4984,7 @@ vwprintf:
 	.type vwscanf, %function
 	.thumb_func
 vwscanf:
-	movw r12, #620
+	movw r12, #622
 	b ws1_resolver
 	.align 2
 
@@ -4976,7 +4992,7 @@ vwscanf:
 	.type wait, %function
 	.thumb_func
 wait:
-	movw r12, #621
+	movw r12, #623
 	b ws1_resolver
 	.align 2
 
@@ -4984,7 +5000,7 @@ wait:
 	.type wait3, %function
 	.thumb_func
 wait3:
-	movw r12, #622
+	movw r12, #624
 	b ws1_resolver
 	.align 2
 
@@ -4992,7 +5008,7 @@ wait3:
 	.type wait4, %function
 	.thumb_func
 wait4:
-	movw r12, #623
+	movw r12, #625
 	b ws1_resolver
 	.align 2
 
@@ -5000,7 +5016,7 @@ wait4:
 	.type waitid, %function
 	.thumb_func
 waitid:
-	movw r12, #624
+	movw r12, #626
 	b ws1_resolver
 	.align 2
 
@@ -5008,7 +5024,7 @@ waitid:
 	.type waitpid, %function
 	.thumb_func
 waitpid:
-	movw r12, #625
+	movw r12, #627
 	b ws1_resolver
 	.align 2
 
@@ -5016,7 +5032,7 @@ waitpid:
 	.type warn, %function
 	.thumb_func
 warn:
-	movw r12, #626
+	movw r12, #628
 	b ws1_resolver
 	.align 2
 
@@ -5024,7 +5040,7 @@ warn:
 	.type warnx, %function
 	.thumb_func
 warnx:
-	movw r12, #627
+	movw r12, #629
 	b ws1_resolver
 	.align 2
 
@@ -5032,7 +5048,7 @@ warnx:
 	.type wcrtomb, %function
 	.thumb_func
 wcrtomb:
-	movw r12, #628
+	movw r12, #630
 	b ws1_resolver
 	.align 2
 
@@ -5040,7 +5056,7 @@ wcrtomb:
 	.type wcscat, %function
 	.thumb_func
 wcscat:
-	movw r12, #629
+	movw r12, #631
 	b ws1_resolver
 	.align 2
 
@@ -5048,7 +5064,7 @@ wcscat:
 	.type wcschr, %function
 	.thumb_func
 wcschr:
-	movw r12, #630
+	movw r12, #632
 	b ws1_resolver
 	.align 2
 
@@ -5056,7 +5072,7 @@ wcschr:
 	.type wcscmp, %function
 	.thumb_func
 wcscmp:
-	movw r12, #631
+	movw r12, #633
 	b ws1_resolver
 	.align 2
 
@@ -5064,7 +5080,7 @@ wcscmp:
 	.type wcscoll, %function
 	.thumb_func
 wcscoll:
-	movw r12, #632
+	movw r12, #634
 	b ws1_resolver
 	.align 2
 
@@ -5072,7 +5088,7 @@ wcscoll:
 	.type wcscpy, %function
 	.thumb_func
 wcscpy:
-	movw r12, #633
+	movw r12, #635
 	b ws1_resolver
 	.align 2
 
@@ -5080,7 +5096,7 @@ wcscpy:
 	.type wcscspn, %function
 	.thumb_func
 wcscspn:
-	movw r12, #634
+	movw r12, #636
 	b ws1_resolver
 	.align 2
 
@@ -5088,7 +5104,7 @@ wcscspn:
 	.type wcsftime, %function
 	.thumb_func
 wcsftime:
-	movw r12, #635
+	movw r12, #637
 	b ws1_resolver
 	.align 2
 
@@ -5096,7 +5112,7 @@ wcsftime:
 	.type wcslen, %function
 	.thumb_func
 wcslen:
-	movw r12, #636
+	movw r12, #638
 	b ws1_resolver
 	.align 2
 
@@ -5104,7 +5120,7 @@ wcslen:
 	.type wcsncat, %function
 	.thumb_func
 wcsncat:
-	movw r12, #637
+	movw r12, #639
 	b ws1_resolver
 	.align 2
 
@@ -5112,7 +5128,7 @@ wcsncat:
 	.type wcsncmp, %function
 	.thumb_func
 wcsncmp:
-	movw r12, #638
+	movw r12, #640
 	b ws1_resolver
 	.align 2
 
@@ -5120,7 +5136,7 @@ wcsncmp:
 	.type wcsncpy, %function
 	.thumb_func
 wcsncpy:
-	movw r12, #639
+	movw r12, #641
 	b ws1_resolver
 	.align 2
 
@@ -5128,7 +5144,7 @@ wcsncpy:
 	.type wcspbrk, %function
 	.thumb_func
 wcspbrk:
-	movw r12, #640
+	movw r12, #642
 	b ws1_resolver
 	.align 2
 
@@ -5136,7 +5152,7 @@ wcspbrk:
 	.type wcsrchr, %function
 	.thumb_func
 wcsrchr:
-	movw r12, #641
+	movw r12, #643
 	b ws1_resolver
 	.align 2
 
@@ -5144,7 +5160,7 @@ wcsrchr:
 	.type wcsrtombs, %function
 	.thumb_func
 wcsrtombs:
-	movw r12, #642
+	movw r12, #644
 	b ws1_resolver
 	.align 2
 
@@ -5152,7 +5168,7 @@ wcsrtombs:
 	.type wcsspn, %function
 	.thumb_func
 wcsspn:
-	movw r12, #643
+	movw r12, #645
 	b ws1_resolver
 	.align 2
 
@@ -5160,7 +5176,7 @@ wcsspn:
 	.type wcsstr, %function
 	.thumb_func
 wcsstr:
-	movw r12, #644
+	movw r12, #646
 	b ws1_resolver
 	.align 2
 
@@ -5168,7 +5184,7 @@ wcsstr:
 	.type wcstod, %function
 	.thumb_func
 wcstod:
-	movw r12, #645
+	movw r12, #647
 	b ws1_resolver
 	.align 2
 
@@ -5176,7 +5192,7 @@ wcstod:
 	.type wcstof, %function
 	.thumb_func
 wcstof:
-	movw r12, #646
+	movw r12, #648
 	b ws1_resolver
 	.align 2
 
@@ -5184,7 +5200,7 @@ wcstof:
 	.type wcstoimax, %function
 	.thumb_func
 wcstoimax:
-	movw r12, #647
+	movw r12, #649
 	b ws1_resolver
 	.align 2
 
@@ -5192,7 +5208,7 @@ wcstoimax:
 	.type wcstok, %function
 	.thumb_func
 wcstok:
-	movw r12, #648
+	movw r12, #650
 	b ws1_resolver
 	.align 2
 
@@ -5200,7 +5216,7 @@ wcstok:
 	.type wcstol, %function
 	.thumb_func
 wcstol:
-	movw r12, #649
+	movw r12, #651
 	b ws1_resolver
 	.align 2
 
@@ -5208,7 +5224,7 @@ wcstol:
 	.type wcstold, %function
 	.thumb_func
 wcstold:
-	movw r12, #650
+	movw r12, #652
 	b ws1_resolver
 	.align 2
 
@@ -5216,7 +5232,7 @@ wcstold:
 	.type wcstoll, %function
 	.thumb_func
 wcstoll:
-	movw r12, #651
+	movw r12, #653
 	b ws1_resolver
 	.align 2
 
@@ -5224,7 +5240,7 @@ wcstoll:
 	.type wcstombs, %function
 	.thumb_func
 wcstombs:
-	movw r12, #652
+	movw r12, #654
 	b ws1_resolver
 	.align 2
 
@@ -5232,7 +5248,7 @@ wcstombs:
 	.type wcstoul, %function
 	.thumb_func
 wcstoul:
-	movw r12, #653
+	movw r12, #655
 	b ws1_resolver
 	.align 2
 
@@ -5240,7 +5256,7 @@ wcstoul:
 	.type wcstoull, %function
 	.thumb_func
 wcstoull:
-	movw r12, #654
+	movw r12, #656
 	b ws1_resolver
 	.align 2
 
@@ -5248,7 +5264,7 @@ wcstoull:
 	.type wcstoumax, %function
 	.thumb_func
 wcstoumax:
-	movw r12, #655
+	movw r12, #657
 	b ws1_resolver
 	.align 2
 
@@ -5256,7 +5272,7 @@ wcstoumax:
 	.type wcsxfrm, %function
 	.thumb_func
 wcsxfrm:
-	movw r12, #656
+	movw r12, #658
 	b ws1_resolver
 	.align 2
 
@@ -5264,7 +5280,7 @@ wcsxfrm:
 	.type wctob, %function
 	.thumb_func
 wctob:
-	movw r12, #657
+	movw r12, #659
 	b ws1_resolver
 	.align 2
 
@@ -5272,7 +5288,7 @@ wctob:
 	.type wctomb, %function
 	.thumb_func
 wctomb:
-	movw r12, #658
+	movw r12, #660
 	b ws1_resolver
 	.align 2
 
@@ -5280,7 +5296,7 @@ wctomb:
 	.type wctrans, %function
 	.thumb_func
 wctrans:
-	movw r12, #659
+	movw r12, #661
 	b ws1_resolver
 	.align 2
 
@@ -5288,7 +5304,7 @@ wctrans:
 	.type wctype, %function
 	.thumb_func
 wctype:
-	movw r12, #660
+	movw r12, #662
 	b ws1_resolver
 	.align 2
 
@@ -5296,7 +5312,7 @@ wctype:
 	.type wmemchr, %function
 	.thumb_func
 wmemchr:
-	movw r12, #661
+	movw r12, #663
 	b ws1_resolver
 	.align 2
 
@@ -5304,7 +5320,7 @@ wmemchr:
 	.type wmemcmp, %function
 	.thumb_func
 wmemcmp:
-	movw r12, #662
+	movw r12, #664
 	b ws1_resolver
 	.align 2
 
@@ -5312,7 +5328,7 @@ wmemcmp:
 	.type wmemcpy, %function
 	.thumb_func
 wmemcpy:
-	movw r12, #663
+	movw r12, #665
 	b ws1_resolver
 	.align 2
 
@@ -5320,7 +5336,7 @@ wmemcpy:
 	.type wmemmove, %function
 	.thumb_func
 wmemmove:
-	movw r12, #664
+	movw r12, #666
 	b ws1_resolver
 	.align 2
 
@@ -5328,7 +5344,7 @@ wmemmove:
 	.type wmemset, %function
 	.thumb_func
 wmemset:
-	movw r12, #665
+	movw r12, #667
 	b ws1_resolver
 	.align 2
 
@@ -5336,7 +5352,7 @@ wmemset:
 	.type wprintf, %function
 	.thumb_func
 wprintf:
-	movw r12, #666
+	movw r12, #668
 	b ws1_resolver
 	.align 2
 
@@ -5344,7 +5360,7 @@ wprintf:
 	.type write, %function
 	.thumb_func
 write:
-	movw r12, #667
+	movw r12, #669
 	b ws1_resolver
 	.align 2
 
@@ -5352,7 +5368,7 @@ write:
 	.type writev, %function
 	.thumb_func
 writev:
-	movw r12, #668
+	movw r12, #670
 	b ws1_resolver
 	.align 2
 
@@ -5360,7 +5376,7 @@ writev:
 	.type wscanf, %function
 	.thumb_func
 wscanf:
-	movw r12, #669
+	movw r12, #671
 	b ws1_resolver
 	.align 2
 
@@ -5368,7 +5384,7 @@ wscanf:
 	.type _Unwind_FindEnclosingFunction, %function
 	.thumb_func
 _Unwind_FindEnclosingFunction:
-	movw r12, #670
+	movw r12, #672
 	b ws1_resolver
 	.align 2
 
@@ -5376,7 +5392,7 @@ _Unwind_FindEnclosingFunction:
 	.type _Unwind_Find_FDE, %function
 	.thumb_func
 _Unwind_Find_FDE:
-	movw r12, #671
+	movw r12, #673
 	b ws1_resolver
 	.align 2
 
@@ -5384,7 +5400,7 @@ _Unwind_Find_FDE:
 	.type _Unwind_GetGR, %function
 	.thumb_func
 _Unwind_GetGR:
-	movw r12, #672
+	movw r12, #674
 	b ws1_resolver
 	.align 2
 
@@ -5392,7 +5408,7 @@ _Unwind_GetGR:
 	.type _Unwind_GetIP, %function
 	.thumb_func
 _Unwind_GetIP:
-	movw r12, #673
+	movw r12, #675
 	b ws1_resolver
 	.align 2
 
@@ -5400,7 +5416,7 @@ _Unwind_GetIP:
 	.type _Unwind_GetIPInfo, %function
 	.thumb_func
 _Unwind_GetIPInfo:
-	movw r12, #674
+	movw r12, #676
 	b ws1_resolver
 	.align 2
 
@@ -5408,7 +5424,7 @@ _Unwind_GetIPInfo:
 	.type _Unwind_SetGR, %function
 	.thumb_func
 _Unwind_SetGR:
-	movw r12, #675
+	movw r12, #677
 	b ws1_resolver
 	.align 2
 
@@ -5416,7 +5432,7 @@ _Unwind_SetGR:
 	.type _Unwind_SetIP, %function
 	.thumb_func
 _Unwind_SetIP:
-	movw r12, #676
+	movw r12, #678
 	b ws1_resolver
 	.align 2
 
@@ -5424,7 +5440,7 @@ _Unwind_SetIP:
 	.type __FD_CLR_chk, %function
 	.thumb_func
 __FD_CLR_chk:
-	movw r12, #677
+	movw r12, #679
 	b ws1_resolver
 	.align 2
 
@@ -5432,7 +5448,7 @@ __FD_CLR_chk:
 	.type __FD_ISSET_chk, %function
 	.thumb_func
 __FD_ISSET_chk:
-	movw r12, #678
+	movw r12, #680
 	b ws1_resolver
 	.align 2
 
@@ -5440,7 +5456,7 @@ __FD_ISSET_chk:
 	.type __FD_SET_chk, %function
 	.thumb_func
 __FD_SET_chk:
-	movw r12, #679
+	movw r12, #681
 	b ws1_resolver
 	.align 2
 
@@ -5448,7 +5464,7 @@ __FD_SET_chk:
 	.type __accept4, %function
 	.thumb_func
 __accept4:
-	movw r12, #680
+	movw r12, #682
 	b ws1_resolver
 	.align 2
 
@@ -5456,7 +5472,7 @@ __accept4:
 	.type __aeabi_atexit, %function
 	.thumb_func
 __aeabi_atexit:
-	movw r12, #681
+	movw r12, #683
 	b ws1_resolver
 	.align 2
 
@@ -5464,7 +5480,7 @@ __aeabi_atexit:
 	.type __aeabi_read_tp, %function
 	.thumb_func
 __aeabi_read_tp:
-	movw r12, #682
+	movw r12, #684
 	b ws1_resolver
 	.align 2
 
@@ -5472,7 +5488,7 @@ __aeabi_read_tp:
 	.type __arm_fadvise64_64, %function
 	.thumb_func
 __arm_fadvise64_64:
-	movw r12, #683
+	movw r12, #685
 	b ws1_resolver
 	.align 2
 
@@ -5480,7 +5496,7 @@ __arm_fadvise64_64:
 	.type __b64_ntop, %function
 	.thumb_func
 __b64_ntop:
-	movw r12, #684
+	movw r12, #686
 	b ws1_resolver
 	.align 2
 
@@ -5488,7 +5504,7 @@ __b64_ntop:
 	.type __b64_pton, %function
 	.thumb_func
 __b64_pton:
-	movw r12, #685
+	movw r12, #687
 	b ws1_resolver
 	.align 2
 
@@ -5496,7 +5512,7 @@ __b64_pton:
 	.type __bionic_brk, %function
 	.thumb_func
 __bionic_brk:
-	movw r12, #686
+	movw r12, #688
 	b ws1_resolver
 	.align 2
 
@@ -5504,7 +5520,7 @@ __bionic_brk:
 	.type __bionic_libcrt_compat_symbols, %function
 	.thumb_func
 __bionic_libcrt_compat_symbols:
-	movw r12, #687
+	movw r12, #689
 	b ws1_resolver
 	.align 2
 
@@ -5512,7 +5528,7 @@ __bionic_libcrt_compat_symbols:
 	.type __cmsg_nxthdr, %function
 	.thumb_func
 __cmsg_nxthdr:
-	movw r12, #688
+	movw r12, #690
 	b ws1_resolver
 	.align 2
 
@@ -5520,7 +5536,7 @@ __cmsg_nxthdr:
 	.type __connect, %function
 	.thumb_func
 __connect:
-	movw r12, #689
+	movw r12, #691
 	b ws1_resolver
 	.align 2
 
@@ -5528,7 +5544,7 @@ __connect:
 	.type __ctype_get_mb_cur_max, %function
 	.thumb_func
 __ctype_get_mb_cur_max:
-	movw r12, #690
+	movw r12, #692
 	b ws1_resolver
 	.align 2
 
@@ -5536,7 +5552,7 @@ __ctype_get_mb_cur_max:
 	.type __cxa_thread_atexit_impl, %function
 	.thumb_func
 __cxa_thread_atexit_impl:
-	movw r12, #691
+	movw r12, #693
 	b ws1_resolver
 	.align 2
 
@@ -5544,7 +5560,7 @@ __cxa_thread_atexit_impl:
 	.type __dn_comp, %function
 	.thumb_func
 __dn_comp:
-	movw r12, #692
+	movw r12, #694
 	b ws1_resolver
 	.align 2
 
@@ -5552,7 +5568,7 @@ __dn_comp:
 	.type __dn_count_labels, %function
 	.thumb_func
 __dn_count_labels:
-	movw r12, #693
+	movw r12, #695
 	b ws1_resolver
 	.align 2
 
@@ -5560,7 +5576,7 @@ __dn_count_labels:
 	.type __dn_skipname, %function
 	.thumb_func
 __dn_skipname:
-	movw r12, #694
+	movw r12, #696
 	b ws1_resolver
 	.align 2
 
@@ -5568,7 +5584,7 @@ __dn_skipname:
 	.type __dso_handle, %function
 	.thumb_func
 __dso_handle:
-	movw r12, #695
+	movw r12, #697
 	b ws1_resolver
 	.align 2
 
@@ -5576,7 +5592,7 @@ __dso_handle:
 	.type __epoll_pwait, %function
 	.thumb_func
 __epoll_pwait:
-	movw r12, #696
+	movw r12, #698
 	b ws1_resolver
 	.align 2
 
@@ -5584,7 +5600,7 @@ __epoll_pwait:
 	.type __fbufsize, %function
 	.thumb_func
 __fbufsize:
-	movw r12, #697
+	movw r12, #699
 	b ws1_resolver
 	.align 2
 
@@ -5592,7 +5608,7 @@ __fbufsize:
 	.type __fcntl64, %function
 	.thumb_func
 __fcntl64:
-	movw r12, #698
+	movw r12, #700
 	b ws1_resolver
 	.align 2
 
@@ -5600,7 +5616,7 @@ __fcntl64:
 	.type __flbf, %function
 	.thumb_func
 __flbf:
-	movw r12, #699
+	movw r12, #701
 	b ws1_resolver
 	.align 2
 
@@ -5608,7 +5624,7 @@ __flbf:
 	.type __fp_nquery, %function
 	.thumb_func
 __fp_nquery:
-	movw r12, #700
+	movw r12, #702
 	b ws1_resolver
 	.align 2
 
@@ -5616,7 +5632,7 @@ __fp_nquery:
 	.type __fp_query, %function
 	.thumb_func
 __fp_query:
-	movw r12, #701
+	movw r12, #703
 	b ws1_resolver
 	.align 2
 
@@ -5624,7 +5640,7 @@ __fp_query:
 	.type __fpclassify, %function
 	.thumb_func
 __fpclassify:
-	movw r12, #702
+	movw r12, #704
 	b ws1_resolver
 	.align 2
 
@@ -5632,7 +5648,7 @@ __fpclassify:
 	.type __fpclassifyd, %function
 	.thumb_func
 __fpclassifyd:
-	movw r12, #703
+	movw r12, #705
 	b ws1_resolver
 	.align 2
 
@@ -5640,7 +5656,7 @@ __fpclassifyd:
 	.type __fpclassifyf, %function
 	.thumb_func
 __fpclassifyf:
-	movw r12, #704
+	movw r12, #706
 	b ws1_resolver
 	.align 2
 
@@ -5648,7 +5664,7 @@ __fpclassifyf:
 	.type __fpclassifyl, %function
 	.thumb_func
 __fpclassifyl:
-	movw r12, #705
+	movw r12, #707
 	b ws1_resolver
 	.align 2
 
@@ -5656,7 +5672,7 @@ __fpclassifyl:
 	.type __fpending, %function
 	.thumb_func
 __fpending:
-	movw r12, #706
+	movw r12, #708
 	b ws1_resolver
 	.align 2
 
@@ -5664,7 +5680,7 @@ __fpending:
 	.type __fpurge, %function
 	.thumb_func
 __fpurge:
-	movw r12, #707
+	movw r12, #709
 	b ws1_resolver
 	.align 2
 
@@ -5672,7 +5688,7 @@ __fpurge:
 	.type __freadable, %function
 	.thumb_func
 __freadable:
-	movw r12, #708
+	movw r12, #710
 	b ws1_resolver
 	.align 2
 
@@ -5680,7 +5696,7 @@ __freadable:
 	.type __freading, %function
 	.thumb_func
 __freading:
-	movw r12, #709
+	movw r12, #711
 	b ws1_resolver
 	.align 2
 
@@ -5688,7 +5704,7 @@ __freading:
 	.type __free_hook, %function
 	.thumb_func
 __free_hook:
-	movw r12, #710
+	movw r12, #712
 	b ws1_resolver
 	.align 2
 
@@ -5696,7 +5712,7 @@ __free_hook:
 	.type __fseterr, %function
 	.thumb_func
 __fseterr:
-	movw r12, #711
+	movw r12, #713
 	b ws1_resolver
 	.align 2
 
@@ -5704,7 +5720,7 @@ __fseterr:
 	.type __fsetlocking, %function
 	.thumb_func
 __fsetlocking:
-	movw r12, #712
+	movw r12, #714
 	b ws1_resolver
 	.align 2
 
@@ -5712,7 +5728,7 @@ __fsetlocking:
 	.type __fstatfs64, %function
 	.thumb_func
 __fstatfs64:
-	movw r12, #713
+	movw r12, #715
 	b ws1_resolver
 	.align 2
 
@@ -5720,7 +5736,7 @@ __fstatfs64:
 	.type __futex_wait, %function
 	.thumb_func
 __futex_wait:
-	movw r12, #714
+	movw r12, #716
 	b ws1_resolver
 	.align 2
 
@@ -5728,7 +5744,7 @@ __futex_wait:
 	.type __futex_wake, %function
 	.thumb_func
 __futex_wake:
-	movw r12, #715
+	movw r12, #717
 	b ws1_resolver
 	.align 2
 
@@ -5736,7 +5752,7 @@ __futex_wake:
 	.type __fwritable, %function
 	.thumb_func
 __fwritable:
-	movw r12, #716
+	movw r12, #718
 	b ws1_resolver
 	.align 2
 
@@ -5744,7 +5760,7 @@ __fwritable:
 	.type __fwriting, %function
 	.thumb_func
 __fwriting:
-	movw r12, #717
+	movw r12, #719
 	b ws1_resolver
 	.align 2
 
@@ -5752,7 +5768,7 @@ __fwriting:
 	.type __get_h_errno, %function
 	.thumb_func
 __get_h_errno:
-	movw r12, #718
+	movw r12, #720
 	b ws1_resolver
 	.align 2
 
@@ -5760,7 +5776,7 @@ __get_h_errno:
 	.type __get_thread, %function
 	.thumb_func
 __get_thread:
-	movw r12, #719
+	movw r12, #721
 	b ws1_resolver
 	.align 2
 
@@ -5768,7 +5784,7 @@ __get_thread:
 	.type __get_tls, %function
 	.thumb_func
 __get_tls:
-	movw r12, #720
+	movw r12, #722
 	b ws1_resolver
 	.align 2
 
@@ -5776,7 +5792,7 @@ __get_tls:
 	.type __getcpu, %function
 	.thumb_func
 __getcpu:
-	movw r12, #721
+	movw r12, #723
 	b ws1_resolver
 	.align 2
 
@@ -5784,7 +5800,7 @@ __getcpu:
 	.type __getcwd, %function
 	.thumb_func
 __getcwd:
-	movw r12, #722
+	movw r12, #724
 	b ws1_resolver
 	.align 2
 
@@ -5792,7 +5808,7 @@ __getcwd:
 	.type __getdents64, %function
 	.thumb_func
 __getdents64:
-	movw r12, #723
+	movw r12, #725
 	b ws1_resolver
 	.align 2
 
@@ -5800,7 +5816,7 @@ __getdents64:
 	.type __getpid, %function
 	.thumb_func
 __getpid:
-	movw r12, #724
+	movw r12, #726
 	b ws1_resolver
 	.align 2
 
@@ -5808,7 +5824,7 @@ __getpid:
 	.type __getpriority, %function
 	.thumb_func
 __getpriority:
-	movw r12, #725
+	movw r12, #727
 	b ws1_resolver
 	.align 2
 
@@ -5816,7 +5832,7 @@ __getpriority:
 	.type __gnu_basename, %function
 	.thumb_func
 __gnu_basename:
-	movw r12, #726
+	movw r12, #728
 	b ws1_resolver
 	.align 2
 
@@ -5824,7 +5840,7 @@ __gnu_basename:
 	.type __gnu_strerror_r, %function
 	.thumb_func
 __gnu_strerror_r:
-	movw r12, #727
+	movw r12, #729
 	b ws1_resolver
 	.align 2
 
@@ -5832,7 +5848,7 @@ __gnu_strerror_r:
 	.type __hostalias, %function
 	.thumb_func
 __hostalias:
-	movw r12, #728
+	movw r12, #730
 	b ws1_resolver
 	.align 2
 
@@ -5840,7 +5856,7 @@ __hostalias:
 	.type __ioctl, %function
 	.thumb_func
 __ioctl:
-	movw r12, #729
+	movw r12, #731
 	b ws1_resolver
 	.align 2
 
@@ -5848,7 +5864,7 @@ __ioctl:
 	.type __isfinite, %function
 	.thumb_func
 __isfinite:
-	movw r12, #730
+	movw r12, #732
 	b ws1_resolver
 	.align 2
 
@@ -5856,7 +5872,7 @@ __isfinite:
 	.type __isfinitef, %function
 	.thumb_func
 __isfinitef:
-	movw r12, #731
+	movw r12, #733
 	b ws1_resolver
 	.align 2
 
@@ -5864,7 +5880,7 @@ __isfinitef:
 	.type __isfinitel, %function
 	.thumb_func
 __isfinitel:
-	movw r12, #732
+	movw r12, #734
 	b ws1_resolver
 	.align 2
 
@@ -5872,7 +5888,7 @@ __isfinitel:
 	.type __isinf, %function
 	.thumb_func
 __isinf:
-	movw r12, #733
+	movw r12, #735
 	b ws1_resolver
 	.align 2
 
@@ -5880,7 +5896,7 @@ __isinf:
 	.type __isinff, %function
 	.thumb_func
 __isinff:
-	movw r12, #734
+	movw r12, #736
 	b ws1_resolver
 	.align 2
 
@@ -5888,7 +5904,7 @@ __isinff:
 	.type __isinfl, %function
 	.thumb_func
 __isinfl:
-	movw r12, #735
+	movw r12, #737
 	b ws1_resolver
 	.align 2
 
@@ -5896,7 +5912,7 @@ __isinfl:
 	.type __isnan, %function
 	.thumb_func
 __isnan:
-	movw r12, #736
+	movw r12, #738
 	b ws1_resolver
 	.align 2
 
@@ -5904,7 +5920,7 @@ __isnan:
 	.type __isnanf, %function
 	.thumb_func
 __isnanf:
-	movw r12, #737
+	movw r12, #739
 	b ws1_resolver
 	.align 2
 
@@ -5912,7 +5928,7 @@ __isnanf:
 	.type __isnanl, %function
 	.thumb_func
 __isnanl:
-	movw r12, #738
+	movw r12, #740
 	b ws1_resolver
 	.align 2
 
@@ -5920,7 +5936,7 @@ __isnanl:
 	.type __isnormal, %function
 	.thumb_func
 __isnormal:
-	movw r12, #739
+	movw r12, #741
 	b ws1_resolver
 	.align 2
 
@@ -5928,7 +5944,7 @@ __isnormal:
 	.type __isnormalf, %function
 	.thumb_func
 __isnormalf:
-	movw r12, #740
+	movw r12, #742
 	b ws1_resolver
 	.align 2
 
@@ -5936,7 +5952,7 @@ __isnormalf:
 	.type __isnormall, %function
 	.thumb_func
 __isnormall:
-	movw r12, #741
+	movw r12, #743
 	b ws1_resolver
 	.align 2
 
@@ -5944,7 +5960,7 @@ __isnormall:
 	.type __libc_current_sigrtmax, %function
 	.thumb_func
 __libc_current_sigrtmax:
-	movw r12, #742
+	movw r12, #744
 	b ws1_resolver
 	.align 2
 
@@ -5952,7 +5968,7 @@ __libc_current_sigrtmax:
 	.type __libc_current_sigrtmin, %function
 	.thumb_func
 __libc_current_sigrtmin:
-	movw r12, #743
+	movw r12, #745
 	b ws1_resolver
 	.align 2
 
@@ -5960,7 +5976,7 @@ __libc_current_sigrtmin:
 	.type __libc_init, %function
 	.thumb_func
 __libc_init:
-	movw r12, #744
+	movw r12, #746
 	b ws1_resolver
 	.align 2
 
@@ -5968,7 +5984,7 @@ __libc_init:
 	.type __llseek, %function
 	.thumb_func
 __llseek:
-	movw r12, #745
+	movw r12, #747
 	b ws1_resolver
 	.align 2
 
@@ -5976,7 +5992,7 @@ __llseek:
 	.type __loc_aton, %function
 	.thumb_func
 __loc_aton:
-	movw r12, #746
+	movw r12, #748
 	b ws1_resolver
 	.align 2
 
@@ -5984,7 +6000,7 @@ __loc_aton:
 	.type __loc_ntoa, %function
 	.thumb_func
 __loc_ntoa:
-	movw r12, #747
+	movw r12, #749
 	b ws1_resolver
 	.align 2
 
@@ -5992,7 +6008,7 @@ __loc_ntoa:
 	.type __malloc_hook, %function
 	.thumb_func
 __malloc_hook:
-	movw r12, #748
+	movw r12, #750
 	b ws1_resolver
 	.align 2
 
@@ -6000,7 +6016,7 @@ __malloc_hook:
 	.type __memalign_hook, %function
 	.thumb_func
 __memalign_hook:
-	movw r12, #749
+	movw r12, #751
 	b ws1_resolver
 	.align 2
 
@@ -6008,7 +6024,7 @@ __memalign_hook:
 	.type __memrchr_chk, %function
 	.thumb_func
 __memrchr_chk:
-	movw r12, #750
+	movw r12, #752
 	b ws1_resolver
 	.align 2
 
@@ -6016,7 +6032,7 @@ __memrchr_chk:
 	.type __mmap2, %function
 	.thumb_func
 __mmap2:
-	movw r12, #751
+	movw r12, #753
 	b ws1_resolver
 	.align 2
 
@@ -6024,7 +6040,7 @@ __mmap2:
 	.type __ns_format_ttl, %function
 	.thumb_func
 __ns_format_ttl:
-	movw r12, #752
+	movw r12, #754
 	b ws1_resolver
 	.align 2
 
@@ -6032,7 +6048,7 @@ __ns_format_ttl:
 	.type __ns_get16, %function
 	.thumb_func
 __ns_get16:
-	movw r12, #753
+	movw r12, #755
 	b ws1_resolver
 	.align 2
 
@@ -6040,7 +6056,7 @@ __ns_get16:
 	.type __ns_get32, %function
 	.thumb_func
 __ns_get32:
-	movw r12, #754
+	movw r12, #756
 	b ws1_resolver
 	.align 2
 
@@ -6048,7 +6064,7 @@ __ns_get32:
 	.type __ns_initparse, %function
 	.thumb_func
 __ns_initparse:
-	movw r12, #755
+	movw r12, #757
 	b ws1_resolver
 	.align 2
 
@@ -6056,7 +6072,7 @@ __ns_initparse:
 	.type __ns_makecanon, %function
 	.thumb_func
 __ns_makecanon:
-	movw r12, #756
+	movw r12, #758
 	b ws1_resolver
 	.align 2
 
@@ -6064,7 +6080,7 @@ __ns_makecanon:
 	.type __ns_msg_getflag, %function
 	.thumb_func
 __ns_msg_getflag:
-	movw r12, #757
+	movw r12, #759
 	b ws1_resolver
 	.align 2
 
@@ -6072,7 +6088,7 @@ __ns_msg_getflag:
 	.type __ns_name_compress, %function
 	.thumb_func
 __ns_name_compress:
-	movw r12, #758
+	movw r12, #760
 	b ws1_resolver
 	.align 2
 
@@ -6080,7 +6096,7 @@ __ns_name_compress:
 	.type __ns_name_ntol, %function
 	.thumb_func
 __ns_name_ntol:
-	movw r12, #759
+	movw r12, #761
 	b ws1_resolver
 	.align 2
 
@@ -6088,7 +6104,7 @@ __ns_name_ntol:
 	.type __ns_name_ntop, %function
 	.thumb_func
 __ns_name_ntop:
-	movw r12, #760
+	movw r12, #762
 	b ws1_resolver
 	.align 2
 
@@ -6096,7 +6112,7 @@ __ns_name_ntop:
 	.type __ns_name_pack, %function
 	.thumb_func
 __ns_name_pack:
-	movw r12, #761
+	movw r12, #763
 	b ws1_resolver
 	.align 2
 
@@ -6104,7 +6120,7 @@ __ns_name_pack:
 	.type __ns_name_pton, %function
 	.thumb_func
 __ns_name_pton:
-	movw r12, #762
+	movw r12, #764
 	b ws1_resolver
 	.align 2
 
@@ -6112,7 +6128,7 @@ __ns_name_pton:
 	.type __ns_name_rollback, %function
 	.thumb_func
 __ns_name_rollback:
-	movw r12, #763
+	movw r12, #765
 	b ws1_resolver
 	.align 2
 
@@ -6120,7 +6136,7 @@ __ns_name_rollback:
 	.type __ns_name_skip, %function
 	.thumb_func
 __ns_name_skip:
-	movw r12, #764
+	movw r12, #766
 	b ws1_resolver
 	.align 2
 
@@ -6128,7 +6144,7 @@ __ns_name_skip:
 	.type __ns_name_uncompress, %function
 	.thumb_func
 __ns_name_uncompress:
-	movw r12, #765
+	movw r12, #767
 	b ws1_resolver
 	.align 2
 
@@ -6136,7 +6152,7 @@ __ns_name_uncompress:
 	.type __ns_name_unpack, %function
 	.thumb_func
 __ns_name_unpack:
-	movw r12, #766
+	movw r12, #768
 	b ws1_resolver
 	.align 2
 
@@ -6144,7 +6160,7 @@ __ns_name_unpack:
 	.type __ns_parserr, %function
 	.thumb_func
 __ns_parserr:
-	movw r12, #767
+	movw r12, #769
 	b ws1_resolver
 	.align 2
 
@@ -6152,7 +6168,7 @@ __ns_parserr:
 	.type __ns_put16, %function
 	.thumb_func
 __ns_put16:
-	movw r12, #768
+	movw r12, #770
 	b ws1_resolver
 	.align 2
 
@@ -6160,7 +6176,7 @@ __ns_put16:
 	.type __ns_put32, %function
 	.thumb_func
 __ns_put32:
-	movw r12, #769
+	movw r12, #771
 	b ws1_resolver
 	.align 2
 
@@ -6168,7 +6184,7 @@ __ns_put32:
 	.type __ns_samename, %function
 	.thumb_func
 __ns_samename:
-	movw r12, #770
+	movw r12, #772
 	b ws1_resolver
 	.align 2
 
@@ -6176,7 +6192,7 @@ __ns_samename:
 	.type __ns_skiprr, %function
 	.thumb_func
 __ns_skiprr:
-	movw r12, #771
+	movw r12, #773
 	b ws1_resolver
 	.align 2
 
@@ -6184,7 +6200,7 @@ __ns_skiprr:
 	.type __ns_sprintrr, %function
 	.thumb_func
 __ns_sprintrr:
-	movw r12, #772
+	movw r12, #774
 	b ws1_resolver
 	.align 2
 
@@ -6192,7 +6208,7 @@ __ns_sprintrr:
 	.type __ns_sprintrrf, %function
 	.thumb_func
 __ns_sprintrrf:
-	movw r12, #773
+	movw r12, #775
 	b ws1_resolver
 	.align 2
 
@@ -6200,7 +6216,7 @@ __ns_sprintrrf:
 	.type __open, %function
 	.thumb_func
 __open:
-	movw r12, #774
+	movw r12, #776
 	b ws1_resolver
 	.align 2
 
@@ -6208,7 +6224,7 @@ __open:
 	.type __open_2, %function
 	.thumb_func
 __open_2:
-	movw r12, #775
+	movw r12, #777
 	b ws1_resolver
 	.align 2
 
@@ -6216,7 +6232,7 @@ __open_2:
 	.type __openat, %function
 	.thumb_func
 __openat:
-	movw r12, #776
+	movw r12, #778
 	b ws1_resolver
 	.align 2
 
@@ -6224,7 +6240,7 @@ __openat:
 	.type __openat_2, %function
 	.thumb_func
 __openat_2:
-	movw r12, #777
+	movw r12, #779
 	b ws1_resolver
 	.align 2
 
@@ -6232,7 +6248,7 @@ __openat_2:
 	.type __p_cdname, %function
 	.thumb_func
 __p_cdname:
-	movw r12, #778
+	movw r12, #780
 	b ws1_resolver
 	.align 2
 
@@ -6240,7 +6256,7 @@ __p_cdname:
 	.type __p_cdnname, %function
 	.thumb_func
 __p_cdnname:
-	movw r12, #779
+	movw r12, #781
 	b ws1_resolver
 	.align 2
 
@@ -6248,7 +6264,7 @@ __p_cdnname:
 	.type __p_class, %function
 	.thumb_func
 __p_class:
-	movw r12, #780
+	movw r12, #782
 	b ws1_resolver
 	.align 2
 
@@ -6256,7 +6272,7 @@ __p_class:
 	.type __p_class_syms, %function
 	.thumb_func
 __p_class_syms:
-	movw r12, #781
+	movw r12, #783
 	b ws1_resolver
 	.align 2
 
@@ -6264,7 +6280,7 @@ __p_class_syms:
 	.type __p_fqname, %function
 	.thumb_func
 __p_fqname:
-	movw r12, #782
+	movw r12, #784
 	b ws1_resolver
 	.align 2
 
@@ -6272,7 +6288,7 @@ __p_fqname:
 	.type __p_fqnname, %function
 	.thumb_func
 __p_fqnname:
-	movw r12, #783
+	movw r12, #785
 	b ws1_resolver
 	.align 2
 
@@ -6280,7 +6296,7 @@ __p_fqnname:
 	.type __p_option, %function
 	.thumb_func
 __p_option:
-	movw r12, #784
+	movw r12, #786
 	b ws1_resolver
 	.align 2
 
@@ -6288,7 +6304,7 @@ __p_option:
 	.type __p_query, %function
 	.thumb_func
 __p_query:
-	movw r12, #785
+	movw r12, #787
 	b ws1_resolver
 	.align 2
 
@@ -6296,7 +6312,7 @@ __p_query:
 	.type __p_rcode, %function
 	.thumb_func
 __p_rcode:
-	movw r12, #786
+	movw r12, #788
 	b ws1_resolver
 	.align 2
 
@@ -6304,7 +6320,7 @@ __p_rcode:
 	.type __p_secstodate, %function
 	.thumb_func
 __p_secstodate:
-	movw r12, #787
+	movw r12, #789
 	b ws1_resolver
 	.align 2
 
@@ -6312,7 +6328,7 @@ __p_secstodate:
 	.type __p_time, %function
 	.thumb_func
 __p_time:
-	movw r12, #788
+	movw r12, #790
 	b ws1_resolver
 	.align 2
 
@@ -6320,7 +6336,7 @@ __p_time:
 	.type __p_type, %function
 	.thumb_func
 __p_type:
-	movw r12, #789
+	movw r12, #791
 	b ws1_resolver
 	.align 2
 
@@ -6328,7 +6344,7 @@ __p_type:
 	.type __p_type_syms, %function
 	.thumb_func
 __p_type_syms:
-	movw r12, #790
+	movw r12, #792
 	b ws1_resolver
 	.align 2
 
@@ -6336,7 +6352,7 @@ __p_type_syms:
 	.type __page_shift, %function
 	.thumb_func
 __page_shift:
-	movw r12, #791
+	movw r12, #793
 	b ws1_resolver
 	.align 2
 
@@ -6344,7 +6360,7 @@ __page_shift:
 	.type __page_size, %function
 	.thumb_func
 __page_size:
-	movw r12, #792
+	movw r12, #794
 	b ws1_resolver
 	.align 2
 
@@ -6352,7 +6368,7 @@ __page_size:
 	.type __ppoll, %function
 	.thumb_func
 __ppoll:
-	movw r12, #793
+	movw r12, #795
 	b ws1_resolver
 	.align 2
 
@@ -6360,7 +6376,7 @@ __ppoll:
 	.type __ppoll64_chk, %function
 	.thumb_func
 __ppoll64_chk:
-	movw r12, #794
+	movw r12, #796
 	b ws1_resolver
 	.align 2
 
@@ -6368,7 +6384,7 @@ __ppoll64_chk:
 	.type __ppoll_chk, %function
 	.thumb_func
 __ppoll_chk:
-	movw r12, #795
+	movw r12, #797
 	b ws1_resolver
 	.align 2
 
@@ -6376,7 +6392,7 @@ __ppoll_chk:
 	.type __pselect6, %function
 	.thumb_func
 __pselect6:
-	movw r12, #796
+	movw r12, #798
 	b ws1_resolver
 	.align 2
 
@@ -6384,7 +6400,7 @@ __pselect6:
 	.type __pthread_cleanup_pop, %function
 	.thumb_func
 __pthread_cleanup_pop:
-	movw r12, #797
+	movw r12, #799
 	b ws1_resolver
 	.align 2
 
@@ -6392,7 +6408,7 @@ __pthread_cleanup_pop:
 	.type __pthread_cleanup_push, %function
 	.thumb_func
 __pthread_cleanup_push:
-	movw r12, #798
+	movw r12, #800
 	b ws1_resolver
 	.align 2
 
@@ -6400,7 +6416,7 @@ __pthread_cleanup_push:
 	.type __pthread_gettid, %function
 	.thumb_func
 __pthread_gettid:
-	movw r12, #799
+	movw r12, #801
 	b ws1_resolver
 	.align 2
 
@@ -6408,7 +6424,7 @@ __pthread_gettid:
 	.type __ptrace, %function
 	.thumb_func
 __ptrace:
-	movw r12, #800
+	movw r12, #802
 	b ws1_resolver
 	.align 2
 
@@ -6416,7 +6432,7 @@ __ptrace:
 	.type __putlong, %function
 	.thumb_func
 __putlong:
-	movw r12, #801
+	movw r12, #803
 	b ws1_resolver
 	.align 2
 
@@ -6424,7 +6440,7 @@ __putlong:
 	.type __putshort, %function
 	.thumb_func
 __putshort:
-	movw r12, #802
+	movw r12, #804
 	b ws1_resolver
 	.align 2
 
@@ -6432,7 +6448,7 @@ __putshort:
 	.type __readlinkat_chk, %function
 	.thumb_func
 __readlinkat_chk:
-	movw r12, #803
+	movw r12, #805
 	b ws1_resolver
 	.align 2
 
@@ -6440,7 +6456,7 @@ __readlinkat_chk:
 	.type __realloc_hook, %function
 	.thumb_func
 __realloc_hook:
-	movw r12, #804
+	movw r12, #806
 	b ws1_resolver
 	.align 2
 
@@ -6448,7 +6464,7 @@ __realloc_hook:
 	.type __reboot, %function
 	.thumb_func
 __reboot:
-	movw r12, #805
+	movw r12, #807
 	b ws1_resolver
 	.align 2
 
@@ -6456,7 +6472,7 @@ __reboot:
 	.type __recvfrom_chk, %function
 	.thumb_func
 __recvfrom_chk:
-	movw r12, #806
+	movw r12, #808
 	b ws1_resolver
 	.align 2
 
@@ -6464,7 +6480,7 @@ __recvfrom_chk:
 	.type __register_atfork, %function
 	.thumb_func
 __register_atfork:
-	movw r12, #807
+	movw r12, #809
 	b ws1_resolver
 	.align 2
 
@@ -6472,7 +6488,7 @@ __register_atfork:
 	.type __res_close, %function
 	.thumb_func
 __res_close:
-	movw r12, #808
+	movw r12, #810
 	b ws1_resolver
 	.align 2
 
@@ -6480,7 +6496,7 @@ __res_close:
 	.type __res_dnok, %function
 	.thumb_func
 __res_dnok:
-	movw r12, #809
+	movw r12, #811
 	b ws1_resolver
 	.align 2
 
@@ -6488,7 +6504,7 @@ __res_dnok:
 	.type __res_hnok, %function
 	.thumb_func
 __res_hnok:
-	movw r12, #810
+	movw r12, #812
 	b ws1_resolver
 	.align 2
 
@@ -6496,7 +6512,7 @@ __res_hnok:
 	.type __res_hostalias, %function
 	.thumb_func
 __res_hostalias:
-	movw r12, #811
+	movw r12, #813
 	b ws1_resolver
 	.align 2
 
@@ -6504,7 +6520,7 @@ __res_hostalias:
 	.type __res_isourserver, %function
 	.thumb_func
 __res_isourserver:
-	movw r12, #812
+	movw r12, #814
 	b ws1_resolver
 	.align 2
 
@@ -6512,7 +6528,7 @@ __res_isourserver:
 	.type __res_mailok, %function
 	.thumb_func
 __res_mailok:
-	movw r12, #813
+	movw r12, #815
 	b ws1_resolver
 	.align 2
 
@@ -6520,7 +6536,7 @@ __res_mailok:
 	.type __res_nameinquery, %function
 	.thumb_func
 __res_nameinquery:
-	movw r12, #814
+	movw r12, #816
 	b ws1_resolver
 	.align 2
 
@@ -6528,7 +6544,7 @@ __res_nameinquery:
 	.type __res_nclose, %function
 	.thumb_func
 __res_nclose:
-	movw r12, #815
+	movw r12, #817
 	b ws1_resolver
 	.align 2
 
@@ -6536,7 +6552,7 @@ __res_nclose:
 	.type __res_ninit, %function
 	.thumb_func
 __res_ninit:
-	movw r12, #816
+	movw r12, #818
 	b ws1_resolver
 	.align 2
 
@@ -6544,7 +6560,7 @@ __res_ninit:
 	.type __res_nmkquery, %function
 	.thumb_func
 __res_nmkquery:
-	movw r12, #817
+	movw r12, #819
 	b ws1_resolver
 	.align 2
 
@@ -6552,7 +6568,7 @@ __res_nmkquery:
 	.type __res_nquery, %function
 	.thumb_func
 __res_nquery:
-	movw r12, #818
+	movw r12, #820
 	b ws1_resolver
 	.align 2
 
@@ -6560,7 +6576,7 @@ __res_nquery:
 	.type __res_nquerydomain, %function
 	.thumb_func
 __res_nquerydomain:
-	movw r12, #819
+	movw r12, #821
 	b ws1_resolver
 	.align 2
 
@@ -6568,7 +6584,7 @@ __res_nquerydomain:
 	.type __res_nsearch, %function
 	.thumb_func
 __res_nsearch:
-	movw r12, #820
+	movw r12, #822
 	b ws1_resolver
 	.align 2
 
@@ -6576,7 +6592,7 @@ __res_nsearch:
 	.type __res_nsend, %function
 	.thumb_func
 __res_nsend:
-	movw r12, #821
+	movw r12, #823
 	b ws1_resolver
 	.align 2
 
@@ -6584,7 +6600,7 @@ __res_nsend:
 	.type __res_ownok, %function
 	.thumb_func
 __res_ownok:
-	movw r12, #822
+	movw r12, #824
 	b ws1_resolver
 	.align 2
 
@@ -6592,7 +6608,7 @@ __res_ownok:
 	.type __res_queriesmatch, %function
 	.thumb_func
 __res_queriesmatch:
-	movw r12, #823
+	movw r12, #825
 	b ws1_resolver
 	.align 2
 
@@ -6600,7 +6616,7 @@ __res_queriesmatch:
 	.type __res_querydomain, %function
 	.thumb_func
 __res_querydomain:
-	movw r12, #824
+	movw r12, #826
 	b ws1_resolver
 	.align 2
 
@@ -6608,7 +6624,7 @@ __res_querydomain:
 	.type __res_randomid, %function
 	.thumb_func
 __res_randomid:
-	movw r12, #825
+	movw r12, #827
 	b ws1_resolver
 	.align 2
 
@@ -6616,7 +6632,7 @@ __res_randomid:
 	.type __res_send, %function
 	.thumb_func
 __res_send:
-	movw r12, #826
+	movw r12, #828
 	b ws1_resolver
 	.align 2
 
@@ -6624,7 +6640,7 @@ __res_send:
 	.type __res_send_setqhook, %function
 	.thumb_func
 __res_send_setqhook:
-	movw r12, #827
+	movw r12, #829
 	b ws1_resolver
 	.align 2
 
@@ -6632,7 +6648,7 @@ __res_send_setqhook:
 	.type __res_send_setrhook, %function
 	.thumb_func
 __res_send_setrhook:
-	movw r12, #828
+	movw r12, #830
 	b ws1_resolver
 	.align 2
 
@@ -6640,7 +6656,7 @@ __res_send_setrhook:
 	.type __rt_sigaction, %function
 	.thumb_func
 __rt_sigaction:
-	movw r12, #829
+	movw r12, #831
 	b ws1_resolver
 	.align 2
 
@@ -6648,7 +6664,7 @@ __rt_sigaction:
 	.type __rt_sigpending, %function
 	.thumb_func
 __rt_sigpending:
-	movw r12, #830
+	movw r12, #832
 	b ws1_resolver
 	.align 2
 
@@ -6656,7 +6672,7 @@ __rt_sigpending:
 	.type __rt_sigprocmask, %function
 	.thumb_func
 __rt_sigprocmask:
-	movw r12, #831
+	movw r12, #833
 	b ws1_resolver
 	.align 2
 
@@ -6664,7 +6680,7 @@ __rt_sigprocmask:
 	.type __rt_sigsuspend, %function
 	.thumb_func
 __rt_sigsuspend:
-	movw r12, #832
+	movw r12, #834
 	b ws1_resolver
 	.align 2
 
@@ -6672,7 +6688,7 @@ __rt_sigsuspend:
 	.type __rt_sigtimedwait, %function
 	.thumb_func
 __rt_sigtimedwait:
-	movw r12, #833
+	movw r12, #835
 	b ws1_resolver
 	.align 2
 
@@ -6680,7 +6696,7 @@ __rt_sigtimedwait:
 	.type __sF, %function
 	.thumb_func
 __sF:
-	movw r12, #834
+	movw r12, #836
 	b ws1_resolver
 	.align 2
 
@@ -6688,7 +6704,7 @@ __sF:
 	.type __sched_cpualloc, %function
 	.thumb_func
 __sched_cpualloc:
-	movw r12, #835
+	movw r12, #837
 	b ws1_resolver
 	.align 2
 
@@ -6696,7 +6712,7 @@ __sched_cpualloc:
 	.type __sched_cpucount, %function
 	.thumb_func
 __sched_cpucount:
-	movw r12, #836
+	movw r12, #838
 	b ws1_resolver
 	.align 2
 
@@ -6704,7 +6720,7 @@ __sched_cpucount:
 	.type __sched_cpufree, %function
 	.thumb_func
 __sched_cpufree:
-	movw r12, #837
+	movw r12, #839
 	b ws1_resolver
 	.align 2
 
@@ -6712,7 +6728,7 @@ __sched_cpufree:
 	.type __sched_getaffinity, %function
 	.thumb_func
 __sched_getaffinity:
-	movw r12, #838
+	movw r12, #840
 	b ws1_resolver
 	.align 2
 
@@ -6720,7 +6736,7 @@ __sched_getaffinity:
 	.type __sclose, %function
 	.thumb_func
 __sclose:
-	movw r12, #839
+	movw r12, #841
 	b ws1_resolver
 	.align 2
 
@@ -6728,7 +6744,7 @@ __sclose:
 	.type __sdidinit, %function
 	.thumb_func
 __sdidinit:
-	movw r12, #840
+	movw r12, #842
 	b ws1_resolver
 	.align 2
 
@@ -6736,7 +6752,7 @@ __sdidinit:
 	.type __sendto_chk, %function
 	.thumb_func
 __sendto_chk:
-	movw r12, #841
+	movw r12, #843
 	b ws1_resolver
 	.align 2
 
@@ -6744,7 +6760,7 @@ __sendto_chk:
 	.type __set_errno, %function
 	.thumb_func
 __set_errno:
-	movw r12, #842
+	movw r12, #844
 	b ws1_resolver
 	.align 2
 
@@ -6752,7 +6768,7 @@ __set_errno:
 	.type __set_tid_address, %function
 	.thumb_func
 __set_tid_address:
-	movw r12, #843
+	movw r12, #845
 	b ws1_resolver
 	.align 2
 
@@ -6760,7 +6776,7 @@ __set_tid_address:
 	.type __sflags, %function
 	.thumb_func
 __sflags:
-	movw r12, #844
+	movw r12, #846
 	b ws1_resolver
 	.align 2
 
@@ -6768,7 +6784,7 @@ __sflags:
 	.type __sflush, %function
 	.thumb_func
 __sflush:
-	movw r12, #845
+	movw r12, #847
 	b ws1_resolver
 	.align 2
 
@@ -6776,7 +6792,7 @@ __sflush:
 	.type __sfp, %function
 	.thumb_func
 __sfp:
-	movw r12, #846
+	movw r12, #848
 	b ws1_resolver
 	.align 2
 
@@ -6784,7 +6800,7 @@ __sfp:
 	.type __sglue, %function
 	.thumb_func
 __sglue:
-	movw r12, #847
+	movw r12, #849
 	b ws1_resolver
 	.align 2
 
@@ -6792,7 +6808,7 @@ __sglue:
 	.type __sigaction, %function
 	.thumb_func
 __sigaction:
-	movw r12, #848
+	movw r12, #850
 	b ws1_resolver
 	.align 2
 
@@ -6800,7 +6816,7 @@ __sigaction:
 	.type __sinit, %function
 	.thumb_func
 __sinit:
-	movw r12, #849
+	movw r12, #851
 	b ws1_resolver
 	.align 2
 
@@ -6808,7 +6824,7 @@ __sinit:
 	.type __smakebuf, %function
 	.thumb_func
 __smakebuf:
-	movw r12, #850
+	movw r12, #852
 	b ws1_resolver
 	.align 2
 
@@ -6816,7 +6832,7 @@ __smakebuf:
 	.type __socket, %function
 	.thumb_func
 __socket:
-	movw r12, #851
+	movw r12, #853
 	b ws1_resolver
 	.align 2
 
@@ -6824,7 +6840,7 @@ __socket:
 	.type __sread, %function
 	.thumb_func
 __sread:
-	movw r12, #852
+	movw r12, #854
 	b ws1_resolver
 	.align 2
 
@@ -6832,7 +6848,7 @@ __sread:
 	.type __srefill, %function
 	.thumb_func
 __srefill:
-	movw r12, #853
+	movw r12, #855
 	b ws1_resolver
 	.align 2
 
@@ -6840,7 +6856,7 @@ __srefill:
 	.type __srget, %function
 	.thumb_func
 __srget:
-	movw r12, #854
+	movw r12, #856
 	b ws1_resolver
 	.align 2
 
@@ -6848,7 +6864,7 @@ __srget:
 	.type __sseek, %function
 	.thumb_func
 __sseek:
-	movw r12, #855
+	movw r12, #857
 	b ws1_resolver
 	.align 2
 
@@ -6856,7 +6872,7 @@ __sseek:
 	.type __statfs64, %function
 	.thumb_func
 __statfs64:
-	movw r12, #856
+	movw r12, #858
 	b ws1_resolver
 	.align 2
 
@@ -6864,7 +6880,7 @@ __statfs64:
 	.type __stpncpy_chk2, %function
 	.thumb_func
 __stpncpy_chk2:
-	movw r12, #857
+	movw r12, #859
 	b ws1_resolver
 	.align 2
 
@@ -6872,7 +6888,7 @@ __stpncpy_chk2:
 	.type __strlcat_chk, %function
 	.thumb_func
 __strlcat_chk:
-	movw r12, #858
+	movw r12, #860
 	b ws1_resolver
 	.align 2
 
@@ -6880,7 +6896,7 @@ __strlcat_chk:
 	.type __strlcpy_chk, %function
 	.thumb_func
 __strlcpy_chk:
-	movw r12, #859
+	movw r12, #861
 	b ws1_resolver
 	.align 2
 
@@ -6888,7 +6904,7 @@ __strlcpy_chk:
 	.type __strncpy_chk2, %function
 	.thumb_func
 __strncpy_chk2:
-	movw r12, #860
+	movw r12, #862
 	b ws1_resolver
 	.align 2
 
@@ -6896,7 +6912,7 @@ __strncpy_chk2:
 	.type __swbuf, %function
 	.thumb_func
 __swbuf:
-	movw r12, #861
+	movw r12, #863
 	b ws1_resolver
 	.align 2
 
@@ -6904,7 +6920,7 @@ __swbuf:
 	.type __swrite, %function
 	.thumb_func
 __swrite:
-	movw r12, #862
+	movw r12, #864
 	b ws1_resolver
 	.align 2
 
@@ -6912,7 +6928,7 @@ __swrite:
 	.type __swsetup, %function
 	.thumb_func
 __swsetup:
-	movw r12, #863
+	movw r12, #865
 	b ws1_resolver
 	.align 2
 
@@ -6920,7 +6936,7 @@ __swsetup:
 	.type __sym_ntop, %function
 	.thumb_func
 __sym_ntop:
-	movw r12, #864
+	movw r12, #866
 	b ws1_resolver
 	.align 2
 
@@ -6928,7 +6944,7 @@ __sym_ntop:
 	.type __sym_ntos, %function
 	.thumb_func
 __sym_ntos:
-	movw r12, #865
+	movw r12, #867
 	b ws1_resolver
 	.align 2
 
@@ -6936,7 +6952,7 @@ __sym_ntos:
 	.type __sym_ston, %function
 	.thumb_func
 __sym_ston:
-	movw r12, #866
+	movw r12, #868
 	b ws1_resolver
 	.align 2
 
@@ -6944,7 +6960,7 @@ __sym_ston:
 	.type __system_property_add, %function
 	.thumb_func
 __system_property_add:
-	movw r12, #867
+	movw r12, #869
 	b ws1_resolver
 	.align 2
 
@@ -6952,7 +6968,7 @@ __system_property_add:
 	.type __system_property_area_init, %function
 	.thumb_func
 __system_property_area_init:
-	movw r12, #868
+	movw r12, #870
 	b ws1_resolver
 	.align 2
 
@@ -6960,7 +6976,7 @@ __system_property_area_init:
 	.type __system_property_area_serial, %function
 	.thumb_func
 __system_property_area_serial:
-	movw r12, #869
+	movw r12, #871
 	b ws1_resolver
 	.align 2
 
@@ -6968,7 +6984,7 @@ __system_property_area_serial:
 	.type __system_property_foreach, %function
 	.thumb_func
 __system_property_foreach:
-	movw r12, #870
+	movw r12, #872
 	b ws1_resolver
 	.align 2
 
@@ -6976,7 +6992,7 @@ __system_property_foreach:
 	.type __system_property_read_callback, %function
 	.thumb_func
 __system_property_read_callback:
-	movw r12, #871
+	movw r12, #873
 	b ws1_resolver
 	.align 2
 
@@ -6984,7 +7000,7 @@ __system_property_read_callback:
 	.type __system_property_serial, %function
 	.thumb_func
 __system_property_serial:
-	movw r12, #872
+	movw r12, #874
 	b ws1_resolver
 	.align 2
 
@@ -6992,7 +7008,7 @@ __system_property_serial:
 	.type __system_property_set_filename, %function
 	.thumb_func
 __system_property_set_filename:
-	movw r12, #873
+	movw r12, #875
 	b ws1_resolver
 	.align 2
 
@@ -7000,7 +7016,7 @@ __system_property_set_filename:
 	.type __system_property_update, %function
 	.thumb_func
 __system_property_update:
-	movw r12, #874
+	movw r12, #876
 	b ws1_resolver
 	.align 2
 
@@ -7008,7 +7024,7 @@ __system_property_update:
 	.type __system_property_wait_any, %function
 	.thumb_func
 __system_property_wait_any:
-	movw r12, #875
+	movw r12, #877
 	b ws1_resolver
 	.align 2
 
@@ -7016,7 +7032,7 @@ __system_property_wait_any:
 	.type __timer_create, %function
 	.thumb_func
 __timer_create:
-	movw r12, #876
+	movw r12, #878
 	b ws1_resolver
 	.align 2
 
@@ -7024,7 +7040,7 @@ __timer_create:
 	.type __timer_delete, %function
 	.thumb_func
 __timer_delete:
-	movw r12, #877
+	movw r12, #879
 	b ws1_resolver
 	.align 2
 
@@ -7032,7 +7048,7 @@ __timer_delete:
 	.type __timer_getoverrun, %function
 	.thumb_func
 __timer_getoverrun:
-	movw r12, #878
+	movw r12, #880
 	b ws1_resolver
 	.align 2
 
@@ -7040,7 +7056,7 @@ __timer_getoverrun:
 	.type __timer_gettime, %function
 	.thumb_func
 __timer_gettime:
-	movw r12, #879
+	movw r12, #881
 	b ws1_resolver
 	.align 2
 
@@ -7048,7 +7064,7 @@ __timer_gettime:
 	.type __timer_settime, %function
 	.thumb_func
 __timer_settime:
-	movw r12, #880
+	movw r12, #882
 	b ws1_resolver
 	.align 2
 
@@ -7056,7 +7072,7 @@ __timer_settime:
 	.type __tls_get_addr, %function
 	.thumb_func
 __tls_get_addr:
-	movw r12, #881
+	movw r12, #883
 	b ws1_resolver
 	.align 2
 
@@ -7064,7 +7080,7 @@ __tls_get_addr:
 	.type __wait4, %function
 	.thumb_func
 __wait4:
-	movw r12, #882
+	movw r12, #884
 	b ws1_resolver
 	.align 2
 
@@ -7072,7 +7088,7 @@ __wait4:
 	.type __waitid, %function
 	.thumb_func
 __waitid:
-	movw r12, #883
+	movw r12, #885
 	b ws1_resolver
 	.align 2
 
@@ -7080,7 +7096,7 @@ __waitid:
 	.type _ctype_, %function
 	.thumb_func
 _ctype_:
-	movw r12, #884
+	movw r12, #886
 	b ws1_resolver
 	.align 2
 
@@ -7088,7 +7104,7 @@ _ctype_:
 	.type _flushlbf, %function
 	.thumb_func
 _flushlbf:
-	movw r12, #885
+	movw r12, #887
 	b ws1_resolver
 	.align 2
 
@@ -7096,7 +7112,7 @@ _flushlbf:
 	.type _fwalk, %function
 	.thumb_func
 _fwalk:
-	movw r12, #886
+	movw r12, #888
 	b ws1_resolver
 	.align 2
 
@@ -7104,7 +7120,7 @@ _fwalk:
 	.type _getlong, %function
 	.thumb_func
 _getlong:
-	movw r12, #887
+	movw r12, #889
 	b ws1_resolver
 	.align 2
 
@@ -7112,7 +7128,7 @@ _getlong:
 	.type _getshort, %function
 	.thumb_func
 _getshort:
-	movw r12, #888
+	movw r12, #890
 	b ws1_resolver
 	.align 2
 
@@ -7120,7 +7136,7 @@ _getshort:
 	.type _resolv_delete_cache_for_net, %function
 	.thumb_func
 _resolv_delete_cache_for_net:
-	movw r12, #889
+	movw r12, #891
 	b ws1_resolver
 	.align 2
 
@@ -7128,7 +7144,7 @@ _resolv_delete_cache_for_net:
 	.type _resolv_flush_cache_for_net, %function
 	.thumb_func
 _resolv_flush_cache_for_net:
-	movw r12, #890
+	movw r12, #892
 	b ws1_resolver
 	.align 2
 
@@ -7136,7 +7152,7 @@ _resolv_flush_cache_for_net:
 	.type _resolv_set_nameservers_for_net, %function
 	.thumb_func
 _resolv_set_nameservers_for_net:
-	movw r12, #891
+	movw r12, #893
 	b ws1_resolver
 	.align 2
 
@@ -7144,7 +7160,7 @@ _resolv_set_nameservers_for_net:
 	.type _tolower_tab_, %function
 	.thumb_func
 _tolower_tab_:
-	movw r12, #892
+	movw r12, #894
 	b ws1_resolver
 	.align 2
 
@@ -7152,7 +7168,7 @@ _tolower_tab_:
 	.type _toupper_tab_, %function
 	.thumb_func
 _toupper_tab_:
-	movw r12, #893
+	movw r12, #895
 	b ws1_resolver
 	.align 2
 
@@ -7160,7 +7176,7 @@ _toupper_tab_:
 	.type accept, %function
 	.thumb_func
 accept:
-	movw r12, #894
+	movw r12, #896
 	b ws1_resolver
 	.align 2
 
@@ -7168,7 +7184,7 @@ accept:
 	.type accept4, %function
 	.thumb_func
 accept4:
-	movw r12, #895
+	movw r12, #897
 	b ws1_resolver
 	.align 2
 
@@ -7176,7 +7192,7 @@ accept4:
 	.type acct, %function
 	.thumb_func
 acct:
-	movw r12, #896
+	movw r12, #898
 	b ws1_resolver
 	.align 2
 
@@ -7184,7 +7200,7 @@ acct:
 	.type adjtimex, %function
 	.thumb_func
 adjtimex:
-	movw r12, #897
+	movw r12, #899
 	b ws1_resolver
 	.align 2
 
@@ -7192,7 +7208,7 @@ adjtimex:
 	.type aligned_alloc, %function
 	.thumb_func
 aligned_alloc:
-	movw r12, #898
+	movw r12, #900
 	b ws1_resolver
 	.align 2
 
@@ -7200,7 +7216,7 @@ aligned_alloc:
 	.type alphasort, %function
 	.thumb_func
 alphasort:
-	movw r12, #899
+	movw r12, #901
 	b ws1_resolver
 	.align 2
 
@@ -7208,7 +7224,7 @@ alphasort:
 	.type alphasort64, %function
 	.thumb_func
 alphasort64:
-	movw r12, #900
+	movw r12, #902
 	b ws1_resolver
 	.align 2
 
@@ -7216,7 +7232,7 @@ alphasort64:
 	.type android_fdsan_close_with_tag, %function
 	.thumb_func
 android_fdsan_close_with_tag:
-	movw r12, #901
+	movw r12, #903
 	b ws1_resolver
 	.align 2
 
@@ -7224,7 +7240,7 @@ android_fdsan_close_with_tag:
 	.type android_fdsan_create_owner_tag, %function
 	.thumb_func
 android_fdsan_create_owner_tag:
-	movw r12, #902
+	movw r12, #904
 	b ws1_resolver
 	.align 2
 
@@ -7232,7 +7248,7 @@ android_fdsan_create_owner_tag:
 	.type android_fdsan_exchange_owner_tag, %function
 	.thumb_func
 android_fdsan_exchange_owner_tag:
-	movw r12, #903
+	movw r12, #905
 	b ws1_resolver
 	.align 2
 
@@ -7240,7 +7256,7 @@ android_fdsan_exchange_owner_tag:
 	.type android_fdsan_get_error_level, %function
 	.thumb_func
 android_fdsan_get_error_level:
-	movw r12, #904
+	movw r12, #906
 	b ws1_resolver
 	.align 2
 
@@ -7248,7 +7264,7 @@ android_fdsan_get_error_level:
 	.type android_fdsan_get_fd_table, %function
 	.thumb_func
 android_fdsan_get_fd_table:
-	movw r12, #905
+	movw r12, #907
 	b ws1_resolver
 	.align 2
 
@@ -7256,7 +7272,7 @@ android_fdsan_get_fd_table:
 	.type android_fdsan_get_owner_tag, %function
 	.thumb_func
 android_fdsan_get_owner_tag:
-	movw r12, #906
+	movw r12, #908
 	b ws1_resolver
 	.align 2
 
@@ -7264,7 +7280,7 @@ android_fdsan_get_owner_tag:
 	.type android_fdsan_get_tag_type, %function
 	.thumb_func
 android_fdsan_get_tag_type:
-	movw r12, #907
+	movw r12, #909
 	b ws1_resolver
 	.align 2
 
@@ -7272,7 +7288,7 @@ android_fdsan_get_tag_type:
 	.type android_fdsan_get_tag_value, %function
 	.thumb_func
 android_fdsan_get_tag_value:
-	movw r12, #908
+	movw r12, #910
 	b ws1_resolver
 	.align 2
 
@@ -7280,7 +7296,7 @@ android_fdsan_get_tag_value:
 	.type android_fdsan_set_error_level, %function
 	.thumb_func
 android_fdsan_set_error_level:
-	movw r12, #909
+	movw r12, #911
 	b ws1_resolver
 	.align 2
 
@@ -7288,7 +7304,7 @@ android_fdsan_set_error_level:
 	.type android_fdtrack_compare_exchange_hook, %function
 	.thumb_func
 android_fdtrack_compare_exchange_hook:
-	movw r12, #910
+	movw r12, #912
 	b ws1_resolver
 	.align 2
 
@@ -7296,7 +7312,7 @@ android_fdtrack_compare_exchange_hook:
 	.type android_fdtrack_get_enabled, %function
 	.thumb_func
 android_fdtrack_get_enabled:
-	movw r12, #911
+	movw r12, #913
 	b ws1_resolver
 	.align 2
 
@@ -7304,7 +7320,7 @@ android_fdtrack_get_enabled:
 	.type android_fdtrack_set_enabled, %function
 	.thumb_func
 android_fdtrack_set_enabled:
-	movw r12, #912
+	movw r12, #914
 	b ws1_resolver
 	.align 2
 
@@ -7312,7 +7328,7 @@ android_fdtrack_set_enabled:
 	.type android_get_device_api_level, %function
 	.thumb_func
 android_get_device_api_level:
-	movw r12, #913
+	movw r12, #915
 	b ws1_resolver
 	.align 2
 
@@ -7320,7 +7336,7 @@ android_get_device_api_level:
 	.type android_getaddrinfofornet, %function
 	.thumb_func
 android_getaddrinfofornet:
-	movw r12, #914
+	movw r12, #916
 	b ws1_resolver
 	.align 2
 
@@ -7328,7 +7344,7 @@ android_getaddrinfofornet:
 	.type android_getaddrinfofornetcontext, %function
 	.thumb_func
 android_getaddrinfofornetcontext:
-	movw r12, #915
+	movw r12, #917
 	b ws1_resolver
 	.align 2
 
@@ -7336,7 +7352,7 @@ android_getaddrinfofornetcontext:
 	.type android_gethostbyaddrfornet, %function
 	.thumb_func
 android_gethostbyaddrfornet:
-	movw r12, #916
+	movw r12, #918
 	b ws1_resolver
 	.align 2
 
@@ -7344,7 +7360,7 @@ android_gethostbyaddrfornet:
 	.type android_gethostbyaddrfornetcontext, %function
 	.thumb_func
 android_gethostbyaddrfornetcontext:
-	movw r12, #917
+	movw r12, #919
 	b ws1_resolver
 	.align 2
 
@@ -7352,7 +7368,7 @@ android_gethostbyaddrfornetcontext:
 	.type android_gethostbynamefornet, %function
 	.thumb_func
 android_gethostbynamefornet:
-	movw r12, #918
+	movw r12, #920
 	b ws1_resolver
 	.align 2
 
@@ -7360,7 +7376,7 @@ android_gethostbynamefornet:
 	.type android_gethostbynamefornetcontext, %function
 	.thumb_func
 android_gethostbynamefornetcontext:
-	movw r12, #919
+	movw r12, #921
 	b ws1_resolver
 	.align 2
 
@@ -7368,7 +7384,7 @@ android_gethostbynamefornetcontext:
 	.type android_mallopt, %function
 	.thumb_func
 android_mallopt:
-	movw r12, #920
+	movw r12, #922
 	b ws1_resolver
 	.align 2
 
@@ -7376,7 +7392,7 @@ android_mallopt:
 	.type android_net_res_stats_aggregate, %function
 	.thumb_func
 android_net_res_stats_aggregate:
-	movw r12, #921
+	movw r12, #923
 	b ws1_resolver
 	.align 2
 
@@ -7384,7 +7400,7 @@ android_net_res_stats_aggregate:
 	.type android_net_res_stats_get_info_for_net, %function
 	.thumb_func
 android_net_res_stats_get_info_for_net:
-	movw r12, #922
+	movw r12, #924
 	b ws1_resolver
 	.align 2
 
@@ -7392,7 +7408,7 @@ android_net_res_stats_get_info_for_net:
 	.type android_net_res_stats_get_usable_servers, %function
 	.thumb_func
 android_net_res_stats_get_usable_servers:
-	movw r12, #923
+	movw r12, #925
 	b ws1_resolver
 	.align 2
 
@@ -7400,7 +7416,7 @@ android_net_res_stats_get_usable_servers:
 	.type android_set_abort_message, %function
 	.thumb_func
 android_set_abort_message:
-	movw r12, #924
+	movw r12, #926
 	b ws1_resolver
 	.align 2
 
@@ -7408,7 +7424,7 @@ android_set_abort_message:
 	.type android_unsafe_frame_pointer_chase, %function
 	.thumb_func
 android_unsafe_frame_pointer_chase:
-	movw r12, #925
+	movw r12, #927
 	b ws1_resolver
 	.align 2
 
@@ -7416,7 +7432,7 @@ android_unsafe_frame_pointer_chase:
 	.type arc4random, %function
 	.thumb_func
 arc4random:
-	movw r12, #926
+	movw r12, #928
 	b ws1_resolver
 	.align 2
 
@@ -7424,7 +7440,7 @@ arc4random:
 	.type arc4random_addrandom, %function
 	.thumb_func
 arc4random_addrandom:
-	movw r12, #927
+	movw r12, #929
 	b ws1_resolver
 	.align 2
 
@@ -7432,7 +7448,7 @@ arc4random_addrandom:
 	.type arc4random_buf, %function
 	.thumb_func
 arc4random_buf:
-	movw r12, #928
+	movw r12, #930
 	b ws1_resolver
 	.align 2
 
@@ -7440,7 +7456,7 @@ arc4random_buf:
 	.type arc4random_stir, %function
 	.thumb_func
 arc4random_stir:
-	movw r12, #929
+	movw r12, #931
 	b ws1_resolver
 	.align 2
 
@@ -7448,7 +7464,7 @@ arc4random_stir:
 	.type arc4random_uniform, %function
 	.thumb_func
 arc4random_uniform:
-	movw r12, #930
+	movw r12, #932
 	b ws1_resolver
 	.align 2
 
@@ -7456,7 +7472,7 @@ arc4random_uniform:
 	.type asctime64, %function
 	.thumb_func
 asctime64:
-	movw r12, #931
+	movw r12, #933
 	b ws1_resolver
 	.align 2
 
@@ -7464,7 +7480,7 @@ asctime64:
 	.type asctime64_r, %function
 	.thumb_func
 asctime64_r:
-	movw r12, #932
+	movw r12, #934
 	b ws1_resolver
 	.align 2
 
@@ -7472,7 +7488,7 @@ asctime64_r:
 	.type asprintf, %function
 	.thumb_func
 asprintf:
-	movw r12, #933
+	movw r12, #935
 	b ws1_resolver
 	.align 2
 
@@ -7480,7 +7496,7 @@ asprintf:
 	.type basename_r, %function
 	.thumb_func
 basename_r:
-	movw r12, #934
+	movw r12, #936
 	b ws1_resolver
 	.align 2
 
@@ -7488,7 +7504,7 @@ basename_r:
 	.type bind, %function
 	.thumb_func
 bind:
-	movw r12, #935
+	movw r12, #937
 	b ws1_resolver
 	.align 2
 
@@ -7496,7 +7512,7 @@ bind:
 	.type bindresvport, %function
 	.thumb_func
 bindresvport:
-	movw r12, #936
+	movw r12, #938
 	b ws1_resolver
 	.align 2
 
@@ -7504,7 +7520,7 @@ bindresvport:
 	.type brk, %function
 	.thumb_func
 brk:
-	movw r12, #937
+	movw r12, #939
 	b ws1_resolver
 	.align 2
 
@@ -7512,7 +7528,7 @@ brk:
 	.type bsd_signal, %function
 	.thumb_func
 bsd_signal:
-	movw r12, #938
+	movw r12, #940
 	b ws1_resolver
 	.align 2
 
@@ -7520,7 +7536,7 @@ bsd_signal:
 	.type call_once, %function
 	.thumb_func
 call_once:
-	movw r12, #939
+	movw r12, #941
 	b ws1_resolver
 	.align 2
 
@@ -7528,7 +7544,7 @@ call_once:
 	.type capget, %function
 	.thumb_func
 capget:
-	movw r12, #940
+	movw r12, #942
 	b ws1_resolver
 	.align 2
 
@@ -7536,7 +7552,7 @@ capget:
 	.type capset, %function
 	.thumb_func
 capset:
-	movw r12, #941
+	movw r12, #943
 	b ws1_resolver
 	.align 2
 
@@ -7544,7 +7560,7 @@ capset:
 	.type catclose, %function
 	.thumb_func
 catclose:
-	movw r12, #942
+	movw r12, #944
 	b ws1_resolver
 	.align 2
 
@@ -7552,7 +7568,7 @@ catclose:
 	.type catgets, %function
 	.thumb_func
 catgets:
-	movw r12, #943
+	movw r12, #945
 	b ws1_resolver
 	.align 2
 
@@ -7560,7 +7576,7 @@ catgets:
 	.type catopen, %function
 	.thumb_func
 catopen:
-	movw r12, #944
+	movw r12, #946
 	b ws1_resolver
 	.align 2
 
@@ -7568,7 +7584,7 @@ catopen:
 	.type cfsetspeed, %function
 	.thumb_func
 cfsetspeed:
-	movw r12, #945
+	movw r12, #947
 	b ws1_resolver
 	.align 2
 
@@ -7576,7 +7592,7 @@ cfsetspeed:
 	.type clearerr_unlocked, %function
 	.thumb_func
 clearerr_unlocked:
-	movw r12, #946
+	movw r12, #948
 	b ws1_resolver
 	.align 2
 
@@ -7584,7 +7600,7 @@ clearerr_unlocked:
 	.type clock_adjtime, %function
 	.thumb_func
 clock_adjtime:
-	movw r12, #947
+	movw r12, #949
 	b ws1_resolver
 	.align 2
 
@@ -7592,7 +7608,7 @@ clock_adjtime:
 	.type clone, %function
 	.thumb_func
 clone:
-	movw r12, #948
+	movw r12, #950
 	b ws1_resolver
 	.align 2
 
@@ -7600,7 +7616,7 @@ clone:
 	.type cnd_broadcast, %function
 	.thumb_func
 cnd_broadcast:
-	movw r12, #949
+	movw r12, #951
 	b ws1_resolver
 	.align 2
 
@@ -7608,7 +7624,7 @@ cnd_broadcast:
 	.type cnd_destroy, %function
 	.thumb_func
 cnd_destroy:
-	movw r12, #950
+	movw r12, #952
 	b ws1_resolver
 	.align 2
 
@@ -7616,7 +7632,7 @@ cnd_destroy:
 	.type cnd_init, %function
 	.thumb_func
 cnd_init:
-	movw r12, #951
+	movw r12, #953
 	b ws1_resolver
 	.align 2
 
@@ -7624,7 +7640,7 @@ cnd_init:
 	.type cnd_signal, %function
 	.thumb_func
 cnd_signal:
-	movw r12, #952
+	movw r12, #954
 	b ws1_resolver
 	.align 2
 
@@ -7632,7 +7648,7 @@ cnd_signal:
 	.type cnd_timedwait, %function
 	.thumb_func
 cnd_timedwait:
-	movw r12, #953
+	movw r12, #955
 	b ws1_resolver
 	.align 2
 
@@ -7640,7 +7656,7 @@ cnd_timedwait:
 	.type cnd_wait, %function
 	.thumb_func
 cnd_wait:
-	movw r12, #954
+	movw r12, #956
 	b ws1_resolver
 	.align 2
 
@@ -7648,7 +7664,7 @@ cnd_wait:
 	.type connect, %function
 	.thumb_func
 connect:
-	movw r12, #955
+	movw r12, #957
 	b ws1_resolver
 	.align 2
 
@@ -7656,7 +7672,7 @@ connect:
 	.type ctime64, %function
 	.thumb_func
 ctime64:
-	movw r12, #956
+	movw r12, #958
 	b ws1_resolver
 	.align 2
 
@@ -7664,7 +7680,7 @@ ctime64:
 	.type ctime64_r, %function
 	.thumb_func
 ctime64_r:
-	movw r12, #957
+	movw r12, #959
 	b ws1_resolver
 	.align 2
 
@@ -7672,7 +7688,7 @@ ctime64_r:
 	.type delete_module, %function
 	.thumb_func
 delete_module:
-	movw r12, #958
+	movw r12, #960
 	b ws1_resolver
 	.align 2
 
@@ -7680,7 +7696,7 @@ delete_module:
 	.type dirname_r, %function
 	.thumb_func
 dirname_r:
-	movw r12, #959
+	movw r12, #961
 	b ws1_resolver
 	.align 2
 
@@ -7688,7 +7704,7 @@ dirname_r:
 	.type dlmalloc, %function
 	.thumb_func
 dlmalloc:
-	movw r12, #960
+	movw r12, #962
 	b ws1_resolver
 	.align 2
 
@@ -7696,7 +7712,7 @@ dlmalloc:
 	.type dlmalloc_inspect_all, %function
 	.thumb_func
 dlmalloc_inspect_all:
-	movw r12, #961
+	movw r12, #963
 	b ws1_resolver
 	.align 2
 
@@ -7704,7 +7720,7 @@ dlmalloc_inspect_all:
 	.type dlmalloc_trim, %function
 	.thumb_func
 dlmalloc_trim:
-	movw r12, #962
+	movw r12, #964
 	b ws1_resolver
 	.align 2
 
@@ -7712,7 +7728,7 @@ dlmalloc_trim:
 	.type dlmalloc_usable_size, %function
 	.thumb_func
 dlmalloc_usable_size:
-	movw r12, #963
+	movw r12, #965
 	b ws1_resolver
 	.align 2
 
@@ -7720,7 +7736,7 @@ dlmalloc_usable_size:
 	.type dn_expand, %function
 	.thumb_func
 dn_expand:
-	movw r12, #964
+	movw r12, #966
 	b ws1_resolver
 	.align 2
 
@@ -7728,7 +7744,7 @@ dn_expand:
 	.type dprintf, %function
 	.thumb_func
 dprintf:
-	movw r12, #965
+	movw r12, #967
 	b ws1_resolver
 	.align 2
 
@@ -7736,7 +7752,7 @@ dprintf:
 	.type dup3, %function
 	.thumb_func
 dup3:
-	movw r12, #966
+	movw r12, #968
 	b ws1_resolver
 	.align 2
 
@@ -7744,7 +7760,7 @@ dup3:
 	.type duplocale, %function
 	.thumb_func
 duplocale:
-	movw r12, #967
+	movw r12, #969
 	b ws1_resolver
 	.align 2
 
@@ -7752,7 +7768,7 @@ duplocale:
 	.type endhostent, %function
 	.thumb_func
 endhostent:
-	movw r12, #968
+	movw r12, #970
 	b ws1_resolver
 	.align 2
 
@@ -7760,7 +7776,7 @@ endhostent:
 	.type endmntent, %function
 	.thumb_func
 endmntent:
-	movw r12, #969
+	movw r12, #971
 	b ws1_resolver
 	.align 2
 
@@ -7768,7 +7784,7 @@ endmntent:
 	.type endnetent, %function
 	.thumb_func
 endnetent:
-	movw r12, #970
+	movw r12, #972
 	b ws1_resolver
 	.align 2
 
@@ -7776,7 +7792,7 @@ endnetent:
 	.type endprotoent, %function
 	.thumb_func
 endprotoent:
-	movw r12, #971
+	movw r12, #973
 	b ws1_resolver
 	.align 2
 
@@ -7784,7 +7800,7 @@ endprotoent:
 	.type endservent, %function
 	.thumb_func
 endservent:
-	movw r12, #972
+	movw r12, #974
 	b ws1_resolver
 	.align 2
 
@@ -7792,7 +7808,7 @@ endservent:
 	.type endutent, %function
 	.thumb_func
 endutent:
-	movw r12, #973
+	movw r12, #975
 	b ws1_resolver
 	.align 2
 
@@ -7800,7 +7816,7 @@ endutent:
 	.type epoll_create1, %function
 	.thumb_func
 epoll_create1:
-	movw r12, #974
+	movw r12, #976
 	b ws1_resolver
 	.align 2
 
@@ -7808,7 +7824,7 @@ epoll_create1:
 	.type epoll_pwait, %function
 	.thumb_func
 epoll_pwait:
-	movw r12, #975
+	movw r12, #977
 	b ws1_resolver
 	.align 2
 
@@ -7816,7 +7832,7 @@ epoll_pwait:
 	.type epoll_pwait64, %function
 	.thumb_func
 epoll_pwait64:
-	movw r12, #976
+	movw r12, #978
 	b ws1_resolver
 	.align 2
 
@@ -7824,7 +7840,7 @@ epoll_pwait64:
 	.type error, %function
 	.thumb_func
 error:
-	movw r12, #977
+	movw r12, #979
 	b ws1_resolver
 	.align 2
 
@@ -7832,7 +7848,7 @@ error:
 	.type error_at_line, %function
 	.thumb_func
 error_at_line:
-	movw r12, #978
+	movw r12, #980
 	b ws1_resolver
 	.align 2
 
@@ -7840,7 +7856,7 @@ error_at_line:
 	.type error_message_count, %function
 	.thumb_func
 error_message_count:
-	movw r12, #979
+	movw r12, #981
 	b ws1_resolver
 	.align 2
 
@@ -7848,7 +7864,7 @@ error_message_count:
 	.type error_one_per_line, %function
 	.thumb_func
 error_one_per_line:
-	movw r12, #980
+	movw r12, #982
 	b ws1_resolver
 	.align 2
 
@@ -7856,7 +7872,7 @@ error_one_per_line:
 	.type error_print_progname, %function
 	.thumb_func
 error_print_progname:
-	movw r12, #981
+	movw r12, #983
 	b ws1_resolver
 	.align 2
 
@@ -7864,7 +7880,7 @@ error_print_progname:
 	.type ether_aton, %function
 	.thumb_func
 ether_aton:
-	movw r12, #982
+	movw r12, #984
 	b ws1_resolver
 	.align 2
 
@@ -7872,7 +7888,7 @@ ether_aton:
 	.type ether_aton_r, %function
 	.thumb_func
 ether_aton_r:
-	movw r12, #983
+	movw r12, #985
 	b ws1_resolver
 	.align 2
 
@@ -7880,7 +7896,7 @@ ether_aton_r:
 	.type ether_ntoa, %function
 	.thumb_func
 ether_ntoa:
-	movw r12, #984
+	movw r12, #986
 	b ws1_resolver
 	.align 2
 
@@ -7888,7 +7904,7 @@ ether_ntoa:
 	.type ether_ntoa_r, %function
 	.thumb_func
 ether_ntoa_r:
-	movw r12, #985
+	movw r12, #987
 	b ws1_resolver
 	.align 2
 
@@ -7896,7 +7912,7 @@ ether_ntoa_r:
 	.type fallocate, %function
 	.thumb_func
 fallocate:
-	movw r12, #986
+	movw r12, #988
 	b ws1_resolver
 	.align 2
 
@@ -7904,7 +7920,7 @@ fallocate:
 	.type fallocate64, %function
 	.thumb_func
 fallocate64:
-	movw r12, #987
+	movw r12, #989
 	b ws1_resolver
 	.align 2
 
@@ -7912,7 +7928,7 @@ fallocate64:
 	.type feof_unlocked, %function
 	.thumb_func
 feof_unlocked:
-	movw r12, #988
+	movw r12, #990
 	b ws1_resolver
 	.align 2
 
@@ -7920,7 +7936,7 @@ feof_unlocked:
 	.type ferror_unlocked, %function
 	.thumb_func
 ferror_unlocked:
-	movw r12, #989
+	movw r12, #991
 	b ws1_resolver
 	.align 2
 
@@ -7928,7 +7944,7 @@ ferror_unlocked:
 	.type fexecve, %function
 	.thumb_func
 fexecve:
-	movw r12, #990
+	movw r12, #992
 	b ws1_resolver
 	.align 2
 
@@ -7936,7 +7952,7 @@ fexecve:
 	.type fflush_unlocked, %function
 	.thumb_func
 fflush_unlocked:
-	movw r12, #991
+	movw r12, #993
 	b ws1_resolver
 	.align 2
 
@@ -7944,7 +7960,7 @@ fflush_unlocked:
 	.type fgetc_unlocked, %function
 	.thumb_func
 fgetc_unlocked:
-	movw r12, #992
+	movw r12, #994
 	b ws1_resolver
 	.align 2
 
@@ -7952,7 +7968,7 @@ fgetc_unlocked:
 	.type fgetln, %function
 	.thumb_func
 fgetln:
-	movw r12, #993
+	movw r12, #995
 	b ws1_resolver
 	.align 2
 
@@ -7960,7 +7976,7 @@ fgetln:
 	.type fgetpos64, %function
 	.thumb_func
 fgetpos64:
-	movw r12, #994
+	movw r12, #996
 	b ws1_resolver
 	.align 2
 
@@ -7968,7 +7984,7 @@ fgetpos64:
 	.type fgets_unlocked, %function
 	.thumb_func
 fgets_unlocked:
-	movw r12, #995
+	movw r12, #997
 	b ws1_resolver
 	.align 2
 
@@ -7976,7 +7992,7 @@ fgets_unlocked:
 	.type fgetxattr, %function
 	.thumb_func
 fgetxattr:
-	movw r12, #996
+	movw r12, #998
 	b ws1_resolver
 	.align 2
 
@@ -7984,7 +8000,7 @@ fgetxattr:
 	.type fileno_unlocked, %function
 	.thumb_func
 fileno_unlocked:
-	movw r12, #997
+	movw r12, #999
 	b ws1_resolver
 	.align 2
 
@@ -7992,7 +8008,7 @@ fileno_unlocked:
 	.type flistxattr, %function
 	.thumb_func
 flistxattr:
-	movw r12, #998
+	movw r12, #1000
 	b ws1_resolver
 	.align 2
 
@@ -8000,7 +8016,7 @@ flistxattr:
 	.type fmemopen, %function
 	.thumb_func
 fmemopen:
-	movw r12, #999
+	movw r12, #1001
 	b ws1_resolver
 	.align 2
 
@@ -8008,7 +8024,7 @@ fmemopen:
 	.type forkpty, %function
 	.thumb_func
 forkpty:
-	movw r12, #1000
+	movw r12, #1002
 	b ws1_resolver
 	.align 2
 
@@ -8016,7 +8032,7 @@ forkpty:
 	.type fpurge, %function
 	.thumb_func
 fpurge:
-	movw r12, #1001
+	movw r12, #1003
 	b ws1_resolver
 	.align 2
 
@@ -8024,7 +8040,7 @@ fpurge:
 	.type fputc_unlocked, %function
 	.thumb_func
 fputc_unlocked:
-	movw r12, #1002
+	movw r12, #1004
 	b ws1_resolver
 	.align 2
 
@@ -8032,7 +8048,7 @@ fputc_unlocked:
 	.type fputs_unlocked, %function
 	.thumb_func
 fputs_unlocked:
-	movw r12, #1003
+	movw r12, #1005
 	b ws1_resolver
 	.align 2
 
@@ -8040,7 +8056,7 @@ fputs_unlocked:
 	.type fread_unlocked, %function
 	.thumb_func
 fread_unlocked:
-	movw r12, #1004
+	movw r12, #1006
 	b ws1_resolver
 	.align 2
 
@@ -8048,7 +8064,7 @@ fread_unlocked:
 	.type free_malloc_leak_info, %function
 	.thumb_func
 free_malloc_leak_info:
-	movw r12, #1005
+	movw r12, #1007
 	b ws1_resolver
 	.align 2
 
@@ -8056,7 +8072,7 @@ free_malloc_leak_info:
 	.type freeaddrinfo, %function
 	.thumb_func
 freeaddrinfo:
-	movw r12, #1006
+	movw r12, #1008
 	b ws1_resolver
 	.align 2
 
@@ -8064,7 +8080,7 @@ freeaddrinfo:
 	.type freeifaddrs, %function
 	.thumb_func
 freeifaddrs:
-	movw r12, #1007
+	movw r12, #1009
 	b ws1_resolver
 	.align 2
 
@@ -8072,7 +8088,7 @@ freeifaddrs:
 	.type freelocale, %function
 	.thumb_func
 freelocale:
-	movw r12, #1008
+	movw r12, #1010
 	b ws1_resolver
 	.align 2
 
@@ -8080,7 +8096,7 @@ freelocale:
 	.type fremovexattr, %function
 	.thumb_func
 fremovexattr:
-	movw r12, #1009
+	movw r12, #1011
 	b ws1_resolver
 	.align 2
 
@@ -8088,7 +8104,7 @@ fremovexattr:
 	.type fsetpos64, %function
 	.thumb_func
 fsetpos64:
-	movw r12, #1010
+	movw r12, #1012
 	b ws1_resolver
 	.align 2
 
@@ -8096,7 +8112,7 @@ fsetpos64:
 	.type fsetxattr, %function
 	.thumb_func
 fsetxattr:
-	movw r12, #1011
+	movw r12, #1013
 	b ws1_resolver
 	.align 2
 
@@ -8104,7 +8120,7 @@ fsetxattr:
 	.type fstatfs, %function
 	.thumb_func
 fstatfs:
-	movw r12, #1012
+	movw r12, #1014
 	b ws1_resolver
 	.align 2
 
@@ -8112,7 +8128,7 @@ fstatfs:
 	.type fstatfs64, %function
 	.thumb_func
 fstatfs64:
-	movw r12, #1013
+	movw r12, #1015
 	b ws1_resolver
 	.align 2
 
@@ -8120,7 +8136,7 @@ fstatfs64:
 	.type fts_children, %function
 	.thumb_func
 fts_children:
-	movw r12, #1014
+	movw r12, #1016
 	b ws1_resolver
 	.align 2
 
@@ -8128,7 +8144,7 @@ fts_children:
 	.type fts_close, %function
 	.thumb_func
 fts_close:
-	movw r12, #1015
+	movw r12, #1017
 	b ws1_resolver
 	.align 2
 
@@ -8136,7 +8152,7 @@ fts_close:
 	.type fts_open, %function
 	.thumb_func
 fts_open:
-	movw r12, #1016
+	movw r12, #1018
 	b ws1_resolver
 	.align 2
 
@@ -8144,7 +8160,7 @@ fts_open:
 	.type fts_read, %function
 	.thumb_func
 fts_read:
-	movw r12, #1017
+	movw r12, #1019
 	b ws1_resolver
 	.align 2
 
@@ -8152,7 +8168,7 @@ fts_read:
 	.type fts_set, %function
 	.thumb_func
 fts_set:
-	movw r12, #1018
+	movw r12, #1020
 	b ws1_resolver
 	.align 2
 
@@ -8160,7 +8176,7 @@ fts_set:
 	.type funopen, %function
 	.thumb_func
 funopen:
-	movw r12, #1019
+	movw r12, #1021
 	b ws1_resolver
 	.align 2
 
@@ -8168,7 +8184,7 @@ funopen:
 	.type funopen64, %function
 	.thumb_func
 funopen64:
-	movw r12, #1020
+	movw r12, #1022
 	b ws1_resolver
 	.align 2
 
@@ -8176,7 +8192,7 @@ funopen64:
 	.type futimens, %function
 	.thumb_func
 futimens:
-	movw r12, #1021
+	movw r12, #1023
 	b ws1_resolver
 	.align 2
 
@@ -8184,7 +8200,7 @@ futimens:
 	.type futimes, %function
 	.thumb_func
 futimes:
-	movw r12, #1022
+	movw r12, #1024
 	b ws1_resolver
 	.align 2
 
@@ -8192,7 +8208,7 @@ futimes:
 	.type futimesat, %function
 	.thumb_func
 futimesat:
-	movw r12, #1023
+	movw r12, #1025
 	b ws1_resolver
 	.align 2
 
@@ -8200,7 +8216,7 @@ futimesat:
 	.type fwrite_unlocked, %function
 	.thumb_func
 fwrite_unlocked:
-	movw r12, #1024
+	movw r12, #1026
 	b ws1_resolver
 	.align 2
 
@@ -8208,7 +8224,7 @@ fwrite_unlocked:
 	.type gai_strerror, %function
 	.thumb_func
 gai_strerror:
-	movw r12, #1025
+	movw r12, #1027
 	b ws1_resolver
 	.align 2
 
@@ -8216,7 +8232,7 @@ gai_strerror:
 	.type get_avphys_pages, %function
 	.thumb_func
 get_avphys_pages:
-	movw r12, #1026
+	movw r12, #1028
 	b ws1_resolver
 	.align 2
 
@@ -8224,7 +8240,7 @@ get_avphys_pages:
 	.type get_malloc_leak_info, %function
 	.thumb_func
 get_malloc_leak_info:
-	movw r12, #1027
+	movw r12, #1029
 	b ws1_resolver
 	.align 2
 
@@ -8232,7 +8248,7 @@ get_malloc_leak_info:
 	.type get_nprocs, %function
 	.thumb_func
 get_nprocs:
-	movw r12, #1028
+	movw r12, #1030
 	b ws1_resolver
 	.align 2
 
@@ -8240,7 +8256,7 @@ get_nprocs:
 	.type get_nprocs_conf, %function
 	.thumb_func
 get_nprocs_conf:
-	movw r12, #1029
+	movw r12, #1031
 	b ws1_resolver
 	.align 2
 
@@ -8248,7 +8264,7 @@ get_nprocs_conf:
 	.type get_phys_pages, %function
 	.thumb_func
 get_phys_pages:
-	movw r12, #1030
+	movw r12, #1032
 	b ws1_resolver
 	.align 2
 
@@ -8256,7 +8272,7 @@ get_phys_pages:
 	.type getaddrinfo, %function
 	.thumb_func
 getaddrinfo:
-	movw r12, #1031
+	movw r12, #1033
 	b ws1_resolver
 	.align 2
 
@@ -8264,7 +8280,7 @@ getaddrinfo:
 	.type getauxval, %function
 	.thumb_func
 getauxval:
-	movw r12, #1032
+	movw r12, #1034
 	b ws1_resolver
 	.align 2
 
@@ -8272,7 +8288,7 @@ getauxval:
 	.type getdelim, %function
 	.thumb_func
 getdelim:
-	movw r12, #1033
+	movw r12, #1035
 	b ws1_resolver
 	.align 2
 
@@ -8280,7 +8296,7 @@ getdelim:
 	.type getdents, %function
 	.thumb_func
 getdents:
-	movw r12, #1034
+	movw r12, #1036
 	b ws1_resolver
 	.align 2
 
@@ -8288,7 +8304,7 @@ getdents:
 	.type getdomainname, %function
 	.thumb_func
 getdomainname:
-	movw r12, #1035
+	movw r12, #1037
 	b ws1_resolver
 	.align 2
 
@@ -8296,7 +8312,7 @@ getdomainname:
 	.type getentropy, %function
 	.thumb_func
 getentropy:
-	movw r12, #1036
+	movw r12, #1038
 	b ws1_resolver
 	.align 2
 
@@ -8304,7 +8320,7 @@ getentropy:
 	.type gethostbyaddr, %function
 	.thumb_func
 gethostbyaddr:
-	movw r12, #1037
+	movw r12, #1039
 	b ws1_resolver
 	.align 2
 
@@ -8312,7 +8328,7 @@ gethostbyaddr:
 	.type gethostbyaddr_r, %function
 	.thumb_func
 gethostbyaddr_r:
-	movw r12, #1038
+	movw r12, #1040
 	b ws1_resolver
 	.align 2
 
@@ -8320,7 +8336,7 @@ gethostbyaddr_r:
 	.type gethostbyname, %function
 	.thumb_func
 gethostbyname:
-	movw r12, #1039
+	movw r12, #1041
 	b ws1_resolver
 	.align 2
 
@@ -8328,7 +8344,7 @@ gethostbyname:
 	.type gethostbyname2, %function
 	.thumb_func
 gethostbyname2:
-	movw r12, #1040
+	movw r12, #1042
 	b ws1_resolver
 	.align 2
 
@@ -8336,7 +8352,7 @@ gethostbyname2:
 	.type gethostbyname2_r, %function
 	.thumb_func
 gethostbyname2_r:
-	movw r12, #1041
+	movw r12, #1043
 	b ws1_resolver
 	.align 2
 
@@ -8344,7 +8360,7 @@ gethostbyname2_r:
 	.type gethostbyname_r, %function
 	.thumb_func
 gethostbyname_r:
-	movw r12, #1042
+	movw r12, #1044
 	b ws1_resolver
 	.align 2
 
@@ -8352,7 +8368,7 @@ gethostbyname_r:
 	.type gethostent, %function
 	.thumb_func
 gethostent:
-	movw r12, #1043
+	movw r12, #1045
 	b ws1_resolver
 	.align 2
 
@@ -8360,7 +8376,7 @@ gethostent:
 	.type getifaddrs, %function
 	.thumb_func
 getifaddrs:
-	movw r12, #1044
+	movw r12, #1046
 	b ws1_resolver
 	.align 2
 
@@ -8368,7 +8384,7 @@ getifaddrs:
 	.type getline, %function
 	.thumb_func
 getline:
-	movw r12, #1045
+	movw r12, #1047
 	b ws1_resolver
 	.align 2
 
@@ -8376,7 +8392,7 @@ getline:
 	.type getloadavg, %function
 	.thumb_func
 getloadavg:
-	movw r12, #1046
+	movw r12, #1048
 	b ws1_resolver
 	.align 2
 
@@ -8384,7 +8400,7 @@ getloadavg:
 	.type getlogin_r, %function
 	.thumb_func
 getlogin_r:
-	movw r12, #1047
+	movw r12, #1049
 	b ws1_resolver
 	.align 2
 
@@ -8392,7 +8408,7 @@ getlogin_r:
 	.type getmntent_r, %function
 	.thumb_func
 getmntent_r:
-	movw r12, #1048
+	movw r12, #1050
 	b ws1_resolver
 	.align 2
 
@@ -8400,7 +8416,7 @@ getmntent_r:
 	.type getnameinfo, %function
 	.thumb_func
 getnameinfo:
-	movw r12, #1049
+	movw r12, #1051
 	b ws1_resolver
 	.align 2
 
@@ -8408,7 +8424,7 @@ getnameinfo:
 	.type getnetent, %function
 	.thumb_func
 getnetent:
-	movw r12, #1050
+	movw r12, #1052
 	b ws1_resolver
 	.align 2
 
@@ -8416,7 +8432,7 @@ getnetent:
 	.type getpeername, %function
 	.thumb_func
 getpeername:
-	movw r12, #1051
+	movw r12, #1053
 	b ws1_resolver
 	.align 2
 
@@ -8424,7 +8440,7 @@ getpeername:
 	.type getprogname, %function
 	.thumb_func
 getprogname:
-	movw r12, #1052
+	movw r12, #1054
 	b ws1_resolver
 	.align 2
 
@@ -8432,7 +8448,7 @@ getprogname:
 	.type getprotoent, %function
 	.thumb_func
 getprotoent:
-	movw r12, #1053
+	movw r12, #1055
 	b ws1_resolver
 	.align 2
 
@@ -8440,7 +8456,7 @@ getprotoent:
 	.type getpt, %function
 	.thumb_func
 getpt:
-	movw r12, #1054
+	movw r12, #1056
 	b ws1_resolver
 	.align 2
 
@@ -8448,7 +8464,7 @@ getpt:
 	.type getrandom, %function
 	.thumb_func
 getrandom:
-	movw r12, #1055
+	movw r12, #1057
 	b ws1_resolver
 	.align 2
 
@@ -8456,7 +8472,7 @@ getrandom:
 	.type getservbyname, %function
 	.thumb_func
 getservbyname:
-	movw r12, #1056
+	movw r12, #1058
 	b ws1_resolver
 	.align 2
 
@@ -8464,7 +8480,7 @@ getservbyname:
 	.type getservbyport, %function
 	.thumb_func
 getservbyport:
-	movw r12, #1057
+	movw r12, #1059
 	b ws1_resolver
 	.align 2
 
@@ -8472,7 +8488,7 @@ getservbyport:
 	.type getservent, %function
 	.thumb_func
 getservent:
-	movw r12, #1058
+	movw r12, #1060
 	b ws1_resolver
 	.align 2
 
@@ -8480,7 +8496,7 @@ getservent:
 	.type getsockname, %function
 	.thumb_func
 getsockname:
-	movw r12, #1059
+	movw r12, #1061
 	b ws1_resolver
 	.align 2
 
@@ -8488,7 +8504,7 @@ getsockname:
 	.type getsockopt, %function
 	.thumb_func
 getsockopt:
-	movw r12, #1060
+	movw r12, #1062
 	b ws1_resolver
 	.align 2
 
@@ -8496,7 +8512,7 @@ getsockopt:
 	.type getutent, %function
 	.thumb_func
 getutent:
-	movw r12, #1061
+	movw r12, #1063
 	b ws1_resolver
 	.align 2
 
@@ -8504,7 +8520,7 @@ getutent:
 	.type getxattr, %function
 	.thumb_func
 getxattr:
-	movw r12, #1062
+	movw r12, #1064
 	b ws1_resolver
 	.align 2
 
@@ -8512,7 +8528,7 @@ getxattr:
 	.type glob, %function
 	.thumb_func
 glob:
-	movw r12, #1063
+	movw r12, #1065
 	b ws1_resolver
 	.align 2
 
@@ -8520,7 +8536,7 @@ glob:
 	.type globfree, %function
 	.thumb_func
 globfree:
-	movw r12, #1064
+	movw r12, #1066
 	b ws1_resolver
 	.align 2
 
@@ -8528,7 +8544,7 @@ globfree:
 	.type gmtime64, %function
 	.thumb_func
 gmtime64:
-	movw r12, #1065
+	movw r12, #1067
 	b ws1_resolver
 	.align 2
 
@@ -8536,7 +8552,7 @@ gmtime64:
 	.type gmtime64_r, %function
 	.thumb_func
 gmtime64_r:
-	movw r12, #1066
+	movw r12, #1068
 	b ws1_resolver
 	.align 2
 
@@ -8544,7 +8560,7 @@ gmtime64_r:
 	.type grantpt, %function
 	.thumb_func
 grantpt:
-	movw r12, #1067
+	movw r12, #1069
 	b ws1_resolver
 	.align 2
 
@@ -8552,7 +8568,7 @@ grantpt:
 	.type hasmntopt, %function
 	.thumb_func
 hasmntopt:
-	movw r12, #1068
+	movw r12, #1070
 	b ws1_resolver
 	.align 2
 
@@ -8560,7 +8576,7 @@ hasmntopt:
 	.type hcreate_r, %function
 	.thumb_func
 hcreate_r:
-	movw r12, #1069
+	movw r12, #1071
 	b ws1_resolver
 	.align 2
 
@@ -8568,7 +8584,7 @@ hcreate_r:
 	.type hdestroy_r, %function
 	.thumb_func
 hdestroy_r:
-	movw r12, #1070
+	movw r12, #1072
 	b ws1_resolver
 	.align 2
 
@@ -8576,7 +8592,7 @@ hdestroy_r:
 	.type herror, %function
 	.thumb_func
 herror:
-	movw r12, #1071
+	movw r12, #1073
 	b ws1_resolver
 	.align 2
 
@@ -8584,7 +8600,7 @@ herror:
 	.type hsearch_r, %function
 	.thumb_func
 hsearch_r:
-	movw r12, #1072
+	movw r12, #1074
 	b ws1_resolver
 	.align 2
 
@@ -8592,7 +8608,7 @@ hsearch_r:
 	.type hstrerror, %function
 	.thumb_func
 hstrerror:
-	movw r12, #1073
+	movw r12, #1075
 	b ws1_resolver
 	.align 2
 
@@ -8600,7 +8616,7 @@ hstrerror:
 	.type iconv, %function
 	.thumb_func
 iconv:
-	movw r12, #1074
+	movw r12, #1076
 	b ws1_resolver
 	.align 2
 
@@ -8608,7 +8624,7 @@ iconv:
 	.type iconv_close, %function
 	.thumb_func
 iconv_close:
-	movw r12, #1075
+	movw r12, #1077
 	b ws1_resolver
 	.align 2
 
@@ -8616,7 +8632,7 @@ iconv_close:
 	.type iconv_open, %function
 	.thumb_func
 iconv_open:
-	movw r12, #1076
+	movw r12, #1078
 	b ws1_resolver
 	.align 2
 
@@ -8624,7 +8640,7 @@ iconv_open:
 	.type if_freenameindex, %function
 	.thumb_func
 if_freenameindex:
-	movw r12, #1077
+	movw r12, #1079
 	b ws1_resolver
 	.align 2
 
@@ -8632,7 +8648,7 @@ if_freenameindex:
 	.type if_indextoname, %function
 	.thumb_func
 if_indextoname:
-	movw r12, #1078
+	movw r12, #1080
 	b ws1_resolver
 	.align 2
 
@@ -8640,7 +8656,7 @@ if_indextoname:
 	.type if_nameindex, %function
 	.thumb_func
 if_nameindex:
-	movw r12, #1079
+	movw r12, #1081
 	b ws1_resolver
 	.align 2
 
@@ -8648,7 +8664,7 @@ if_nameindex:
 	.type if_nametoindex, %function
 	.thumb_func
 if_nametoindex:
-	movw r12, #1080
+	movw r12, #1082
 	b ws1_resolver
 	.align 2
 
@@ -8656,7 +8672,7 @@ if_nametoindex:
 	.type imaxabs, %function
 	.thumb_func
 imaxabs:
-	movw r12, #1081
+	movw r12, #1083
 	b ws1_resolver
 	.align 2
 
@@ -8664,7 +8680,7 @@ imaxabs:
 	.type imaxdiv, %function
 	.thumb_func
 imaxdiv:
-	movw r12, #1082
+	movw r12, #1084
 	b ws1_resolver
 	.align 2
 
@@ -8672,7 +8688,7 @@ imaxdiv:
 	.type in6addr_any, %function
 	.thumb_func
 in6addr_any:
-	movw r12, #1083
+	movw r12, #1085
 	b ws1_resolver
 	.align 2
 
@@ -8680,7 +8696,7 @@ in6addr_any:
 	.type in6addr_loopback, %function
 	.thumb_func
 in6addr_loopback:
-	movw r12, #1084
+	movw r12, #1086
 	b ws1_resolver
 	.align 2
 
@@ -8688,7 +8704,7 @@ in6addr_loopback:
 	.type inet_lnaof, %function
 	.thumb_func
 inet_lnaof:
-	movw r12, #1085
+	movw r12, #1087
 	b ws1_resolver
 	.align 2
 
@@ -8696,7 +8712,7 @@ inet_lnaof:
 	.type inet_makeaddr, %function
 	.thumb_func
 inet_makeaddr:
-	movw r12, #1086
+	movw r12, #1088
 	b ws1_resolver
 	.align 2
 
@@ -8704,7 +8720,7 @@ inet_makeaddr:
 	.type inet_netof, %function
 	.thumb_func
 inet_netof:
-	movw r12, #1087
+	movw r12, #1089
 	b ws1_resolver
 	.align 2
 
@@ -8712,7 +8728,7 @@ inet_netof:
 	.type inet_network, %function
 	.thumb_func
 inet_network:
-	movw r12, #1088
+	movw r12, #1090
 	b ws1_resolver
 	.align 2
 
@@ -8720,7 +8736,7 @@ inet_network:
 	.type inet_nsap_addr, %function
 	.thumb_func
 inet_nsap_addr:
-	movw r12, #1089
+	movw r12, #1091
 	b ws1_resolver
 	.align 2
 
@@ -8728,7 +8744,7 @@ inet_nsap_addr:
 	.type inet_nsap_ntoa, %function
 	.thumb_func
 inet_nsap_ntoa:
-	movw r12, #1090
+	movw r12, #1092
 	b ws1_resolver
 	.align 2
 
@@ -8736,7 +8752,7 @@ inet_nsap_ntoa:
 	.type inet_ntoa, %function
 	.thumb_func
 inet_ntoa:
-	movw r12, #1091
+	movw r12, #1093
 	b ws1_resolver
 	.align 2
 
@@ -8744,7 +8760,7 @@ inet_ntoa:
 	.type init_module, %function
 	.thumb_func
 init_module:
-	movw r12, #1092
+	movw r12, #1094
 	b ws1_resolver
 	.align 2
 
@@ -8752,7 +8768,7 @@ init_module:
 	.type initstate, %function
 	.thumb_func
 initstate:
-	movw r12, #1093
+	movw r12, #1095
 	b ws1_resolver
 	.align 2
 
@@ -8760,7 +8776,7 @@ initstate:
 	.type inotify_init1, %function
 	.thumb_func
 inotify_init1:
-	movw r12, #1094
+	movw r12, #1096
 	b ws1_resolver
 	.align 2
 
@@ -8768,7 +8784,7 @@ inotify_init1:
 	.type insque, %function
 	.thumb_func
 insque:
-	movw r12, #1095
+	movw r12, #1097
 	b ws1_resolver
 	.align 2
 
@@ -8776,7 +8792,7 @@ insque:
 	.type isalnum_l, %function
 	.thumb_func
 isalnum_l:
-	movw r12, #1096
+	movw r12, #1098
 	b ws1_resolver
 	.align 2
 
@@ -8784,7 +8800,7 @@ isalnum_l:
 	.type isalpha_l, %function
 	.thumb_func
 isalpha_l:
-	movw r12, #1097
+	movw r12, #1099
 	b ws1_resolver
 	.align 2
 
@@ -8792,7 +8808,7 @@ isalpha_l:
 	.type isblank_l, %function
 	.thumb_func
 isblank_l:
-	movw r12, #1098
+	movw r12, #1100
 	b ws1_resolver
 	.align 2
 
@@ -8800,7 +8816,7 @@ isblank_l:
 	.type iscntrl_l, %function
 	.thumb_func
 iscntrl_l:
-	movw r12, #1099
+	movw r12, #1101
 	b ws1_resolver
 	.align 2
 
@@ -8808,7 +8824,7 @@ iscntrl_l:
 	.type isdigit_l, %function
 	.thumb_func
 isdigit_l:
-	movw r12, #1100
+	movw r12, #1102
 	b ws1_resolver
 	.align 2
 
@@ -8816,7 +8832,7 @@ isdigit_l:
 	.type isfinite, %function
 	.thumb_func
 isfinite:
-	movw r12, #1101
+	movw r12, #1103
 	b ws1_resolver
 	.align 2
 
@@ -8824,7 +8840,7 @@ isfinite:
 	.type isfinitef, %function
 	.thumb_func
 isfinitef:
-	movw r12, #1102
+	movw r12, #1104
 	b ws1_resolver
 	.align 2
 
@@ -8832,7 +8848,7 @@ isfinitef:
 	.type isfinitel, %function
 	.thumb_func
 isfinitel:
-	movw r12, #1103
+	movw r12, #1105
 	b ws1_resolver
 	.align 2
 
@@ -8840,7 +8856,7 @@ isfinitel:
 	.type isgraph_l, %function
 	.thumb_func
 isgraph_l:
-	movw r12, #1104
+	movw r12, #1106
 	b ws1_resolver
 	.align 2
 
@@ -8848,7 +8864,7 @@ isgraph_l:
 	.type isinf, %function
 	.thumb_func
 isinf:
-	movw r12, #1105
+	movw r12, #1107
 	b ws1_resolver
 	.align 2
 
@@ -8856,7 +8872,7 @@ isinf:
 	.type isinff, %function
 	.thumb_func
 isinff:
-	movw r12, #1106
+	movw r12, #1108
 	b ws1_resolver
 	.align 2
 
@@ -8864,7 +8880,7 @@ isinff:
 	.type isinfl, %function
 	.thumb_func
 isinfl:
-	movw r12, #1107
+	movw r12, #1109
 	b ws1_resolver
 	.align 2
 
@@ -8872,7 +8888,7 @@ isinfl:
 	.type islower_l, %function
 	.thumb_func
 islower_l:
-	movw r12, #1108
+	movw r12, #1110
 	b ws1_resolver
 	.align 2
 
@@ -8880,7 +8896,7 @@ islower_l:
 	.type isnan, %function
 	.thumb_func
 isnan:
-	movw r12, #1109
+	movw r12, #1111
 	b ws1_resolver
 	.align 2
 
@@ -8888,7 +8904,7 @@ isnan:
 	.type isnanf, %function
 	.thumb_func
 isnanf:
-	movw r12, #1110
+	movw r12, #1112
 	b ws1_resolver
 	.align 2
 
@@ -8896,7 +8912,7 @@ isnanf:
 	.type isnanl, %function
 	.thumb_func
 isnanl:
-	movw r12, #1111
+	movw r12, #1113
 	b ws1_resolver
 	.align 2
 
@@ -8904,7 +8920,7 @@ isnanl:
 	.type isnormal, %function
 	.thumb_func
 isnormal:
-	movw r12, #1112
+	movw r12, #1114
 	b ws1_resolver
 	.align 2
 
@@ -8912,7 +8928,7 @@ isnormal:
 	.type isnormalf, %function
 	.thumb_func
 isnormalf:
-	movw r12, #1113
+	movw r12, #1115
 	b ws1_resolver
 	.align 2
 
@@ -8920,7 +8936,7 @@ isnormalf:
 	.type isnormall, %function
 	.thumb_func
 isnormall:
-	movw r12, #1114
+	movw r12, #1116
 	b ws1_resolver
 	.align 2
 
@@ -8928,7 +8944,7 @@ isnormall:
 	.type isprint_l, %function
 	.thumb_func
 isprint_l:
-	movw r12, #1115
+	movw r12, #1117
 	b ws1_resolver
 	.align 2
 
@@ -8936,7 +8952,7 @@ isprint_l:
 	.type ispunct_l, %function
 	.thumb_func
 ispunct_l:
-	movw r12, #1116
+	movw r12, #1118
 	b ws1_resolver
 	.align 2
 
@@ -8944,7 +8960,7 @@ ispunct_l:
 	.type issetugid, %function
 	.thumb_func
 issetugid:
-	movw r12, #1117
+	movw r12, #1119
 	b ws1_resolver
 	.align 2
 
@@ -8952,7 +8968,7 @@ issetugid:
 	.type isspace_l, %function
 	.thumb_func
 isspace_l:
-	movw r12, #1118
+	movw r12, #1120
 	b ws1_resolver
 	.align 2
 
@@ -8960,7 +8976,7 @@ isspace_l:
 	.type isupper_l, %function
 	.thumb_func
 isupper_l:
-	movw r12, #1119
+	movw r12, #1121
 	b ws1_resolver
 	.align 2
 
@@ -8968,7 +8984,7 @@ isupper_l:
 	.type iswalnum_l, %function
 	.thumb_func
 iswalnum_l:
-	movw r12, #1120
+	movw r12, #1122
 	b ws1_resolver
 	.align 2
 
@@ -8976,7 +8992,7 @@ iswalnum_l:
 	.type iswalpha_l, %function
 	.thumb_func
 iswalpha_l:
-	movw r12, #1121
+	movw r12, #1123
 	b ws1_resolver
 	.align 2
 
@@ -8984,7 +9000,7 @@ iswalpha_l:
 	.type iswblank_l, %function
 	.thumb_func
 iswblank_l:
-	movw r12, #1122
+	movw r12, #1124
 	b ws1_resolver
 	.align 2
 
@@ -8992,7 +9008,7 @@ iswblank_l:
 	.type iswcntrl_l, %function
 	.thumb_func
 iswcntrl_l:
-	movw r12, #1123
+	movw r12, #1125
 	b ws1_resolver
 	.align 2
 
@@ -9000,7 +9016,7 @@ iswcntrl_l:
 	.type iswctype_l, %function
 	.thumb_func
 iswctype_l:
-	movw r12, #1124
+	movw r12, #1126
 	b ws1_resolver
 	.align 2
 
@@ -9008,7 +9024,7 @@ iswctype_l:
 	.type iswdigit_l, %function
 	.thumb_func
 iswdigit_l:
-	movw r12, #1125
+	movw r12, #1127
 	b ws1_resolver
 	.align 2
 
@@ -9016,7 +9032,7 @@ iswdigit_l:
 	.type iswgraph_l, %function
 	.thumb_func
 iswgraph_l:
-	movw r12, #1126
+	movw r12, #1128
 	b ws1_resolver
 	.align 2
 
@@ -9024,7 +9040,7 @@ iswgraph_l:
 	.type iswlower_l, %function
 	.thumb_func
 iswlower_l:
-	movw r12, #1127
+	movw r12, #1129
 	b ws1_resolver
 	.align 2
 
@@ -9032,7 +9048,7 @@ iswlower_l:
 	.type iswprint_l, %function
 	.thumb_func
 iswprint_l:
-	movw r12, #1128
+	movw r12, #1130
 	b ws1_resolver
 	.align 2
 
@@ -9040,7 +9056,7 @@ iswprint_l:
 	.type iswpunct_l, %function
 	.thumb_func
 iswpunct_l:
-	movw r12, #1129
+	movw r12, #1131
 	b ws1_resolver
 	.align 2
 
@@ -9048,7 +9064,7 @@ iswpunct_l:
 	.type iswspace_l, %function
 	.thumb_func
 iswspace_l:
-	movw r12, #1130
+	movw r12, #1132
 	b ws1_resolver
 	.align 2
 
@@ -9056,7 +9072,7 @@ iswspace_l:
 	.type iswupper_l, %function
 	.thumb_func
 iswupper_l:
-	movw r12, #1131
+	movw r12, #1133
 	b ws1_resolver
 	.align 2
 
@@ -9064,7 +9080,7 @@ iswupper_l:
 	.type iswxdigit_l, %function
 	.thumb_func
 iswxdigit_l:
-	movw r12, #1132
+	movw r12, #1134
 	b ws1_resolver
 	.align 2
 
@@ -9072,7 +9088,7 @@ iswxdigit_l:
 	.type isxdigit_l, %function
 	.thumb_func
 isxdigit_l:
-	movw r12, #1133
+	movw r12, #1135
 	b ws1_resolver
 	.align 2
 
@@ -9080,7 +9096,7 @@ isxdigit_l:
 	.type ldexp, %function
 	.thumb_func
 ldexp:
-	movw r12, #1134
+	movw r12, #1136
 	b ws1_resolver
 	.align 2
 
@@ -9088,7 +9104,7 @@ ldexp:
 	.type lgetxattr, %function
 	.thumb_func
 lgetxattr:
-	movw r12, #1135
+	movw r12, #1137
 	b ws1_resolver
 	.align 2
 
@@ -9096,7 +9112,7 @@ lgetxattr:
 	.type linkat, %function
 	.thumb_func
 linkat:
-	movw r12, #1136
+	movw r12, #1138
 	b ws1_resolver
 	.align 2
 
@@ -9104,7 +9120,7 @@ linkat:
 	.type listen, %function
 	.thumb_func
 listen:
-	movw r12, #1137
+	movw r12, #1139
 	b ws1_resolver
 	.align 2
 
@@ -9112,7 +9128,7 @@ listen:
 	.type listxattr, %function
 	.thumb_func
 listxattr:
-	movw r12, #1138
+	movw r12, #1140
 	b ws1_resolver
 	.align 2
 
@@ -9120,7 +9136,7 @@ listxattr:
 	.type llistxattr, %function
 	.thumb_func
 llistxattr:
-	movw r12, #1139
+	movw r12, #1141
 	b ws1_resolver
 	.align 2
 
@@ -9128,7 +9144,7 @@ llistxattr:
 	.type localtime64, %function
 	.thumb_func
 localtime64:
-	movw r12, #1140
+	movw r12, #1142
 	b ws1_resolver
 	.align 2
 
@@ -9136,7 +9152,7 @@ localtime64:
 	.type localtime64_r, %function
 	.thumb_func
 localtime64_r:
-	movw r12, #1141
+	movw r12, #1143
 	b ws1_resolver
 	.align 2
 
@@ -9144,7 +9160,7 @@ localtime64_r:
 	.type login_tty, %function
 	.thumb_func
 login_tty:
-	movw r12, #1142
+	movw r12, #1144
 	b ws1_resolver
 	.align 2
 
@@ -9152,7 +9168,7 @@ login_tty:
 	.type lremovexattr, %function
 	.thumb_func
 lremovexattr:
-	movw r12, #1143
+	movw r12, #1145
 	b ws1_resolver
 	.align 2
 
@@ -9160,7 +9176,7 @@ lremovexattr:
 	.type lsetxattr, %function
 	.thumb_func
 lsetxattr:
-	movw r12, #1144
+	movw r12, #1146
 	b ws1_resolver
 	.align 2
 
@@ -9168,7 +9184,7 @@ lsetxattr:
 	.type lutimes, %function
 	.thumb_func
 lutimes:
-	movw r12, #1145
+	movw r12, #1147
 	b ws1_resolver
 	.align 2
 
@@ -9176,7 +9192,7 @@ lutimes:
 	.type madvise, %function
 	.thumb_func
 madvise:
-	movw r12, #1146
+	movw r12, #1148
 	b ws1_resolver
 	.align 2
 
@@ -9184,7 +9200,7 @@ madvise:
 	.type malloc_backtrace, %function
 	.thumb_func
 malloc_backtrace:
-	movw r12, #1147
+	movw r12, #1149
 	b ws1_resolver
 	.align 2
 
@@ -9192,7 +9208,7 @@ malloc_backtrace:
 	.type malloc_disable, %function
 	.thumb_func
 malloc_disable:
-	movw r12, #1148
+	movw r12, #1150
 	b ws1_resolver
 	.align 2
 
@@ -9200,7 +9216,7 @@ malloc_disable:
 	.type malloc_enable, %function
 	.thumb_func
 malloc_enable:
-	movw r12, #1149
+	movw r12, #1151
 	b ws1_resolver
 	.align 2
 
@@ -9208,7 +9224,7 @@ malloc_enable:
 	.type malloc_info, %function
 	.thumb_func
 malloc_info:
-	movw r12, #1150
+	movw r12, #1152
 	b ws1_resolver
 	.align 2
 
@@ -9216,7 +9232,7 @@ malloc_info:
 	.type malloc_iterate, %function
 	.thumb_func
 malloc_iterate:
-	movw r12, #1151
+	movw r12, #1153
 	b ws1_resolver
 	.align 2
 
@@ -9224,7 +9240,7 @@ malloc_iterate:
 	.type malloc_usable_size, %function
 	.thumb_func
 malloc_usable_size:
-	movw r12, #1152
+	movw r12, #1154
 	b ws1_resolver
 	.align 2
 
@@ -9232,7 +9248,7 @@ malloc_usable_size:
 	.type mbsnrtowcs, %function
 	.thumb_func
 mbsnrtowcs:
-	movw r12, #1153
+	movw r12, #1155
 	b ws1_resolver
 	.align 2
 
@@ -9240,7 +9256,7 @@ mbsnrtowcs:
 	.type memfd_create, %function
 	.thumb_func
 memfd_create:
-	movw r12, #1154
+	movw r12, #1156
 	b ws1_resolver
 	.align 2
 
@@ -9248,7 +9264,7 @@ memfd_create:
 	.type memswap, %function
 	.thumb_func
 memswap:
-	movw r12, #1155
+	movw r12, #1157
 	b ws1_resolver
 	.align 2
 
@@ -9256,7 +9272,7 @@ memswap:
 	.type mincore, %function
 	.thumb_func
 mincore:
-	movw r12, #1156
+	movw r12, #1158
 	b ws1_resolver
 	.align 2
 
@@ -9264,7 +9280,7 @@ mincore:
 	.type mkfifoat, %function
 	.thumb_func
 mkfifoat:
-	movw r12, #1157
+	movw r12, #1159
 	b ws1_resolver
 	.align 2
 
@@ -9272,7 +9288,7 @@ mkfifoat:
 	.type mknodat, %function
 	.thumb_func
 mknodat:
-	movw r12, #1158
+	movw r12, #1160
 	b ws1_resolver
 	.align 2
 
@@ -9280,7 +9296,7 @@ mknodat:
 	.type mkostemp, %function
 	.thumb_func
 mkostemp:
-	movw r12, #1159
+	movw r12, #1161
 	b ws1_resolver
 	.align 2
 
@@ -9288,7 +9304,7 @@ mkostemp:
 	.type mkostemp64, %function
 	.thumb_func
 mkostemp64:
-	movw r12, #1160
+	movw r12, #1162
 	b ws1_resolver
 	.align 2
 
@@ -9296,7 +9312,7 @@ mkostemp64:
 	.type mkostemps, %function
 	.thumb_func
 mkostemps:
-	movw r12, #1161
+	movw r12, #1163
 	b ws1_resolver
 	.align 2
 
@@ -9304,7 +9320,7 @@ mkostemps:
 	.type mkostemps64, %function
 	.thumb_func
 mkostemps64:
-	movw r12, #1162
+	movw r12, #1164
 	b ws1_resolver
 	.align 2
 
@@ -9312,7 +9328,7 @@ mkostemps64:
 	.type mkstemp64, %function
 	.thumb_func
 mkstemp64:
-	movw r12, #1163
+	movw r12, #1165
 	b ws1_resolver
 	.align 2
 
@@ -9320,7 +9336,7 @@ mkstemp64:
 	.type mkstemps, %function
 	.thumb_func
 mkstemps:
-	movw r12, #1164
+	movw r12, #1166
 	b ws1_resolver
 	.align 2
 
@@ -9328,7 +9344,7 @@ mkstemps:
 	.type mkstemps64, %function
 	.thumb_func
 mkstemps64:
-	movw r12, #1165
+	movw r12, #1167
 	b ws1_resolver
 	.align 2
 
@@ -9336,7 +9352,7 @@ mkstemps64:
 	.type mktime64, %function
 	.thumb_func
 mktime64:
-	movw r12, #1166
+	movw r12, #1168
 	b ws1_resolver
 	.align 2
 
@@ -9344,7 +9360,7 @@ mktime64:
 	.type mlock2, %function
 	.thumb_func
 mlock2:
-	movw r12, #1167
+	movw r12, #1169
 	b ws1_resolver
 	.align 2
 
@@ -9352,7 +9368,7 @@ mlock2:
 	.type mremap, %function
 	.thumb_func
 mremap:
-	movw r12, #1168
+	movw r12, #1170
 	b ws1_resolver
 	.align 2
 
@@ -9360,7 +9376,7 @@ mremap:
 	.type msgctl, %function
 	.thumb_func
 msgctl:
-	movw r12, #1169
+	movw r12, #1171
 	b ws1_resolver
 	.align 2
 
@@ -9368,7 +9384,7 @@ msgctl:
 	.type msgget, %function
 	.thumb_func
 msgget:
-	movw r12, #1170
+	movw r12, #1172
 	b ws1_resolver
 	.align 2
 
@@ -9376,7 +9392,7 @@ msgget:
 	.type msgrcv, %function
 	.thumb_func
 msgrcv:
-	movw r12, #1171
+	movw r12, #1173
 	b ws1_resolver
 	.align 2
 
@@ -9384,7 +9400,7 @@ msgrcv:
 	.type msgsnd, %function
 	.thumb_func
 msgsnd:
-	movw r12, #1172
+	movw r12, #1174
 	b ws1_resolver
 	.align 2
 
@@ -9392,7 +9408,7 @@ msgsnd:
 	.type mtx_destroy, %function
 	.thumb_func
 mtx_destroy:
-	movw r12, #1173
+	movw r12, #1175
 	b ws1_resolver
 	.align 2
 
@@ -9400,7 +9416,7 @@ mtx_destroy:
 	.type mtx_init, %function
 	.thumb_func
 mtx_init:
-	movw r12, #1174
+	movw r12, #1176
 	b ws1_resolver
 	.align 2
 
@@ -9408,7 +9424,7 @@ mtx_init:
 	.type mtx_lock, %function
 	.thumb_func
 mtx_lock:
-	movw r12, #1175
+	movw r12, #1177
 	b ws1_resolver
 	.align 2
 
@@ -9416,7 +9432,7 @@ mtx_lock:
 	.type mtx_timedlock, %function
 	.thumb_func
 mtx_timedlock:
-	movw r12, #1176
+	movw r12, #1178
 	b ws1_resolver
 	.align 2
 
@@ -9424,7 +9440,7 @@ mtx_timedlock:
 	.type mtx_trylock, %function
 	.thumb_func
 mtx_trylock:
-	movw r12, #1177
+	movw r12, #1179
 	b ws1_resolver
 	.align 2
 
@@ -9432,7 +9448,7 @@ mtx_trylock:
 	.type mtx_unlock, %function
 	.thumb_func
 mtx_unlock:
-	movw r12, #1178
+	movw r12, #1180
 	b ws1_resolver
 	.align 2
 
@@ -9440,7 +9456,7 @@ mtx_unlock:
 	.type newlocale, %function
 	.thumb_func
 newlocale:
-	movw r12, #1179
+	movw r12, #1181
 	b ws1_resolver
 	.align 2
 
@@ -9448,7 +9464,7 @@ newlocale:
 	.type nl_langinfo, %function
 	.thumb_func
 nl_langinfo:
-	movw r12, #1180
+	movw r12, #1182
 	b ws1_resolver
 	.align 2
 
@@ -9456,7 +9472,7 @@ nl_langinfo:
 	.type nl_langinfo_l, %function
 	.thumb_func
 nl_langinfo_l:
-	movw r12, #1181
+	movw r12, #1183
 	b ws1_resolver
 	.align 2
 
@@ -9464,7 +9480,7 @@ nl_langinfo_l:
 	.type nsdispatch, %function
 	.thumb_func
 nsdispatch:
-	movw r12, #1182
+	movw r12, #1184
 	b ws1_resolver
 	.align 2
 
@@ -9472,7 +9488,7 @@ nsdispatch:
 	.type open_memstream, %function
 	.thumb_func
 open_memstream:
-	movw r12, #1183
+	movw r12, #1185
 	b ws1_resolver
 	.align 2
 
@@ -9480,7 +9496,7 @@ open_memstream:
 	.type open_wmemstream, %function
 	.thumb_func
 open_wmemstream:
-	movw r12, #1184
+	movw r12, #1186
 	b ws1_resolver
 	.align 2
 
@@ -9488,7 +9504,7 @@ open_wmemstream:
 	.type openat64, %function
 	.thumb_func
 openat64:
-	movw r12, #1185
+	movw r12, #1187
 	b ws1_resolver
 	.align 2
 
@@ -9496,7 +9512,7 @@ openat64:
 	.type openpty, %function
 	.thumb_func
 openpty:
-	movw r12, #1186
+	movw r12, #1188
 	b ws1_resolver
 	.align 2
 
@@ -9504,7 +9520,7 @@ openpty:
 	.type pclose, %function
 	.thumb_func
 pclose:
-	movw r12, #1187
+	movw r12, #1189
 	b ws1_resolver
 	.align 2
 
@@ -9512,7 +9528,7 @@ pclose:
 	.type personality, %function
 	.thumb_func
 personality:
-	movw r12, #1188
+	movw r12, #1190
 	b ws1_resolver
 	.align 2
 
@@ -9520,7 +9536,7 @@ personality:
 	.type pipe2, %function
 	.thumb_func
 pipe2:
-	movw r12, #1189
+	movw r12, #1191
 	b ws1_resolver
 	.align 2
 
@@ -9528,7 +9544,7 @@ pipe2:
 	.type popen, %function
 	.thumb_func
 popen:
-	movw r12, #1190
+	movw r12, #1192
 	b ws1_resolver
 	.align 2
 
@@ -9536,7 +9552,7 @@ popen:
 	.type posix_openpt, %function
 	.thumb_func
 posix_openpt:
-	movw r12, #1191
+	movw r12, #1193
 	b ws1_resolver
 	.align 2
 
@@ -9544,7 +9560,7 @@ posix_openpt:
 	.type posix_spawnattr_getsigdefault64, %function
 	.thumb_func
 posix_spawnattr_getsigdefault64:
-	movw r12, #1192
+	movw r12, #1194
 	b ws1_resolver
 	.align 2
 
@@ -9552,7 +9568,7 @@ posix_spawnattr_getsigdefault64:
 	.type posix_spawnattr_getsigmask64, %function
 	.thumb_func
 posix_spawnattr_getsigmask64:
-	movw r12, #1193
+	movw r12, #1195
 	b ws1_resolver
 	.align 2
 
@@ -9560,7 +9576,7 @@ posix_spawnattr_getsigmask64:
 	.type posix_spawnattr_setsigdefault64, %function
 	.thumb_func
 posix_spawnattr_setsigdefault64:
-	movw r12, #1194
+	movw r12, #1196
 	b ws1_resolver
 	.align 2
 
@@ -9568,7 +9584,7 @@ posix_spawnattr_setsigdefault64:
 	.type posix_spawnattr_setsigmask64, %function
 	.thumb_func
 posix_spawnattr_setsigmask64:
-	movw r12, #1195
+	movw r12, #1197
 	b ws1_resolver
 	.align 2
 
@@ -9576,7 +9592,7 @@ posix_spawnattr_setsigmask64:
 	.type ppoll, %function
 	.thumb_func
 ppoll:
-	movw r12, #1196
+	movw r12, #1198
 	b ws1_resolver
 	.align 2
 
@@ -9584,7 +9600,7 @@ ppoll:
 	.type ppoll64, %function
 	.thumb_func
 ppoll64:
-	movw r12, #1197
+	movw r12, #1199
 	b ws1_resolver
 	.align 2
 
@@ -9592,7 +9608,7 @@ ppoll64:
 	.type preadv, %function
 	.thumb_func
 preadv:
-	movw r12, #1198
+	movw r12, #1200
 	b ws1_resolver
 	.align 2
 
@@ -9600,7 +9616,7 @@ preadv:
 	.type preadv64, %function
 	.thumb_func
 preadv64:
-	movw r12, #1199
+	movw r12, #1201
 	b ws1_resolver
 	.align 2
 
@@ -9608,7 +9624,7 @@ preadv64:
 	.type prlimit, %function
 	.thumb_func
 prlimit:
-	movw r12, #1200
+	movw r12, #1202
 	b ws1_resolver
 	.align 2
 
@@ -9616,7 +9632,7 @@ prlimit:
 	.type prlimit64, %function
 	.thumb_func
 prlimit64:
-	movw r12, #1201
+	movw r12, #1203
 	b ws1_resolver
 	.align 2
 
@@ -9624,7 +9640,7 @@ prlimit64:
 	.type process_vm_readv, %function
 	.thumb_func
 process_vm_readv:
-	movw r12, #1202
+	movw r12, #1204
 	b ws1_resolver
 	.align 2
 
@@ -9632,7 +9648,7 @@ process_vm_readv:
 	.type process_vm_writev, %function
 	.thumb_func
 process_vm_writev:
-	movw r12, #1203
+	movw r12, #1205
 	b ws1_resolver
 	.align 2
 
@@ -9640,7 +9656,7 @@ process_vm_writev:
 	.type pselect, %function
 	.thumb_func
 pselect:
-	movw r12, #1204
+	movw r12, #1206
 	b ws1_resolver
 	.align 2
 
@@ -9648,7 +9664,7 @@ pselect:
 	.type pselect64, %function
 	.thumb_func
 pselect64:
-	movw r12, #1205
+	movw r12, #1207
 	b ws1_resolver
 	.align 2
 
@@ -9656,7 +9672,7 @@ pselect64:
 	.type psiginfo, %function
 	.thumb_func
 psiginfo:
-	movw r12, #1206
+	movw r12, #1208
 	b ws1_resolver
 	.align 2
 
@@ -9664,7 +9680,7 @@ psiginfo:
 	.type psignal, %function
 	.thumb_func
 psignal:
-	movw r12, #1207
+	movw r12, #1209
 	b ws1_resolver
 	.align 2
 
@@ -9672,7 +9688,7 @@ psignal:
 	.type pthread_cond_clockwait, %function
 	.thumb_func
 pthread_cond_clockwait:
-	movw r12, #1208
+	movw r12, #1210
 	b ws1_resolver
 	.align 2
 
@@ -9680,7 +9696,7 @@ pthread_cond_clockwait:
 	.type pthread_cond_timedwait_monotonic, %function
 	.thumb_func
 pthread_cond_timedwait_monotonic:
-	movw r12, #1209
+	movw r12, #1211
 	b ws1_resolver
 	.align 2
 
@@ -9688,7 +9704,7 @@ pthread_cond_timedwait_monotonic:
 	.type pthread_cond_timedwait_monotonic_np, %function
 	.thumb_func
 pthread_cond_timedwait_monotonic_np:
-	movw r12, #1210
+	movw r12, #1212
 	b ws1_resolver
 	.align 2
 
@@ -9696,7 +9712,7 @@ pthread_cond_timedwait_monotonic_np:
 	.type pthread_cond_timedwait_relative_np, %function
 	.thumb_func
 pthread_cond_timedwait_relative_np:
-	movw r12, #1211
+	movw r12, #1213
 	b ws1_resolver
 	.align 2
 
@@ -9704,7 +9720,7 @@ pthread_cond_timedwait_relative_np:
 	.type pthread_cond_timeout_np, %function
 	.thumb_func
 pthread_cond_timeout_np:
-	movw r12, #1212
+	movw r12, #1214
 	b ws1_resolver
 	.align 2
 
@@ -9712,7 +9728,7 @@ pthread_cond_timeout_np:
 	.type pthread_getattr_np, %function
 	.thumb_func
 pthread_getattr_np:
-	movw r12, #1213
+	movw r12, #1215
 	b ws1_resolver
 	.align 2
 
@@ -9720,7 +9736,7 @@ pthread_getattr_np:
 	.type pthread_gettid_np, %function
 	.thumb_func
 pthread_gettid_np:
-	movw r12, #1214
+	movw r12, #1216
 	b ws1_resolver
 	.align 2
 
@@ -9728,7 +9744,7 @@ pthread_gettid_np:
 	.type pthread_mutex_clocklock, %function
 	.thumb_func
 pthread_mutex_clocklock:
-	movw r12, #1215
+	movw r12, #1217
 	b ws1_resolver
 	.align 2
 
@@ -9736,7 +9752,7 @@ pthread_mutex_clocklock:
 	.type pthread_mutex_lock_timeout_np, %function
 	.thumb_func
 pthread_mutex_lock_timeout_np:
-	movw r12, #1216
+	movw r12, #1218
 	b ws1_resolver
 	.align 2
 
@@ -9744,7 +9760,7 @@ pthread_mutex_lock_timeout_np:
 	.type pthread_mutex_timedlock_monotonic_np, %function
 	.thumb_func
 pthread_mutex_timedlock_monotonic_np:
-	movw r12, #1217
+	movw r12, #1219
 	b ws1_resolver
 	.align 2
 
@@ -9752,7 +9768,7 @@ pthread_mutex_timedlock_monotonic_np:
 	.type pthread_rwlock_clockrdlock, %function
 	.thumb_func
 pthread_rwlock_clockrdlock:
-	movw r12, #1218
+	movw r12, #1220
 	b ws1_resolver
 	.align 2
 
@@ -9760,7 +9776,7 @@ pthread_rwlock_clockrdlock:
 	.type pthread_rwlock_clockwrlock, %function
 	.thumb_func
 pthread_rwlock_clockwrlock:
-	movw r12, #1219
+	movw r12, #1221
 	b ws1_resolver
 	.align 2
 
@@ -9768,7 +9784,7 @@ pthread_rwlock_clockwrlock:
 	.type pthread_rwlock_timedrdlock_monotonic_np, %function
 	.thumb_func
 pthread_rwlock_timedrdlock_monotonic_np:
-	movw r12, #1220
+	movw r12, #1222
 	b ws1_resolver
 	.align 2
 
@@ -9776,7 +9792,7 @@ pthread_rwlock_timedrdlock_monotonic_np:
 	.type pthread_rwlock_timedwrlock_monotonic_np, %function
 	.thumb_func
 pthread_rwlock_timedwrlock_monotonic_np:
-	movw r12, #1221
+	movw r12, #1223
 	b ws1_resolver
 	.align 2
 
@@ -9784,7 +9800,7 @@ pthread_rwlock_timedwrlock_monotonic_np:
 	.type pthread_rwlockattr_getkind_np, %function
 	.thumb_func
 pthread_rwlockattr_getkind_np:
-	movw r12, #1222
+	movw r12, #1224
 	b ws1_resolver
 	.align 2
 
@@ -9792,7 +9808,7 @@ pthread_rwlockattr_getkind_np:
 	.type pthread_rwlockattr_setkind_np, %function
 	.thumb_func
 pthread_rwlockattr_setkind_np:
-	movw r12, #1223
+	movw r12, #1225
 	b ws1_resolver
 	.align 2
 
@@ -9800,7 +9816,7 @@ pthread_rwlockattr_setkind_np:
 	.type pthread_sigmask64, %function
 	.thumb_func
 pthread_sigmask64:
-	movw r12, #1224
+	movw r12, #1226
 	b ws1_resolver
 	.align 2
 
@@ -9808,7 +9824,7 @@ pthread_sigmask64:
 	.type pthread_sigqueue, %function
 	.thumb_func
 pthread_sigqueue:
-	movw r12, #1225
+	movw r12, #1227
 	b ws1_resolver
 	.align 2
 
@@ -9816,7 +9832,7 @@ pthread_sigqueue:
 	.type ptrace, %function
 	.thumb_func
 ptrace:
-	movw r12, #1226
+	movw r12, #1228
 	b ws1_resolver
 	.align 2
 
@@ -9824,7 +9840,7 @@ ptrace:
 	.type ptsname, %function
 	.thumb_func
 ptsname:
-	movw r12, #1227
+	movw r12, #1229
 	b ws1_resolver
 	.align 2
 
@@ -9832,7 +9848,7 @@ ptsname:
 	.type ptsname_r, %function
 	.thumb_func
 ptsname_r:
-	movw r12, #1228
+	movw r12, #1230
 	b ws1_resolver
 	.align 2
 
@@ -9840,7 +9856,7 @@ ptsname_r:
 	.type pututline, %function
 	.thumb_func
 pututline:
-	movw r12, #1229
+	movw r12, #1231
 	b ws1_resolver
 	.align 2
 
@@ -9848,7 +9864,7 @@ pututline:
 	.type putw, %function
 	.thumb_func
 putw:
-	movw r12, #1230
+	movw r12, #1232
 	b ws1_resolver
 	.align 2
 
@@ -9856,7 +9872,7 @@ putw:
 	.type pvalloc, %function
 	.thumb_func
 pvalloc:
-	movw r12, #1231
+	movw r12, #1233
 	b ws1_resolver
 	.align 2
 
@@ -9864,7 +9880,7 @@ pvalloc:
 	.type pwritev, %function
 	.thumb_func
 pwritev:
-	movw r12, #1232
+	movw r12, #1234
 	b ws1_resolver
 	.align 2
 
@@ -9872,7 +9888,7 @@ pwritev:
 	.type pwritev64, %function
 	.thumb_func
 pwritev64:
-	movw r12, #1233
+	movw r12, #1235
 	b ws1_resolver
 	.align 2
 
@@ -9880,7 +9896,7 @@ pwritev64:
 	.type quotactl, %function
 	.thumb_func
 quotactl:
-	movw r12, #1234
+	movw r12, #1236
 	b ws1_resolver
 	.align 2
 
@@ -9888,7 +9904,7 @@ quotactl:
 	.type random, %function
 	.thumb_func
 random:
-	movw r12, #1235
+	movw r12, #1237
 	b ws1_resolver
 	.align 2
 
@@ -9896,7 +9912,7 @@ random:
 	.type readahead, %function
 	.thumb_func
 readahead:
-	movw r12, #1236
+	movw r12, #1238
 	b ws1_resolver
 	.align 2
 
@@ -9904,7 +9920,7 @@ readahead:
 	.type reallocarray, %function
 	.thumb_func
 reallocarray:
-	movw r12, #1237
+	movw r12, #1239
 	b ws1_resolver
 	.align 2
 
@@ -9912,7 +9928,7 @@ reallocarray:
 	.type reboot, %function
 	.thumb_func
 reboot:
-	movw r12, #1238
+	movw r12, #1240
 	b ws1_resolver
 	.align 2
 
@@ -9920,7 +9936,7 @@ reboot:
 	.type recv, %function
 	.thumb_func
 recv:
-	movw r12, #1239
+	movw r12, #1241
 	b ws1_resolver
 	.align 2
 
@@ -9928,7 +9944,7 @@ recv:
 	.type recvfrom, %function
 	.thumb_func
 recvfrom:
-	movw r12, #1240
+	movw r12, #1242
 	b ws1_resolver
 	.align 2
 
@@ -9936,7 +9952,7 @@ recvfrom:
 	.type recvmmsg, %function
 	.thumb_func
 recvmmsg:
-	movw r12, #1241
+	movw r12, #1243
 	b ws1_resolver
 	.align 2
 
@@ -9944,7 +9960,7 @@ recvmmsg:
 	.type recvmsg, %function
 	.thumb_func
 recvmsg:
-	movw r12, #1242
+	movw r12, #1244
 	b ws1_resolver
 	.align 2
 
@@ -9952,7 +9968,7 @@ recvmsg:
 	.type regcomp, %function
 	.thumb_func
 regcomp:
-	movw r12, #1243
+	movw r12, #1245
 	b ws1_resolver
 	.align 2
 
@@ -9960,7 +9976,7 @@ regcomp:
 	.type regerror, %function
 	.thumb_func
 regerror:
-	movw r12, #1244
+	movw r12, #1246
 	b ws1_resolver
 	.align 2
 
@@ -9968,7 +9984,7 @@ regerror:
 	.type regexec, %function
 	.thumb_func
 regexec:
-	movw r12, #1245
+	movw r12, #1247
 	b ws1_resolver
 	.align 2
 
@@ -9976,7 +9992,7 @@ regexec:
 	.type regfree, %function
 	.thumb_func
 regfree:
-	movw r12, #1246
+	movw r12, #1248
 	b ws1_resolver
 	.align 2
 
@@ -9984,7 +10000,7 @@ regfree:
 	.type removexattr, %function
 	.thumb_func
 removexattr:
-	movw r12, #1247
+	movw r12, #1249
 	b ws1_resolver
 	.align 2
 
@@ -9992,7 +10008,7 @@ removexattr:
 	.type remque, %function
 	.thumb_func
 remque:
-	movw r12, #1248
+	movw r12, #1250
 	b ws1_resolver
 	.align 2
 
@@ -10000,7 +10016,7 @@ remque:
 	.type renameat2, %function
 	.thumb_func
 renameat2:
-	movw r12, #1249
+	movw r12, #1251
 	b ws1_resolver
 	.align 2
 
@@ -10008,7 +10024,7 @@ renameat2:
 	.type res_init, %function
 	.thumb_func
 res_init:
-	movw r12, #1250
+	movw r12, #1252
 	b ws1_resolver
 	.align 2
 
@@ -10016,7 +10032,7 @@ res_init:
 	.type res_mkquery, %function
 	.thumb_func
 res_mkquery:
-	movw r12, #1251
+	movw r12, #1253
 	b ws1_resolver
 	.align 2
 
@@ -10024,7 +10040,7 @@ res_mkquery:
 	.type res_query, %function
 	.thumb_func
 res_query:
-	movw r12, #1252
+	movw r12, #1254
 	b ws1_resolver
 	.align 2
 
@@ -10032,7 +10048,7 @@ res_query:
 	.type res_search, %function
 	.thumb_func
 res_search:
-	movw r12, #1253
+	movw r12, #1255
 	b ws1_resolver
 	.align 2
 
@@ -10040,7 +10056,7 @@ res_search:
 	.type sbrk, %function
 	.thumb_func
 sbrk:
-	movw r12, #1254
+	movw r12, #1256
 	b ws1_resolver
 	.align 2
 
@@ -10048,7 +10064,7 @@ sbrk:
 	.type scandir, %function
 	.thumb_func
 scandir:
-	movw r12, #1255
+	movw r12, #1257
 	b ws1_resolver
 	.align 2
 
@@ -10056,7 +10072,7 @@ scandir:
 	.type scandir64, %function
 	.thumb_func
 scandir64:
-	movw r12, #1256
+	movw r12, #1258
 	b ws1_resolver
 	.align 2
 
@@ -10064,7 +10080,7 @@ scandir64:
 	.type scandirat, %function
 	.thumb_func
 scandirat:
-	movw r12, #1257
+	movw r12, #1259
 	b ws1_resolver
 	.align 2
 
@@ -10072,7 +10088,7 @@ scandirat:
 	.type scandirat64, %function
 	.thumb_func
 scandirat64:
-	movw r12, #1258
+	movw r12, #1260
 	b ws1_resolver
 	.align 2
 
@@ -10080,7 +10096,7 @@ scandirat64:
 	.type sched_getaffinity, %function
 	.thumb_func
 sched_getaffinity:
-	movw r12, #1259
+	movw r12, #1261
 	b ws1_resolver
 	.align 2
 
@@ -10088,7 +10104,7 @@ sched_getaffinity:
 	.type sched_getcpu, %function
 	.thumb_func
 sched_getcpu:
-	movw r12, #1260
+	movw r12, #1262
 	b ws1_resolver
 	.align 2
 
@@ -10096,7 +10112,7 @@ sched_getcpu:
 	.type sched_setaffinity, %function
 	.thumb_func
 sched_setaffinity:
-	movw r12, #1261
+	movw r12, #1263
 	b ws1_resolver
 	.align 2
 
@@ -10104,7 +10120,7 @@ sched_setaffinity:
 	.type sem_clockwait, %function
 	.thumb_func
 sem_clockwait:
-	movw r12, #1262
+	movw r12, #1264
 	b ws1_resolver
 	.align 2
 
@@ -10112,7 +10128,7 @@ sem_clockwait:
 	.type sem_timedwait_monotonic_np, %function
 	.thumb_func
 sem_timedwait_monotonic_np:
-	movw r12, #1263
+	movw r12, #1265
 	b ws1_resolver
 	.align 2
 
@@ -10120,7 +10136,7 @@ sem_timedwait_monotonic_np:
 	.type semctl, %function
 	.thumb_func
 semctl:
-	movw r12, #1264
+	movw r12, #1266
 	b ws1_resolver
 	.align 2
 
@@ -10128,7 +10144,7 @@ semctl:
 	.type semget, %function
 	.thumb_func
 semget:
-	movw r12, #1265
+	movw r12, #1267
 	b ws1_resolver
 	.align 2
 
@@ -10136,7 +10152,7 @@ semget:
 	.type semop, %function
 	.thumb_func
 semop:
-	movw r12, #1266
+	movw r12, #1268
 	b ws1_resolver
 	.align 2
 
@@ -10144,7 +10160,7 @@ semop:
 	.type semtimedop, %function
 	.thumb_func
 semtimedop:
-	movw r12, #1267
+	movw r12, #1269
 	b ws1_resolver
 	.align 2
 
@@ -10152,7 +10168,7 @@ semtimedop:
 	.type send, %function
 	.thumb_func
 send:
-	movw r12, #1268
+	movw r12, #1270
 	b ws1_resolver
 	.align 2
 
@@ -10160,7 +10176,7 @@ send:
 	.type sendfile64, %function
 	.thumb_func
 sendfile64:
-	movw r12, #1269
+	movw r12, #1271
 	b ws1_resolver
 	.align 2
 
@@ -10168,7 +10184,7 @@ sendfile64:
 	.type sendmmsg, %function
 	.thumb_func
 sendmmsg:
-	movw r12, #1270
+	movw r12, #1272
 	b ws1_resolver
 	.align 2
 
@@ -10176,7 +10192,7 @@ sendmmsg:
 	.type sendmsg, %function
 	.thumb_func
 sendmsg:
-	movw r12, #1271
+	movw r12, #1273
 	b ws1_resolver
 	.align 2
 
@@ -10184,7 +10200,7 @@ sendmsg:
 	.type sendto, %function
 	.thumb_func
 sendto:
-	movw r12, #1272
+	movw r12, #1274
 	b ws1_resolver
 	.align 2
 
@@ -10192,7 +10208,7 @@ sendto:
 	.type setdomainname, %function
 	.thumb_func
 setdomainname:
-	movw r12, #1273
+	movw r12, #1275
 	b ws1_resolver
 	.align 2
 
@@ -10200,7 +10216,7 @@ setdomainname:
 	.type setfsgid, %function
 	.thumb_func
 setfsgid:
-	movw r12, #1274
+	movw r12, #1276
 	b ws1_resolver
 	.align 2
 
@@ -10208,7 +10224,7 @@ setfsgid:
 	.type setfsuid, %function
 	.thumb_func
 setfsuid:
-	movw r12, #1275
+	movw r12, #1277
 	b ws1_resolver
 	.align 2
 
@@ -10216,7 +10232,7 @@ setfsuid:
 	.type sethostent, %function
 	.thumb_func
 sethostent:
-	movw r12, #1276
+	movw r12, #1278
 	b ws1_resolver
 	.align 2
 
@@ -10224,7 +10240,7 @@ sethostent:
 	.type setjmp, %function
 	.thumb_func
 setjmp:
-	movw r12, #1277
+	movw r12, #1279
 	b ws1_resolver
 	.align 2
 
@@ -10232,7 +10248,7 @@ setjmp:
 	.type setmntent, %function
 	.thumb_func
 setmntent:
-	movw r12, #1278
+	movw r12, #1280
 	b ws1_resolver
 	.align 2
 
@@ -10240,7 +10256,7 @@ setmntent:
 	.type setnetent, %function
 	.thumb_func
 setnetent:
-	movw r12, #1279
+	movw r12, #1281
 	b ws1_resolver
 	.align 2
 
@@ -10248,7 +10264,7 @@ setnetent:
 	.type setns, %function
 	.thumb_func
 setns:
-	movw r12, #1280
+	movw r12, #1282
 	b ws1_resolver
 	.align 2
 
@@ -10256,7 +10272,7 @@ setns:
 	.type setprogname, %function
 	.thumb_func
 setprogname:
-	movw r12, #1281
+	movw r12, #1283
 	b ws1_resolver
 	.align 2
 
@@ -10264,7 +10280,7 @@ setprogname:
 	.type setprotoent, %function
 	.thumb_func
 setprotoent:
-	movw r12, #1282
+	movw r12, #1284
 	b ws1_resolver
 	.align 2
 
@@ -10272,7 +10288,7 @@ setprotoent:
 	.type setservent, %function
 	.thumb_func
 setservent:
-	movw r12, #1283
+	movw r12, #1285
 	b ws1_resolver
 	.align 2
 
@@ -10280,7 +10296,7 @@ setservent:
 	.type setsockopt, %function
 	.thumb_func
 setsockopt:
-	movw r12, #1284
+	movw r12, #1286
 	b ws1_resolver
 	.align 2
 
@@ -10288,7 +10304,7 @@ setsockopt:
 	.type setstate, %function
 	.thumb_func
 setstate:
-	movw r12, #1285
+	movw r12, #1287
 	b ws1_resolver
 	.align 2
 
@@ -10296,7 +10312,7 @@ setstate:
 	.type setutent, %function
 	.thumb_func
 setutent:
-	movw r12, #1286
+	movw r12, #1288
 	b ws1_resolver
 	.align 2
 
@@ -10304,7 +10320,7 @@ setutent:
 	.type setxattr, %function
 	.thumb_func
 setxattr:
-	movw r12, #1287
+	movw r12, #1289
 	b ws1_resolver
 	.align 2
 
@@ -10312,7 +10328,7 @@ setxattr:
 	.type shmat, %function
 	.thumb_func
 shmat:
-	movw r12, #1288
+	movw r12, #1290
 	b ws1_resolver
 	.align 2
 
@@ -10320,7 +10336,7 @@ shmat:
 	.type shmctl, %function
 	.thumb_func
 shmctl:
-	movw r12, #1289
+	movw r12, #1291
 	b ws1_resolver
 	.align 2
 
@@ -10328,7 +10344,7 @@ shmctl:
 	.type shmdt, %function
 	.thumb_func
 shmdt:
-	movw r12, #1290
+	movw r12, #1292
 	b ws1_resolver
 	.align 2
 
@@ -10336,7 +10352,7 @@ shmdt:
 	.type shmget, %function
 	.thumb_func
 shmget:
-	movw r12, #1291
+	movw r12, #1293
 	b ws1_resolver
 	.align 2
 
@@ -10344,7 +10360,7 @@ shmget:
 	.type shutdown, %function
 	.thumb_func
 shutdown:
-	movw r12, #1292
+	movw r12, #1294
 	b ws1_resolver
 	.align 2
 
@@ -10352,7 +10368,7 @@ shutdown:
 	.type sigaction64, %function
 	.thumb_func
 sigaction64:
-	movw r12, #1293
+	movw r12, #1295
 	b ws1_resolver
 	.align 2
 
@@ -10360,7 +10376,7 @@ sigaction64:
 	.type sigaddset64, %function
 	.thumb_func
 sigaddset64:
-	movw r12, #1294
+	movw r12, #1296
 	b ws1_resolver
 	.align 2
 
@@ -10368,7 +10384,7 @@ sigaddset64:
 	.type sigaltstack, %function
 	.thumb_func
 sigaltstack:
-	movw r12, #1295
+	movw r12, #1297
 	b ws1_resolver
 	.align 2
 
@@ -10376,7 +10392,7 @@ sigaltstack:
 	.type sigdelset64, %function
 	.thumb_func
 sigdelset64:
-	movw r12, #1296
+	movw r12, #1298
 	b ws1_resolver
 	.align 2
 
@@ -10384,7 +10400,7 @@ sigdelset64:
 	.type sigemptyset64, %function
 	.thumb_func
 sigemptyset64:
-	movw r12, #1297
+	movw r12, #1299
 	b ws1_resolver
 	.align 2
 
@@ -10392,7 +10408,7 @@ sigemptyset64:
 	.type sigfillset64, %function
 	.thumb_func
 sigfillset64:
-	movw r12, #1298
+	movw r12, #1300
 	b ws1_resolver
 	.align 2
 
@@ -10400,7 +10416,7 @@ sigfillset64:
 	.type sighold, %function
 	.thumb_func
 sighold:
-	movw r12, #1299
+	movw r12, #1301
 	b ws1_resolver
 	.align 2
 
@@ -10408,7 +10424,7 @@ sighold:
 	.type sigignore, %function
 	.thumb_func
 sigignore:
-	movw r12, #1300
+	movw r12, #1302
 	b ws1_resolver
 	.align 2
 
@@ -10416,7 +10432,7 @@ sigignore:
 	.type siginterrupt, %function
 	.thumb_func
 siginterrupt:
-	movw r12, #1301
+	movw r12, #1303
 	b ws1_resolver
 	.align 2
 
@@ -10424,7 +10440,7 @@ siginterrupt:
 	.type sigismember64, %function
 	.thumb_func
 sigismember64:
-	movw r12, #1302
+	movw r12, #1304
 	b ws1_resolver
 	.align 2
 
@@ -10432,7 +10448,7 @@ sigismember64:
 	.type signalfd, %function
 	.thumb_func
 signalfd:
-	movw r12, #1303
+	movw r12, #1305
 	b ws1_resolver
 	.align 2
 
@@ -10440,7 +10456,7 @@ signalfd:
 	.type signalfd64, %function
 	.thumb_func
 signalfd64:
-	movw r12, #1304
+	movw r12, #1306
 	b ws1_resolver
 	.align 2
 
@@ -10448,7 +10464,7 @@ signalfd64:
 	.type sigpending64, %function
 	.thumb_func
 sigpending64:
-	movw r12, #1305
+	movw r12, #1307
 	b ws1_resolver
 	.align 2
 
@@ -10456,7 +10472,7 @@ sigpending64:
 	.type sigprocmask64, %function
 	.thumb_func
 sigprocmask64:
-	movw r12, #1306
+	movw r12, #1308
 	b ws1_resolver
 	.align 2
 
@@ -10464,7 +10480,7 @@ sigprocmask64:
 	.type sigrelse, %function
 	.thumb_func
 sigrelse:
-	movw r12, #1307
+	movw r12, #1309
 	b ws1_resolver
 	.align 2
 
@@ -10472,7 +10488,7 @@ sigrelse:
 	.type sigset, %function
 	.thumb_func
 sigset:
-	movw r12, #1308
+	movw r12, #1310
 	b ws1_resolver
 	.align 2
 
@@ -10480,7 +10496,7 @@ sigset:
 	.type sigsuspend64, %function
 	.thumb_func
 sigsuspend64:
-	movw r12, #1309
+	movw r12, #1311
 	b ws1_resolver
 	.align 2
 
@@ -10488,7 +10504,7 @@ sigsuspend64:
 	.type sigtimedwait64, %function
 	.thumb_func
 sigtimedwait64:
-	movw r12, #1310
+	movw r12, #1312
 	b ws1_resolver
 	.align 2
 
@@ -10496,7 +10512,7 @@ sigtimedwait64:
 	.type sigwait64, %function
 	.thumb_func
 sigwait64:
-	movw r12, #1311
+	movw r12, #1313
 	b ws1_resolver
 	.align 2
 
@@ -10504,7 +10520,7 @@ sigwait64:
 	.type sigwaitinfo64, %function
 	.thumb_func
 sigwaitinfo64:
-	movw r12, #1312
+	movw r12, #1314
 	b ws1_resolver
 	.align 2
 
@@ -10512,7 +10528,7 @@ sigwaitinfo64:
 	.type socket, %function
 	.thumb_func
 socket:
-	movw r12, #1313
+	movw r12, #1315
 	b ws1_resolver
 	.align 2
 
@@ -10520,7 +10536,7 @@ socket:
 	.type socketpair, %function
 	.thumb_func
 socketpair:
-	movw r12, #1314
+	movw r12, #1316
 	b ws1_resolver
 	.align 2
 
@@ -10528,7 +10544,7 @@ socketpair:
 	.type splice, %function
 	.thumb_func
 splice:
-	movw r12, #1315
+	movw r12, #1317
 	b ws1_resolver
 	.align 2
 
@@ -10536,7 +10552,7 @@ splice:
 	.type srandom, %function
 	.thumb_func
 srandom:
-	movw r12, #1316
+	movw r12, #1318
 	b ws1_resolver
 	.align 2
 
@@ -10544,7 +10560,7 @@ srandom:
 	.type statfs, %function
 	.thumb_func
 statfs:
-	movw r12, #1317
+	movw r12, #1319
 	b ws1_resolver
 	.align 2
 
@@ -10552,7 +10568,7 @@ statfs:
 	.type statfs64, %function
 	.thumb_func
 statfs64:
-	movw r12, #1318
+	movw r12, #1320
 	b ws1_resolver
 	.align 2
 
@@ -10560,7 +10576,7 @@ statfs64:
 	.type statx, %function
 	.thumb_func
 statx:
-	movw r12, #1319
+	movw r12, #1321
 	b ws1_resolver
 	.align 2
 
@@ -10568,7 +10584,7 @@ statx:
 	.type strcasecmp_l, %function
 	.thumb_func
 strcasecmp_l:
-	movw r12, #1320
+	movw r12, #1322
 	b ws1_resolver
 	.align 2
 
@@ -10576,7 +10592,7 @@ strcasecmp_l:
 	.type strchrnul, %function
 	.thumb_func
 strchrnul:
-	movw r12, #1321
+	movw r12, #1323
 	b ws1_resolver
 	.align 2
 
@@ -10584,7 +10600,7 @@ strchrnul:
 	.type strcoll_l, %function
 	.thumb_func
 strcoll_l:
-	movw r12, #1322
+	movw r12, #1324
 	b ws1_resolver
 	.align 2
 
@@ -10592,7 +10608,7 @@ strcoll_l:
 	.type strerror_l, %function
 	.thumb_func
 strerror_l:
-	movw r12, #1323
+	movw r12, #1325
 	b ws1_resolver
 	.align 2
 
@@ -10600,7 +10616,7 @@ strerror_l:
 	.type strftime_l, %function
 	.thumb_func
 strftime_l:
-	movw r12, #1324
+	movw r12, #1326
 	b ws1_resolver
 	.align 2
 
@@ -10608,7 +10624,7 @@ strftime_l:
 	.type strncasecmp_l, %function
 	.thumb_func
 strncasecmp_l:
-	movw r12, #1325
+	movw r12, #1327
 	b ws1_resolver
 	.align 2
 
@@ -10616,7 +10632,7 @@ strncasecmp_l:
 	.type strntoimax, %function
 	.thumb_func
 strntoimax:
-	movw r12, #1326
+	movw r12, #1328
 	b ws1_resolver
 	.align 2
 
@@ -10624,7 +10640,7 @@ strntoimax:
 	.type strntoumax, %function
 	.thumb_func
 strntoumax:
-	movw r12, #1327
+	movw r12, #1329
 	b ws1_resolver
 	.align 2
 
@@ -10632,7 +10648,7 @@ strntoumax:
 	.type strptime_l, %function
 	.thumb_func
 strptime_l:
-	movw r12, #1328
+	movw r12, #1330
 	b ws1_resolver
 	.align 2
 
@@ -10640,7 +10656,7 @@ strptime_l:
 	.type strtod_l, %function
 	.thumb_func
 strtod_l:
-	movw r12, #1329
+	movw r12, #1331
 	b ws1_resolver
 	.align 2
 
@@ -10648,7 +10664,7 @@ strtod_l:
 	.type strtof_l, %function
 	.thumb_func
 strtof_l:
-	movw r12, #1330
+	movw r12, #1332
 	b ws1_resolver
 	.align 2
 
@@ -10656,7 +10672,7 @@ strtof_l:
 	.type strtol_l, %function
 	.thumb_func
 strtol_l:
-	movw r12, #1331
+	movw r12, #1333
 	b ws1_resolver
 	.align 2
 
@@ -10664,7 +10680,7 @@ strtol_l:
 	.type strtold_l, %function
 	.thumb_func
 strtold_l:
-	movw r12, #1332
+	movw r12, #1334
 	b ws1_resolver
 	.align 2
 
@@ -10672,7 +10688,7 @@ strtold_l:
 	.type strtoll_l, %function
 	.thumb_func
 strtoll_l:
-	movw r12, #1333
+	movw r12, #1335
 	b ws1_resolver
 	.align 2
 
@@ -10680,7 +10696,7 @@ strtoll_l:
 	.type strtoq, %function
 	.thumb_func
 strtoq:
-	movw r12, #1334
+	movw r12, #1336
 	b ws1_resolver
 	.align 2
 
@@ -10688,7 +10704,7 @@ strtoq:
 	.type strtotimeval, %function
 	.thumb_func
 strtotimeval:
-	movw r12, #1335
+	movw r12, #1337
 	b ws1_resolver
 	.align 2
 
@@ -10696,7 +10712,7 @@ strtotimeval:
 	.type strtoul_l, %function
 	.thumb_func
 strtoul_l:
-	movw r12, #1336
+	movw r12, #1338
 	b ws1_resolver
 	.align 2
 
@@ -10704,7 +10720,7 @@ strtoul_l:
 	.type strtoull_l, %function
 	.thumb_func
 strtoull_l:
-	movw r12, #1337
+	movw r12, #1339
 	b ws1_resolver
 	.align 2
 
@@ -10712,7 +10728,7 @@ strtoull_l:
 	.type strtouq, %function
 	.thumb_func
 strtouq:
-	movw r12, #1338
+	movw r12, #1340
 	b ws1_resolver
 	.align 2
 
@@ -10720,7 +10736,7 @@ strtouq:
 	.type strxfrm_l, %function
 	.thumb_func
 strxfrm_l:
-	movw r12, #1339
+	movw r12, #1341
 	b ws1_resolver
 	.align 2
 
@@ -10728,7 +10744,7 @@ strxfrm_l:
 	.type swapoff, %function
 	.thumb_func
 swapoff:
-	movw r12, #1340
+	movw r12, #1342
 	b ws1_resolver
 	.align 2
 
@@ -10736,7 +10752,7 @@ swapoff:
 	.type swapon, %function
 	.thumb_func
 swapon:
-	movw r12, #1341
+	movw r12, #1343
 	b ws1_resolver
 	.align 2
 
@@ -10744,7 +10760,7 @@ swapon:
 	.type symlinkat, %function
 	.thumb_func
 symlinkat:
-	movw r12, #1342
+	movw r12, #1344
 	b ws1_resolver
 	.align 2
 
@@ -10752,7 +10768,7 @@ symlinkat:
 	.type sync_file_range, %function
 	.thumb_func
 sync_file_range:
-	movw r12, #1343
+	movw r12, #1345
 	b ws1_resolver
 	.align 2
 
@@ -10760,7 +10776,7 @@ sync_file_range:
 	.type syncfs, %function
 	.thumb_func
 syncfs:
-	movw r12, #1344
+	movw r12, #1346
 	b ws1_resolver
 	.align 2
 
@@ -10768,7 +10784,7 @@ syncfs:
 	.type sys_signame, %function
 	.thumb_func
 sys_signame:
-	movw r12, #1345
+	movw r12, #1347
 	b ws1_resolver
 	.align 2
 
@@ -10776,7 +10792,7 @@ sys_signame:
 	.type syscall, %function
 	.thumb_func
 syscall:
-	movw r12, #1346
+	movw r12, #1348
 	b ws1_resolver
 	.align 2
 
@@ -10784,7 +10800,7 @@ syscall:
 	.type sysinfo, %function
 	.thumb_func
 sysinfo:
-	movw r12, #1347
+	movw r12, #1349
 	b ws1_resolver
 	.align 2
 
@@ -10792,7 +10808,7 @@ sysinfo:
 	.type sysv_signal, %function
 	.thumb_func
 sysv_signal:
-	movw r12, #1348
+	movw r12, #1350
 	b ws1_resolver
 	.align 2
 
@@ -10800,7 +10816,7 @@ sysv_signal:
 	.type tdelete, %function
 	.thumb_func
 tdelete:
-	movw r12, #1349
+	movw r12, #1351
 	b ws1_resolver
 	.align 2
 
@@ -10808,7 +10824,7 @@ tdelete:
 	.type tdestroy, %function
 	.thumb_func
 tdestroy:
-	movw r12, #1350
+	movw r12, #1352
 	b ws1_resolver
 	.align 2
 
@@ -10816,7 +10832,7 @@ tdestroy:
 	.type tee, %function
 	.thumb_func
 tee:
-	movw r12, #1351
+	movw r12, #1353
 	b ws1_resolver
 	.align 2
 
@@ -10824,7 +10840,7 @@ tee:
 	.type tfind, %function
 	.thumb_func
 tfind:
-	movw r12, #1352
+	movw r12, #1354
 	b ws1_resolver
 	.align 2
 
@@ -10832,7 +10848,7 @@ tfind:
 	.type tgkill, %function
 	.thumb_func
 tgkill:
-	movw r12, #1353
+	movw r12, #1355
 	b ws1_resolver
 	.align 2
 
@@ -10840,7 +10856,7 @@ tgkill:
 	.type thrd_create, %function
 	.thumb_func
 thrd_create:
-	movw r12, #1354
+	movw r12, #1356
 	b ws1_resolver
 	.align 2
 
@@ -10848,7 +10864,7 @@ thrd_create:
 	.type thrd_current, %function
 	.thumb_func
 thrd_current:
-	movw r12, #1355
+	movw r12, #1357
 	b ws1_resolver
 	.align 2
 
@@ -10856,7 +10872,7 @@ thrd_current:
 	.type thrd_detach, %function
 	.thumb_func
 thrd_detach:
-	movw r12, #1356
+	movw r12, #1358
 	b ws1_resolver
 	.align 2
 
@@ -10864,7 +10880,7 @@ thrd_detach:
 	.type thrd_equal, %function
 	.thumb_func
 thrd_equal:
-	movw r12, #1357
+	movw r12, #1359
 	b ws1_resolver
 	.align 2
 
@@ -10872,7 +10888,7 @@ thrd_equal:
 	.type thrd_exit, %function
 	.thumb_func
 thrd_exit:
-	movw r12, #1358
+	movw r12, #1360
 	b ws1_resolver
 	.align 2
 
@@ -10880,7 +10896,7 @@ thrd_exit:
 	.type thrd_join, %function
 	.thumb_func
 thrd_join:
-	movw r12, #1359
+	movw r12, #1361
 	b ws1_resolver
 	.align 2
 
@@ -10888,7 +10904,7 @@ thrd_join:
 	.type thrd_sleep, %function
 	.thumb_func
 thrd_sleep:
-	movw r12, #1360
+	movw r12, #1362
 	b ws1_resolver
 	.align 2
 
@@ -10896,7 +10912,7 @@ thrd_sleep:
 	.type thrd_yield, %function
 	.thumb_func
 thrd_yield:
-	movw r12, #1361
+	movw r12, #1363
 	b ws1_resolver
 	.align 2
 
@@ -10904,7 +10920,7 @@ thrd_yield:
 	.type timegm64, %function
 	.thumb_func
 timegm64:
-	movw r12, #1362
+	movw r12, #1364
 	b ws1_resolver
 	.align 2
 
@@ -10912,7 +10928,7 @@ timegm64:
 	.type timelocal64, %function
 	.thumb_func
 timelocal64:
-	movw r12, #1363
+	movw r12, #1365
 	b ws1_resolver
 	.align 2
 
@@ -10920,7 +10936,7 @@ timelocal64:
 	.type timerfd_create, %function
 	.thumb_func
 timerfd_create:
-	movw r12, #1364
+	movw r12, #1366
 	b ws1_resolver
 	.align 2
 
@@ -10928,7 +10944,7 @@ timerfd_create:
 	.type timerfd_gettime, %function
 	.thumb_func
 timerfd_gettime:
-	movw r12, #1365
+	movw r12, #1367
 	b ws1_resolver
 	.align 2
 
@@ -10936,7 +10952,7 @@ timerfd_gettime:
 	.type timerfd_settime, %function
 	.thumb_func
 timerfd_settime:
-	movw r12, #1366
+	movw r12, #1368
 	b ws1_resolver
 	.align 2
 
@@ -10944,7 +10960,7 @@ timerfd_settime:
 	.type timespec_get, %function
 	.thumb_func
 timespec_get:
-	movw r12, #1367
+	movw r12, #1369
 	b ws1_resolver
 	.align 2
 
@@ -10952,7 +10968,7 @@ timespec_get:
 	.type tkill, %function
 	.thumb_func
 tkill:
-	movw r12, #1368
+	movw r12, #1370
 	b ws1_resolver
 	.align 2
 
@@ -10960,7 +10976,7 @@ tkill:
 	.type toascii, %function
 	.thumb_func
 toascii:
-	movw r12, #1369
+	movw r12, #1371
 	b ws1_resolver
 	.align 2
 
@@ -10968,7 +10984,7 @@ toascii:
 	.type tolower_l, %function
 	.thumb_func
 tolower_l:
-	movw r12, #1370
+	movw r12, #1372
 	b ws1_resolver
 	.align 2
 
@@ -10976,7 +10992,7 @@ tolower_l:
 	.type toupper_l, %function
 	.thumb_func
 toupper_l:
-	movw r12, #1371
+	movw r12, #1373
 	b ws1_resolver
 	.align 2
 
@@ -10984,7 +11000,7 @@ toupper_l:
 	.type towctrans_l, %function
 	.thumb_func
 towctrans_l:
-	movw r12, #1372
+	movw r12, #1374
 	b ws1_resolver
 	.align 2
 
@@ -10992,7 +11008,7 @@ towctrans_l:
 	.type towlower_l, %function
 	.thumb_func
 towlower_l:
-	movw r12, #1373
+	movw r12, #1375
 	b ws1_resolver
 	.align 2
 
@@ -11000,7 +11016,7 @@ towlower_l:
 	.type towupper_l, %function
 	.thumb_func
 towupper_l:
-	movw r12, #1374
+	movw r12, #1376
 	b ws1_resolver
 	.align 2
 
@@ -11008,7 +11024,7 @@ towupper_l:
 	.type tsearch, %function
 	.thumb_func
 tsearch:
-	movw r12, #1375
+	movw r12, #1377
 	b ws1_resolver
 	.align 2
 
@@ -11016,7 +11032,7 @@ tsearch:
 	.type tss_create, %function
 	.thumb_func
 tss_create:
-	movw r12, #1376
+	movw r12, #1378
 	b ws1_resolver
 	.align 2
 
@@ -11024,7 +11040,7 @@ tss_create:
 	.type tss_delete, %function
 	.thumb_func
 tss_delete:
-	movw r12, #1377
+	movw r12, #1379
 	b ws1_resolver
 	.align 2
 
@@ -11032,7 +11048,7 @@ tss_delete:
 	.type tss_get, %function
 	.thumb_func
 tss_get:
-	movw r12, #1378
+	movw r12, #1380
 	b ws1_resolver
 	.align 2
 
@@ -11040,7 +11056,7 @@ tss_get:
 	.type tss_set, %function
 	.thumb_func
 tss_set:
-	movw r12, #1379
+	movw r12, #1381
 	b ws1_resolver
 	.align 2
 
@@ -11048,7 +11064,7 @@ tss_set:
 	.type twalk, %function
 	.thumb_func
 twalk:
-	movw r12, #1380
+	movw r12, #1382
 	b ws1_resolver
 	.align 2
 
@@ -11056,7 +11072,7 @@ twalk:
 	.type umount2, %function
 	.thumb_func
 umount2:
-	movw r12, #1381
+	movw r12, #1383
 	b ws1_resolver
 	.align 2
 
@@ -11064,7 +11080,7 @@ umount2:
 	.type unlockpt, %function
 	.thumb_func
 unlockpt:
-	movw r12, #1382
+	movw r12, #1384
 	b ws1_resolver
 	.align 2
 
@@ -11072,7 +11088,7 @@ unlockpt:
 	.type unshare, %function
 	.thumb_func
 unshare:
-	movw r12, #1383
+	movw r12, #1385
 	b ws1_resolver
 	.align 2
 
@@ -11080,7 +11096,7 @@ unshare:
 	.type uselocale, %function
 	.thumb_func
 uselocale:
-	movw r12, #1384
+	movw r12, #1386
 	b ws1_resolver
 	.align 2
 
@@ -11088,7 +11104,7 @@ uselocale:
 	.type utmpname, %function
 	.thumb_func
 utmpname:
-	movw r12, #1385
+	movw r12, #1387
 	b ws1_resolver
 	.align 2
 
@@ -11096,7 +11112,7 @@ utmpname:
 	.type vasprintf, %function
 	.thumb_func
 vasprintf:
-	movw r12, #1386
+	movw r12, #1388
 	b ws1_resolver
 	.align 2
 
@@ -11104,7 +11120,7 @@ vasprintf:
 	.type vdprintf, %function
 	.thumb_func
 vdprintf:
-	movw r12, #1387
+	movw r12, #1389
 	b ws1_resolver
 	.align 2
 
@@ -11112,7 +11128,7 @@ vdprintf:
 	.type vmsplice, %function
 	.thumb_func
 vmsplice:
-	movw r12, #1388
+	movw r12, #1390
 	b ws1_resolver
 	.align 2
 
@@ -11120,7 +11136,7 @@ vmsplice:
 	.type wcpcpy, %function
 	.thumb_func
 wcpcpy:
-	movw r12, #1389
+	movw r12, #1391
 	b ws1_resolver
 	.align 2
 
@@ -11128,7 +11144,7 @@ wcpcpy:
 	.type wcpncpy, %function
 	.thumb_func
 wcpncpy:
-	movw r12, #1390
+	movw r12, #1392
 	b ws1_resolver
 	.align 2
 
@@ -11136,7 +11152,7 @@ wcpncpy:
 	.type wcscasecmp, %function
 	.thumb_func
 wcscasecmp:
-	movw r12, #1391
+	movw r12, #1393
 	b ws1_resolver
 	.align 2
 
@@ -11144,7 +11160,7 @@ wcscasecmp:
 	.type wcscasecmp_l, %function
 	.thumb_func
 wcscasecmp_l:
-	movw r12, #1392
+	movw r12, #1394
 	b ws1_resolver
 	.align 2
 
@@ -11152,7 +11168,7 @@ wcscasecmp_l:
 	.type wcscoll_l, %function
 	.thumb_func
 wcscoll_l:
-	movw r12, #1393
+	movw r12, #1395
 	b ws1_resolver
 	.align 2
 
@@ -11160,7 +11176,7 @@ wcscoll_l:
 	.type wcsdup, %function
 	.thumb_func
 wcsdup:
-	movw r12, #1394
+	movw r12, #1396
 	b ws1_resolver
 	.align 2
 
@@ -11168,7 +11184,7 @@ wcsdup:
 	.type wcsftime_l, %function
 	.thumb_func
 wcsftime_l:
-	movw r12, #1395
+	movw r12, #1397
 	b ws1_resolver
 	.align 2
 
@@ -11176,7 +11192,7 @@ wcsftime_l:
 	.type wcslcat, %function
 	.thumb_func
 wcslcat:
-	movw r12, #1396
+	movw r12, #1398
 	b ws1_resolver
 	.align 2
 
@@ -11184,7 +11200,7 @@ wcslcat:
 	.type wcslcpy, %function
 	.thumb_func
 wcslcpy:
-	movw r12, #1397
+	movw r12, #1399
 	b ws1_resolver
 	.align 2
 
@@ -11192,7 +11208,7 @@ wcslcpy:
 	.type wcsncasecmp, %function
 	.thumb_func
 wcsncasecmp:
-	movw r12, #1398
+	movw r12, #1400
 	b ws1_resolver
 	.align 2
 
@@ -11200,7 +11216,7 @@ wcsncasecmp:
 	.type wcsncasecmp_l, %function
 	.thumb_func
 wcsncasecmp_l:
-	movw r12, #1399
+	movw r12, #1401
 	b ws1_resolver
 	.align 2
 
@@ -11208,7 +11224,7 @@ wcsncasecmp_l:
 	.type wcsnlen, %function
 	.thumb_func
 wcsnlen:
-	movw r12, #1400
+	movw r12, #1402
 	b ws1_resolver
 	.align 2
 
@@ -11216,7 +11232,7 @@ wcsnlen:
 	.type wcsnrtombs, %function
 	.thumb_func
 wcsnrtombs:
-	movw r12, #1401
+	movw r12, #1403
 	b ws1_resolver
 	.align 2
 
@@ -11224,7 +11240,7 @@ wcsnrtombs:
 	.type wcstod_l, %function
 	.thumb_func
 wcstod_l:
-	movw r12, #1402
+	movw r12, #1404
 	b ws1_resolver
 	.align 2
 
@@ -11232,7 +11248,7 @@ wcstod_l:
 	.type wcstof_l, %function
 	.thumb_func
 wcstof_l:
-	movw r12, #1403
+	movw r12, #1405
 	b ws1_resolver
 	.align 2
 
@@ -11240,7 +11256,7 @@ wcstof_l:
 	.type wcstol_l, %function
 	.thumb_func
 wcstol_l:
-	movw r12, #1404
+	movw r12, #1406
 	b ws1_resolver
 	.align 2
 
@@ -11248,7 +11264,7 @@ wcstol_l:
 	.type wcstold_l, %function
 	.thumb_func
 wcstold_l:
-	movw r12, #1405
+	movw r12, #1407
 	b ws1_resolver
 	.align 2
 
@@ -11256,7 +11272,7 @@ wcstold_l:
 	.type wcstoll_l, %function
 	.thumb_func
 wcstoll_l:
-	movw r12, #1406
+	movw r12, #1408
 	b ws1_resolver
 	.align 2
 
@@ -11264,7 +11280,7 @@ wcstoll_l:
 	.type wcstoul_l, %function
 	.thumb_func
 wcstoul_l:
-	movw r12, #1407
+	movw r12, #1409
 	b ws1_resolver
 	.align 2
 
@@ -11272,7 +11288,7 @@ wcstoul_l:
 	.type wcstoull_l, %function
 	.thumb_func
 wcstoull_l:
-	movw r12, #1408
+	movw r12, #1410
 	b ws1_resolver
 	.align 2
 
@@ -11280,7 +11296,7 @@ wcstoull_l:
 	.type wcswcs, %function
 	.thumb_func
 wcswcs:
-	movw r12, #1409
+	movw r12, #1411
 	b ws1_resolver
 	.align 2
 
@@ -11288,7 +11304,7 @@ wcswcs:
 	.type wcswidth, %function
 	.thumb_func
 wcswidth:
-	movw r12, #1410
+	movw r12, #1412
 	b ws1_resolver
 	.align 2
 
@@ -11296,7 +11312,7 @@ wcswidth:
 	.type wcsxfrm_l, %function
 	.thumb_func
 wcsxfrm_l:
-	movw r12, #1411
+	movw r12, #1413
 	b ws1_resolver
 	.align 2
 
@@ -11304,7 +11320,7 @@ wcsxfrm_l:
 	.type wctrans_l, %function
 	.thumb_func
 wctrans_l:
-	movw r12, #1412
+	movw r12, #1414
 	b ws1_resolver
 	.align 2
 
@@ -11312,7 +11328,7 @@ wctrans_l:
 	.type wctype_l, %function
 	.thumb_func
 wctype_l:
-	movw r12, #1413
+	movw r12, #1415
 	b ws1_resolver
 	.align 2
 
@@ -11320,7 +11336,7 @@ wctype_l:
 	.type wcwidth, %function
 	.thumb_func
 wcwidth:
-	movw r12, #1414
+	movw r12, #1416
 	b ws1_resolver
 	.align 2
 
@@ -11328,7 +11344,7 @@ wcwidth:
 	.type wmempcpy, %function
 	.thumb_func
 wmempcpy:
-	movw r12, #1415
+	movw r12, #1417
 	b ws1_resolver
 	.align 2
 
@@ -11336,7 +11352,7 @@ wmempcpy:
 	.type SHA1Final, %function
 	.thumb_func
 SHA1Final:
-	movw r12, #1416
+	movw r12, #1418
 	b ws1_resolver
 	.align 2
 
@@ -11344,7 +11360,7 @@ SHA1Final:
 	.type SHA1Init, %function
 	.thumb_func
 SHA1Init:
-	movw r12, #1417
+	movw r12, #1419
 	b ws1_resolver
 	.align 2
 
@@ -11352,7 +11368,7 @@ SHA1Init:
 	.type SHA1Transform, %function
 	.thumb_func
 SHA1Transform:
-	movw r12, #1418
+	movw r12, #1420
 	b ws1_resolver
 	.align 2
 
@@ -11360,7 +11376,7 @@ SHA1Transform:
 	.type SHA1Update, %function
 	.thumb_func
 SHA1Update:
-	movw r12, #1419
+	movw r12, #1421
 	b ws1_resolver
 	.align 2
 
@@ -11368,7 +11384,7 @@ SHA1Update:
 	.type __assert2, %function
 	.thumb_func
 __assert2:
-	movw r12, #1420
+	movw r12, #1422
 	b ws1_resolver
 	.align 2
 
@@ -11376,7 +11392,7 @@ __assert2:
 	.type __atomic_cmpxchg, %function
 	.thumb_func
 __atomic_cmpxchg:
-	movw r12, #1421
+	movw r12, #1423
 	b ws1_resolver
 	.align 2
 
@@ -11384,7 +11400,7 @@ __atomic_cmpxchg:
 	.type __atomic_dec, %function
 	.thumb_func
 __atomic_dec:
-	movw r12, #1422
+	movw r12, #1424
 	b ws1_resolver
 	.align 2
 
@@ -11392,7 +11408,7 @@ __atomic_dec:
 	.type __atomic_inc, %function
 	.thumb_func
 __atomic_inc:
-	movw r12, #1423
+	movw r12, #1425
 	b ws1_resolver
 	.align 2
 
@@ -11400,7 +11416,7 @@ __atomic_inc:
 	.type __atomic_swap, %function
 	.thumb_func
 __atomic_swap:
-	movw r12, #1424
+	movw r12, #1426
 	b ws1_resolver
 	.align 2
 
@@ -11408,7 +11424,7 @@ __atomic_swap:
 	.type __isthreaded, %function
 	.thumb_func
 __isthreaded:
-	movw r12, #1425
+	movw r12, #1427
 	b ws1_resolver
 	.align 2
 
@@ -11416,7 +11432,7 @@ __isthreaded:
 	.type __system_properties_init, %function
 	.thumb_func
 __system_properties_init:
-	movw r12, #1426
+	movw r12, #1428
 	b ws1_resolver
 	.align 2
 
@@ -11424,7 +11440,7 @@ __system_properties_init:
 	.type __system_property_area__, %function
 	.thumb_func
 __system_property_area__:
-	movw r12, #1427
+	movw r12, #1429
 	b ws1_resolver
 	.align 2
 
@@ -11432,7 +11448,7 @@ __system_property_area__:
 	.type __system_property_find, %function
 	.thumb_func
 __system_property_find:
-	movw r12, #1428
+	movw r12, #1430
 	b ws1_resolver
 	.align 2
 
@@ -11440,7 +11456,7 @@ __system_property_find:
 	.type __system_property_find_nth, %function
 	.thumb_func
 __system_property_find_nth:
-	movw r12, #1429
+	movw r12, #1431
 	b ws1_resolver
 	.align 2
 
@@ -11448,7 +11464,7 @@ __system_property_find_nth:
 	.type __system_property_get, %function
 	.thumb_func
 __system_property_get:
-	movw r12, #1430
+	movw r12, #1432
 	b ws1_resolver
 	.align 2
 
@@ -11456,7 +11472,7 @@ __system_property_get:
 	.type __system_property_read, %function
 	.thumb_func
 __system_property_read:
-	movw r12, #1431
+	movw r12, #1433
 	b ws1_resolver
 	.align 2
 
@@ -11464,7 +11480,7 @@ __system_property_read:
 	.type __system_property_set, %function
 	.thumb_func
 __system_property_set:
-	movw r12, #1432
+	movw r12, #1434
 	b ws1_resolver
 	.align 2
 
@@ -11472,7 +11488,7 @@ __system_property_set:
 	.type __system_property_wait, %function
 	.thumb_func
 __system_property_wait:
-	movw r12, #1433
+	movw r12, #1435
 	b ws1_resolver
 	.align 2
 
@@ -11480,7 +11496,7 @@ __system_property_wait:
 	.type asctime, %function
 	.thumb_func
 asctime:
-	movw r12, #1434
+	movw r12, #1436
 	b ws1_resolver
 	.align 2
 
@@ -11488,7 +11504,7 @@ asctime:
 	.type asctime_r, %function
 	.thumb_func
 asctime_r:
-	movw r12, #1435
+	movw r12, #1437
 	b ws1_resolver
 	.align 2
 
@@ -11496,7 +11512,7 @@ asctime_r:
 	.type cacheflush, %function
 	.thumb_func
 cacheflush:
-	movw r12, #1436
+	movw r12, #1438
 	b ws1_resolver
 	.align 2
 
@@ -11504,7 +11520,7 @@ cacheflush:
 	.type chdir, %function
 	.thumb_func
 chdir:
-	movw r12, #1437
+	movw r12, #1439
 	b ws1_resolver
 	.align 2
 
@@ -11512,7 +11528,7 @@ chdir:
 	.type chown, %function
 	.thumb_func
 chown:
-	movw r12, #1438
+	movw r12, #1440
 	b ws1_resolver
 	.align 2
 
@@ -11520,7 +11536,7 @@ chown:
 	.type close, %function
 	.thumb_func
 close:
-	movw r12, #1439
+	movw r12, #1441
 	b ws1_resolver
 	.align 2
 
@@ -11528,7 +11544,7 @@ close:
 	.type creat, %function
 	.thumb_func
 creat:
-	movw r12, #1440
+	movw r12, #1442
 	b ws1_resolver
 	.align 2
 
@@ -11536,7 +11552,7 @@ creat:
 	.type creat64, %function
 	.thumb_func
 creat64:
-	movw r12, #1441
+	movw r12, #1443
 	b ws1_resolver
 	.align 2
 
@@ -11544,7 +11560,7 @@ creat64:
 	.type ctime, %function
 	.thumb_func
 ctime:
-	movw r12, #1442
+	movw r12, #1444
 	b ws1_resolver
 	.align 2
 
@@ -11552,7 +11568,7 @@ ctime:
 	.type ctime_r, %function
 	.thumb_func
 ctime_r:
-	movw r12, #1443
+	movw r12, #1445
 	b ws1_resolver
 	.align 2
 
@@ -11560,7 +11576,7 @@ ctime_r:
 	.type daylight, %function
 	.thumb_func
 daylight:
-	movw r12, #1444
+	movw r12, #1446
 	b ws1_resolver
 	.align 2
 
@@ -11568,7 +11584,7 @@ daylight:
 	.type difftime, %function
 	.thumb_func
 difftime:
-	movw r12, #1445
+	movw r12, #1447
 	b ws1_resolver
 	.align 2
 
@@ -11576,7 +11592,7 @@ difftime:
 	.type endpwent, %function
 	.thumb_func
 endpwent:
-	movw r12, #1446
+	movw r12, #1448
 	b ws1_resolver
 	.align 2
 
@@ -11584,7 +11600,7 @@ endpwent:
 	.type epoll_create, %function
 	.thumb_func
 epoll_create:
-	movw r12, #1447
+	movw r12, #1449
 	b ws1_resolver
 	.align 2
 
@@ -11592,7 +11608,7 @@ epoll_create:
 	.type epoll_ctl, %function
 	.thumb_func
 epoll_ctl:
-	movw r12, #1448
+	movw r12, #1450
 	b ws1_resolver
 	.align 2
 
@@ -11600,7 +11616,7 @@ epoll_ctl:
 	.type epoll_wait, %function
 	.thumb_func
 epoll_wait:
-	movw r12, #1449
+	movw r12, #1451
 	b ws1_resolver
 	.align 2
 
@@ -11608,7 +11624,7 @@ epoll_wait:
 	.type eventfd, %function
 	.thumb_func
 eventfd:
-	movw r12, #1450
+	movw r12, #1452
 	b ws1_resolver
 	.align 2
 
@@ -11616,7 +11632,7 @@ eventfd:
 	.type eventfd_read, %function
 	.thumb_func
 eventfd_read:
-	movw r12, #1451
+	movw r12, #1453
 	b ws1_resolver
 	.align 2
 
@@ -11624,7 +11640,7 @@ eventfd_read:
 	.type eventfd_write, %function
 	.thumb_func
 eventfd_write:
-	movw r12, #1452
+	movw r12, #1454
 	b ws1_resolver
 	.align 2
 
@@ -11632,7 +11648,7 @@ eventfd_write:
 	.type execl, %function
 	.thumb_func
 execl:
-	movw r12, #1453
+	movw r12, #1455
 	b ws1_resolver
 	.align 2
 
@@ -11640,7 +11656,7 @@ execl:
 	.type execle, %function
 	.thumb_func
 execle:
-	movw r12, #1454
+	movw r12, #1456
 	b ws1_resolver
 	.align 2
 
@@ -11648,7 +11664,7 @@ execle:
 	.type execlp, %function
 	.thumb_func
 execlp:
-	movw r12, #1455
+	movw r12, #1457
 	b ws1_resolver
 	.align 2
 
@@ -11656,7 +11672,7 @@ execlp:
 	.type execv, %function
 	.thumb_func
 execv:
-	movw r12, #1456
+	movw r12, #1458
 	b ws1_resolver
 	.align 2
 
@@ -11664,7 +11680,7 @@ execv:
 	.type execve, %function
 	.thumb_func
 execve:
-	movw r12, #1457
+	movw r12, #1459
 	b ws1_resolver
 	.align 2
 
@@ -11672,7 +11688,7 @@ execve:
 	.type execvp, %function
 	.thumb_func
 execvp:
-	movw r12, #1458
+	movw r12, #1460
 	b ws1_resolver
 	.align 2
 
@@ -11680,7 +11696,7 @@ execvp:
 	.type execvpe, %function
 	.thumb_func
 execvpe:
-	movw r12, #1459
+	movw r12, #1461
 	b ws1_resolver
 	.align 2
 
@@ -11688,7 +11704,7 @@ execvpe:
 	.type faccessat, %function
 	.thumb_func
 faccessat:
-	movw r12, #1460
+	movw r12, #1462
 	b ws1_resolver
 	.align 2
 
@@ -11696,7 +11712,7 @@ faccessat:
 	.type fchmodat, %function
 	.thumb_func
 fchmodat:
-	movw r12, #1461
+	movw r12, #1463
 	b ws1_resolver
 	.align 2
 
@@ -11704,7 +11720,7 @@ fchmodat:
 	.type fchown, %function
 	.thumb_func
 fchown:
-	movw r12, #1462
+	movw r12, #1464
 	b ws1_resolver
 	.align 2
 
@@ -11712,7 +11728,7 @@ fchown:
 	.type fchownat, %function
 	.thumb_func
 fchownat:
-	movw r12, #1463
+	movw r12, #1465
 	b ws1_resolver
 	.align 2
 
@@ -11720,7 +11736,7 @@ fchownat:
 	.type fdopendir, %function
 	.thumb_func
 fdopendir:
-	movw r12, #1464
+	movw r12, #1466
 	b ws1_resolver
 	.align 2
 
@@ -11728,7 +11744,7 @@ fdopendir:
 	.type fdprintf, %function
 	.thumb_func
 fdprintf:
-	movw r12, #1465
+	movw r12, #1467
 	b ws1_resolver
 	.align 2
 
@@ -11736,7 +11752,7 @@ fdprintf:
 	.type fork, %function
 	.thumb_func
 fork:
-	movw r12, #1466
+	movw r12, #1468
 	b ws1_resolver
 	.align 2
 
@@ -11744,7 +11760,7 @@ fork:
 	.type fstat, %function
 	.thumb_func
 fstat:
-	movw r12, #1467
+	movw r12, #1469
 	b ws1_resolver
 	.align 2
 
@@ -11752,7 +11768,7 @@ fstat:
 	.type fstat64, %function
 	.thumb_func
 fstat64:
-	movw r12, #1468
+	movw r12, #1470
 	b ws1_resolver
 	.align 2
 
@@ -11760,7 +11776,7 @@ fstat64:
 	.type fstatat, %function
 	.thumb_func
 fstatat:
-	movw r12, #1469
+	movw r12, #1471
 	b ws1_resolver
 	.align 2
 
@@ -11768,7 +11784,7 @@ fstatat:
 	.type fstatat64, %function
 	.thumb_func
 fstatat64:
-	movw r12, #1470
+	movw r12, #1472
 	b ws1_resolver
 	.align 2
 
@@ -11776,7 +11792,7 @@ fstatat64:
 	.type getegid, %function
 	.thumb_func
 getegid:
-	movw r12, #1471
+	movw r12, #1473
 	b ws1_resolver
 	.align 2
 
@@ -11784,7 +11800,7 @@ getegid:
 	.type geteuid, %function
 	.thumb_func
 geteuid:
-	movw r12, #1472
+	movw r12, #1474
 	b ws1_resolver
 	.align 2
 
@@ -11792,7 +11808,7 @@ geteuid:
 	.type getgid, %function
 	.thumb_func
 getgid:
-	movw r12, #1473
+	movw r12, #1475
 	b ws1_resolver
 	.align 2
 
@@ -11800,7 +11816,7 @@ getgid:
 	.type getgrgid, %function
 	.thumb_func
 getgrgid:
-	movw r12, #1474
+	movw r12, #1476
 	b ws1_resolver
 	.align 2
 
@@ -11808,7 +11824,7 @@ getgrgid:
 	.type getgrnam, %function
 	.thumb_func
 getgrnam:
-	movw r12, #1475
+	movw r12, #1477
 	b ws1_resolver
 	.align 2
 
@@ -11816,7 +11832,7 @@ getgrnam:
 	.type getgrouplist, %function
 	.thumb_func
 getgrouplist:
-	movw r12, #1476
+	movw r12, #1478
 	b ws1_resolver
 	.align 2
 
@@ -11824,7 +11840,7 @@ getgrouplist:
 	.type getgroups, %function
 	.thumb_func
 getgroups:
-	movw r12, #1477
+	movw r12, #1479
 	b ws1_resolver
 	.align 2
 
@@ -11832,7 +11848,7 @@ getgroups:
 	.type getlogin, %function
 	.thumb_func
 getlogin:
-	movw r12, #1478
+	movw r12, #1480
 	b ws1_resolver
 	.align 2
 
@@ -11840,7 +11856,7 @@ getlogin:
 	.type getmntent, %function
 	.thumb_func
 getmntent:
-	movw r12, #1479
+	movw r12, #1481
 	b ws1_resolver
 	.align 2
 
@@ -11848,7 +11864,7 @@ getmntent:
 	.type getnetbyaddr, %function
 	.thumb_func
 getnetbyaddr:
-	movw r12, #1480
+	movw r12, #1482
 	b ws1_resolver
 	.align 2
 
@@ -11856,7 +11872,7 @@ getnetbyaddr:
 	.type getnetbyname, %function
 	.thumb_func
 getnetbyname:
-	movw r12, #1481
+	movw r12, #1483
 	b ws1_resolver
 	.align 2
 
@@ -11864,7 +11880,7 @@ getnetbyname:
 	.type getpriority, %function
 	.thumb_func
 getpriority:
-	movw r12, #1482
+	movw r12, #1484
 	b ws1_resolver
 	.align 2
 
@@ -11872,7 +11888,7 @@ getpriority:
 	.type getprotobyname, %function
 	.thumb_func
 getprotobyname:
-	movw r12, #1483
+	movw r12, #1485
 	b ws1_resolver
 	.align 2
 
@@ -11880,7 +11896,7 @@ getprotobyname:
 	.type getprotobynumber, %function
 	.thumb_func
 getprotobynumber:
-	movw r12, #1484
+	movw r12, #1486
 	b ws1_resolver
 	.align 2
 
@@ -11888,7 +11904,7 @@ getprotobynumber:
 	.type getpwnam, %function
 	.thumb_func
 getpwnam:
-	movw r12, #1485
+	movw r12, #1487
 	b ws1_resolver
 	.align 2
 
@@ -11896,7 +11912,7 @@ getpwnam:
 	.type getpwnam_r, %function
 	.thumb_func
 getpwnam_r:
-	movw r12, #1486
+	movw r12, #1488
 	b ws1_resolver
 	.align 2
 
@@ -11904,7 +11920,7 @@ getpwnam_r:
 	.type getpwuid, %function
 	.thumb_func
 getpwuid:
-	movw r12, #1487
+	movw r12, #1489
 	b ws1_resolver
 	.align 2
 
@@ -11912,7 +11928,7 @@ getpwuid:
 	.type getpwuid_r, %function
 	.thumb_func
 getpwuid_r:
-	movw r12, #1488
+	movw r12, #1490
 	b ws1_resolver
 	.align 2
 
@@ -11920,7 +11936,7 @@ getpwuid_r:
 	.type getresgid, %function
 	.thumb_func
 getresgid:
-	movw r12, #1489
+	movw r12, #1491
 	b ws1_resolver
 	.align 2
 
@@ -11928,7 +11944,7 @@ getresgid:
 	.type getresuid, %function
 	.thumb_func
 getresuid:
-	movw r12, #1490
+	movw r12, #1492
 	b ws1_resolver
 	.align 2
 
@@ -11936,7 +11952,7 @@ getresuid:
 	.type getuid, %function
 	.thumb_func
 getuid:
-	movw r12, #1491
+	movw r12, #1493
 	b ws1_resolver
 	.align 2
 
@@ -11944,7 +11960,7 @@ getuid:
 	.type gmtime, %function
 	.thumb_func
 gmtime:
-	movw r12, #1492
+	movw r12, #1494
 	b ws1_resolver
 	.align 2
 
@@ -11952,7 +11968,7 @@ gmtime:
 	.type gmtime_r, %function
 	.thumb_func
 gmtime_r:
-	movw r12, #1493
+	movw r12, #1495
 	b ws1_resolver
 	.align 2
 
@@ -11960,7 +11976,7 @@ gmtime_r:
 	.type klogctl, %function
 	.thumb_func
 klogctl:
-	movw r12, #1494
+	movw r12, #1496
 	b ws1_resolver
 	.align 2
 
@@ -11968,7 +11984,7 @@ klogctl:
 	.type lchown, %function
 	.thumb_func
 lchown:
-	movw r12, #1495
+	movw r12, #1497
 	b ws1_resolver
 	.align 2
 
@@ -11976,7 +11992,7 @@ lchown:
 	.type localtime, %function
 	.thumb_func
 localtime:
-	movw r12, #1496
+	movw r12, #1498
 	b ws1_resolver
 	.align 2
 
@@ -11984,7 +12000,7 @@ localtime:
 	.type localtime_r, %function
 	.thumb_func
 localtime_r:
-	movw r12, #1497
+	movw r12, #1499
 	b ws1_resolver
 	.align 2
 
@@ -11992,7 +12008,7 @@ localtime_r:
 	.type lstat, %function
 	.thumb_func
 lstat:
-	movw r12, #1498
+	movw r12, #1500
 	b ws1_resolver
 	.align 2
 
@@ -12000,7 +12016,7 @@ lstat:
 	.type lstat64, %function
 	.thumb_func
 lstat64:
-	movw r12, #1499
+	movw r12, #1501
 	b ws1_resolver
 	.align 2
 
@@ -12008,7 +12024,7 @@ lstat64:
 	.type memcmp, %function
 	.thumb_func
 memcmp:
-	movw r12, #1500
+	movw r12, #1502
 	b ws1_resolver
 	.align 2
 
@@ -12016,7 +12032,7 @@ memcmp:
 	.type memmem, %function
 	.thumb_func
 memmem:
-	movw r12, #1501
+	movw r12, #1503
 	b ws1_resolver
 	.align 2
 
@@ -12024,7 +12040,7 @@ memmem:
 	.type mkdir, %function
 	.thumb_func
 mkdir:
-	movw r12, #1502
+	movw r12, #1504
 	b ws1_resolver
 	.align 2
 
@@ -12032,7 +12048,7 @@ mkdir:
 	.type mkdirat, %function
 	.thumb_func
 mkdirat:
-	movw r12, #1503
+	movw r12, #1505
 	b ws1_resolver
 	.align 2
 
@@ -12040,7 +12056,7 @@ mkdirat:
 	.type mkdtemp, %function
 	.thumb_func
 mkdtemp:
-	movw r12, #1504
+	movw r12, #1506
 	b ws1_resolver
 	.align 2
 
@@ -12048,7 +12064,7 @@ mkdtemp:
 	.type mknod, %function
 	.thumb_func
 mknod:
-	movw r12, #1505
+	movw r12, #1507
 	b ws1_resolver
 	.align 2
 
@@ -12056,7 +12072,7 @@ mknod:
 	.type mktime, %function
 	.thumb_func
 mktime:
-	movw r12, #1506
+	movw r12, #1508
 	b ws1_resolver
 	.align 2
 
@@ -12064,7 +12080,7 @@ mktime:
 	.type open, %function
 	.thumb_func
 open:
-	movw r12, #1507
+	movw r12, #1509
 	b ws1_resolver
 	.align 2
 
@@ -12072,7 +12088,7 @@ open:
 	.type open64, %function
 	.thumb_func
 open64:
-	movw r12, #1508
+	movw r12, #1510
 	b ws1_resolver
 	.align 2
 
@@ -12080,7 +12096,7 @@ open64:
 	.type openat, %function
 	.thumb_func
 openat:
-	movw r12, #1509
+	movw r12, #1511
 	b ws1_resolver
 	.align 2
 
@@ -12088,7 +12104,7 @@ openat:
 	.type opendir, %function
 	.thumb_func
 opendir:
-	movw r12, #1510
+	movw r12, #1512
 	b ws1_resolver
 	.align 2
 
@@ -12096,7 +12112,7 @@ opendir:
 	.type poll, %function
 	.thumb_func
 poll:
-	movw r12, #1511
+	movw r12, #1513
 	b ws1_resolver
 	.align 2
 
@@ -12104,7 +12120,7 @@ poll:
 	.type prctl, %function
 	.thumb_func
 prctl:
-	movw r12, #1512
+	movw r12, #1514
 	b ws1_resolver
 	.align 2
 
@@ -12112,7 +12128,7 @@ prctl:
 	.type pthread_attr_init, %function
 	.thumb_func
 pthread_attr_init:
-	movw r12, #1513
+	movw r12, #1515
 	b ws1_resolver
 	.align 2
 
@@ -12120,7 +12136,7 @@ pthread_attr_init:
 	.type pthread_create, %function
 	.thumb_func
 pthread_create:
-	movw r12, #1514
+	movw r12, #1516
 	b ws1_resolver
 	.align 2
 
@@ -12128,7 +12144,7 @@ pthread_create:
 	.type renameat, %function
 	.thumb_func
 renameat:
-	movw r12, #1515
+	movw r12, #1517
 	b ws1_resolver
 	.align 2
 
@@ -12136,7 +12152,7 @@ renameat:
 	.type rmdir, %function
 	.thumb_func
 rmdir:
-	movw r12, #1516
+	movw r12, #1518
 	b ws1_resolver
 	.align 2
 
@@ -12144,7 +12160,7 @@ rmdir:
 	.type sendfile, %function
 	.thumb_func
 sendfile:
-	movw r12, #1517
+	movw r12, #1519
 	b ws1_resolver
 	.align 2
 
@@ -12152,7 +12168,7 @@ sendfile:
 	.type setegid, %function
 	.thumb_func
 setegid:
-	movw r12, #1518
+	movw r12, #1520
 	b ws1_resolver
 	.align 2
 
@@ -12160,7 +12176,7 @@ setegid:
 	.type seteuid, %function
 	.thumb_func
 seteuid:
-	movw r12, #1519
+	movw r12, #1521
 	b ws1_resolver
 	.align 2
 
@@ -12168,7 +12184,7 @@ seteuid:
 	.type setgid, %function
 	.thumb_func
 setgid:
-	movw r12, #1520
+	movw r12, #1522
 	b ws1_resolver
 	.align 2
 
@@ -12176,7 +12192,7 @@ setgid:
 	.type setgroups, %function
 	.thumb_func
 setgroups:
-	movw r12, #1521
+	movw r12, #1523
 	b ws1_resolver
 	.align 2
 
@@ -12184,7 +12200,7 @@ setgroups:
 	.type setpriority, %function
 	.thumb_func
 setpriority:
-	movw r12, #1522
+	movw r12, #1524
 	b ws1_resolver
 	.align 2
 
@@ -12192,7 +12208,7 @@ setpriority:
 	.type setregid, %function
 	.thumb_func
 setregid:
-	movw r12, #1523
+	movw r12, #1525
 	b ws1_resolver
 	.align 2
 
@@ -12200,7 +12216,7 @@ setregid:
 	.type setresgid, %function
 	.thumb_func
 setresgid:
-	movw r12, #1524
+	movw r12, #1526
 	b ws1_resolver
 	.align 2
 
@@ -12208,7 +12224,7 @@ setresgid:
 	.type setresuid, %function
 	.thumb_func
 setresuid:
-	movw r12, #1525
+	movw r12, #1527
 	b ws1_resolver
 	.align 2
 
@@ -12216,7 +12232,7 @@ setresuid:
 	.type setreuid, %function
 	.thumb_func
 setreuid:
-	movw r12, #1526
+	movw r12, #1528
 	b ws1_resolver
 	.align 2
 
@@ -12224,7 +12240,7 @@ setreuid:
 	.type setuid, %function
 	.thumb_func
 setuid:
-	movw r12, #1527
+	movw r12, #1529
 	b ws1_resolver
 	.align 2
 
@@ -12232,7 +12248,7 @@ setuid:
 	.type stat, %function
 	.thumb_func
 stat:
-	movw r12, #1528
+	movw r12, #1530
 	b ws1_resolver
 	.align 2
 
@@ -12240,7 +12256,7 @@ stat:
 	.type stat64, %function
 	.thumb_func
 stat64:
-	movw r12, #1529
+	movw r12, #1531
 	b ws1_resolver
 	.align 2
 
@@ -12248,7 +12264,7 @@ stat64:
 	.type statvfs, %function
 	.thumb_func
 statvfs:
-	movw r12, #1530
+	movw r12, #1532
 	b ws1_resolver
 	.align 2
 
@@ -12256,7 +12272,7 @@ statvfs:
 	.type strcasestr, %function
 	.thumb_func
 strcasestr:
-	movw r12, #1531
+	movw r12, #1533
 	b ws1_resolver
 	.align 2
 
@@ -12264,7 +12280,7 @@ strcasestr:
 	.type strftime, %function
 	.thumb_func
 strftime:
-	movw r12, #1532
+	movw r12, #1534
 	b ws1_resolver
 	.align 2
 
@@ -12272,7 +12288,7 @@ strftime:
 	.type strndup, %function
 	.thumb_func
 strndup:
-	movw r12, #1533
+	movw r12, #1535
 	b ws1_resolver
 	.align 2
 
@@ -12280,7 +12296,7 @@ strndup:
 	.type strptime, %function
 	.thumb_func
 strptime:
-	movw r12, #1534
+	movw r12, #1536
 	b ws1_resolver
 	.align 2
 
@@ -12288,7 +12304,7 @@ strptime:
 	.type timegm, %function
 	.thumb_func
 timegm:
-	movw r12, #1535
+	movw r12, #1537
 	b ws1_resolver
 	.align 2
 
@@ -12296,7 +12312,7 @@ timegm:
 	.type timelocal, %function
 	.thumb_func
 timelocal:
-	movw r12, #1536
+	movw r12, #1538
 	b ws1_resolver
 	.align 2
 
@@ -12304,7 +12320,7 @@ timelocal:
 	.type timezone, %function
 	.thumb_func
 timezone:
-	movw r12, #1537
+	movw r12, #1539
 	b ws1_resolver
 	.align 2
 
@@ -12312,7 +12328,7 @@ timezone:
 	.type ttyname, %function
 	.thumb_func
 ttyname:
-	movw r12, #1538
+	movw r12, #1540
 	b ws1_resolver
 	.align 2
 
@@ -12320,7 +12336,7 @@ ttyname:
 	.type ttyname_r, %function
 	.thumb_func
 ttyname_r:
-	movw r12, #1539
+	movw r12, #1541
 	b ws1_resolver
 	.align 2
 
@@ -12328,7 +12344,7 @@ ttyname_r:
 	.type tzname, %function
 	.thumb_func
 tzname:
-	movw r12, #1540
+	movw r12, #1542
 	b ws1_resolver
 	.align 2
 
@@ -12336,7 +12352,7 @@ tzname:
 	.type tzset, %function
 	.thumb_func
 tzset:
-	movw r12, #1541
+	movw r12, #1543
 	b ws1_resolver
 	.align 2
 
@@ -12344,7 +12360,7 @@ tzset:
 	.type unlinkat, %function
 	.thumb_func
 unlinkat:
-	movw r12, #1542
+	movw r12, #1544
 	b ws1_resolver
 	.align 2
 
@@ -12352,7 +12368,7 @@ unlinkat:
 	.type utimensat, %function
 	.thumb_func
 utimensat:
-	movw r12, #1543
+	movw r12, #1545
 	b ws1_resolver
 	.align 2
 
@@ -12360,7 +12376,7 @@ utimensat:
 	.type vfdprintf, %function
 	.thumb_func
 vfdprintf:
-	movw r12, #1544
+	movw r12, #1546
 	b ws1_resolver
 	.align 2
 
@@ -16999,6 +17015,12 @@ ws1_slot_1543:
 	.word 0
 	.global ws1_slot_1544
 ws1_slot_1544:
+	.word 0
+	.global ws1_slot_1545
+ws1_slot_1545:
+	.word 0
+	.global ws1_slot_1546
+ws1_slot_1546:
 	.word 0
 	.text
 

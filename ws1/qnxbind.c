@@ -52,6 +52,7 @@ extern void __udivsi3(void);
 extern void __vsnprintf_chk(void);
 extern void __vsprintf_chk(void);
 extern void _exit(void);
+extern void _init_libc(void);
 extern void _longjmp(void);
 extern void _setjmp(void);
 extern void _tolower(void);
@@ -93,6 +94,7 @@ extern void closedir(void);
 extern void closelog(void);
 extern void ctermid(void);
 extern void daemon(void);
+extern void devctl(void);
 extern void dirfd(void);
 extern void dirname(void);
 extern void div(void);
@@ -745,7 +747,7 @@ extern void ttyname_r(void);
 extern void tzname(void);
 extern void tzset(void);
 
-void *qnxb_ptrs[1545] = {
+void *qnxb_ptrs[1547] = {
   (void *)&_Exit,
   (void *)&_Unwind_Backtrace,
   (void *)&_Unwind_Complete,
@@ -799,6 +801,7 @@ void *qnxb_ptrs[1545] = {
   (void *)&__vsnprintf_chk,
   (void *)&__vsprintf_chk,
   (void *)&_exit,
+  (void *)&_init_libc,
   (void *)&_longjmp,
   (void *)&_setjmp,
   (void *)&_tolower,
@@ -840,6 +843,7 @@ void *qnxb_ptrs[1545] = {
   (void *)&closelog,
   (void *)&ctermid,
   (void *)&daemon,
+  (void *)&devctl,
   (void *)&dirfd,
   (void *)&dirname,
   (void *)&div,
