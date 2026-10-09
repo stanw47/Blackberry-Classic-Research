@@ -104,49 +104,12 @@ static uint32_t shm_alloc(unsigned n)
     return off;   /* region-relative offset */
 }
 
-/* Walk a binder command stream and convert between A11 and RIM encodings:
- * to_offsets=1 (write side): A11 words -> RIM words, A11 txn layout -> RIM
- * txn layout, payload pointers -> region offsets.  to_offsets=0 (read side):
- * RIM words -> A11 words, RIM txn layout -> A11 layout, region offsets ->
- * payload pointers. */
-static void xlate_stream(unsigned char *w, unsigned size, int to_offsets)
-{
-    unsigned off = 0;
-    while (off + 4 <= size) {
-        uint32_t cmd = *(uint32_t *)(w + off);
-        unsigned plen = (cmd >> 16) & 0x3fffu;
-        off += 4;
-        if ((cmd == (to_offsets ? BC_TRANSACTION_A11 : BR_TRANSACTION_RIM) ||
-             cmd == (to_offsets ? BC_REPLY_A11       : BR_REPLY_RIM))
-            && off + sizeof(struct txn_a11) <= size) {
-            uint32_t *t = (uint32_t *)(w + off);
-            uint32_t data_size = t[6], offsets_size = t[7], buffer = t[8], offsets = t[9];
-            if (to_offsets) {
-                /* A11 layout -> RIM layout (pointers already region offsets) */
-                t[6] = buffer;
-                t[7] = offsets_size;
-                t[8] = offsets;
-                t[9] = data_size;
-            } else {
-                /* RIM layout -> A11 layout (region offsets -> pointers) */
-                if (buffer)  buffer  += g_vm_base;
-                if (offsets) offsets += g_vm_base;
-                t[6] = data_size;
-                t[7] = offsets_size;
-                t[8] = buffer;
-                t[9] = offsets;
-            }
-        }
-        *(uint32_t *)(w + off - 4) = rim_cmd(cmd);
-        off += plen;
-    }
-}
-
-/* Walk the BC_ command stream in the write buffer, copy the transaction
- * payloads into the region, rewrite their pointers to region offsets, convert
- * the txn struct to RIM's layout and the command words to RIM's encoding. */
-static void relocate_writebuf2(unsigned char *w, unsigned size, unsigned char *shm,
-                               int paymode, int reorder, int synthpayload)
+/* Walk the BC stream inside the devctl message; copy txn payloads into the
+ * message after the stream, rewrite payload pointers to MESSAGE OFFSETS, and
+ * swap command words to RIM's encoding.  (The driver reads client data with
+ * resmgr_msgread(ctp, dst, size, offset) — everything is message-relative.) */
+static void pack_writemsg(unsigned char *w, unsigned size, unsigned char *msg,
+                          unsigned *payload_off)
 {
     unsigned off = 0;
     while (off + 4 <= size) {
@@ -159,43 +122,52 @@ static void relocate_writebuf2(unsigned char *w, unsigned size, unsigned char *s
             uint32_t data_size = t[6], offsets_size = t[7];
             uint32_t buffer = t[8], offsets = t[9];
             if (data_size && buffer) {
-                uint32_t no = shm_alloc(data_size);
-                if (!no) return;
-                memcpy(shm + no, (void *)(unsigned long)buffer, data_size);
-                buffer = paymode ? (uint32_t)(unsigned long)(shm + no) : no;
+                uint32_t no = *payload_off;
+                memcpy(msg + no, (void *)(unsigned long)buffer, data_size);
+                *payload_off = (no + data_size + 3) & ~3u;
+                buffer = no;
+            } else if (cmd == BC_TRANSACTION_A11 && data_size == 0) {
+                /* RIM's 4.3 client always sent writeInt32(0) for the context-
+                 * manager PING; the driver's size check may require >= 4. */
+                uint32_t no = *payload_off;
+                *(uint32_t *)(msg + no) = 0;
+                *payload_off = (no + 4 + 3) & ~3u;
+                buffer = no;
+                data_size = 4;
             }
             if (offsets_size && offsets) {
-                uint32_t no = shm_alloc(offsets_size);
-                if (!no) return;
-                memcpy(shm + no, (void *)(unsigned long)offsets, offsets_size);
-                offsets = paymode ? (uint32_t)(unsigned long)(shm + no) : no;
+                uint32_t no = *payload_off;
+                memcpy(msg + no, (void *)(unsigned long)offsets, offsets_size);
+                *payload_off = (no + offsets_size + 3) & ~3u;
+                offsets = no;
             }
-            dbg1("QB tgt", t[0]);
-            dbg1("QB code", t[2]);
-            dbg1("QB flg", t[3]);
-            dbg1("QB dsz", data_size);
-            dbg1("QB osz", offsets_size);
-            dbg1("QB buf", buffer);
-            if (synthpayload && data_size == 0) {
-                uint32_t no = shm_alloc(4);
-                if (no) {
-                    *(uint32_t *)(shm + no) = 0;
-                    buffer = paymode ? (uint32_t)(unsigned long)(shm + no) : no;
-                    data_size = 4;
-                    dbg1("QB synth", no);
-                }
-            }
-            if (reorder) {   /* A11 layout -> RIM layout */
-                t[6] = buffer;
-                t[7] = offsets_size;
-                t[8] = offsets;
-                t[9] = data_size;
-            } else {
-                t[6] = data_size;
-                t[7] = offsets_size;
-                t[8] = buffer;
-                t[9] = offsets;
-            }
+            /* AOSP field order is what the driver parses (verified against
+             * RIM's writeTransactionData: data_size, offsets_size, buffer,
+             * offsets at +0x18..+0x24) */
+            t[6] = data_size;
+            t[7] = offsets_size;
+            t[8] = buffer;
+            t[9] = offsets;
+        }
+        *(uint32_t *)(w + off - 4) = rim_cmd(cmd);
+        off += plen;
+    }
+}
+
+/* Walk the BR stream in the reply area; convert message offsets in txn fields
+ * to absolute pointers into the caller's read buffer and swap words to A11. */
+static void unpack_readmsg(unsigned char *w, unsigned size, unsigned char *readbase)
+{
+    unsigned off = 0;
+    while (off + 4 <= size) {
+        uint32_t cmd = *(uint32_t *)(w + off);
+        unsigned plen = (cmd >> 16) & 0x3fffu;
+        off += 4;
+        if ((cmd == BR_TRANSACTION_RIM || cmd == BR_REPLY_RIM)
+            && off + sizeof(struct txn_a11) <= size) {
+            uint32_t *t = (uint32_t *)(w + off);
+            if (t[8]) t[8] = (uint32_t)(unsigned long)(readbase + t[8]);
+            if (t[9]) t[9] = (uint32_t)(unsigned long)(readbase + t[9]);
         }
         *(uint32_t *)(w + off - 4) = rim_cmd(cmd);
         off += plen;
@@ -231,75 +203,46 @@ int qnx_binder_ioctl(int fd, unsigned long request, void *arg)
         rc = devctl(fd, RIM_SET_MAX_THREADS, arg, 4, &info);
         break;
     case BINDER_WRITE_READ: {
+        /* One devctl message carries everything: [bwr 24B][write stream +
+         * payloads][read area].  All pointers the driver sees are message
+         * offsets (it uses resmgr_msgread/write with them). */
         struct bwr32 *b = (struct bwr32 *)arg;
         unsigned char *shm = (unsigned char *)(unsigned long)g_vm_base;
+        unsigned char *msg = shm + SHM_WSCRATCH;
+        struct bwr32 *mb = (struct bwr32 *)msg;
         uint32_t wb = b->write_buffer, rb = b->read_buffer;
-        int vi, done = 0;
+        unsigned ws = b->write_size, rs = b->read_size;
+        unsigned payload_off, total;
 
         if (!g_vm_base) { SET_ERRNO(EINVAL); return -1; }
-        dbg1("QB wsz", b->write_size);
-        if (b->write_size >= 4) {
-            uint32_t *cw = (uint32_t *)(unsigned long)wb;
-            dbg1("QB c0", cw[0]);
-            if (b->write_size >= 12) dbg1("QB c1", cw[2]);
-            if (b->write_size >= 16) dbg1("QB c2", cw[3]);
-        }
-        for (vi = 0; vi < 14 && !done; vi++) {
-            int bufmode = (vi == 2 || vi == 3);      /* 0: region offsets, 1: addresses */
-            int paymode = (vi == 1 || vi == 3 || vi == 7); /* payload offsets vs addresses */
-            int reorder = (vi != 4);                 /* RIM txn layout vs AOSP */
-            int filter  = (vi >= 6 && vi < 8);       /* drop non-transaction commands */
-            int synth   = (vi >= 8 && vi < 10);      /* synthesize 4-byte payload */
-            int noread  = (vi >= 10);                /* zero the read request */
-            int prefix  = (vi >= 12);                /* prepend refcount op for handle 0 */
-            g_payload_off = SHM_PAYLOAD;
-            b->write_buffer = wb; b->read_buffer = rb;
-            if (b->write_size) {
-                unsigned wsize = b->write_size;
-                unsigned char *dst = shm + SHM_WSCRATCH + (prefix ? 8 : 0);
-                if (wsize > SHM_PAYLOAD - SHM_WSCRATCH - 0x1000 - (prefix ? 8 : 0)) { SET_ERRNO(EINVAL); return -1; }
-                memcpy(dst, (void *)(unsigned long)wb, wsize);
-                if (filter) {
-                    /* keep only BC_TRANSACTION/BC_REPLY commands */
-                    unsigned ro = 0, wo = 0;
-                    while (ro + 4 <= wsize) {
-                        uint32_t c = *(uint32_t *)(dst + ro);
-                        unsigned pl = (c >> 16) & 0x3fffu;
-                        if (c == BC_TRANSACTION_A11 || c == BC_REPLY_A11) {
-                            memmove(dst + wo, dst + ro, 4 + pl);
-                            wo += 4 + pl;
-                        }
-                        ro += 4 + pl;
-                    }
-                    wsize = wo;
-                }
-                relocate_writebuf2(dst, wsize, shm, paymode, reorder, synth);
-                if (prefix) {
-                    /* RIM-encoded refcount op on handle 0 (already wire form) */
-                    *(uint32_t *)(shm + SHM_WSCRATCH) = (vi == 13) ? 0x80046305u : 0x80046304u;
-                    *(uint32_t *)(shm + SHM_WSCRATCH + 4) = 0;
-                    wsize += 8;
-                }
-                b->write_size = wsize;
-                b->write_buffer = bufmode ? (uint32_t)(unsigned long)(shm + SHM_WSCRATCH) : SHM_WSCRATCH;
-            }
-            if (b->read_size)
-                b->read_buffer = bufmode ? (uint32_t)(unsigned long)(shm + SHM_RSCRATCH) : SHM_RSCRATCH;
-            if (noread) { b->read_size = 0; b->read_buffer = 0; }
-            rc = devctl(fd, BINDER_WRITE_READ, arg, BINDER_WRITE_READ_LEN, &info);
-            dbg1("QB try", (unsigned)vi);
-            dbg1("QB rc ", (unsigned)rc);
-            if (rc == 0) done = 1;
-        }
+        if (ws > 0x20000 || rs > 0x20000) { SET_ERRNO(EINVAL); return -1; }
+        if (24 + ws > SHM_PAYLOAD - SHM_WSCRATCH - 0x40000) { SET_ERRNO(EINVAL); return -1; }
+        if (ws) memcpy(msg + 24, (void *)(unsigned long)wb, ws);
+        payload_off = 24 + ws;
+        if (ws) pack_writemsg(msg + 24, ws, msg, &payload_off);
+        mb->write_size = ws;
+        mb->write_consumed = 0;
+        mb->write_buffer = 24;
+        mb->read_size = rs;
+        mb->read_consumed = 0;
+        mb->read_buffer = payload_off;
+        total = payload_off + rs;
+
+        rc = devctl(fd, BINDER_WRITE_READ, msg, total, &info);
+
+        b->write_consumed = mb->write_consumed;
         b->write_buffer = wb;
-        if (b->read_size) {
-            if (rc == 0 && b->read_consumed) {
-                if (b->read_consumed > b->read_size) b->read_consumed = b->read_size;
-                xlate_stream(shm + SHM_RSCRATCH, b->read_consumed, 0);
-                memcpy((void *)(unsigned long)rb, shm + SHM_RSCRATCH, b->read_consumed);
-            }
-            b->read_buffer = rb;
+        b->read_buffer = rb;
+        if (rc == 0 && mb->read_consumed) {
+            if (mb->read_consumed > rs) mb->read_consumed = rs;
+            unpack_readmsg(msg + payload_off, mb->read_consumed,
+                           (unsigned char *)(unsigned long)rb);
+            memcpy((void *)(unsigned long)rb, msg + payload_off, mb->read_consumed);
+            b->read_consumed = mb->read_consumed;
+        } else {
+            b->read_consumed = 0;
         }
+        dbg1("QB wr rc", (unsigned)rc);
         if (rc == 0) {
             dbg1("QB wr wc", b->write_consumed);
             dbg1("QB wr rcc", b->read_consumed);
