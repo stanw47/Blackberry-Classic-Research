@@ -16,7 +16,7 @@ int *___errno(void) { return __get_errno_ptr(); }
 /* ---- Debug write at load time ---- */
 static void __attribute__((constructor)) shim_debug_init(void)
 {
-    static const char msg[] = "[SHIM] init\n";
+    static const char msg[] = "[SHIM] init trace50f\n";
     write(1, msg, sizeof(msg) - 1);
 }
 

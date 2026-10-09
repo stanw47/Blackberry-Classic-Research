@@ -1,15 +1,14 @@
-/* probe_binder_devctl — try the BB10 binder driver via QNX devctl with the
- * request numbers discovered in RIM's libbionic.so ioctl_binder:
- *   0xC0186201 BINDER_WRITE_READ (24-byte arg)
- *   0xC108620C ProcessState ctor config (size 8; RIM sets a 0xfe000 field)
- *   0xC0046209 BINDER_VERSION (4-byte arg)
- *   0xC03C620B binder_qnx_fd transaction-memory (60-byte arg)
+/* probe_binder_devctl — v11: is the CFG writeback token a valid address IN OUR
+ * PROCESS (driver mmap_peer'ing the shm into the client)?  Crash-tolerant: the
+ * token dereference happens first, everything else after.
  */
 #include <unistd.h>
 #include <fcntl.h>
 #include <stdint.h>
 
 extern int devctl(int fd, int dcmd, void *data, size_t nbytes, int *info);
+extern void *mmap(void *addr, size_t len, int prot, int flags, int fd, long long off);
+extern int munmap(void *addr, size_t len);
 
 #define SAY(s) write(1, (s), sizeof(s) - 1)
 
@@ -29,6 +28,8 @@ int main(void)
     unsigned char buf[0x120];
     int info = 0;
     int i, fd;
+    int rc;
+    unsigned token;
 
     for (i = 0; i < (int)sizeof(buf); ++i) buf[i] = 0;
 
@@ -36,30 +37,44 @@ int main(void)
     SAY("open: "); ph(fd); SAY("\n");
     if (fd < 0) return 1;
 
-    /* BINDER_VERSION (4-byte arg) */
-    buf[0] = buf[1] = buf[2] = buf[3] = 0;
-    int rc = devctl(fd, (int)0xC0046209, buf, 4, &info);
-    SAY("devctl VERSION rc="); ph(rc); SAY("info="); ph(info);
-    SAY("ver="); ph(*(unsigned *)buf); SAY("\n");
+    rc = devctl(fd, (int)0xC0046209, buf, 4, &info);
+    SAY("VERSION rc="); ph(rc); SAY("ver="); ph(*(unsigned *)buf); SAY("\n");
 
-    /* ProcessState ctor config: size field at +0x104 = 0xfe000 */
+    *(unsigned *)buf = 15;
+    rc = devctl(fd, (int)0x80046205, buf, 4, &info);
+    SAY("SET_MAX_THREADS rc="); ph(rc); SAY("\n");
+
+    for (i = 0; i < 0x108; ++i) buf[i] = 0;
     *(unsigned *)(buf + 0x104) = 0xfe000;
-    info = 0;
-    rc = devctl(fd, (int)0xC108620C, buf, 8, &info);
-    SAY("devctl CFG rc="); ph(rc); SAY("info="); ph(info); SAY("\n");
+    rc = devctl(fd, (int)0xC108620C, buf, 0x108, &info);
+    token = *(unsigned *)(buf + 0x100);
+    SAY("CFG rc="); ph(rc); SAY("token="); ph(token); SAY("\n");
 
-    /* transaction memory (60-byte arg) */
-    info = 0;
+    /* THE TEST: is the token mapped in our address space? */
+    {
+        volatile unsigned *tp = (volatile unsigned *)token;
+        unsigned v0 = *tp;
+        SAY("token[0] = "); ph(v0); SAY("\n");
+        *tp = 0xA5A5A5A5u;
+        SAY("token write+read = "); ph(*tp); SAY("\n");
+        *tp = v0;
+    }
+
+    /* TXN with more candidate keys */
+    for (i = 0; i < 0x40; ++i) buf[i] = 0;
+    *(unsigned *)buf = (unsigned)getpid();
     rc = devctl(fd, (int)0xC03C620B, buf, 0x3C, &info);
-    SAY("devctl TXN rc="); ph(rc); SAY("info="); ph(info); SAY("\n");
-    for (i = 0; i < 0x3C; i += 4) { ph(*(unsigned *)(buf + i)); if (((i / 4) & 3) == 3) SAY("\n"); }
-    SAY("\n");
+    SAY("TXN(pid) rc="); ph(rc); SAY("\n");
 
-    /* BINDER_WRITE_READ (24-byte arg, empty) */
+    /* retry mmap on fd with every plausible prot/flag combo */
+    void *m;
+    m = mmap(0, 0xfe000, 0x300, 1, fd, 0);  SAY("mmap 0x300/1: "); ph((unsigned long)m); SAY("\n");
+    m = mmap(0, 0xfe000, 0x3, 1, fd, 0);    SAY("mmap 0x3/1: ");   ph((unsigned long)m); SAY("\n");
+    m = mmap(0, 0xfe000, 0x300, 0, fd, 0);  SAY("mmap 0x300/0: "); ph((unsigned long)m); SAY("\n");
+
     for (i = 0; i < 0x18; ++i) buf[i] = 0;
-    info = 0;
     rc = devctl(fd, (int)0xC0186201, buf, 0x18, &info);
-    SAY("devctl WR rc="); ph(rc); SAY("info="); ph(info); SAY("\n");
+    SAY("WR rc="); ph(rc); SAY("\n");
 
     close(fd);
     return 0;

@@ -51,7 +51,15 @@ arm-none-eabi-gcc -march=armv7-a -mfloat-abi=soft -mthumb -Os -nostdlib -fpic -f
 # AIDL-generated .cpp compiled into libbinder (done in build.sh; here just include if present).
 L="$LD -shared --allow-shlib-undefined -L$OUT -L$SHIM -L$SR"
 CRT="$CB $CE"
-QNXNEED="-l:libc.so.3 -l:libc.so"           # ORDER MATTERS: real libc first, shim second
+# ORDER MATTERS: real QNX libc first.  The WS1 shim is deployed on-device under
+# the (unused) trusted libthread_db.so inode, so the NEEDED name is
+# libthread_db.so — that keeps the runtime's real libc.so loadable for the
+# core's QNX binaries while our chain gets the shim (session50e).
+if [ ! -f "$SHIM/libthread_db.so" ]; then
+    echo "[qnx-link] missing $SHIM/libthread_db.so — run: make -C ws1 build/libthread_db.so"
+    exit 1
+fi
+QNXNEED="-l:libc.so.3 -l:libthread_db.so"
 
 echo "[qnx-link] libc++.so (static libc++/abi/unwind + aeabi stubs -> shared)"
 $L -o "$OUT/libc++.so" $CRT --whole-archive "$SYS/libc++_static.a" "$SYS/libc++abi.a" "$LU" --no-whole-archive "$O/aeabi_stubs.o" $QNXNEED $CE -soname libc++.so 2>&1 | grep -vE "warning|stripped|NOTE" | head -3 || true

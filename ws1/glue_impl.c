@@ -39,9 +39,28 @@ static int (*p_pthread_mutex_unlock)(pthread_mutex_t *) = 0;
 static int (*p_pthread_cond_wait)(pthread_cond_t *, pthread_mutex_t *) = 0;
 static int (*p_pthread_cond_signal)(pthread_cond_t *) = 0;
 static int (*p_pthread_cond_broadcast)(pthread_cond_t *) = 0;
+static int (*p_pthread_once)(void *, void (*)(void)) = 0;
+static int (*p_pthread_key_create)(unsigned *, void (*)(void *)) = 0;
+static void *(*p_pthread_getspecific)(unsigned) = 0;
+static int (*p_pthread_setspecific)(unsigned, const void *) = 0;
 
 extern void *dlopen(const char *, int);
 extern void *dlsym(void *, const char *);
+extern long write(int, const void *, unsigned long);
+
+/* session50f tracing: "<tag> <hex>\n" on fd 1 (the probe's run.log). */
+static void ws1_dbg(const char *tag, unsigned v)
+{
+    char b[40];
+    int n = 0, i;
+    while (*tag) b[n++] = *tag++;
+    for (i = 0; i < 8; ++i) {
+        unsigned d = (v >> ((7 - i) * 4)) & 0xf;
+        b[n++] = d < 10 ? (char)('0' + d) : (char)('a' + d - 10);
+    }
+    b[n++] = '\n';
+    write(1, b, (unsigned long)n);
+}
 
 static void resolve_pthread(void)
 {
@@ -52,6 +71,10 @@ static void resolve_pthread(void)
     p_pthread_cond_wait    = (void *)dlsym(libc, "pthread_cond_wait");
     p_pthread_cond_signal  = (void *)dlsym(libc, "pthread_cond_signal");
     p_pthread_cond_broadcast = (void *)dlsym(libc, "pthread_cond_broadcast");
+    p_pthread_once         = (void *)dlsym(libc, "pthread_once");
+    p_pthread_key_create   = (void *)dlsym(libc, "pthread_key_create");
+    p_pthread_getspecific  = (void *)dlsym(libc, "pthread_getspecific");
+    p_pthread_setspecific  = (void *)dlsym(libc, "pthread_setspecific");
 }
 
 /* _NTO_SYNC_MUTEX_FREE = 0x10, _NTO_SYNC_COND = 0x02 */
@@ -97,6 +120,7 @@ static unsigned futex_hash(volatile int *p)
 int ws1_impl_futex_wait(volatile int *ftx, int value, const struct timespec_t *timeout)
 {
     ensure_pthread();
+    ws1_dbg("FW", (unsigned)(unsigned long)ftx);
     unsigned h = futex_hash(ftx);
     struct futex_entry *e;
     int i, found = -1;
@@ -124,6 +148,7 @@ int ws1_impl_futex_wait(volatile int *ftx, int value, const struct timespec_t *t
     if (*ftx != value) {
         rc = 0;                       /* word already changed: don't sleep */
     } else {
+        ws1_dbg("FS", (unsigned)(unsigned long)ftx);  /* actually sleeping */
         p_pthread_cond_wait(&e->c, &e->m);  /* timeout ignored in early smoke */
         rc = 0;
     }
@@ -134,6 +159,7 @@ int ws1_impl_futex_wait(volatile int *ftx, int value, const struct timespec_t *t
 int ws1_impl_futex_wake(volatile int *ftx, int count)
 {
     ensure_pthread();
+    ws1_dbg("FK", (unsigned)(unsigned long)ftx);
     unsigned h = futex_hash(ftx);
     struct futex_entry *e;
     int i, found = -1, woken = 0;
@@ -205,8 +231,19 @@ void *ws1_impl_newlocale(int mask, const char *name, void *base)
 void *ws1_impl_uselocale(void *loc) { (void)loc; return ws1_c_locale; }
 void  ws1_impl_freelocale(void *loc) { (void)loc; }
 int   ws1_impl_mbsinit(const void *ps) { return ps ? (*(const int *)ps == 0) : 1; }
-int   ws1_impl_register_atfork(void *prep, void *parent, void *child, void *dso)
+int ws1_impl_register_atfork(void *prep, void *parent, void *child, void *dso)
 { (void)prep; (void)parent; (void)child; (void)dso; return 0; }
+
+/* bionic struct rlimit is 2x32-bit; QNX's is 2x64-bit, so the QNX getrlimit
+ * would write 16 bytes into an 8-byte caller object and smash the caller's
+ * stack frame (session50g: Parcel::initState SIGBUS).  Parcel only wants a
+ * sane gMaxFds, so return a fixed limit without calling QNX. */
+int ws1_impl_getrlimit(int resource, unsigned *rlp)
+{
+    (void)resource;
+    if (rlp) { rlp[0] = 1024; rlp[1] = 1024; }
+    return 0;
+}
 
 unsigned long ws1_impl_mbrtowc(int *pwc, const char *s, unsigned long n, void *ps)
 {
@@ -247,9 +284,11 @@ unsigned long ws1_impl_mbsnrtowcs(int *dst, const char **src, unsigned long nms,
  * pthread_cond_t is a 4-byte counter signalled via __futex_wake. */
 int ws1_impl_pthread_mutex_lock(unsigned *m)
 {
+    ws1_dbg("ML", (unsigned)(unsigned long)m);
     for (;;) {
         if (*m == 0 && __sync_bool_compare_and_swap(m, 0u, 1u))
             return 0;
+        ws1_dbg("MW", (unsigned)(unsigned long)m);  /* contended: about to sleep */
         ws1_impl_futex_wait((volatile int *)m, 1, 0);
     }
 }
@@ -259,12 +298,48 @@ int ws1_impl_pthread_mutex_trylock(unsigned *m)
 }
 int ws1_impl_pthread_mutex_unlock(unsigned *m)
 {
+    ws1_dbg("MU", (unsigned)(unsigned long)m);
     *m = 0;
     ws1_impl_futex_wake((volatile int *)m, 1);
     return 0;
 }
 int ws1_impl_pthread_mutex_init(unsigned *m, const void *a) { (void)a; *m = 0; return 0; }
 int ws1_impl_pthread_mutex_destroy(unsigned *m) { *m = 0; return 0; }
+
+/* forwarders with tracing (these are otherwise trampolines to QNX) */
+int ws1_impl_pthread_once(unsigned *once, void (*init)(void))
+{
+    ws1_dbg("PO", (unsigned)(unsigned long)once);
+    /* bionic pthread_once_t is a 4-byte word (0=uninit, 2=done); QNX's is a
+     * different size, so implement it over the futex emulation. */
+    if (__sync_bool_compare_and_swap(once, 0u, 1u)) {
+        init();
+        *once = 2;
+        ws1_impl_futex_wake((volatile int *)once, 0x7fffffff);
+        return 0;
+    }
+    while (*once != 2)
+        ws1_impl_futex_wait((volatile int *)once, 1, 0);
+    return 0;
+}
+int ws1_impl_pthread_key_create(unsigned *k, void (*dtor)(void *))
+{
+    ws1_dbg("KC", (unsigned)(unsigned long)k);
+    ensure_pthread();
+    return p_pthread_key_create(k, dtor);
+}
+void *ws1_impl_pthread_getspecific(unsigned k)
+{
+    ws1_dbg("KG", k);
+    ensure_pthread();
+    return p_pthread_getspecific(k);
+}
+int ws1_impl_pthread_setspecific(unsigned k, const void *v)
+{
+    ws1_dbg("KS", k);
+    ensure_pthread();
+    return p_pthread_setspecific(k, v);
+}
 
 int ws1_impl_pthread_cond_wait(unsigned *c, unsigned *m)
 {
@@ -312,6 +387,11 @@ struct ws1_glue_impl __attribute__((visibility("hidden"))) ws1_glue_impls[] = {
     { "wcrtomb",                    (void *)ws1_impl_wcrtomb },
     { "mbsnrtowcs",                 (void *)ws1_impl_mbsnrtowcs },
     { "__register_atfork",          (void *)ws1_impl_register_atfork },
+    { "getrlimit",                  (void *)ws1_impl_getrlimit },
+    { "pthread_once",               (void *)ws1_impl_pthread_once },
+    { "pthread_key_create",         (void *)ws1_impl_pthread_key_create },
+    { "pthread_getspecific",        (void *)ws1_impl_pthread_getspecific },
+    { "pthread_setspecific",        (void *)ws1_impl_pthread_setspecific },
     { "pthread_mutex_lock",         (void *)ws1_impl_pthread_mutex_lock },
     { "pthread_mutex_trylock",      (void *)ws1_impl_pthread_mutex_trylock },
     { "pthread_mutex_unlock",       (void *)ws1_impl_pthread_mutex_unlock },

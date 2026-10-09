@@ -59,27 +59,29 @@ compile_lib() {
     # (see CXXFLAGS).  Only libbase's vndksupport misc.cpp is excluded by path.
     for f in $(find "$dir" -maxdepth 1 -name '*.cpp' \
                  | grep -vE '_windows\.cpp|_benchmark\.cpp|format_benchmark|errors_windows|/utf8\.cpp|aosp_system_libbase/misc\.cpp|logd_writer|pmsg_writer|trace-container|_test[0-9]*\.cpp|-host\.cpp'); do
-        if $CXX -std=c++17 -fPIC -D__ANDROID_RECOVERY__ -c $INC $extra -o "$out/$(basename $f .cpp).o" "$f" 2>/dev/null; then
+        if $CXX -std=c++17 -fPIC -D__ANDROID_RECOVERY__ -DLOG_NDEBUG=1 -c $INC $extra -o "$out/$(basename $f .cpp).o" "$f" 2>/dev/null; then
             ok=$((ok+1)); else fail=$((fail+1)); echo "  skip/fail: $(basename $f)"; fi
     done
     echo "$lib: compiled ok=$ok fail=$fail"
 }
 
+QNXB="$(cd "$(dirname "$0")" && pwd)/qnx_binder"
 echo "[a11-build] generating AIDL headers"
 gen_aidl
 echo "[a11-build] compiling A11 native libs"
-compile_lib libbase   "$AOSP/aosp_system_libbase"          /tmp/a11obj/libbase
-compile_lib liblog    "$AOSP/aosp_system_logging/liblog"   /tmp/a11obj/liblog
+compile_lib libbase   "$AOSP/aosp_system_libbase"          /tmp/a11obj/libbase   "-include $QNXB/qnx_bionic_redirect.h -I$QNXB"
+compile_lib liblog    "$AOSP/aosp_system_logging/liblog"   /tmp/a11obj/liblog    "-include $QNXB/qnx_bionic_redirect.h -I$QNXB"
 # logd_writer.cpp is excluded; liblog references LogdWrite -> no-op stub.
 $CXX -std=c++17 -fPIC $INC -c "$(dirname "$0")/a11_stubs/logd_stub.cpp" -o /tmp/a11obj/liblog/logd_stub.o
-compile_lib libcutils "$AOSP/lin_system_core/libcutils"    /tmp/a11obj/libcutils
-compile_lib libutils  "$AOSP/lin_system_core/libutils"     /tmp/a11obj/libutils
-QNXB="$(cd "$(dirname "$0")" && pwd)/qnx_binder"
-compile_lib libbinder "$AOSP/lin_frameworks_native/libs/binder" /tmp/a11obj/libbinder "-include $QNXB/qnx_binder_redirect.h -I$QNXB"
+compile_lib libcutils "$AOSP/lin_system_core/libcutils"    /tmp/a11obj/libcutils "-include $QNXB/qnx_bionic_redirect.h -I$QNXB"
+compile_lib libutils  "$AOSP/lin_system_core/libutils"     /tmp/a11obj/libutils  "-include $QNXB/qnx_bionic_redirect.h -I$QNXB"
+# -DBINDER_IPC_32BIT=1: the driver speaks RIM's 32-bit protocol (session50:
+# version 7), so A11's wire format is built 32-bit and matches byte-for-byte.
+# This makes the old 64<->32 translation layer (binder_compat.c) unnecessary.
+compile_lib libbinder "$AOSP/lin_frameworks_native/libs/binder" /tmp/a11obj/libbinder "-include $QNXB/qnx_binder_redirect.h -I$QNXB -DBINDER_IPC_32BIT=1"
 CC=$NDK/bin/armv7a-linux-androideabi30-clang
-$CC -std=c11 -fPIC -I"$QNXB" -c "$QNXB/binder_compat.c" -o /tmp/a11obj/libbinder/qnx_binder_compat.o
 $CC -std=c11 -fPIC -I"$QNXB" -c "$QNXB/qnx_binder.c" -o /tmp/a11obj/libbinder/qnx_binder.o
-echo "[a11-build] compiled QNX binder compat redirect into libbinder" 
+echo "[a11-build] compiled QNX binder devctl redirect into libbinder (32-bit wire)"
 
 # AIDL-generated .cpp define android/os/*::descriptor + getInterfaceDescriptor — libbinder
 # needs them (else the QNX loader reports them unresolved). Compile into libbinder's objs.

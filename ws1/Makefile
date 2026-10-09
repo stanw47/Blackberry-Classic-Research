@@ -47,6 +47,17 @@ build/libc.so: $(OBJS) build/libqnxbind.so
 	$(CC) -shared $(OBJS) -o $@ $(LDFLAGS)
 	$(CROSS)-readelf -h $@ | grep -E "Class|Machine|Flags"
 
+# session50e: identical shim under a second soname.  The on-device deployment
+# overwrites the unused trusted native/lib/libthread_db.so inode with this, so
+# the runtime's real libc.so stays intact for its QNX binaries while the A11
+# chain still gets the shim.
+build/libthread_db.so: $(OBJS) build/libqnxbind.so
+	$(CC) -shared $(OBJS) -o $@ -nostdlib -Wl,-soname,libthread_db.so $(LIBGCCDEFSYM) \
+	    -Wl,--version-script=hide_slots.map -Lbuild -L$(SYSROOT)/lib \
+	    -Wl,--no-as-needed -l:libqnxbind.so -l:libc.so.3 \
+	    -L$(LIBGCCDIR) -lgcc
+	$(CROSS)-readelf -d $@ | grep SONAME
+
 # link-time binding table: direct references to QNX libc.so.3 symbols, filled
 # by the loader at load time (no dlopen/dlsym at resolution time)
 build/qnxbind.o: qnxbind.c | build
